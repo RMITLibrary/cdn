@@ -2,4 +2,4 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home2/bitmaapp/cdn
- - /bin/cp -R cdn $DEPLOYPATH
+ - /bin/cp -R *.* $DEPLOYPATH

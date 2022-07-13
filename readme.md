@@ -1,2 +1,3 @@
+### RMIT Library Digital Learning Object Respository CDN
 
-Test Commit 2
+Place objects by type in folders by authoring mode

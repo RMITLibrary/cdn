@@ -618,7 +618,7 @@ li#Key {
   padding: 1rem;
   visibility: visible;
   transition: transform .1s ease-in, opacity .2s ease-in;
-  height: fit-content;
+    /*height: fit-content;  */
 }
 
 [role="dialog"][hidden] {

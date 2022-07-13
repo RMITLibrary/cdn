@@ -1,5 +1,5 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home2/bitmaapp/public_html/cdn
+ - export DEPLOYPATH=/home2/bitmaapp/public_html/cdn/
  - /bin/cp -R * $DEPLOYPATH

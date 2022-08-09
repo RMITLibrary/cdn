@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sacale=1, maximum-scale=1, user-salable=no">
+    <title>Writing cohesion activity</title>
+    <style>
+        body {
+            width: 480px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-size: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        
+        p {
+            /*margin: 20px 0;*/
+            padding: 0px;
+        }
+        
+        #panel {
+            float: left;
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            margin-bottom: 25px;
+        }
+        
+        #sortable {
+            width: 480px;
+            height: 35px;
+            padding: 0.5em;
+        }
+        
+        .droppable {
+            border-radius: 5px;
+            padding: 1px 0;
+            margin: 0;
+            background-color: #f2f2f2;
+            vertical-align: middle;
+            width: 90px;
+            height: 23px;
+            display: inline-block;
+            border: 1px solid #ededed;
+        }
+        
+        .answer {
+            float: left;
+            border-radius: 5px;
+            padding: 4px 10px 0px 10px;
+            background-color: #9dd8f2;
+            height: 20px;
+            max-width: 90px;
+            /*width: 70px;*/
+            color: white;
+            cursor: pointer;
+            white-space: nowrap;
+            text-align: center;
+        }
+        /*.answered {*/
+        /*border-radius: 5px;*/
+        /*margin: 0 5px;*/
+        /*width: 70px;*/
+        /*padding: 0px 10px 4px 10px;*/
+        /*background-color: #9dd8f2;*/
+        /*height: 20px;*/
+        /*color: white;*/
+        /*display: inline-block;*/
+        /*}*/
+        
+        .answered {
+            border-radius: 5px;
+            padding: 1px 0;
+            margin: 0;
+            background-color: #9dd8f2;
+            width: 90px;
+            height: 23px;
+            color: white;
+            display: inline-block;
+            border: 1px solid;
+            text-align: center;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+        
+        #welldone {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0px;
+            background-color: #7dac21;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+    <script src="./jquery.js"></script>
+    <script src="./jquery-ui.min.js"></script>
+    <!--<script src="./packery.pkgd.min.js"></script>-->
+    <script src="./masonry.pkgd.min.js"></script>
+    <script src="./jquery.ui.touch-punch.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18193581-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-18193581-7');
+    </script>
+</head>
+
+<body>
+    <!--<div class="droppable" style="float: right">debug</div>-->
+    <div>
+        <div id="paragraph" style="float: left; width: 100%; line-height: 25px; margin-bottom: 30px">
+
+            <span class="droppable" id="Similarly"></span>, other factors can <span class="droppable" id="also"></span> reduce the need for a leader. Certain individual and organisational variables can act as substitutes for leadership or neutralise the
+            leader's influence. According to Searsen (2011), data from numerous studies demonstrates that in many situations, whatever behaviour leaders exhibit is irrelevant.
+            <div class="droppable" id="For_example"></div>, employees' experience, training or the need for independence can neutralise the effect of leadership.
+            <div class="droppable" id="Further"></div>, Searson (2011, p. 72) asserts that these characteristics can create situations where direction and support from a leader and organisational structure are no longer required.
+            <div class="droppable" id="Therefore"></div>, the need for leadership varies according to the situation.
+
+        </div>
+
+        <div id="panel">
+            <p class='hide' id="welldone" style=" ">Well done! <br>You have completed the paragraph using the correct linking words.</p>
+
+            <div id="sortable" class="">
+                <div id="draggable1" class="answer" ref="Therefore" style="width: 75px">Therefore</div>
+                <div id="draggable2" class="answer" ref="For_example" style="width: 75px">For example</div>
+                <div id="draggable3" class="answer" ref="Further" style="width: 50px">Further</div>
+                <div id="draggable4" class="answer" ref="Similarly" style="width: 50px">Similarly</div>
+                <div id="draggable5" class="answer" ref="also" style="width: 25px">also</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="showAnswer()">
+				Show Answer
+			</button>
+        <button onclick="clearAnswer()">
+				Clear
+			</button>
+    </div>
+    <script>
+        console.log("script running")
+        $(".hide").hide();
+        var correctCount = 0;
+        //			var mouseoverId="";
+        var droppableId = "";
+
+
+        //initialise sortables and draggables
+        //			var $container = $('#sortable').packery({
+        //				columnWidth: 25,
+        ////				isInitLayout: true,
+        //				"isHorizontal": true,
+        //				"isOriginLeft": true,
+        //				rowHeight: 20,
+        //				"gutter": 5
+        //				});
+        $('#sortable').masonry({
+            columnWidth: 25,
+            //				isInitLayout: true,
+            "isHorizontal": true,
+            "isOriginLeft": true,
+            rowHeight: 20,
+            "gutter": 5
+        });
+        //						$('#sortable').sortable();
+        $("#sortable").disableSelection();
+        //			$(".droppable").mouseover(function(){
+        //				mouseoverId="#"+$(this).attr("id");
+        //				console.log("mouseover: "+mouseoverId)
+        //			})
+        //
+        //			$(".droppable").mouseout(function(){
+        //				mouseoverId="";
+        //			})
+
+        $(".answer").draggable({
+            scroll: false,
+            revert: function(droppableContainer) {
+                if (droppableContainer) {
+                    //if drop is valid i.e. draggable is dropped on a valid droppable or droppable has accepted the draggable
+                    $('#sortable').masonry('layout')
+                } else {
+                    //if drop is invalid i.e. droppable has not accepted the draggable
+                    $(this).effect("shake");
+                }
+                return (!droppableContainer) //returns true if invalid drop i.e draggable will revert and false if the draggable has been dropped correctly and thus no revert
+            },
+        });
+
+
+
+
+        //initialise droppables
+        $("#Therefore").droppable({
+            accept: "#draggable1",
+            activeClass: "",
+            hoverClass: "",
+            drop: function(event, ui) {
+                $(this).html("Therefore").removeClass("droppable").addClass("answered");
+                $("#draggable1").hide();
+                correctCount++;
+                checkComplete()
+            }
+        });
+        $("#For_example").droppable({
+            accept: "#draggable2",
+            activeClass: "",
+            hoverClass: "",
+            drop: function(event, ui) {
+                $(this).html("For example").removeClass("droppable").addClass("answered");
+                $("#draggable2").hide();
+                correctCount++;
+                checkComplete()
+            }
+        });
+        $("#Further").droppable({
+            accept: "#draggable3",
+            activeClass: "",
+            hoverClass: "",
+            drop: function(event, ui) {
+                $(this).html('Further').removeClass("droppable").addClass("answered");
+                $("#draggable3").hide();
+                correctCount++;
+                checkComplete()
+            }
+        });
+        $("#Similarly").droppable({
+            accept: "#draggable4",
+            activeClass: "",
+            hoverClass: "",
+            drop: function(event, ui) {
+                $(this).html("Similarly").removeClass("droppable").addClass("answered");
+                $("#draggable4").hide();
+                correctCount++;
+                checkComplete()
+            }
+        });
+        $("#also").droppable({
+            accept: "#draggable5",
+            activeClass: "",
+            hoverClass: "",
+            drop: function(event, ui) {
+                $(this).html("also").removeClass("droppable").addClass("answered");
+                $("#draggable5").hide();
+                correctCount++;
+                checkComplete()
+            }
+        });
+
+
+        //check answer
+        function checkComplete() {
+            if (correctCount >= 5) {
+                $("#sortable").hide();
+                $("#welldone").show("bounce", 1000);
+            }
+        }
+
+
+
+        //show answers
+        function showAnswer() {
+            for (var i = 1; i < 6; i++) {
+                droppableId = "#" + $("#draggable" + i).attr("ref");
+                console.log("droppableId: " + droppableId)
+                $("#draggable" + i).animate({
+                    top: $(droppableId).position().top - $("#panel").position().top,
+                    left: $(droppableId).position().left
+                }, 500);
+            }
+
+            setTimeout(function() {
+                for (var k = 1; k < 6; k++) {
+                    var droppableId = "#" + $("#draggable" + k).attr("ref");
+                    $(droppableId).html($("#draggable" + k).text())
+                    $(droppableId).removeClass("droppable");
+                    $(droppableId).addClass("answered");
+                    $("#draggable" + k).hide();
+                }
+            }, 420);
+        }
+
+        //clear answers
+        function clearAnswer() {
+            console.log("clear answer");
+            location.reload(true);
+            correctCount = 0;
+        }
+
+
+        //utility
+        function isObjOnObj(a, b) {
+            var al = a.left;
+            var ar = a.left + a.width;
+            var bl = b.left;
+            var br = b.left + b.width;
+
+            var at = a.top;
+            var ab = a.top + a.height;
+            var bt = b.top;
+            var bb = b.top + b.height;
+
+            if (bl > ar || br < al) {
+                return false;
+            } //overlap not possible
+            if (bt > ab || bb < at) {
+                return false;
+            } //overlap not possible
+
+            if (bl > al && bl < ar) {
+                return true;
+            }
+            if (br > al && br < ar) {
+                return true;
+            }
+
+            if (bt > at && bt < ab) {
+                return true;
+            }
+            if (bb > at && bb < ab) {
+                return true;
+            }
+
+            return false;
+        }
+
+        //bit layout fix
+    </script>
+</body>
+
+</html>

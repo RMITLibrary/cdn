@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+.lightBlue{
+	background:#aad9ee;
+}
+
+.red{
+	background: #eda5ac;
+}
+
+.darkBlue{
+	background:#dacff0;
+	color: #dacff0;
+}
+
+.orange{
+	background:#fed8c5;
+}
+
+.black{
+	background:#bfbfbf;
+	/*background-image:url(image/slashes.png)*/
+}
+
+.darkGreen{
+	background:#c0d7b3;
+}
+
+.blank{
+	background:#FFFFFF;
+}
+
+
+/*highlight*/
+.lightBlue_h{
+	-webkit-filter: drop-shadow(0px 0px 25px #1697d1);
+	filter: drop-shadow(0px 0px 25px #1697d1);
+}
+
+.red_h{
+	-webkit-filter: drop-shadow(0px 0px 25px #d32538);
+	filter: drop-shadow(0px 0px 25px #d32538);
+}
+
+.darkBlue_h{
+-webkit-filter: drop-shadow(0px 0px 25px #7456b2);
+	filter: drop-shadow(0px 0px 25px #7456b2);
+}
+
+.orange_h{
+	-webkit-filter: drop-shadow(0px 0px 25px #ff863d);
+	filter: drop-shadow(0px 0px 25px #ff863d);
+}
+
+.black_h{
+-webkit-filter: drop-shadow(0px 0px 25px #000);
+	filter: drop-shadow(0px 0px 25px #000);}
+
+.darkGreen_h{
+	-webkit-filter: drop-shadow(0px 0px 25px #2a7900);
+	filter: drop-shadow(0px 0px 25px #2a7900);
+}
+

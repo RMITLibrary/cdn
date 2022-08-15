@@ -1,748 +1,748 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Time management</title>
-<script src="jquery-ui-1.11.1/external/jquery/jquery.js"></script>
-<script src="jquery-ui-1.11.1/jquery-ui.js"></script>
-<script src="jquery-ui-1.11.1/html2canvas.js"></script>
-<link rel="stylesheet" href="jquery-ui-1.11.1/jquery-ui.css">
-<link rel="stylesheet" href="style.css">
-<style>
-table, th, td {
-	border: 1px solid grey;
-	border-collapse: collapse;
-	width: 100%;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size:10px;
-}
-th, td {
-	padding: 2px;
-	text-align: center;
-	width: 11%;
-	
-}
-th {
-		font-size:15px;
-}
-.dock {
-	border-style: hidden;
-	border-color:#FFFFFF;
-	
-}
-a {
-	font-size:11px;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color:#000;
-	
-}
-body{
-	width:600px;	
-	background:#FFFFFF;
-}
 
-#myHideFrame {
-    position: absolute;
-    top: -9999px;
-    width: 1px;
-    height: 1px;
-}
+    <meta charset="UTF-8">
+    <title>Time management</title>
+    <script src="jquery-ui-1.11.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.1/jquery-ui.js"></script>
+    <script src="jquery-ui-1.11.1/html2canvas.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.11.1/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 10px;
+        }
+        
+        th,
+        td {
+            padding: 2px;
+            text-align: center;
+            width: 11%;
+        }
+        
+        th {
+            font-size: 15px;
+        }
+        
+        .dock {
+            border-style: hidden;
+            border-color: #FFFFFF;
+        }
+        
+        a {
+            font-size: 11px;
+            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #000;
+        }
+        
+        body {
+            width: 600px;
+            background: #FFFFFF;
+        }
+        
+        #myHideFrame {
+            position: absolute;
+            top: -9999px;
+            width: 1px;
+            height: 1px;
+        }
+    </style>
 
-</style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18193581-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    <!-- Global site tag (gtag.js) - Google Analytics --> 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18193581-7"></script> 
-        <script> 
-          window.dataLayer = window.dataLayer || []; 
-          function gtag(){dataLayer.push(arguments);} 
-          gtag('js', new Date()); 
-          gtag('config', 'UA-18193581-7'); 
-        </script> 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-18193581-7');
+    </script>
 </head>
+
 <body>
-<!--<div id="debug"></div>
+
+    <!--<div id="debug"></div>
 <div id="debug2"></div>
 <div id="debug3"></div>-->
-<div id="timetable">
-<div  style="width:100%">
-  <table width="100%" border="1">
-    <tbody>
-      <tr>
-        <th scope="col">&nbsp;</th>
-        <th scope="col">Mon</th>
-        <th scope="col">Tue</th>
-        <th scope="col">Wed</th>
-        <th scope="col">Thu</th>
-        <th scope="col">Fri</th>
-        <th scope="col">Sat</th>
-        <th scope="col">Sun</th>
-      </tr>
-      <tr>
-        <td rowspan="2">6-7 AM</td>
-        <td id="1-1">&nbsp;</td>
-        <td id="2-1">&nbsp;</td>
-        <td id="3-1">&nbsp;</td>
-        <td id="4-1">&nbsp;</td>
-        <td id="5-1">&nbsp;</td>
-        <td id="6-1">&nbsp;</td>
-        <td id="7-1">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-2">&nbsp;</td>
-        <td id="2-2">&nbsp;</td>
-        <td id="3-2">&nbsp;</td>
-        <td id="4-2">&nbsp;</td>
-        <td id="5-2">&nbsp;</td>
-        <td id="6-2">&nbsp;</td>
-        <td id="7-2">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">7-8 AM</td>
-        <td id="1-3">&nbsp;</td>
-        <td id="2-3">&nbsp;</td>
-        <td id="3-3">&nbsp;</td>
-        <td id="4-3">&nbsp;</td>
-        <td id="5-3">&nbsp;</td>
-        <td id="6-3">&nbsp;</td>
-        <td id="7-3">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-4">&nbsp;</td>
-        <td id="2-4">&nbsp;</td>
-        <td id="3-4">&nbsp;</td>
-        <td id="4-4">&nbsp;</td>
-        <td id="5-4">&nbsp;</td>
-        <td id="6-4">&nbsp;</td>
-        <td id="7-4">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">8-9 AM</td>
-        <td id="1-5">&nbsp;</td>
-        <td id="2-5">&nbsp;</td>
-        <td id="3-5">&nbsp;</td>
-        <td id="4-5">&nbsp;</td>
-        <td id="5-5">&nbsp;</td>
-        <td id="6-5">&nbsp;</td>
-        <td id="7-5">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-6">&nbsp;</td>
-        <td id="2-6">&nbsp;</td>
-        <td id="3-6">&nbsp;</td>
-        <td id="4-6">&nbsp;</td>
-        <td id="5-6">&nbsp;</td>
-        <td id="6-6">&nbsp;</td>
-        <td id="7-6">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">9-10 AM</td>
-        <td id="1-7">&nbsp;</td>
-        <td id="2-7">&nbsp;</td>
-        <td id="3-7">&nbsp;</td>
-        <td id="4-7">&nbsp;</td>
-        <td id="5-7">&nbsp;</td>
-        <td id="6-7">&nbsp;</td>
-        <td id="7-7">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-8">&nbsp;</td>
-        <td id="2-8">&nbsp;</td>
-        <td id="3-8">&nbsp;</td>
-        <td id="4-8">&nbsp;</td>
-        <td id="5-8">&nbsp;</td>
-        <td id="6-8">&nbsp;</td>
-        <td id="7-8">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">10-11 AM</td>
-        <td id="1-9">&nbsp;</td>
-        <td id="2-9">&nbsp;</td>
-        <td id="3-9">&nbsp;</td>
-        <td id="4-9">&nbsp;</td>
-        <td id="5-9">&nbsp;</td>
-        <td id="6-9">&nbsp;</td>
-        <td id="7-9">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-10">&nbsp;</td>
-        <td id="2-10">&nbsp;</td>
-        <td id="3-10">&nbsp;</td>
-        <td id="4-10">&nbsp;</td>
-        <td id="5-10">&nbsp;</td>
-        <td id="6-10">&nbsp;</td>
-        <td id="7-10">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">11-12 AM</td>
-        <td id="1-11">&nbsp;</td>
-        <td id="2-11">&nbsp;</td>
-        <td id="3-11">&nbsp;</td>
-        <td id="4-11">&nbsp;</td>
-        <td id="5-11">&nbsp;</td>
-        <td id="6-11">&nbsp;</td>
-        <td id="7-11">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-12">&nbsp;</td>
-        <td id="2-12">&nbsp;</td>
-        <td id="3-12">&nbsp;</td>
-        <td id="4-12">&nbsp;</td>
-        <td id="5-12">&nbsp;</td>
-        <td id="6-12">&nbsp;</td>
-        <td id="7-12">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">12-1 PM</td>
-        <td id="1-13">&nbsp;</td>
-        <td id="2-13">&nbsp;</td>
-        <td id="3-13">&nbsp;</td>
-        <td id="4-13">&nbsp;</td>
-        <td id="5-13">&nbsp;</td>
-        <td id="6-13">&nbsp;</td>
-        <td id="7-13">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-14">&nbsp;</td>
-        <td id="2-14">&nbsp;</td>
-        <td id="3-14">&nbsp;</td>
-        <td id="4-14">&nbsp;</td>
-        <td id="5-14">&nbsp;</td>
-        <td id="6-14">&nbsp;</td>
-        <td id="7-14">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">1-2 PM</td>
-        <td id="1-15">&nbsp;</td>
-        <td id="2-15">&nbsp;</td>
-        <td id="3-15">&nbsp;</td>
-        <td id="4-15">&nbsp;</td>
-        <td id="5-15">&nbsp;</td>
-        <td id="6-15">&nbsp;</td>
-        <td id="7-15">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-16">&nbsp;</td>
-        <td id="2-16">&nbsp;</td>
-        <td id="3-16">&nbsp;</td>
-        <td id="4-16">&nbsp;</td>
-        <td id="5-16">&nbsp;</td>
-        <td id="6-16">&nbsp;</td>
-        <td id="7-16">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">2-3 PM</td>
-        <td id="1-17">&nbsp;</td>
-        <td id="2-17">&nbsp;</td>
-        <td id="3-17">&nbsp;</td>
-        <td id="4-17">&nbsp;</td>
-        <td id="5-17">&nbsp;</td>
-        <td id="6-17">&nbsp;</td>
-        <td id="7-17">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-18">&nbsp;</td>
-        <td id="2-18">&nbsp;</td>
-        <td id="3-18">&nbsp;</td>
-        <td id="4-18">&nbsp;</td>
-        <td id="5-18">&nbsp;</td>
-        <td id="6-18">&nbsp;</td>
-        <td id="7-18">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">3-4 PM</td>
-        <td id="1-19">&nbsp;</td>
-        <td id="2-19">&nbsp;</td>
-        <td id="3-19">&nbsp;</td>
-        <td id="4-19">&nbsp;</td>
-        <td id="5-19">&nbsp;</td>
-        <td id="6-19">&nbsp;</td>
-        <td id="7-19">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-20">&nbsp;</td>
-        <td id="2-20">&nbsp;</td>
-        <td id="3-20">&nbsp;</td>
-        <td id="4-20">&nbsp;</td>
-        <td id="5-20">&nbsp;</td>
-        <td id="6-20">&nbsp;</td>
-        <td id="7-20">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">4-5 PM</td>
-        <td id="1-21">&nbsp;</td>
-        <td id="2-21">&nbsp;</td>
-        <td id="3-21">&nbsp;</td>
-        <td id="4-21">&nbsp;</td>
-        <td id="5-21">&nbsp;</td>
-        <td id="6-21">&nbsp;</td>
-        <td id="7-21">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-22">&nbsp;</td>
-        <td id="2-22">&nbsp;</td>
-        <td id="3-22">&nbsp;</td>
-        <td id="4-22">&nbsp;</td>
-        <td id="5-22">&nbsp;</td>
-        <td id="6-22">&nbsp;</td>
-        <td id="7-22">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">5-6 PM</td>
-        <td id="1-23">&nbsp;</td>
-        <td id="2-23">&nbsp;</td>
-        <td id="3-23">&nbsp;</td>
-        <td id="4-23">&nbsp;</td>
-        <td id="5-23">&nbsp;</td>
-        <td id="6-23">&nbsp;</td>
-        <td id="7-23">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-24">&nbsp;</td>
-        <td id="2-24">&nbsp;</td>
-        <td id="3-24">&nbsp;</td>
-        <td id="4-24">&nbsp;</td>
-        <td id="5-24">&nbsp;</td>
-        <td id="6-24">&nbsp;</td>
-        <td id="7-24">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">6-7 PM</td>
-        <td id="1-25">&nbsp;</td>
-        <td id="2-25">&nbsp;</td>
-        <td id="3-25">&nbsp;</td>
-        <td id="4-25">&nbsp;</td>
-        <td id="5-25">&nbsp;</td>
-        <td id="6-25">&nbsp;</td>
-        <td id="7-25">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-26">&nbsp;</td>
-        <td id="2-26">&nbsp;</td>
-        <td id="3-26">&nbsp;</td>
-        <td id="4-26">&nbsp;</td>
-        <td id="5-26">&nbsp;</td>
-        <td id="6-26">&nbsp;</td>
-        <td id="7-26">&nbsp;</td>
-      <tr>
-        <td rowspan="2">7-8 PM</td>
-        <td id="1-27">&nbsp;</td>
-        <td id="2-27">&nbsp;</td>
-        <td id="3-27">&nbsp;</td>
-        <td id="4-27">&nbsp;</td>
-        <td id="5-27">&nbsp;</td>
-        <td id="6-27">&nbsp;</td>
-        <td id="7-27">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-28">&nbsp;</td>
-        <td id="2-28">&nbsp;</td>
-        <td id="3-28">&nbsp;</td>
-        <td id="4-28">&nbsp;</td>
-        <td id="5-28">&nbsp;</td>
-        <td id="6-28">&nbsp;</td>
-        <td id="7-28">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">8-9 PM</td>
-        <td id="1-29">&nbsp;</td>
-        <td id="2-29">&nbsp;</td>
-        <td id="3-29">&nbsp;</td>
-        <td id="4-29">&nbsp;</td>
-        <td id="5-29">&nbsp;</td>
-        <td id="6-29">&nbsp;</td>
-        <td id="7-29">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-30">&nbsp;</td>
-        <td id="2-30">&nbsp;</td>
-        <td id="3-30">&nbsp;</td>
-        <td id="4-30">&nbsp;</td>
-        <td id="5-30">&nbsp;</td>
-        <td id="6-30">&nbsp;</td>
-        <td id="7-30">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">9-10 PM</td>
-        <td id="1-31">&nbsp;</td>
-        <td id="2-31">&nbsp;</td>
-        <td id="3-31">&nbsp;</td>
-        <td id="4-31">&nbsp;</td>
-        <td id="5-31">&nbsp;</td>
-        <td id="6-31">&nbsp;</td>
-        <td id="7-31">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-32">&nbsp;</td>
-        <td id="2-32">&nbsp;</td>
-        <td id="3-32">&nbsp;</td>
-        <td id="4-32">&nbsp;</td>
-        <td id="5-32">&nbsp;</td>
-        <td id="6-32">&nbsp;</td>
-        <td id="7-32">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">10-11 PM</td>
-        <td id="1-33">&nbsp;</td>
-        <td id="2-33">&nbsp;</td>
-        <td id="3-33">&nbsp;</td>
-        <td id="4-33">&nbsp;</td>
-        <td id="5-33">&nbsp;</td>
-        <td id="6-33">&nbsp;</td>
-        <td id="7-33">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-34">&nbsp;</td>
-        <td id="2-34">&nbsp;</td>
-        <td id="3-34">&nbsp;</td>
-        <td id="4-34">&nbsp;</td>
-        <td id="5-34">&nbsp;</td>
-        <td id="6-34">&nbsp;</td>
-        <td id="7-34">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2">11-12 PM</td>
-        <td id="1-35">&nbsp;</td>
-        <td id="2-35">&nbsp;</td>
-        <td id="3-35">&nbsp;</td>
-        <td id="4-35">&nbsp;</td>
-        <td id="5-35">&nbsp;</td>
-        <td id="6-35">&nbsp;</td>
-        <td id="7-35">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-36">&nbsp;</td>
-        <td id="2-36">&nbsp;</td>
-        <td id="3-36">&nbsp;</td>
-        <td id="4-36">&nbsp;</td>
-        <td id="5-36">&nbsp;</td>
-        <td id="6-36">&nbsp;</td>
-        <td id="7-36">&nbsp;</td>
-      </tr>
-      <tr>
-        <td rowspan="2" class="black">12-6 AM</td>
-        <td id="1-37">&nbsp;</td>
-        <td id="2-37">&nbsp;</td>
-        <td id="3-37">&nbsp;</td>
-        <td id="4-37">&nbsp;</td>
-        <td id="5-37">&nbsp;</td>
-        <td id="6-37">&nbsp;</td>
-        <td id="7-37">&nbsp;</td>
-      </tr>
-      <tr>
-        <td id="1-38">&nbsp;</td>
-        <td id="2-38">&nbsp;</td>
-        <td id="3-38">&nbsp;</td>
-        <td id="4-38">&nbsp;</td>
-        <td id="5-38">&nbsp;</td>
-        <td id="6-38">&nbsp;</td>
-        <td id="7-38">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div style="margin-top:10px">
-  <table width="100%" id="dock" style="border:0px">
-    <tbody >
-      <tr style="border-style:hidden; ">
-        <td class="dock" id="draggable1"><img src="image/house-icon3.png" width="54" height="54" alt=""/></td>
-        <td class="dock" id="draggable2"><img src="image/Martz90-Circle-Books.png" width="54" height="54" alt=""/></td>
-        <td class="dock" id="draggable3"><img src="image/Shopping_icons_vector-05-256.png" width="54" height="54" alt=""/></td>
-        <td class="dock" id="draggable4"><img src="image/24585390-dumbbell-icon.png" width="54" height="54" alt=""/></td>
-        <td class="dock" id="draggable5"><img src="image/Sleeping-512.png" width="54" height="54" alt=""/></td>
-        <td class="dock" id="draggable6"><img src="image/clock-time-3.png" width="54" height="54" alt=""/></td>
-        <td style="font-size:43px;border:0px; font-size-adjust:inherit"><strong id="total">126</strong></td>
-      </tr>
-      <tr>
-        <td class="dock">Home / family commitments</td>
-        <td class="dock">Lectures / classes</td>
-        <td class="dock">Paid / Unpaid work</td>
-        <td class="dock">Sports / Leisure activities</td>
-        <td class="dock">Sleep</td>
-        <td class="dock">Other / 30 minutes eg. travel</td>
-        <td class="dock">hours left for study</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
-<div  style="width:70px; height:20px; float:left; margin:17px; text-decoration:none;"><button id="save">Save</button></div>
-<div id="download" style="width:70px; height:20px; float:left; margin:17px; text-decoration:none;"><button>Download</button></div>
+    <div id="timetable">
+        <div style="width:100%">
+            <table width="100%" border="1">
+                <tbody>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">Mon</th>
+                        <th scope="col">Tue</th>
+                        <th scope="col">Wed</th>
+                        <th scope="col">Thu</th>
+                        <th scope="col">Fri</th>
+                        <th scope="col">Sat</th>
+                        <th scope="col">Sun</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">6-7 AM</td>
+                        <td id="1-1">&nbsp;</td>
+                        <td id="2-1">&nbsp;</td>
+                        <td id="3-1">&nbsp;</td>
+                        <td id="4-1">&nbsp;</td>
+                        <td id="5-1">&nbsp;</td>
+                        <td id="6-1">&nbsp;</td>
+                        <td id="7-1">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-2">&nbsp;</td>
+                        <td id="2-2">&nbsp;</td>
+                        <td id="3-2">&nbsp;</td>
+                        <td id="4-2">&nbsp;</td>
+                        <td id="5-2">&nbsp;</td>
+                        <td id="6-2">&nbsp;</td>
+                        <td id="7-2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">7-8 AM</td>
+                        <td id="1-3">&nbsp;</td>
+                        <td id="2-3">&nbsp;</td>
+                        <td id="3-3">&nbsp;</td>
+                        <td id="4-3">&nbsp;</td>
+                        <td id="5-3">&nbsp;</td>
+                        <td id="6-3">&nbsp;</td>
+                        <td id="7-3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-4">&nbsp;</td>
+                        <td id="2-4">&nbsp;</td>
+                        <td id="3-4">&nbsp;</td>
+                        <td id="4-4">&nbsp;</td>
+                        <td id="5-4">&nbsp;</td>
+                        <td id="6-4">&nbsp;</td>
+                        <td id="7-4">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">8-9 AM</td>
+                        <td id="1-5">&nbsp;</td>
+                        <td id="2-5">&nbsp;</td>
+                        <td id="3-5">&nbsp;</td>
+                        <td id="4-5">&nbsp;</td>
+                        <td id="5-5">&nbsp;</td>
+                        <td id="6-5">&nbsp;</td>
+                        <td id="7-5">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-6">&nbsp;</td>
+                        <td id="2-6">&nbsp;</td>
+                        <td id="3-6">&nbsp;</td>
+                        <td id="4-6">&nbsp;</td>
+                        <td id="5-6">&nbsp;</td>
+                        <td id="6-6">&nbsp;</td>
+                        <td id="7-6">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">9-10 AM</td>
+                        <td id="1-7">&nbsp;</td>
+                        <td id="2-7">&nbsp;</td>
+                        <td id="3-7">&nbsp;</td>
+                        <td id="4-7">&nbsp;</td>
+                        <td id="5-7">&nbsp;</td>
+                        <td id="6-7">&nbsp;</td>
+                        <td id="7-7">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-8">&nbsp;</td>
+                        <td id="2-8">&nbsp;</td>
+                        <td id="3-8">&nbsp;</td>
+                        <td id="4-8">&nbsp;</td>
+                        <td id="5-8">&nbsp;</td>
+                        <td id="6-8">&nbsp;</td>
+                        <td id="7-8">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">10-11 AM</td>
+                        <td id="1-9">&nbsp;</td>
+                        <td id="2-9">&nbsp;</td>
+                        <td id="3-9">&nbsp;</td>
+                        <td id="4-9">&nbsp;</td>
+                        <td id="5-9">&nbsp;</td>
+                        <td id="6-9">&nbsp;</td>
+                        <td id="7-9">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-10">&nbsp;</td>
+                        <td id="2-10">&nbsp;</td>
+                        <td id="3-10">&nbsp;</td>
+                        <td id="4-10">&nbsp;</td>
+                        <td id="5-10">&nbsp;</td>
+                        <td id="6-10">&nbsp;</td>
+                        <td id="7-10">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">11-12 AM</td>
+                        <td id="1-11">&nbsp;</td>
+                        <td id="2-11">&nbsp;</td>
+                        <td id="3-11">&nbsp;</td>
+                        <td id="4-11">&nbsp;</td>
+                        <td id="5-11">&nbsp;</td>
+                        <td id="6-11">&nbsp;</td>
+                        <td id="7-11">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-12">&nbsp;</td>
+                        <td id="2-12">&nbsp;</td>
+                        <td id="3-12">&nbsp;</td>
+                        <td id="4-12">&nbsp;</td>
+                        <td id="5-12">&nbsp;</td>
+                        <td id="6-12">&nbsp;</td>
+                        <td id="7-12">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">12-1 PM</td>
+                        <td id="1-13">&nbsp;</td>
+                        <td id="2-13">&nbsp;</td>
+                        <td id="3-13">&nbsp;</td>
+                        <td id="4-13">&nbsp;</td>
+                        <td id="5-13">&nbsp;</td>
+                        <td id="6-13">&nbsp;</td>
+                        <td id="7-13">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-14">&nbsp;</td>
+                        <td id="2-14">&nbsp;</td>
+                        <td id="3-14">&nbsp;</td>
+                        <td id="4-14">&nbsp;</td>
+                        <td id="5-14">&nbsp;</td>
+                        <td id="6-14">&nbsp;</td>
+                        <td id="7-14">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">1-2 PM</td>
+                        <td id="1-15">&nbsp;</td>
+                        <td id="2-15">&nbsp;</td>
+                        <td id="3-15">&nbsp;</td>
+                        <td id="4-15">&nbsp;</td>
+                        <td id="5-15">&nbsp;</td>
+                        <td id="6-15">&nbsp;</td>
+                        <td id="7-15">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-16">&nbsp;</td>
+                        <td id="2-16">&nbsp;</td>
+                        <td id="3-16">&nbsp;</td>
+                        <td id="4-16">&nbsp;</td>
+                        <td id="5-16">&nbsp;</td>
+                        <td id="6-16">&nbsp;</td>
+                        <td id="7-16">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2-3 PM</td>
+                        <td id="1-17">&nbsp;</td>
+                        <td id="2-17">&nbsp;</td>
+                        <td id="3-17">&nbsp;</td>
+                        <td id="4-17">&nbsp;</td>
+                        <td id="5-17">&nbsp;</td>
+                        <td id="6-17">&nbsp;</td>
+                        <td id="7-17">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-18">&nbsp;</td>
+                        <td id="2-18">&nbsp;</td>
+                        <td id="3-18">&nbsp;</td>
+                        <td id="4-18">&nbsp;</td>
+                        <td id="5-18">&nbsp;</td>
+                        <td id="6-18">&nbsp;</td>
+                        <td id="7-18">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">3-4 PM</td>
+                        <td id="1-19">&nbsp;</td>
+                        <td id="2-19">&nbsp;</td>
+                        <td id="3-19">&nbsp;</td>
+                        <td id="4-19">&nbsp;</td>
+                        <td id="5-19">&nbsp;</td>
+                        <td id="6-19">&nbsp;</td>
+                        <td id="7-19">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-20">&nbsp;</td>
+                        <td id="2-20">&nbsp;</td>
+                        <td id="3-20">&nbsp;</td>
+                        <td id="4-20">&nbsp;</td>
+                        <td id="5-20">&nbsp;</td>
+                        <td id="6-20">&nbsp;</td>
+                        <td id="7-20">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">4-5 PM</td>
+                        <td id="1-21">&nbsp;</td>
+                        <td id="2-21">&nbsp;</td>
+                        <td id="3-21">&nbsp;</td>
+                        <td id="4-21">&nbsp;</td>
+                        <td id="5-21">&nbsp;</td>
+                        <td id="6-21">&nbsp;</td>
+                        <td id="7-21">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-22">&nbsp;</td>
+                        <td id="2-22">&nbsp;</td>
+                        <td id="3-22">&nbsp;</td>
+                        <td id="4-22">&nbsp;</td>
+                        <td id="5-22">&nbsp;</td>
+                        <td id="6-22">&nbsp;</td>
+                        <td id="7-22">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">5-6 PM</td>
+                        <td id="1-23">&nbsp;</td>
+                        <td id="2-23">&nbsp;</td>
+                        <td id="3-23">&nbsp;</td>
+                        <td id="4-23">&nbsp;</td>
+                        <td id="5-23">&nbsp;</td>
+                        <td id="6-23">&nbsp;</td>
+                        <td id="7-23">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-24">&nbsp;</td>
+                        <td id="2-24">&nbsp;</td>
+                        <td id="3-24">&nbsp;</td>
+                        <td id="4-24">&nbsp;</td>
+                        <td id="5-24">&nbsp;</td>
+                        <td id="6-24">&nbsp;</td>
+                        <td id="7-24">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">6-7 PM</td>
+                        <td id="1-25">&nbsp;</td>
+                        <td id="2-25">&nbsp;</td>
+                        <td id="3-25">&nbsp;</td>
+                        <td id="4-25">&nbsp;</td>
+                        <td id="5-25">&nbsp;</td>
+                        <td id="6-25">&nbsp;</td>
+                        <td id="7-25">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="1-26">&nbsp;</td>
+                        <td id="2-26">&nbsp;</td>
+                        <td id="3-26">&nbsp;</td>
+                        <td id="4-26">&nbsp;</td>
+                        <td id="5-26">&nbsp;</td>
+                        <td id="6-26">&nbsp;</td>
+                        <td id="7-26">&nbsp;</td>
+                        <tr>
+                            <td rowspan="2">7-8 PM</td>
+                            <td id="1-27">&nbsp;</td>
+                            <td id="2-27">&nbsp;</td>
+                            <td id="3-27">&nbsp;</td>
+                            <td id="4-27">&nbsp;</td>
+                            <td id="5-27">&nbsp;</td>
+                            <td id="6-27">&nbsp;</td>
+                            <td id="7-27">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td id="1-28">&nbsp;</td>
+                            <td id="2-28">&nbsp;</td>
+                            <td id="3-28">&nbsp;</td>
+                            <td id="4-28">&nbsp;</td>
+                            <td id="5-28">&nbsp;</td>
+                            <td id="6-28">&nbsp;</td>
+                            <td id="7-28">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">8-9 PM</td>
+                            <td id="1-29">&nbsp;</td>
+                            <td id="2-29">&nbsp;</td>
+                            <td id="3-29">&nbsp;</td>
+                            <td id="4-29">&nbsp;</td>
+                            <td id="5-29">&nbsp;</td>
+                            <td id="6-29">&nbsp;</td>
+                            <td id="7-29">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td id="1-30">&nbsp;</td>
+                            <td id="2-30">&nbsp;</td>
+                            <td id="3-30">&nbsp;</td>
+                            <td id="4-30">&nbsp;</td>
+                            <td id="5-30">&nbsp;</td>
+                            <td id="6-30">&nbsp;</td>
+                            <td id="7-30">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">9-10 PM</td>
+                            <td id="1-31">&nbsp;</td>
+                            <td id="2-31">&nbsp;</td>
+                            <td id="3-31">&nbsp;</td>
+                            <td id="4-31">&nbsp;</td>
+                            <td id="5-31">&nbsp;</td>
+                            <td id="6-31">&nbsp;</td>
+                            <td id="7-31">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td id="1-32">&nbsp;</td>
+                            <td id="2-32">&nbsp;</td>
+                            <td id="3-32">&nbsp;</td>
+                            <td id="4-32">&nbsp;</td>
+                            <td id="5-32">&nbsp;</td>
+                            <td id="6-32">&nbsp;</td>
+                            <td id="7-32">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">10-11 PM</td>
+                            <td id="1-33">&nbsp;</td>
+                            <td id="2-33">&nbsp;</td>
+                            <td id="3-33">&nbsp;</td>
+                            <td id="4-33">&nbsp;</td>
+                            <td id="5-33">&nbsp;</td>
+                            <td id="6-33">&nbsp;</td>
+                            <td id="7-33">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td id="1-34">&nbsp;</td>
+                            <td id="2-34">&nbsp;</td>
+                            <td id="3-34">&nbsp;</td>
+                            <td id="4-34">&nbsp;</td>
+                            <td id="5-34">&nbsp;</td>
+                            <td id="6-34">&nbsp;</td>
+                            <td id="7-34">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">11-12 PM</td>
+                            <td id="1-35">&nbsp;</td>
+                            <td id="2-35">&nbsp;</td>
+                            <td id="3-35">&nbsp;</td>
+                            <td id="4-35">&nbsp;</td>
+                            <td id="5-35">&nbsp;</td>
+                            <td id="6-35">&nbsp;</td>
+                            <td id="7-35">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td id="1-36">&nbsp;</td>
+                            <td id="2-36">&nbsp;</td>
+                            <td id="3-36">&nbsp;</td>
+                            <td id="4-36">&nbsp;</td>
+                            <td id="5-36">&nbsp;</td>
+                            <td id="6-36">&nbsp;</td>
+                            <td id="7-36">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="black">12-6 AM</td>
+                            <td id="1-37">&nbsp;</td>
+                            <td id="2-37">&nbsp;</td>
+                            <td id="3-37">&nbsp;</td>
+                            <td id="4-37">&nbsp;</td>
+                            <td id="5-37">&nbsp;</td>
+                            <td id="6-37">&nbsp;</td>
+                            <td id="7-37">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td id="1-38">&nbsp;</td>
+                            <td id="2-38">&nbsp;</td>
+                            <td id="3-38">&nbsp;</td>
+                            <td id="4-38">&nbsp;</td>
+                            <td id="5-38">&nbsp;</td>
+                            <td id="6-38">&nbsp;</td>
+                            <td id="7-38">&nbsp;</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-top:10px">
+            <table width="100%" id="dock" style="border:0px">
+                <tbody>
+                    <tr style="border-style:hidden; ">
+                        <td class="dock" id="draggable1"><img src="image/house-icon3.png" width="54" height="54" alt="" /></td>
+                        <td class="dock" id="draggable2"><img src="image/Martz90-Circle-Books.png" width="54" height="54" alt="" /></td>
+                        <td class="dock" id="draggable3"><img src="image/Shopping_icons_vector-05-256.png" width="54" height="54" alt="" /></td>
+                        <td class="dock" id="draggable4"><img src="image/24585390-dumbbell-icon.png" width="54" height="54" alt="" /></td>
+                        <td class="dock" id="draggable5"><img src="image/Sleeping-512.png" width="54" height="54" alt="" /></td>
+                        <td class="dock" id="draggable6"><img src="image/clock-time-3.png" width="54" height="54" alt="" /></td>
+                        <td style="font-size:43px;border:0px; font-size-adjust:inherit"><strong id="total">126</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="dock">Home / family commitments</td>
+                        <td class="dock">Lectures / classes</td>
+                        <td class="dock">Paid / Unpaid work</td>
+                        <td class="dock">Sports / Leisure activities</td>
+                        <td class="dock">Sleep</td>
+                        <td class="dock">Other / 30 minutes eg. travel</td>
+                        <td class="dock">hours left for study</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="width:70px; height:20px; float:left; margin:17px; text-decoration:none;"><button id="save">Save</button></div>
+    <div id="download" style="width:70px; height:20px; float:left; margin:17px; text-decoration:none;"><button>Download</button></div>
 
-<script>
+    <script>
+        var colour = null;
+        var total = 126;
+        $("#total").css("color", "#a6cf00").html(total);
+        $('table').disableSelection();
+        //$( "#1,1" ).click(function() {
+        //$("#debug").html("hello");
+        //});
+        //$("#debug").html("here");
+        //$("#dcc").html("hello");
+        //$("#1-1").html("hello");
+        //initialize cells
+        for (var i = 1; i <= 7; i++) {
+            for (var j = 1; j <= 38; j++) {
+                var id = "#" + i + "-" + j;
+                if (j % 2 == 0) {
+                    $(id).css("border-top-style", "hidden");
+                    $(id).css("border-top-width", "0px");
+                } else {
+                    $(id).css("border-bottom-style", "hidden");
+                    $(id).css("border-bottom-width", "0px");
+                }
+                $(id).click(highlight);
 
-var colour=null;
-var total=126;
-$("#total").css("color","#a6cf00").html(total);
-$('table').disableSelection();
-//$( "#1,1" ).click(function() {
-//$("#debug").html("hello");
-//});
-//$("#debug").html("here");
-//$("#dcc").html("hello");
-//$("#1-1").html("hello");
-//initialize cells
-for(var i=1; i<=7; i++){
-	for(var j=1; j<=38; j++){
-		var id="#"+i+"-"+j;
-		if(j%2==0){
-			$(id).css("border-top-style","hidden");
-			$(id).css("border-top-width","0px");
-		}
-		else{
-			$(id).css("border-bottom-style","hidden");
-			$(id).css("border-bottom-width","0px");
-		}
-		$(id).click(highlight);
-		
-		var highlight=function() {
-			if(colour !=null){
-			$("#download").hide();
-			var tId=$(this).attr("id");
-						if(parseInt(tId.substr(2,2))%2==0){
-							var nId=tId.substr(0,2)+(parseInt(tId.substr(2,2))-1);
-							var toggleColour=$(this).attr("class").substr(12,20);
-								var toggleColour2=$("#"+nId ).attr("class").substr(12,20);
+                var highlight = function() {
+                    if (colour != null) {
+                        $("#download").hide();
+                        var tId = $(this).attr("id");
+                        if (parseInt(tId.substr(2, 2)) % 2 == 0) {
+                            var nId = tId.substr(0, 2) + (parseInt(tId.substr(2, 2)) - 1);
+                            var toggleColour = $(this).attr("class").substr(12, 20);
+                            var toggleColour2 = $("#" + nId).attr("class").substr(12, 20);
 
-							if($(this).attr("class")!="ui-droppable"){
-								$("#debug2").html($(this).attr("class"));
-								if(toggleColour2 == "" || toggleColour == "" ){
-									total+=0.5;
-								}
-								else{
-									total++;
-								}
-								$( this ).removeClass(toggleColour, 100, "easeOutSine")//,function(){total+=0.5}).html("removed");
-								$( "#"+nId ).removeClass(toggleColour2, 100, "easeOutSine")//,function(){total+=0.5}).html("removed");
-								
-							}
-							else{
-								if(colour != "darkGreen"){
-									if(toggleColour2.indexOf("darkGreen")>=0 || toggleColour.indexOf("darkGreen")>=0 ){
-										total-=0.5;
-									}
-									else{
-										total--;
-									}
-									$( this ).addClass(colour);
-									$( "#"+nId ).addClass(colour);
-								
-								}
-								else{
-									$( this ).addClass(colour);
-									total=total-0.5;
-								}
-							}
-						}
-						else{
-							var nId=tId.substr(0,2)+(parseInt(tId.substr(2,2))+1);
-							var toggleColour=$(this).attr("class").substr(12,20);
-							var toggleColour2=$("#"+nId ).attr("class").substr(12,20);
-							if($(this).attr("class")!="ui-droppable"){
-								$("#debug2").html($(this).attr("class"));
-								
-								if(toggleColour2 == "" || toggleColour == "" ){
-									total+=0.5;
-								}
-								else{
-									total++;
-								}
-								$( this ).removeClass(toggleColour, 100, "easeOutSine")//,function(){total+=0.5}).html("removed");
-								$( "#"+nId ).removeClass(toggleColour2, 100, "easeOutSine")//,function(){total+=0.5}).html("removed");
-									
-							}
-							else{
-								if(colour != "darkGreen"){
-									if(toggleColour2.indexOf("darkGreen")>=0 || toggleColour.indexOf("darkGreen")>=0 ){
-										total-=0.5;
-									}
-									else{
-										total--;
-									}
-									$( this ).addClass(colour);
-									$( "#"+nId ).addClass(colour);
-									
-								}
-								else{
-									$( this ).addClass(colour);
-									total=total-0.5;
-								}
-							}
-						}
-		}
-			if(total>=25){
-			$("#total").css("color","#a6cf00").html(total);
-			}
-			else if (total>=10){
-				$("#total").css("color","#ffaa00").html(total);
-			}
-			else {
-			$("#total").css("color","#ff3a00").html(total);
-			}
-		};
-		
-		
-		$(id).droppable({
-     		activeClass: "ui-state-hover",
-     		hoverClass: "ui-state-active",
-     	drop: function( event, ui ) {
-			var tId=$(this).attr("id");
-			//colour 2 cells if is not green
-			if(colour != "darkGreen"){
-				if(parseInt(tId.substr(2,2))%2==0){
-					var nId=tId.substr(0,2)+(parseInt(tId.substr(2,2))-1);
-					$( this ).addClass(colour);
-					$( "#"+nId ).addClass(colour);
-				}
-				else{
-					var nId=tId.substr(0,2)+(parseInt(tId.substr(2,2))+1);
-					$( this ).addClass(colour);
-					$( "#"+nId ).addClass(colour);
-				}
-				total--;
-			}
-			//colour half cell if is green
-			else{
-        		$( this ).addClass(colour);
-				total=total-0.5;
-			}
-			$("#total").html(total);
-        	return false;
-		}
-    });
-	} 
-}
+                            if ($(this).attr("class") != "ui-droppable") {
+                                $("#debug2").html($(this).attr("class"));
+                                if (toggleColour2 == "" || toggleColour == "") {
+                                    total += 0.5;
+                                } else {
+                                    total++;
+                                }
+                                $(this).removeClass(toggleColour, 100, "easeOutSine") //,function(){total+=0.5}).html("removed");
+                                $("#" + nId).removeClass(toggleColour2, 100, "easeOutSine") //,function(){total+=0.5}).html("removed");
+
+                            } else {
+                                if (colour != "darkGreen") {
+                                    if (toggleColour2.indexOf("darkGreen") >= 0 || toggleColour.indexOf("darkGreen") >= 0) {
+                                        total -= 0.5;
+                                    } else {
+                                        total--;
+                                    }
+                                    $(this).addClass(colour);
+                                    $("#" + nId).addClass(colour);
+
+                                } else {
+                                    $(this).addClass(colour);
+                                    total = total - 0.5;
+                                }
+                            }
+                        } else {
+                            var nId = tId.substr(0, 2) + (parseInt(tId.substr(2, 2)) + 1);
+                            var toggleColour = $(this).attr("class").substr(12, 20);
+                            var toggleColour2 = $("#" + nId).attr("class").substr(12, 20);
+                            if ($(this).attr("class") != "ui-droppable") {
+                                $("#debug2").html($(this).attr("class"));
+
+                                if (toggleColour2 == "" || toggleColour == "") {
+                                    total += 0.5;
+                                } else {
+                                    total++;
+                                }
+                                $(this).removeClass(toggleColour, 100, "easeOutSine") //,function(){total+=0.5}).html("removed");
+                                $("#" + nId).removeClass(toggleColour2, 100, "easeOutSine") //,function(){total+=0.5}).html("removed");
+
+                            } else {
+                                if (colour != "darkGreen") {
+                                    if (toggleColour2.indexOf("darkGreen") >= 0 || toggleColour.indexOf("darkGreen") >= 0) {
+                                        total -= 0.5;
+                                    } else {
+                                        total--;
+                                    }
+                                    $(this).addClass(colour);
+                                    $("#" + nId).addClass(colour);
+
+                                } else {
+                                    $(this).addClass(colour);
+                                    total = total - 0.5;
+                                }
+                            }
+                        }
+                    }
+                    if (total >= 25) {
+                        $("#total").css("color", "#a6cf00").html(total);
+                    } else if (total >= 10) {
+                        $("#total").css("color", "#ffaa00").html(total);
+                    } else {
+                        $("#total").css("color", "#ff3a00").html(total);
+                    }
+                };
 
 
- $("[id$=37]").addClass("black");
-$("[id$=38]").addClass("black");
-	
-$(function() {
-	$("[id^=draggable]").css( 'height', '85px' );
-	$("[id^=draggable]").click(function(){
-		//reset the highlight
-		$("[id^=draggable]").css("background", "");
-		$("[id^=draggable]").css("background-size", "");
-		switch($(this).attr("id")){
-			case "draggable1":
-			colour="lightBlue";
-			$(this).css("background","#fff url(image/lightBlue_shadow.png) no-repeat center center" );		
-			$(this).css("background-size","100% 100%");
-			break;
-			case "draggable2":
-			colour="red";
-			$(this).css("background","#fff url(image/red_shadow.png) no-repeat center center" );		
-			$(this).css("background-size","100% 100%");
-			break;
-			case "draggable3":
-			colour="darkBlue";
-			$(this).css("background","#fff url(image/darkBlue_shadow.png) no-repeat center center" );		
-			$(this).css("background-size","100% 100%");
-			break;
-			case "draggable4":
-			colour="orange";
-			$(this).css("background","#fff url(image/orange_shadow.png) no-repeat center center" );		
-			$(this).css("background-size","100% 100%");
-			break;
-			case "draggable5":
-			colour="black";
-			$(this).css("background","#fff url(image/black_shadow.png) no-repeat center center" );		
-			$(this).css("background-size","100% 100%");
-			break;
-			case "draggable6":
-			colour="darkGreen";
-			$(this).css("background","#fff url(image/darkGreen_shadow.png) no-repeat center center" );		
-			$(this).css("background-size","100% 100%");
-			break;
-		}
-	});
-	
-	$("[id^=draggable]").css( 'cursor', "pointer");
-		
-});
-
-function detectIE() {
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf('MSIE ');
-    var trident = ua.indexOf('Trident/');
-
-    if (msie > 0) {
-        // IE 10 or older => return version number
-		$("#debug").html("ie");
-		return true;
-        //return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-    }
-
-    if (trident > 0) {
-        // IE 11 (or newer) => return version number
-			$("#debug").html("ie");
-		return true;
-        //var rv = ua.indexOf('rv:');
-       // return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-    }
-
-    // other browser
-		$("#debug").html("not ie");
-    return false;
-}
-
-$("#save").hide();
-	$("#download").hide();
-	
-if(!detectIE()){
-	$("#save").show();
-var link = document.createElement("a");
-var linkText = document.createTextNode("Download");
-	link.appendChild(linkText);
-	link.download = "photo.png"; //Setup name file
-	$("#save").click(function(){
-		html2canvas($("#timetable"), {
- 		 onrendered: function(canvas) {
-		var img = canvas.toDataURL();
-		link.href = img.replace(/^data[:]image\/(png|jpg|jpeg)[;]/i, "data:application/octet-stream;");
-  		},
-		background: "#FFFFFF"});
-		$("#download").html(link);
-		$("#download").show();
-	});
-}
-	//$("#download").html(link);
-		
-	
+                $(id).droppable({
+                    activeClass: "ui-state-hover",
+                    hoverClass: "ui-state-active",
+                    drop: function(event, ui) {
+                        var tId = $(this).attr("id");
+                        //colour 2 cells if is not green
+                        if (colour != "darkGreen") {
+                            if (parseInt(tId.substr(2, 2)) % 2 == 0) {
+                                var nId = tId.substr(0, 2) + (parseInt(tId.substr(2, 2)) - 1);
+                                $(this).addClass(colour);
+                                $("#" + nId).addClass(colour);
+                            } else {
+                                var nId = tId.substr(0, 2) + (parseInt(tId.substr(2, 2)) + 1);
+                                $(this).addClass(colour);
+                                $("#" + nId).addClass(colour);
+                            }
+                            total--;
+                        }
+                        //colour half cell if is green
+                        else {
+                            $(this).addClass(colour);
+                            total = total - 0.5;
+                        }
+                        $("#total").html(total);
+                        return false;
+                    }
+                });
+            }
+        }
 
 
-var genPic=function(){
-html2canvas($("#timetable"), {
-  onrendered: function(canvas) {
-    //document.body.appendChild(canvas);
-	
-	var img = canvas.toDataURL();
-	
-	//var url  = img.replace(/^data[:]image\/(png|jpg|jpeg)[;]/i, "data:application/octet-stream;");
-	link.href = img.replace(/^data[:]image\/(png|jpg|jpeg)[;]/i, "data:application/octet-stream;");
-	//link.onclick = function(){
-//   // alert('here be dragons');
-//	window.open(url, 'window name', 'window settings');
-// 	};
-	
-	//document.body.appendChild(link);
-  }
-})};
-// $(document).ready(function () {
-//          $('#saveBtn').click(function () {
-//              alert("hiii");
-//              $("#timetable").html2canvas();
-//             var img = canvas.toDataURL();
-//			var frame = document.getElementById("myHideFrame");
-//			if(!frame) {
-//   			 frame = document.createElement("iframe");
-//    		frame.id = "myHideFrame";
-//   		 document.body.appendChild(frame);
-//			}
-//			frame.src = img.replace(/^data[:]image\/(png|jpg|jpeg)[;]/i, "data:application/octet-stream;");
-//
-//          });
-//      });
+        $("[id$=37]").addClass("black");
+        $("[id$=38]").addClass("black");
 
-</script>
+        $(function() {
+            $("[id^=draggable]").css('height', '85px');
+            $("[id^=draggable]").click(function() {
+                //reset the highlight
+                $("[id^=draggable]").css("background", "");
+                $("[id^=draggable]").css("background-size", "");
+                switch ($(this).attr("id")) {
+                    case "draggable1":
+                        colour = "lightBlue";
+                        $(this).css("background", "#fff url(image/lightBlue_shadow.png) no-repeat center center");
+                        $(this).css("background-size", "100% 100%");
+                        break;
+                    case "draggable2":
+                        colour = "red";
+                        $(this).css("background", "#fff url(image/red_shadow.png) no-repeat center center");
+                        $(this).css("background-size", "100% 100%");
+                        break;
+                    case "draggable3":
+                        colour = "darkBlue";
+                        $(this).css("background", "#fff url(image/darkBlue_shadow.png) no-repeat center center");
+                        $(this).css("background-size", "100% 100%");
+                        break;
+                    case "draggable4":
+                        colour = "orange";
+                        $(this).css("background", "#fff url(image/orange_shadow.png) no-repeat center center");
+                        $(this).css("background-size", "100% 100%");
+                        break;
+                    case "draggable5":
+                        colour = "black";
+                        $(this).css("background", "#fff url(image/black_shadow.png) no-repeat center center");
+                        $(this).css("background-size", "100% 100%");
+                        break;
+                    case "draggable6":
+                        colour = "darkGreen";
+                        $(this).css("background", "#fff url(image/darkGreen_shadow.png) no-repeat center center");
+                        $(this).css("background-size", "100% 100%");
+                        break;
+                }
+            });
+
+            $("[id^=draggable]").css('cursor', "pointer");
+
+        });
+
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf('MSIE ');
+            var trident = ua.indexOf('Trident/');
+
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                $("#debug").html("ie");
+                return true;
+                //return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            }
+
+            if (trident > 0) {
+                // IE 11 (or newer) => return version number
+                $("#debug").html("ie");
+                return true;
+                //var rv = ua.indexOf('rv:');
+                // return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+
+            // other browser
+            $("#debug").html("not ie");
+            return false;
+        }
+
+        $("#save").hide();
+        $("#download").hide();
+
+        if (!detectIE()) {
+            $("#save").show();
+            var link = document.createElement("a");
+            var linkText = document.createTextNode("Download");
+            link.appendChild(linkText);
+            link.download = "photo.png"; //Setup name file
+            $("#save").click(function() {
+                html2canvas($("#timetable"), {
+                    onrendered: function(canvas) {
+                        var img = canvas.toDataURL();
+                        link.href = img.replace(/^data[:]image\/(png|jpg|jpeg)[;]/i, "data:application/octet-stream;");
+                    },
+                    background: "#FFFFFF"
+                });
+                $("#download").html(link);
+                $("#download").show();
+            });
+        }
+        //$("#download").html(link);
+
+
+
+
+        var genPic = function() {
+            html2canvas($("#timetable"), {
+                onrendered: function(canvas) {
+                    //document.body.appendChild(canvas);
+
+                    var img = canvas.toDataURL();
+
+                    //var url  = img.replace(/^data[:]image\/(png|jpg|jpeg)[;]/i, "data:application/octet-stream;");
+                    link.href = img.replace(/^data[:]image\/(png|jpg|jpeg)[;]/i, "data:application/octet-stream;");
+                    //link.onclick = function(){
+                    //   // alert('here be dragons');
+                    //	window.open(url, 'window name', 'window settings');
+                    // 	};
+
+                    //document.body.appendChild(link);
+                }
+            })
+        };
+        // $(document).ready(function () {
+        //          $('#saveBtn').click(function () {
+        //              alert("hiii");
+        //              $("#timetable").html2canvas();
+        //             var img = canvas.toDataURL();
+        //			var frame = document.getElementById("myHideFrame");
+        //			if(!frame) {
+        //   			 frame = document.createElement("iframe");
+        //    		frame.id = "myHideFrame";
+        //   		 document.body.appendChild(frame);
+        //			}
+        //			frame.src = img.replace(/^data[:]image\/(png|jpg|jpeg)[;]/i, "data:application/octet-stream;");
+        //
+        //          });
+        //      });
+    </script>
+
 </body>
+
 </html>

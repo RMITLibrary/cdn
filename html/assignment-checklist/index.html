@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-au">
+
 <head>
-    <meta charset="UTF-8">
-    <title>CodePen - Bootstrap Checklist or TODO list</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment Checklist</title>
     <link rel="stylesheet" href="./rmit-bootstrap-5.css">
     <link rel="stylesheet" href="./style.css">
+    <!-- 
+         Build notes : Modified from a Codepen experiment by Rishabh Agrawal.
+         https://codepen.io/AndroidRishabh/pen/vYxJPej
+         Developed for RMIT by Jack Dunstan : https://www.linkedin.com/in/jackdunstan/
+        -->
 </head>
+
 <body>
-
-
-
-        <div id="myDIV" class="header">
-            <h2 style="margin:5px">Assignment Checklist <div id="result">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col p-0">
+                <div id="myDIV" class="header">
+                    <h2 style="margin:5px">Assignment Checklist <div id="result">
+                        </div>
+                    </h2>
+                    <input type="text" id="myInput" placeholder="Add your task here">
+                    <span onclick="newElement()" class="addBtn">Add</span>
                 </div>
-            </h2>
-
-            <input type="text" id="myInput" placeholder="Title...">
-            <span onclick="newElement()" class="addBtn">Add</span>
+                <ul id="myUL">
+                    <li>Have you answered the question or completed all requirements of the assignment?</li>
+                    <li class="checked">Read this checklist</li>
+                    <li>Have you checked for any additional instructions before submitting?</li>
+                    <li>Have you checked your work against the rubric on Canvas?</li>
+                    <li>Does your final submission look the same in the format you are submitting it in?</li>
+                    <li>Have you organised your work in a logical way?</li>
+                    <li>Have all sources been cited according to the conventions of your course?</li>
+                    <li>Is your reference list full, in the correct order and all entries formatted accurately?</li>
+                    <li>Has everyone who has worked on this assignment been credited?</li>
+                    <li>Have you provided enough evidence and detail to support your ideas?</li>
+                    <li>Have you followed any formatting requirements?</li>
+                    <li>Have you proofread for errors or typos?</li>
+                </ul>
+            </div>
         </div>
-
-        <ul id="myUL">
-            <li>Have you answered the question or completed all requirements of the assignment?</li>
-            <li>Have you covered the requirements of the rubric?</li>
-            <li class="checked">Read this checklist</li>
-            <li>Have you checked for any additional instructions before submitting?</li>
-            <li>Have you checked your work against the rubric on Canvas?</li>
-            <li>Does your final submission look the same in the format you are submitting it in?</li>
-            <li>Have you organised your work in a logical way?</li>
-            <li>Have all sources been cited according to the conventions of your course?</li>
-            <li>Is your reference list full, in the correct order and all entries formatted accurately?</li>
-            <li>Has everyone who has worked on this assignment been credited?</li>
-            <li>Have you provided enough evidence and detail to support your ideas?</li>
-            <li>Have you followed any formatting requirements?</li>
-
-            <li>Have you proofread for errors or typos?</li>
-
-        </ul>
-
-
-
-
-    <!-- partial -->
+    </div>
     <script src="./script.js"></script>
 
 </body>

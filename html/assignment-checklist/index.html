@@ -7,10 +7,13 @@
     <title>Assignment Checklist</title>
     <link rel="stylesheet" href="./rmit-bootstrap-5.css">
     <link rel="stylesheet" href="./style.css">
-    <!-- 
+    <!--
          Build notes : Modified from a Codepen experiment by Rishabh Agrawal.
          https://codepen.io/AndroidRishabh/pen/vYxJPej
-         Developed for RMIT by Jack Dunstan : https://www.linkedin.com/in/jackdunstan/
+         Developed for RMIT by Jack Dunstan, Digital Learning Team, RMIT University Library - digital.learning.library@rmit.edu.au
+        
+        * Can't add to it with keyboard navigation
+        *  
         -->
 </head>
 
@@ -19,11 +22,11 @@
         <div class="row">
             <div class="col p-0">
                 <div id="myDIV" class="header">
-                    <h2 style="margin:5px">Assignment Checklist <div id="result">
+                    <h2>Assignment Checklist <div id="result">
                         </div>
                     </h2>
                     <input type="text" id="myInput" placeholder="Add your task here">
-                    <span onclick="newElement()" class="addBtn">Add</span>
+                    <button tabindex="0" onclick="newElement()" class="addBtn">Add</button>
                 </div>
                 <ul id="myUL">
                     <li>Have you answered the question or completed all requirements of the assignment?</li>

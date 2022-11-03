@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<document-metadata version="1.0" xmlns="http://breeze.macromedia.com/ns/document-metadata" generator="Adobe Captivate 8">
+<document-info>
+	<title>Interactive risk assessment matrix - zoo scenarios</title>
+	<summary>What is this matrix used for? 
+A risk assessment matrix is used during risk assessment to define the level of risk by considering the category of probability or likelihood against the category of consequence severity. This is a simple mechanism to increase the visibility of risks and assist management decision making. 
+The hierarchy of control should be used in conjunction with the risk assessment matrix. 
+How to use this interactive 
+Click on the coloured boxes in this 5x5 matrix to reveal a different scenario for each risk option in the table. 
+These zoo scenarios include some amusing, some far-fetched, and some real and potentially serious risk scenarios that might occur in a Zoo (some of these have really happened!) 
+This interactive is designed to help reinforce your learning about how to assess risk using the 5x5 matrix model shown here with examples that range from very mild to extremely serious in consequence. 
+*Your field of study/work will have its own set of risks. It is important to consider the context and interpretation of how different events may impact your potential environment – different people may interpret risk at various levels of severity depending on their knowledge of work practices and past experiences. 
+</summary>
+	<author>RMIT Library, Digital Learning</author>
+	<keywords>Adobe Captivate Project Interactive risk assessment matrix - zoo scenarios</keywords>
+	<view-link href="index.html?slide={position}"/>
+</document-info>
+<section type="slide" position="1">
+	<title>Risk assessment matrix interactive</title>
+
+	<content></content>
+</section>
+</document-metadata>

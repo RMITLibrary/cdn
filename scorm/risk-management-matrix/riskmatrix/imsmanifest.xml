@@ -34,8 +34,7 @@
 			</metadata>
 			
 			<file href="assets/TOC_icons/collapseIcon.png"/>
-		    <file href="index_scorm.html"/>
-			<file href="scormdriver.js"/>
+		    <file href="index.html"/>
 			<file href="browsersniff.js"/>
 			
 <file href="assets/TOC_icons/expandIcon.png"/> 

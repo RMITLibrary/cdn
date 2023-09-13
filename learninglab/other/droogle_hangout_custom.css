@@ -1,0 +1,38 @@
+#content #block-droogle-hangout-droogle-hangout-invites h2,
+#block-droogle-hangout-droogle-hangout-invites h2 {
+  background-color: #629540;
+}
+
+.slant-45 {
+  border-right: 20px solid #629540;
+}
+
+#hangout-invite-popup {
+  border: solid 5px #629540;
+}
+
+.hangout-btn-bubble {
+  background-color: #9fc56d;
+}
+
+.hangout-btn-bubble:after {
+  border-right: 8px solid #9fc56d;
+}
+
+#google-popup-logo {
+  background: url(http://emedia.rmit.edu.au/dev/sites/all/modules/custom/droogle_hangout/images/hangout_logo_green.png) no-repeat 0 0 transparent;
+}
+
+#close-hangout-invite-popup:hover {
+  background-color: #427520;
+}
+
+.hangout-sent {
+  border: solid 3px #629540;
+  border-top: solid 20px #629540;
+}
+
+.hangout-sent a:visited,
+.hangout-sent a {
+  background-color: #528530;
+}

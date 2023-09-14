@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/modules/system/system.base.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/system/system.menus.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/system/system.messages.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/system/system.theme.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/overlay/overlay-parent.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.button.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.resizable.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.dialog.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.selectable.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/contextual/contextual.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/modules/book/book.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox_node/colorbox_node.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/comment/comment.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/field/theme/field.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/logintoboggan/logintoboggan.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/node/node.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/search/search.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/user/user.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/views/css/views.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox/styles/default/colorbox_style.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/ctools/css/ctools.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/ldap/ldap_help/ldap_help.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/css/lab_helper.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/lightbox2/css/lightbox.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/BookMadeSimple/book_made_simple.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/webform/css/webform.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/libraries/fontawesome/css/font-awesome.css?r1mc0o");
+</style>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" />
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/modules/shortcut/shortcut.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/toolbar/toolbar.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/default.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/style.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/layout.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/learning_lab_dialog.css?r1mc0o");
+</style>
+<style type="text/css" media="print">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/print.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/default/files/css_injector/css_injector_12.css?r1mc0o");
+</style>
+  <script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/drupal.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/misc/1.9/jquery.ba-bbq.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/misc/1.9/overlay-parent.js?v=1.0"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/modules/contextual/contextual.js?v=1.0"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/ajax.js?v=7.56"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/libraries/colorbox/jquery.colorbox-min.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox/js/colorbox.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox/styles/default/colorbox_style.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox/js/colorbox_load.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/js/js.cookie-2.1.1.min.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/lightbox2/js/auto_image_handling.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/lightbox2/js/lightbox_video.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/lightbox2/js/lightbox.js?1635311741"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/devel/devel_krumo_path.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/textarea.js?v=7.56"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/progress.js?v=7.56"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/webform/js/webform.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/js/feedback.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/google_analytics/googleanalytics.js?r1mc0o"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-18193581-7", {"cookieDomain":"auto"});ga("require", "linkid", "linkid.js");ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/bs_shortcodes/includes/js/bootstrap-shortcodes-tooltip.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/bs_shortcodes/includes/js/bootstrap-shortcodes-popover.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/js/jquery.ui.touch-punch.min.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/autocomplete.js?v=7.56"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/modules/toolbar/toolbar.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox_node/colorbox_node.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/js/lab_helper.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/js/global.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/js/bookboxmenus.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/js/mobile.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/js/new_window.js?r1mc0o"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/learninglab\/","pathPrefix":"","ajaxPageState":{"theme":"ll","theme_token":"buS34IW1y2AAzNkuWC5UfHQ3Y79gTC-Zcakrdck1eBY","jquery_version":"1.10","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/1.9\/jquery.ba-bbq.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/1.9\/overlay-parent.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.button.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.mouse.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.draggable.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.position.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.resizable.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.dialog.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.droppable.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.sortable.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.selectable.min.js":1,"modules\/contextual\/contextual.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/LearningLabNodeTypes\/js\/js.cookie-2.1.1.min.js":1,"sites\/all\/modules\/lightbox2\/js\/auto_image_handling.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox_video.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/devel\/devel_krumo_path.js":1,"misc\/textarea.js":1,"misc\/progress.js":1,"sites\/all\/modules\/webform\/js\/webform.js":1,"sites\/all\/modules\/LearningLabNodeTypes\/js\/feedback.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/modules\/bs_shortcodes\/includes\/js\/bootstrap-shortcodes-tooltip.js":1,"sites\/all\/modules\/bs_shortcodes\/includes\/js\/bootstrap-shortcodes-popover.js":1,"sites\/all\/modules\/LearningLabNodeTypes\/js\/jquery.ui.touch-punch.min.js":1,"misc\/autocomplete.js":1,"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.6\/js\/bootstrap.min.js":1,"modules\/toolbar\/toolbar.js":1,"sites\/all\/modules\/colorbox_node\/colorbox_node.js":1,"sites\/all\/modules\/LearningLabNodeTypes\/js\/lab_helper.js":1,"sites\/all\/themes\/ll\/js\/global.js":1,"sites\/all\/themes\/ll\/js\/bookboxmenus.js":1,"sites\/all\/themes\/ll\/js\/mobile.js":1,"sites\/all\/themes\/ll\/js\/new_window.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"modules\/overlay\/overlay-parent.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"misc\/ui\/jquery.ui.selectable.css":1,"modules\/contextual\/contextual.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/colorbox_node\/colorbox_node.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/ldap\/ldap_help\/ldap_help.css":1,"sites\/all\/modules\/LearningLabNodeTypes\/css\/lab_helper.css":1,"sites\/all\/modules\/lightbox2\/css\/lightbox.css":1,"sites\/all\/modules\/BookMadeSimple\/book_made_simple.css":1,"sites\/all\/modules\/webform\/css\/webform.css":1,"sites\/all\/libraries\/fontawesome\/css\/font-awesome.css":1,"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.6\/css\/bootstrap.min.css":1,"modules\/shortcut\/shortcut.css":1,"modules\/toolbar\/toolbar.css":1,"sites\/all\/themes\/ll\/css\/default.css":1,"sites\/all\/themes\/ll\/css\/style.css":1,"sites\/all\/themes\/ll\/css\/layout.css":1,"sites\/all\/themes\/ll\/css\/learning_lab_dialog.css":1,"sites\/all\/themes\/ll\/css\/print.css":1,"public:\/\/css_injector\/css_injector_12.css":1}},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.85","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":false,"maxWidth":"98%","maxHeight":"98%","initialWidth":"300","initialHeight":"250","fixed":false,"scrolling":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"lightbox2":{"rtl":0,"file_path":"\/learninglab\/(\\w\\w\/)public:\/","default_image":"\/learninglab\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"img.inline","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":1,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":1,"flvPlayer":"\/learninglab\/sites\/all\/libraries\/jwplayer\/player.swf","flvFlashvars":""},"overlay":{"paths":{"admin":"node\/*\/webform\nnode\/*\/webform\/*\nnode\/*\/webform-results\nnode\/*\/webform-results\/*\nnode\/*\/submission\/*\nnode\/*\/outline\nnode\/*\/outline\/remove\nnode\/*\/book_access\nbook_access\/*\nfield-collection\/*\/*\/edit\nfield-collection\/*\/*\/delete\nfield-collection\/*\/add\/*\/*\nuser\/*\/linkchecker\nlinkchecker\/*\/edit\nnode\/*\/edit\nnode\/*\/delete\nnode\/*\/revisions\nnode\/*\/revisions\/*\/revert\nnode\/*\/revisions\/*\/delete\nnode\/add\nnode\/add\/*\nnode\/*\/nodequeue\noverlay\/dismiss-message\nuser\/*\/shortcuts\nadmin\nadmin\/*\nbatch\ntaxonomy\/term\/*\/edit\nuser\/*\/cancel\nuser\/*\/edit\nuser\/*\/edit\/*\ndevel\/*\nnode\/*\/devel\nnode\/*\/devel\/*\ncomment\/*\/devel\ncomment\/*\/devel\/*\nuser\/*\/devel\nuser\/*\/devel\/*\ntaxonomy\/term\/*\/devel\ntaxonomy\/term\/*\/devel\/*","non_admin":"admin\/structure\/block\/demo\/*\nadmin\/reports\/status\/php"},"pathPrefixes":[],"ajaxCallback":"overlay-ajax"},"ajax":{"edit-submit--2":{"callback":"ajax_feedback_callback","wrapper":"webform-client-form-924","method":"replaceWith","effect":"fade","event":"mousedown","keypress":true,"prevent":"click","url":"\/learninglab\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Submit feedback"}}},"urlIsAjaxTrusted":{"\/learninglab\/system\/ajax":true,"\/learninglab\/content\/artist-statement-1-gunshydesign":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1,"trackUrlFragments":1},"colorbox_node":{"width":"600px","height":"600px"},"tableHeaderOffset":"Drupal.toolbar.height"});
+//--><!]]>
+</script>
+  <script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+</head>
+	<style type="text/css">
+.selection {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin: 10px 4px;
+    line-height: 30px;
+	}
+	</style>
+<body>
+
+
+
+
+<h3>Peter Westwood&nbsp;</h3>
+	<p class="introductory-paragraph">Long artist statement - artwork&nbsp; (395 words) </p>
+<div class="alert alert-info"><button class="close" data-dismiss="alert" type="button">&times;</button>
+			<p><svg class="bi bi-info-circle-fill" fill="currentColor" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path> </svg> <strong>Select the buttons </strong> to highlight the structure and different parts of the text.&nbsp;</p>
+		</div>
+<div class="accessibility-hide" id="activity">
+	<div class="legends" style="vertical-align:top">
+		<h4 style="margin-left: 40px;">Parts of the statement:</h4>
+			<p style="margin-left: 40px;">
+				<button class="btn btn-default btn-xs" id="context_btn">Context and meaning behind the work</button>
+				<button class="btn btn-default btn-xs" id="content_btn">Content – description of the work</button>
+				<button class="btn btn-default btn-xs" id="rationale_btn">Rationale - artist intent for the audience</button>
+				<button class="btn btn-default" id="show_btn">Show all</button>
+			</p>
+	</div>
+	<div id="sample-document">
+			<p><strong>Peter Westwood<br>
+			  The Poor Hospital, 2012</strong></p>
+			
+
+			
+			
+	<div class="paragraph">
+		<p>
+		<span class="context">The poor hospital alludes to multiple places and times affected by troublesome occurrences. The title of the work is ambiguous and could infer an inability within a society to care appropriately for those it holds in its care.  A poor hospital may imply something about a failure to feel for the plight of others, or the capacity of hospital staff or residents to endure, due to financial or political factors, or, if we consider the world currently, a pandemic. A poor hospital may be a place of uncertainty due to an incapacity to provide refuge or guidance, rather than being an institution capable of promoting well-being. A poor hospital may be a piteous reflection about an infirmary overtaken by sickness, or an institution that has failed its capabilities.  </span><br />
+ 
+<span class="content">In the centre of the work, a group of figures converges, comprising three nurses and two shadowy figures. We enter the picture, closely following a nurse as she pushes a wheelchair into the ward, towards a trolley that is being made ready. A shadowy character stands at the centre, his identity hidden by the mask brushed across his face, and although indeterminate, this figure implies a patriarchal presence. The intention of the nurse who stares directly at us is ambiguous: perhaps we are related to the incoming patient, or we’re part of the medical staff, or perhaps we are merely the viewer of the painting. The patient and their bed devolve into swipes of paint, their status, and even their very existence, reduced to the intrinsic structure of the painting itself. The blood-red streaks, depicting blankets and a nurse’s sash, are a sanguine reminder of our mortal fragility.</span><br />
+ 
+<span class="rationale">The nurse that stares directly at the onlooker casts an enigmatic gaze. The gaze, and the nurse’s intention are not clear. We consider that she may be seeking our aid, revoking us for our role as ineffectual observers, or may equally be standing defiant, rejecting our assumptions. Nevertheless, the nurse appears to provide a ‘draw’ for the viewer as they become self-aware through the subconscious repetition of being seen and looked at: the viewer becomes conscious of the gaze, the pattern of being aware of equally being a visual object. (Lacan 1977, pp. 77-79). The nurse’s gaze locks us into a silent dialogue, and we suspect that this may be our hospital, that we have somehow permitted its impoverishment.</span><br /><br />
+ 
+Reference: 
+Lacan, J. (1977). The four fundamental concepts of psychoanalysis, Miller, J-A. (ed). Translated from the French by Alan Sheridan. London and New York: Karnac. 
+
+		</p>
+	
+	</div>	
+		
+		<p><strong>Peter Westwood</strong> <br /><em>The Poor Hospital</em>, 2012<br>
+	       Artwork Acc RMIT.2018.24 <br>
+	       Oil on linen; 92 X 128 cm<br>
+          RMIT University Collection<br />
+	&copy;Copyright Peter Westwood</p>
+</div>
+
+<p>&nbsp;</p>
+			
+<script>
+    (function($){
+        //        $('[data-toggle="tooltip"]').tooltip()
+
+        var modes = ['context','content','rationale']  
+        var mode = ''
+        $("#activity button").click(function(){
+            var id = $(this).attr("id")
+            mode = id.slice(0,id.length-4).toLowerCase();
+            var color= "color"+(modes.indexOf(mode)+1)
+            dehighlight()
+            highlight(mode,color)
+        })
+
+        $("#show_btn").click(function(){
+            if($(this).text()=='Show all'){
+                for(var i=1;i<11;i++){
+                    var color = "color"+i
+                    highlight(modes[i-1],color)
+                }
+                $(this).text('Hide all')
+            }else{
+                dehighlight()
+                $(this).text('Show all')
+            }
+
+        })
+
+        var highlight = function(mode,color){
+            $("."+mode).addClass(color+"-h "+color)
+            $("#"+mode+"_btn").addClass(color+"-h "+color+" "+color+"-b")
+        }
+
+        var dehighlight = function(){
+            $("#activity span, #activity button").removeClass(function(){
+                var classes =''
+                for(var i=1;i<11;i++){
+                    classes+="color"+i+" color"+i+"-h "+'color'+i+"-b "
+                }
+                return classes;
+            })
+        }
+        })(jQuery)
+</script>
+<style type="text/css">
+.color1{color: #104880!important;}
+    .color1-b{border: 1px solid #104880 !important}
+    .color1-h{background-color: #DDF5FD!important;}
+    .color2, .correct{color: #134D13!important;}
+    .color2-b, .correct{border: 1px solid #134D13 !important}
+    .color2-h, .correct{background-color: #CCE7DF!important;}
+    .color4, .incorrect{color: #D50000!important;}
+    .color4-b, .incorrect{border: 1px solid #D50000 !important}
+    .color4-h, .incorrect{background-color: #FBE6E6!important;}
+
+    .color3{color: #B84600!important;}
+    .color3-b{border: 1px solid #F66000!important}
+    .color3-h{background-color: #FFF3DE!important;}
+
+    .color5{color: #591E77!important;}
+    .color5-b{border: 1px solid #591E77!important}
+    .color5-h{background-color: #DFDBFE!important;}
+    .color6{color: #4D4D4D!important;}
+    .color6-b{border: 1px solid #4D4D4D!important}
+    .color6-h{background-color: #E6E6E6!important;}
+    .color7{color: #8F6400!important;}
+    .color7-b{border: 1px solid #FDB000!important}
+    .color7-h{background-color: #FFFADA!important;}
+
+    .color8{color: #7D5D54!important;}
+    .color8-b{border: 1px solid #A18071!important}
+    .color8-h{background-color: #EFEAD7!important;}
+    .color9{color: #AD2D1A!important;}
+    .color9-b{border: 1px solid #E66957!important}
+    .color9-h{background-color: #FAD4C2!important;}
+    .color10{color: #A3298B!important;}
+    .color10-b{border: 1px solid #CE3DB1!important}
+    .color10-h{background-color: #E9DBD8!important;}
+
+    .legends div, .legends button{
+        text-align: center;
+        padding: 2px 5px;
+        /*        width:90%;*/
+        margin:5px auto 5px auto;
+        border-radius: 5px
+    }
+    .paragraph{
+        line-height:25px
+    }
+    #activity button,#activity span {transition: all .3s}</style>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+var data = {
+    "type":"dropdown",
+    "questions":[
+        {
+            "markup":'<div><p><select class="btn btn-default"><option value="-1"></option><option value="0">Whereas</option><option value="1">Hence</option></select> in the past computers were too expensive for many families, today’s production techniques enable most households to afford a basic PC.</p><p>Simply being <select class="btn btn-default"><option value="-1"></option><option value="0">discriminated</option><option value="1">aware</option></select> of an issue is not enough to motivate a person to attempt to solve it; rather they must feel that the issue directly affects them.</p><p>Tutors will use their <select class="btn btn-default"><option value="-1"></option><option value="0">enforcement</option><option value="1">discretion</option></select> in granting extensions for assignments.</p><p>Employers are increasingly seeking graduates with a global <select class="btn btn-default"><option value="-1"></option><option value="0">orientation</option><option value="1">monitoring</option></select>.</p><p>Scientists have proven the importance of genetics in this area, and <select class="btn btn-default"><option value="-1"></option><option value="0">furthermore</option><option value="1">despite</option></select>, shown that lifestyle is not a major factor, as once thought.</p></div>',
+            "key":[0,1,1,0,0],
+            "answered":false
+        },
+        {
+            "markup":'<div><p>One difficulty of learning a language is understanding <select class="btn btn-default"><option value="-1"></option><option value="0">index</option><option value="1">abstract</option></select> concepts, which may have no direct translation in the learner’s native tongue.</p><p>Experts have warned of the effects of global warming for years; <select class="btn btn-default"><option value="-1"></option><option value="0">preceding</option><option value="1">nevertheless</option></select>, most governments have not implemented any real change in policy.</p><p>Following a spike in the <select class="btn btn-default"><option value="-1"></option><option value="0">incidence</option><option value="1">welfare</option></select> of the disease in the 1980s, funding was increased for scientists engaged in investigating the causes.</p><p>The <select class="btn btn-default"><option value="-1"></option><option value="0">input</option><option value="1">ratio</option></select> of major stakeholders such as community groups, legal representatives and educators was sought when designing the framework.</p><p>Once the information has entered the public <select class="btn btn-default"><option value="-1"></option><option value="0">domain</option><option value="1">generation</option></select>, particularly through social networking media, it can be very hard to erase.</p><p>Students must display a thorough understanding of the <select class="btn btn-default"><option value="-1"></option><option value="0">exceeding</option><option value="1">underlying</option></select> principles and demonstrate that they can apply them in a variety of scenarios.</p></div>',
+            "key":[1,1,0,0,0,1],
+            "answered":false
+        }
+    ]
+
+}

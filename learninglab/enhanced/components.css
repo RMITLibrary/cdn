@@ -1,0 +1,295 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ac-custom {
+	padding: 0 3em;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.ac-custom h2 {
+	font-size: 3em;
+	font-weight: 300;
+	padding: 0 0 0.5em;
+	margin: 0 0 30px;
+}
+
+.ac-custom ul,
+.ac-custom ol {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+.ac-custom li {
+	margin-left: 20px;
+	padding: 1em 0;
+	position: relative;
+    display: inline-block;
+}
+
+.ac-custom label {
+	display: inline-block;
+	position: relative;
+	font-size: 16px;
+	padding: 0 0 0 60px;
+	vertical-align: top;
+	color: rgba(0,0,0,0.2);
+	cursor: pointer;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before {
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	left: 0;
+	margin-top: -25px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"] {
+	opacity: 0;
+	-webkit-appearance: none;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 100;
+}
+
+.ac-custom label::before {
+	content: '';
+	border: 4px solid #fff;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.ac-radio label::before {
+	border-radius: 50%;
+}
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label {
+	color: rgba(0,0,0,1);
+} 
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before {
+	opacity: 0.8;
+}
+
+/* General SVG and path styles */
+
+.ac-custom svg {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	margin-top: -20px;
+	left: 5px;
+	pointer-events: none;
+}
+
+.ac-custom svg path {
+	stroke: #DC291E;
+	stroke-width: 13px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
+/* Specific input, SVG and path styles */
+
+/* Circle */
+.ac-circle input[type="checkbox"],
+.ac-circle input[type="radio"],
+.ac-circle label::before {
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	left: 15px;
+	position: absolute;
+}
+
+.ac-circle label::before {
+	background-color: rgba(0,0,0,.2);
+     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .03);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .03);
+	border: none;
+}
+
+.ac-circle svg {
+	width: 50px;
+    height: 50px;
+    margin-top: -24px;
+    left: 0px;
+}
+
+.ac-circle svg path {
+	stroke-width: 5px;
+} 
+
+/* Box Fill */
+.ac-boxfill svg path {
+	stroke-width: 8px;
+} 
+
+/* Swirl */
+.ac-swirl svg path {
+	stroke-width: 8px;
+}
+
+/* List */
+.ac-list ol {
+	list-style: decimal;
+	list-style-position: inside;
+}
+
+.ac-list ol li {
+	font-size: 2em;
+	padding: 1em 1em 0 2em;
+	text-indent: -40px;
+}
+
+.ac-list ol li label {
+	font-size: 1em;
+	text-indent: 0;
+	padding-left: 30px;
+}
+
+.ac-list label::before {
+	display: none;
+}
+
+.ac-list svg {
+	width: 100%;
+	height: 80px;
+	left: 0;
+	top: 1.2em;
+	margin-top: 0px;
+}
+
+.ac-list svg path {
+	stroke-width: 4px;
+}
+
+.wrapper{max-width: 720px;margin: 0px auto;padding:10px  0px;position: relative}
+
+    .section {
+        -webkit-box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.43);
+        -moz-box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.43);
+        box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.43);
+        display: block;
+        z-index: 99;
+        border-top:1px solid #eee;
+        background: #fff;
+    }
+
+    .section h4{display:inline-block;width: 60%;vertical-align: middle;margin:0;font-family: museo300}            
+    .section ul{display:inline-block;width: 40%;vertical-align: middle}  
+    .well{margin: 0; border-radius: 0}
+    .well ul{
+        display: none;width: 100%
+    }
+
+    .well ul li{
+        line-height: 35px;
+    }
+
+    .well .btn {
+        padding: 10px 15px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        font-size: smaller;
+        margin: 10px 6px;
+        display: inline-block;
+        transition: all .1s;
+        cursor: pointer;
+        color: #333;
+        background:transparent;
+    }
+    .well .btn:hover{
+        border: 1px solid #ccc;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .well .btn.active{
+        border: 1px solid #eee;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        background-color: #e6e6e6;
+        border-color: #adadad;
+    }
+
+    .well a{color: #333;transition: color .3s;text-decoration: underline}
+    .well a:hover{color:#DC291E;}
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+        http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    .well a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    .well abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+    * Don't show links that are fragment identifiers,
+    * or use the `javascript:` pseudo protocol
+    */
+
+    .well a[href^="#"]:after,
+    .well a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    .pr, .mi{display: block !important;width:40%;display: inline-block;border: 0!important}
+    .tfs, .tft{display: none !important}
+    .printOnly{display: block !important}
+    .notPrint{display: none !important}
+    .pr{float: left}
+    .mi{float: right}
+
+    .ac-circle label {
+        padding:15px;
+    }
+
+    .section{padding:0px;border: none;font-size: small}
+    .well{padding: 0px;border: none;border-top: 1px solid #ccc}
+    .well ul{width: 45%;display: inline-block}
+    .well ul li{
+        line-height: 25px !important;
+    }
+
+}
+
+.printOnly{display: none !important}
+.notPrint{display: block !important}

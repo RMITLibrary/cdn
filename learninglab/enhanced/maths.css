@@ -1,0 +1,183 @@
+
+.responsive-video {
+    padding-bottom: 37%;
+    max-width: 55%;
+}
+
+.responsive-activity {
+    position: relative;
+    padding-bottom: 37%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.responsive-activity iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.transcript {
+    margin-bottom: 40px;
+    float: none;
+}
+
+.transcript p {
+    width: 99% !important;
+}
+
+.lower-level #main #content-area {
+    width: 100% 
+}
+
+.lower-level #main #content-area input, #sidebar-second {
+    display: none
+}
+
+.MathJax_Display {
+    width: 55% !important;
+}
+	
+img { 
+    max-width: 100%;
+}
+
+#content-area p, #content-area table, #content-area hr {
+    width: 55%;
+}
+
+h4 {
+    color: #D30900;
+    font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+}
+
+blockquote {
+font-size: 1em;
+}
+
+a:link.mathspdf, a:active.mathspdf, a:hover.mathspdf, a:visited.mathspdf, a:focus.mathspdf {
+    color: #fff !important;
+    margin-top: 40px;
+    padding: 10px;
+    background: #222160;
+    display: inline-block;
+}
+
+a:link.mathspdf, a:visited.mathspdf {
+    text-decoration: none !important;
+}
+
+a:hover.mathspdf, a:active.mathspdf, a:focus.mathspdf {
+    text-decoration: underline !important;
+}
+
+label { 
+    cursor: pointer;
+    font-weight: normal; 
+}
+
+label:focus, label:hover { 
+    text-decoration: underline;
+}
+
+/* Side and margin notes ------------------------------------------------- */
+	
+.sidenote img, .marginnote img { 
+    max-width: 300px !important;
+}
+
+.sidenote, .marginnote { 
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
+.sidenote-number {
+    position: relative;
+    vertical-align: baseline;
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem; 
+}
+
+input.margin-toggle { display: none; }
+
+label.sidenote-number { display: inline; }
+
+label.margin-toggle:not(.sidenote-number) { display: none; }
+
+@media (max-width: 950px) {
+
+    .sidenote, .marginnote { 
+        float: none;
+        clear: both;
+        display: block;
+        margin-right: 0;
+        width: 95%;
+    }
+
+    label.sidenote-number, .sidenote-number { display: none; }
+
+    .MathJax_Display {
+        width: 95% !important;
+    }
+
+    #content-area p, #content-area table, #content-area hr {
+        width: 95%;
+    }
+
+    .responsive-video {
+    max-width: 95%;
+    }
+
+    .transcript {
+    max-width: 95%;
+    }
+
+    /* If you need to re-hide/reveal notes. 
+
+    label.margin-toggle:not(.sidenote-number) { display: inline; } 
+
+    .shownote,
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        width: 95%;
+        margin: 1rem 2.5%;
+    }*/
+
+}
+
+
+/* Accordion ------------------------------------------------- */
+
+
+.video-accordion .panel {
+    margin: 20px 0 !important;
+    width:  55%;
+}
+
+.video-accordion .video-accordion-button {
+    background-color: #474747;
+}
+
+.video-accordion h4 a:hover, .video-accordion h4 a:focus {
+    text-decoration: underline;
+    color: #d30900;
+}
+
+.video-accordion h4 a.accordion-toggle {
+    display: block;
+}
+
+.transcript .panel-default>.panel-heading {
+    text-align: left !important;
+}
+

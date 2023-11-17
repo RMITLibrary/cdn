@@ -15,8 +15,8 @@ Please convert folder and file names so they render consistently in browsers and
 
 ## Analytics for objects
 
-1. Paste this code as high in the <head> of the page as possible:
-```
+1. Paste this code as high in the `<head>` of the page as possible:
+```html
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -26,8 +26,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-2. Paste this code immediately after the opening <body> tag:
-```
+2. Paste this code immediately after the opening `<body>` tag:
+```html
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNVBSW6K"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -37,4 +37,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 ## To do
 
 * Include Google analytics tag in head of html files
-* Apply open graph data in the <head> of interactives
+* Apply open graph data in the `<head>` of interactives [Open Graph explainer](https://ogp.me) and [Open Graph Generator](https://smallseotools.com/open-graph-generator/)

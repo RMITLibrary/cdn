@@ -4,7 +4,7 @@ Place objects by type in folders by authoring mode and collection as appropriate
 
 Please add a readme file for each folder explaining the folder contents. This could be a link to the relebvant DLOR page or metadata export.
 
-## Public location
+## URLs explained
 
 ### Edit page:
 

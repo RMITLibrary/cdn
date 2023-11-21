@@ -4,6 +4,18 @@ Place objects by type in folders by authoring mode and collection as appropriate
 
 Please add a readme file for each folder explaining the folder contents. This could be a link to the relebvant DLOR page or metadata export.
 
+## Public location
+
+### Edit page:
+
+https://github.com/RMITLibrary/cdn/blob/main/hype/peer_mentoring_cred_interactives/M4-CYU/M4-CYU.html
+
+resolves to
+### Public (published) page
+
+https://rmitlibrary.github.io/cdn/hype/peer_mentoring_cred_interactives/M4-CYU/M4-CYU.html
+
+
 ## URL friendly content please.
 
 Please convert folder and file names so they render consistently in browsers and work on servers. Suggested:

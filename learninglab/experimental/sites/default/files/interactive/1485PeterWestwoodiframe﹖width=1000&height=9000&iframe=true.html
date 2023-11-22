@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style type="text/css" media="all">@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/system/system.base%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/system/system.menus%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/system/system.messages%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/system/system.theme%EF%B9%96r1mc0o.css");
+</style>
+<style type="text/css" media="all">@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/overlay/overlay-parent%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.button.min%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.resizable.min%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.dialog.min%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.selectable.min%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/contextual/contextual%EF%B9%96r1mc0o.css");
+</style>
+<style type="text/css" media="all">@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/book/book%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/colorbox_node/colorbox_node%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/comment/comment%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/field/theme/field%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/logintoboggan/logintoboggan%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/node/node%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/search/search%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/user/user%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/views/css/views%EF%B9%96r1mc0o.css");
+</style>
+<style type="text/css" media="all">@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/colorbox/styles/default/colorbox_style%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/ctools/css/ctools%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/ldap/ldap_help/ldap_help%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/LearningLabNodeTypes/css/lab_helper%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/lightbox2/css/lightbox%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/BookMadeSimple/book_made_simple%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/modules/webform/css/webform%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/libraries/fontawesome/css/font-awesome%EF%B9%96r1mc0o.css");
+</style>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" />
+<style type="text/css" media="all">@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/shortcut/shortcut%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/modules/toolbar/toolbar%EF%B9%96r1mc0o.css");
+</style>
+<style type="text/css" media="all">@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/themes/ll/css/default%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/themes/ll/css/style%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/themes/ll/css/layout%EF%B9%96r1mc0o.css");
+@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/themes/ll/css/learning_lab_dialog%EF%B9%96r1mc0o.css");
+</style>
+<style type="text/css" media="print">@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/all/themes/ll/css/print%EF%B9%96r1mc0o.css");
+</style>
+<style type="text/css" media="all">@import url("https://learninglab.rmit.edu.au/sites/default/files/sites/default/files/css_injector/css_injector_12%EF%B9%96r1mc0o.css");
+</style>
+
+<script type="text/javascript" src="https://learninglab.rmit.edu.au/sites/default/files/sites/all/js_files.js"></script>
+
+  <script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+</head>
+	<style type="text/css">.selection {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin: 10px 4px;
+    line-height: 30px;
+	}
+	</style>
+<body>
+
+
+
+
+<h3>Peter Westwood&nbsp;</h3>
+	<p class="introductory-paragraph">This vocabulary quiz will test your knowledge of common words used for creative practice writing.</p>
+
+<div class="activity-container" id="select-activity">
+	<h3 class="activity-heading">Artist statement &ndash; general art practice</h3>
+	<div class="accessibility-hide" id="activity">
+		<div class="panel-body">
+			<div>
+				<div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button><svg class="bi bi-info-circle-fill" fill="currentColor" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path> </svg> To complete this quiz, <strong>select the missing word</strong> from each drop-down menu and check your answers to see your results.</div>
+			</div>
+			<div class="buttons" style="margin-left: 40px;"><button class="btn btn-default" id="check-answers" type="button">Check Answers</button><button class="btn btn-default" id="show-answers" type="button">Show Answers</button><button class="btn btn-default" id="clear" type="button">Clear</button></div>
+			<p>&nbsp;</p>
+			<div id="sample-document">
+				<p><strong>Peter Westwood</strong><br />
+					The poor hospital, 2012<br />
+					Oil on linen; 92 X 128 cm<br />
+					RMIT University Collection</p>
+				<p><strong>General art practice statement: </strong><br />
+					Peter Westwood&rsquo;s work <span class="2"><select class="options" id="first"></select></span> and comments on perpetual change as a way of articulating our contemporaneity. Adopting an <span class="5"><select class="options" id="first"></select></span> involving the production of paintings and their presentation as constituents of a network in the form of exhibition, his work focuses on ideas of capriciousness to <span class="1"><select class="options" id="first"></select></span> volatility, coming into being-ness, fleetingness and multiplicity. The effects of capriciousness or unpredictability in the experience of his artworks reveals ideas of unending transition in our times, provoking the viewer to <span class="4"><select class="options" id="first"></select></span> upon self, flux and permanence within contemporary capital society. Peter considers a painting an immanent <span class="0"><select class="options" id="first"></select></span>, as much an &lsquo;event&rsquo; as a &lsquo;thing&rsquo;. And through its painting-ness coalescing with its imagery, his works appear to present a type of inexplicable cognizance, rather than a <span class="6"><select class="options" id="first"></select></span>, imitation or <span class="3"><select class="options" id="first"></select></span>. Generally, Peter&rsquo;s work embodies a &lsquo;something&rsquo; that may only ever be alluded to visually.</p>
+			
+			<p>&nbsp;</p>
+			
+			<p>Artist statement &copy; copyright Peter Westwood</p>
+				</div>
+		</div>
+	</div>
+	
+
+<script>
+/*Activity 2 script */
+  jQuery(document).ready(function() {
+
+    var i = 0;
+  
+    var answers = [
+        "experience", "examine", "embodies", "affect", "reflect", "approach", "representation"
+    ];
+
+    jQuery(".options").append(new Option("-- Select --"));
+
+    /* Add options to select dropdown */
+    for (i = 0; i < answers.length; i++) {
+        jQuery(".options").append(new Option(answers[i], answers[i]));
+    };
+ 
+
+    /* Capitalisation */
+   /* jQuery("#first option").each(function() {
+        jQuery(this).text(jQuery(this).text().charAt(0).toUpperCase() + jQuery(this).text().slice(1));
+    });*/
+
+    /* Remove if selected, show if unselected */
+    jQuery("#select-activity select").on("change", function(event) {
+        var previous_value = jQuery(this).data("previous");
+        var value = jQuery(this).val();
+        jQuery("#select-activity select").not(this).find("option[value='" + previous_value + "']").show();
+        jQuery(this).data("previous", value);
+        jQuery("#select-activity select").not(this).find("option[value='" + value + "']").hide();
+
+    });
+
+    /* If there's an icon already */
+    jQuery("select").on("change", function() {
+        jQuery("select").each(function() {
+                if (jQuery(this).parent().find(".fa-times")) {
+                jQuery(this).parent().find(".fa-times").remove();
+                jQuery("#check-answers").prop("disabled", false);
+            }
+        });
+    });
+
+    /* Check answers */
+    jQuery("#check-answers").click(function() {
+        jQuery("select").each(function() {
+            jQuery(this).parent().find(".fa").remove();
+            var answer_num = jQuery(this).parent().attr("class");
+            var answer_text = answers[answer_num];
+            var correct = "<span class=\"color2\"><i class=\"fa fa-check\" aria-hidden=\"true\"></i></span>";
+            var incorrect = "<span class=\"color4\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span>";
+            if (jQuery(this).val() == answer_text) {
+                jQuery(this).parent().append(correct);
+            } else {
+                jQuery(this).parent().append(incorrect);
+            }
+
+        });
+       jQuery("#check-answers").prop("disabled", true);
+    });
+
+    /* Show answers */
+    jQuery("#show-answers").click(function() {
+        jQuery("select").each(function() {
+            var answer_num = jQuery(this).parent().attr("class");
+            jQuery(this).val(answers[answer_num]);
+            jQuery(this).parent().find(".fa").remove();
+            jQuery(this).prop("disabled", true);
+        });
+        jQuery("#check-answers").prop("disabled", true);
+        jQuery("#show-answers").prop("disabled", true);
+    });
+
+    /* Clear answers */
+    jQuery("#clear").click(function() {
+        jQuery("select").each(function() {
+            jQuery(this).find(".fa").remove();
+            jQuery(this).val(jQuery("select option:first").val());
+            jQuery("#check-answers").prop("disabled", false);
+            jQuery("#show-answers").prop("disabled", false);
+            jQuery(this).parent().find(".fa").remove();
+            jQuery(this).prop("disabled", false);
+        });
+        /* Empty, and populate the dropdown */
+        jQuery(".options").empty().append(new Option("-- Select --"));
+        for (i = 0; i < answers.length; i++) {
+            jQuery(".options").append(new Option(answers[i], answers[i]));
+        };
+        /* Capitalise */
+        jQuery("#first option").each(function() {
+            jQuery(this).text(jQuery(this).text().charAt(0).toUpperCase() + jQuery(this).text().slice(1));
+        });
+    });
+});
+</script>
+	</div>
+</body>
+</html>

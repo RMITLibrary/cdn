@@ -1,0 +1,1748 @@
+/* Please make and commit changes to https://github.com/RMITLibrary/Learning-Lab-CSS
+Questions? ask AJ or Jack
+Variables (see scss in repo)
+*/
+/* ===============================
+    Contents
+   ===============================
+Body
+    Typography
+    Glyphs and logos
+    Mobile/tablet view
+Header
+Footer
+Menus and navigation
+    Global bar
+    Global left navigation
+    Tutorial
+    Top search bar
+    Search bar
+    Hamburger
+    Admin edit menu
+    Book navigation menu
+    Restyled menu
+FlexSlider/carousel
+    Yellow button
+    Red button
+Pages
+    Book page
+    Landing page
+In-page content
+    Accordion
+    Tables and panels
+    Video accordions
+    Accessibility button
+    Responsive video embed
+    iframe resizer
+Other helpers
+    Feedback form
+
+*/
+/* ==============================================================
+    Colours
+   ==============================================================*/
+/* Permanent colours 
+Base against -light pass AAA accessibility for contrast
+Med can be used when visibility isn't important, e.g. a decorative border
+Exception: grey-med passes against white bg  */
+
+:root {
+  --white: #ffffff;
+  --black: #000;
+  --grey-rmit: #e3e5e0;
+  --grey-light: #AAB6AA;
+  --grey-dark: #333D33;
+  --grey-med: #4D5B4D;
+  --grey-superlight: #f5f5f5;
+
+  --blue-rmit: #000054;
+  --blue: #104880; 
+  --blue-light: #D6E4FA; 
+  --blue-med: #3587b5;
+  --blue-alt: #265A87;
+
+  --red-rmit: #e61e2a;
+  --red: #9E0000;
+  --red-light: #FFE5E5; 
+  --red-med: #e48080;
+  --red-dark: #560B10;
+
+  --yellow-rmit: #fac800;
+  --yellow: #665200; 
+  --yellow-light: #FFF9E0; 
+  --yellow-med: #fac800;
+
+  --green: #2E562E;
+  --green-light: #E1EFE1;
+  --green-med: #6c946c;
+
+  --teal: #14523F;
+  --teal-light: #C6F1E4; 
+  --teal-med: #46D2A8;
+
+  --brown: #704123;
+  --brown-light: #F4E7DC; 
+  --brown-med: #CA8458;
+
+  --purple: #522E99;
+  --purple-light: #E6DCF4; 
+  --purple-med: #906ED4;
+
+  --pink: #691668;
+  --pink-light: #F4C3F3; 
+  --pink-med: #DC5BDA;
+
+}
+
+.color-blue, .alert-info, .btn-info { 
+	color: var(--blue); 
+	border-color: var(--blue-med); 
+	background-color: var(--blue-light); 
+}
+.color-teal { 
+	color: var(--teal);
+	border-color: var(--teal-med);
+	background-color: var(--teal-light); 
+}
+.color-brown { 
+	color: var(--brown);
+	border-color: var(--brown-med); 
+	background-color: var(--brown-light); 
+}
+.color-red, .alert-danger, .btn-danger { 
+	color: var(--red); 
+	border-color: var(--red-med);
+	background-color: var(--red-light); 
+}
+.color-purple { 
+	color: var(--purple);
+	border-color: var(--purple-med);
+	background-color: var(--purple-light); 
+}
+.color-pink { 
+	color: var(--pink);
+	border-color: var(--pink-med);
+	background-color: var(--pink-light); 
+}
+.color-green, .alert-success, .btn-success { 
+	color: var(--green);
+	border-color: var(--green-med);
+	background-color: var(--green-light); 
+}
+.color-yellow, .alert-warning, .btn-warning { 
+	color: var(--yellow);
+	border-color: var(--yellow-med);
+	background-color: var(--yellow-light);
+}
+
+.btn-info:hover, .btn-info:active, .btn-info:focus, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+	background-color: var(--blue); 
+	border-color: var(--blue-med); 
+        color: var(--blue-light) !important;
+}
+
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+	background-color: var(--green); 
+	border-color: var(--green-med);
+        color: var(--green-light) !important;  
+}
+
+.btn-warning:hover, .btn-warning:active, .btn-warning:focus {
+	background-color: var(--yellow); 
+	border-color: var(--yellow-med); 
+        color: var(--yellow-light) !important;
+}
+
+.btn-danger:hover, .btn-danger:active, .btn-danger:focus {
+	background-color: var(--red); 
+	border-color: var(--red-med); 
+        color: var(--red-light) !important;
+}
+
+.alert-info a.alert-link, .alert-info a:visited.alert-link { color: var(--blue) !important; }
+.alert-success a.alert-link, .alert-success a:visited.alert-link { color: var(--green) !important; }
+.alert-warning a.alert-link, .alert-warning a:visited.alert-link { color: var(--yellow) !important; }
+.alert-danger a.alert-link, .alert-danger a:visited.alert-link { color: var(--red) !important; }
+
+.alert-info a:hover.alert-link, .alert-info a:focus.alert-link,
+.alert-success a:hover.alert-link, .alert-success a:focus.alert-link,
+.alert-warning a:hover.alert-link, .alert-warning a:focus.alert-link,
+.alert-danger a:hover.alert-link, .alert-danger a:focus.alert-link { color: var(--grey-dark) !important; }
+
+.border { 
+	border: 1px solid; 
+	padding: 1px 4px;
+}
+
+.no-bg { background: none !important; }
+
+.color1 { color: var(--blue); }
+.color1-b { border: var(--blue-med) 1px solid; }
+.color1-h { background-color: var(--blue-light); }
+.color2 { color: var(--teal); }
+.color2-b { border: var(--teal-med) 1px solid; }
+.color2-h { background-color: var(--teal-light); }
+.color3 { color: var(--brown); }
+.color3-b { border: var(--brown-med) 1px solid; }
+.color3-h { background-color: var(--brown-light); }
+.color4 { color: var(--red); }
+.color4-b { border: var(--red-med) 1px solid; }
+.color4-h { background-color: var(--red-light); }
+.color5 { color: var(--purple); }
+.color5-b { border: var(--purple-med) 1px solid; }
+.color5-h { background-color: var(--purple-light); }
+.color6 { color: var(--pink); }
+.color6-b { border: var(--pink-med) 1px solid; }
+.color6-h { background-color: var(--pink-light); }
+.color7 { color: var(--green); }
+.color7-b { border: var(--green-med) 1px solid; }
+.color7-h { background-color: var(--green-light); }
+.color8 { color: var(--yellow); }
+.color8-b { border: var(--yellow-med) 1px solid; }
+.color8-h { background-color: var(--yellow-light); }
+
+.highlight-1 { color: var(--green) !important; }
+.highlight-2 { color: var(--blue) !important; }
+.highlight-3 { color: var(--brown) !important; }
+.highlight-4 { color: var(--teal) !important; }
+.highlight-5 { color: var(--red) !important; }
+
+.text-muted { color: var(--grey-med) !important; }
+.text-warning, .warning { color: var(--yellow) !important; }
+.text-danger, .danger { color: var(--red) !important; }
+.text-info { color: var(--blue) !important; }
+.text-success, .success { color: var(--green) !important; }
+
+.progress-bar, .progress-bar-info { background-color: var(--blue-med); }
+.progress-bar-success { background-color: var(--green-med);  }
+.progress-bar-warning { background-color: var(--yellow-med);  }
+.progress-bar-danger { background-color: var(--red);  }
+
+
+/* Temporary/old/being phased out colours, remove when no longer needed ------------------------- */
+
+.green-colour,
+.correct-colour {
+  color: #134D13;
+}
+
+.green-colour-border,
+.correct-colour-border {
+  border: 1px solid #134D13;
+}
+
+.green-colour-highlight,
+.correct-colour-highlight {
+  background-color: #CCE7DF;
+}
+
+.red-colour,
+.incorrect-colour {
+  color: var(--red-rmit);
+}
+
+.red-colour-border,
+.incorrect-colour-border {
+  border: 1px solid var(--red-rmit);
+}
+
+.red-colour-highlight,
+.incorrect-colour-highlight {
+  background-color: #FBE6E6;
+}
+
+.blue-colour {
+  color: #104880;
+}
+
+.blue-colour-border {
+  border: 1px solid #104880;
+}
+
+.blue-colour-highlight {
+  background-color: #DDF5FD;
+}
+
+.orange-colour {
+  color: #F66000;
+}
+
+.orange-colour-border {
+  border: 1px solid #F66000;
+}
+
+.orange-colour-highlight {
+  background-color: #FFF3DE;
+}
+
+.purple-colour {
+  color: #591E77;
+}
+
+.purple-colour-border {
+  border: 1px solid #591E77;
+}
+
+.purple-colour-highlight {
+  background-color: #DFDBFE;
+}
+
+.grey-colour {
+  color: #808080;
+}
+
+.grey-colour-border {
+  border: 1px solid #808080;
+}
+
+.grey-colour-highlight {
+  background-color: #E6E6E6;
+}
+
+.yellow-colour {
+  color: #FDB000;
+}
+
+.yellow-colour-border {
+  border: 1px solid #FDB000;
+}
+
+.yellow-colour-highlight {
+  background-color: #FDB000;
+}
+
+.rmitaqua-colour {
+  color: #00DCB4;
+}
+
+.rmitaqua-colour-border {
+  border: 1px solid #00DCB4;
+}
+
+.rmitaqua-colour-highlight {
+  background-color: #BFF6EC;
+}
+
+.rmitblue-colour {
+  color: #0078FF;
+}
+
+.rmitblue-colour-border {
+  border: 1px solid #0078FF;
+}
+
+.rmitblue-colour-highlight {
+  background-color: #BFDDFF;
+}
+
+.rmitarctic-colour {
+  color: #50D2FF;
+}
+
+.rmitarctic-colour-border {
+  border: 1px solid #50D2FF;
+}
+
+.rmitarctic-colour-highlight {
+  background-color: #D3F3FF;
+}
+
+.rmitpurple-colour {
+  color: #591E77;
+}
+
+.rmitpurple-colour-border {
+  border: 1px solid #591E77;
+}
+
+.rmitpurple-colour-highlight {
+  background-color: #E9BFDF;
+}
+
+.rmitarctic-colour {
+  color: #50D2FF;
+}
+
+.rmitarctic-colour-border {
+  border: 1px solid #50D2FF;
+}
+
+.rmitarctic-colour-highlight {
+  background-color: #D3F3FF;
+}
+
+.rmitteal-colour {
+  color: #9BE8BF;
+}
+
+.rmitteal-colour-border {
+  border: 1px solid #9BE8BF;
+}
+
+.rmitteal-colour-highlight {
+  background-color: #DDF7E9;
+}
+
+/* ============================================================== 
+    Body
+   ============================================================== */
+body {
+  background-image: none;
+  background-color: #ffffff;
+  line-height: 2.24rem;
+}
+
+#header {
+  padding-top: 10px;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: none;
+}
+
+.content img {
+  max-width: 100% !important;
+}
+
+u {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:focus {
+  text-decoration: underline;
+}
+
+/* === Typography =============================== */
+
+h2,
+.h2 {
+  font-size: 4.2rem;
+}
+
+h3,
+.h3 {
+  font-size: 2.52rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.96rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.68rem;
+}
+
+.node-inner .content {
+  font-size: 1.54rem;
+}
+
+#content-area .landing-page-menu {
+  font-size: 1.4rem;
+}
+
+.landing-page #learning_lab_current_book_menu li a {
+  font-size: 1.4rem;
+}
+
+.btn-group-xs > .btn,
+.btn-xs {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.54rem;
+}
+
+.node .content a:link {
+  color: var(--blue-rmit);
+}
+
+.node .content a:hover,
+.node .content a:active,
+.node .content a:focus {
+  color: var(--red-rmit);
+}
+
+.lead, .introductory-paragraph /* WIIFM on pages */
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+  color: #333;
+}
+
+blockquote .small, blockquote small, .small {
+  color: var(--grey-med);
+}
+
+.icon-heading
+{
+  padding-left: 60px;
+  background-size: 40px 40px;
+}
+
+h5.icon-heading {
+  line-height: 32px;
+  background-size: 30px 30px;
+}
+
+.ivideo {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 234.03 177.01'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D.cls-1,.cls-2,.cls-3%7Bstroke:%23000;stroke-miterlimit:10;%7D.cls-1,.cls-2%7Bstroke-width:6px;%7D.cls-2,.cls-3%7Bfill:none;%7D.cls-3%7Bstroke-width:8px;%7D%3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Crect class='cls-1' x='3' y='3' width='228.03' height='171.01' rx='14'/%3E%3Cpath class='cls-2' d='M142.33,71.33c0-2.78-46.61-28.81-46.57-26.8s-.13,51.55,0,53.6C95.91,100.48,142.33,74.1,142.33,71.33Z'/%3E%3Cline class='cls-2' x1='3' y1='134.87' x2='230.06' y2='134.87'/%3E%3Cline class='cls-2' x1='50.69' y1='154.63' x2='211.44' y2='154.63'/%3E%3Cline class='cls-3' x1='22.81' y1='147.79' x2='22.81' y2='161.66'/%3E%3Cline class='cls-3' x1='33.4' y1='147.79' x2='33.4' y2='161.66'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 
+	no-repeat center left;
+}	
+
+.itutorial {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 284.41 178.99'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D.cls-1,.cls-2%7Bstroke:%23000;stroke-miterlimit:10;stroke-width:6px;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Crect class='cls-1' x='27.62' y='3' width='229.17' height='162.99' rx='14'/%3E%3Crect class='cls-1' x='46.42' y='17.45' width='191.58' height='115.14' rx='14'/%3E%3Ccircle class='cls-1' cx='142.21' cy='60.37' r='24.12'/%3E%3Cpath class='cls-2' d='M106,132.59c0-16.8,6.28-31.63,15.83-40.43,5.81-5.36,12.83,7.93,20.4,7.93S156.68,86.75,162.46,92c9.64,8.79,16,23.68,16,40.56'/%3E%3Ccircle class='cls-1' cx='142.21' cy='10.95' r='4.83'/%3E%3Cpath class='cls-1' d='M176,153.56a3.76,3.76,0,0,1-3.3,2.1H111.75a3.77,3.77,0,0,1-3.31-2.1H3C3,165.9,8.43,176,15.06,176H269.35c6.64,0,12.06-10.09,12.06-22.43Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 
+	no-repeat center left;
+}	
+
+.iaudio {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 238.52 174.49'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D.cls-1,.cls-2%7Bstroke:%23000;stroke-miterlimit:10;stroke-width:6px;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='M209.32,162.42h0c-7.86-2.23-12.56-10.85-10.44-19.15l7.54-29.58c2.12-8.3,10.29-13.26,18.15-11h0c7.86,2.23,12.56,10.85,10.44,19.15l-7.54,29.58C225.35,159.7,217.19,164.66,209.32,162.42Z'/%3E%3Cpath class='cls-1' d='M183.09,170.71h0c-11.54-3.28-18.44-15.94-15.33-28.13l11.43-44.8c3.1-12.18,15.09-19.47,26.63-16.18h0c11.55,3.28,18.45,15.93,15.34,28.12l-11.43,44.8C206.62,166.7,194.63,174,183.09,170.71Z'/%3E%3Cpath class='cls-1' d='M14,102.67h0c7.87-2.24,16,2.72,18.15,11l7.54,29.58c2.12,8.3-2.58,16.92-10.44,19.15h0c-7.86,2.24-16-2.72-18.15-11L3.51,121.82C1.39,113.52,6.09,104.9,14,102.67Z'/%3E%3Cpath class='cls-1' d='M55.43,170.71h0c11.54-3.28,18.45-15.94,15.34-28.13L59.34,97.78C56.23,85.6,44.24,78.31,32.7,81.6h0c-11.55,3.28-18.45,15.93-15.34,28.12l11.43,44.8C31.9,166.7,43.89,174,55.43,170.71Z'/%3E%3Cpath class='cls-2' d='M44.06,126.15l-9.23-35.3C34.83,42.33,72.09,3,118.05,3s83.22,39.33,83.22,87.85l-6.81,35.3m-136-96.68c-2.45,8.29,10.23,11,10.23,11A66.08,66.08,0,0,1,166,39s7.27.73,11.62-9.56'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+	no-repeat center left;
+}	
+
+.ilinks {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 155.64 199.91'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D.cls-2,.cls-3%7Bfill:none;stroke:%23000;stroke-miterlimit:10;%7D.cls-2%7Bstroke-width:6px;%7D.cls-3%7Bstroke-width:10px;%7D%3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='M141.57,82.81h0c-3.53,0-6.68.68-8.71,2.43h-2.49a11.09,11.09,0,0,0-10.92-9.41c-6.09,0-11.06,2-11.06,8.06V79.58A11.09,11.09,0,0,0,97.32,68.52h0A11.09,11.09,0,0,0,86.26,79.58v5.66h0l-.12-51.89a11.07,11.07,0,0,0-22.13,0V96.78s-8.13-14-16.11-7.31c-9,7.5-6.21,51-2,58.74s19.51,18.85,20.84,25.06,2.66,23.61,2.66,23.61l67.61-.83a105.24,105.24,0,0,1,3.13-16.9c2.71-10,12.51-14.75,12.51-32.71V93.88A11.1,11.1,0,0,0,141.57,82.81Z'/%3E%3Cpath class='cls-2' d='M64,132.27V33.35A11.1,11.1,0,0,1,75.06,22.29h0A11.1,11.1,0,0,1,86.13,33.35l.13,55.33'/%3E%3Cpath class='cls-2' d='M108.39,91.12V79.58A11.09,11.09,0,0,0,97.32,68.52h0A11.09,11.09,0,0,0,86.26,79.58v9.1'/%3E%3Cpath class='cls-2' d='M108.39,88.79v-4.9c0-6.08,5-8.06,11.06-8.06h0a11.1,11.1,0,0,1,11.06,11.06V92'/%3E%3Cpath class='cls-2' d='M64,96.78s-8.13-14-16.11-7.31c-9,7.5-6.21,51-2,58.74s19.51,18.85,20.84,25.06,2.66,23.61,2.66,23.61l67.61-.83a105.24,105.24,0,0,1,3.13-16.9c2.71-10,12.51-14.75,12.51-32.71V93.88a11.1,11.1,0,0,0-11.07-11.07h0c-6.08,0-11.06,2-11.06,8.07v6.23'/%3E%3Cline class='cls-3' y1='5' x2='94.44' y2='5'/%3E%3Cline class='cls-3' y1='32.49' x2='47.22' y2='32.49'/%3E%3Cline class='cls-3' y1='59.98' x2='44.78' y2='59.98'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+	no-repeat center left;
+}
+
+.inotes {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 172.38 162.86'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D.cls-1,.cls-2%7Bstroke:%23000;stroke-miterlimit:10;stroke-width:6px;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='M89.79,159.86H10a7,7,0,0,1-7-7V10a7,7,0,0,1,7-7H110.17a7,7,0,0,1,7,7V129.93Z'/%3E%3Cpath class='cls-2' d='M89.79,159.86V136.93a7,7,0,0,1,7-7h20.38'/%3E%3Cpath class='cls-1' d='M167.11,37.16,93.4,104.32c-2.84,2.59-30,9.72-32.73,6.73-3.1-3.41,6.89-29.38,9.74-32l73.7-67.16a7,7,0,0,1,9.89.46l13.57,14.89A7,7,0,0,1,167.11,37.16Z'/%3E%3Crect class='cls-1' x='145.5' y='16.48' width='0.44' height='34.14' rx='0.22' transform='translate(15.41 106.9) rotate(-42.34)'/%3E%3Cpath class='cls-1' d='M70.41,79.08s6.06-.8,15.7,9.76c6.61,7.25,7.49,15.59,7.29,15.47'/%3E%3Cline class='cls-1' x1='80.69' y1='82.9' x2='140.63' y2='28.29'/%3E%3Cline class='cls-1' x1='90.72' y1='93.91' x2='150.66' y2='39.3'/%3E%3Cpath d='M73,110.78c-5.35.7-10.74.87-11.86-.35-1.36-1.49-.49-7.52.9-13.06C63.23,92.57,78.31,110.08,73,110.78Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+	no-repeat center left;
+}
+
+.istudy {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 207.52 252.88'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;stroke:%23000;stroke-miterlimit:10;stroke-width:6px;%7D%3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Crect class='cls-1' x='4.23' y='161.65' width='106.39' height='17.19' transform='translate(137.2 9.26) rotate(45)'/%3E%3Crect class='cls-1' x='0.09' y='71.8' width='143.34' height='17.19' transform='translate(179.35 86.5) rotate(135)'/%3E%3Cpath class='cls-1' d='M57.43,233.92c0-19.38,22.53-35.09,50.32-35.09s50.33,15.71,50.33,35.09'/%3E%3Ccircle class='cls-1' cx='23.67' cy='127.78' r='20.67'/%3E%3Cpath class='cls-1' d='M170.71,47.85c7.42,7.08,8.77,17.72-3.34,30.42S143.09,92.07,135.66,85'/%3E%3Cline class='cls-1' x1='174.13' y1='86.39' x2='190.5' y2='102'/%3E%3Cline class='cls-1' x1='186.68' y1='65.41' x2='207.1' y2='68.32'/%3E%3Cline class='cls-1' x1='154.19' y1='99.48' x2='158.07' y2='119.73'/%3E%3Cpath class='cls-1' d='M129.48,15.35a7.05,7.05,0,0,0-.51-.6L118.21,4.49a5.43,5.43,0,0,0-7.65.18L89.48,26.77a5.42,5.42,0,0,0,.19,7.65l10.76,10.26a5.7,5.7,0,0,0,.62.48c-7.72,18.51-4.71,39.51,9.34,52.92,5.32,5.06,25.69-11.74,43.79-30.72s33.91-40.12,28.6-45.19C168.72,8.77,147.6,6.76,129.48,15.35Z'/%3E%3Crect class='cls-1' x='44.35' y='233.92' width='126.81' height='15.96' rx='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+	no-repeat center left;
+}
+
+.whatsnext {
+	text-align: right;
+	font-weight: bold;
+	border-top: 1px solid #eee;
+	margin-top: 20px;
+	padding-top: 10px;
+}
+
+.visually-hidden { 
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+    clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+    white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+.heppp-content-link {
+    max-width: 620px; 
+    background: var(--grey-superlight) url("../world.svg") center right no-repeat; 
+    padding: 1em 8em 1em 1em;
+    margin: 2em 0 1em 0;
+}
+
+.heppp-content-link h3 {
+    margin-top: 1em; 
+    font-size: 1.4em;
+}
+
+.learning-lab-activity h3 {
+  border-bottom: 1px solid var(--grey-superlight);
+  color: var(--grey-med);
+}
+
+/* === Glyphs and logos =============================== */
+
+.red-square li {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.red-square li::before {
+  margin-right: 8px;
+  margin-left: -12px !important;
+  content: '\25AA ';
+  color: var(--red-rmit);
+}
+
+
+/* === Mobile/tablet view =============================== */
+
+/* Tablet */
+@media (max-width: 939px) {
+  /* Top nav */
+  #learning_lab_book_aware_menu li a {
+    background-color: var(--grey-rmit);
+    border: 1px solid var(--grey-rmit);
+  }
+  #learning_lab_book_aware_menu li a:hover,
+#learning_lab_book_aware_menu li a:focus {
+    background-color: var(--white);
+  }
+  #learning_lab_book_aware_menu li a,
+#learning_lab_book_aware_menu li a:visited {
+    color: var(--blue-rmit);
+  }
+  #learning_lab_book_aware_menu li a.active {
+    background-color: var(--grey-rmit);
+  }
+  #learning_lab_book_aware_menu ul {
+    border-top: none;
+  }
+  /* Mega-menu */
+  .mega-menu,
+.mega-hover,
+#learning_lab_book_aware_menu ul li a::before {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  #header-inner .right-icons > a { 
+    margin-left: 40px; 
+    margin-right: 40px; 
+    display: contents;
+  } 
+
+  /* Side nav to footer  nav */
+
+  #block-learning_lab_node_types-learning_lab_current_book_menu .block-inner #learning_lab_current_book_menu .backlink a {
+    background-color: var(--red-rmit);
+    border-top: 1px solid var(--red-dark);
+  }
+
+  #block-learning_lab_node_types-learning_lab_current_book_menu .block-inner #learning_lab_current_book_menu .backlink a:hover,
+#block-learning_lab_node_types-learning_lab_current_book_menu .block-inner #learning_lab_current_book_menu .backlink a:focus {
+    background-color: var(--red-rmit);
+    border-top: 1px solid var(--red-dark);
+  }
+
+  #block-learning_lab_node_types-learning_lab_current_book_menu .backlink a {
+    color: var(--white);
+  }
+
+}
+
+
+/* =============================== 
+    Header
+   =============================== */
+
+#rmit-logo span {
+    width: 167px;    
+    height: 35px;
+}
+
+@media (max-width: 768px) {
+ #rmit-logo span {
+    width: 110px !important;
+    height: 23px !important;
+ }
+}
+
+.gruntrmit-logo_RMIT-artboard {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 186.85 38.94'%3E%3Cstyle%3E.st0%7Bdisplay:none%7D.st1%7Bdisplay:inline%7D.st2%7Bclip-path:url(%23SVGID_2_)%7D.st6%7Bclip-path:url(%23SVGID_4_);fill:%23fce380%7D.st7%7Bclip-path:url(%23SVGID_2_);fill:none;stroke:%23e61e2a;stroke-width:19.76;stroke-miterlimit:10%7D.st17%7Bfill:%23fff%7D%3C/style%3E%3Cg class='st0' id='Guides'%3E%3Cg class='st1'%3E%3Cdefs%3E%3Cpath id='SVGID_1_' d='M-217.62-309.12h841.89v595.28h-841.89z'%3E%3C/path%3E%3C/defs%3E%3CclipPath id='SVGID_2_'%3E%3Cuse xlink:href='%23SVGID_1_' overflow='visible'%3E%3C/use%3E%3C/clipPath%3E%3Cg class='st2'%3E%3Cdefs%3E%3Cpath id='SVGID_3_' d='M-217.62-309.12h841.89v595.28h-841.89z'%3E%3C/path%3E%3C/defs%3E%3CclipPath id='SVGID_4_'%3E%3Cuse xlink:href='%23SVGID_3_' overflow='visible'%3E%3C/use%3E%3C/clipPath%3E%3Cpath clip-path='url(%23SVGID_4_)' fill='%23222160' d='M-217.62-309.12h132.73v595.28h-132.73z'%3E%3C/path%3E%3Cpath clip-path='url(%23SVGID_4_)' fill='%23fac700' d='M614.47 276.35h9.8v9.8h-9.8z'%3E%3C/path%3E%3Cpath clip-path='url(%23SVGID_4_)' fill='%23fcd640' d='M599.77 276.35h9.8v9.8h-9.8z'%3E%3C/path%3E%3Cpath class='st6' d='M585.07 276.35h9.8v9.8h-9.8zM-84.89 276.35h665.06v9.8H-84.89z'%3E%3C/path%3E%3C/g%3E%3Cpath class='st7' d='M-51.79-265.22h98.28M-51.79-135.7H.44'%3E%3C/path%3E%3Ctext transform='translate(-51.794 -259.623)'%3E%3Ctspan class='st17' x='0' y='0' font-family='Museo-500' font-size='18'%3EO%3C/tspan%3E%3Ctspan class='st17' x='19.12' y='0' font-family='Museo-500' font-size='18'%3Et%3C/tspan%3E%3Ctspan class='st17' x='25.34' y='0' font-family='Museo-500' font-size='18'%3Eher tips%3C/tspan%3E%3C/text%3E%3Ctext transform='translate(-46.124 -237.154)'%3E%3Ctspan x='0' y='0' font-family='ArialMT' font-size='14'%3EUse a capital %3C/tspan%3E%3Ctspan x='84.82' y='0' font-family='ArialMT' font-size='14'%3EL%3C/tspan%3E%3Ctspan x='92.1' y='0' font-family='ArialMT' font-size='14'%3E for Library when writing about RMI%3C/tspan%3E%3Ctspan x='309.19' y='0' font-family='ArialMT' font-size='14'%3ET%3C/tspan%3E%3Ctspan x='317.52' y='0' font-family='ArialMT' font-size='14'%3E University Librar%3C/tspan%3E%3Ctspan x='422.55' y='0' font-family='ArialMT' font-size='14' letter-spacing='-1'%3Ey%3C/tspan%3E%3Ctspan x='428.52' y='0' font-family='ArialMT' font-size='14'%3E.%3C/tspan%3E%3Ctspan x='432.41' y='0' font-family='ArialMT' font-size='14'%3E%3C/tspan%3E%3Ctspan x='436.05' y='0' font-family='ArialMT' font-size='14'%3EThis aligns with a capital U for%3C/tspan%3E%3C/text%3E%3Ctext transform='translate(-46.124 -220.354)'%3E%3Ctspan x='0' y='0' font-family='ArialMT' font-size='14'%3EUniversity when referring to RMI%3C/tspan%3E%3Ctspan x='199.95' y='0' font-family='ArialMT' font-size='14' letter-spacing='-1'%3ET%3C/tspan%3E%3Ctspan x='206.98' y='0' font-family='ArialMT' font-size='14'%3E.%3C/tspan%3E%3C/text%3E%3Ctext transform='translate(-46.124 -186.754)'%3E%3Ctspan x='0' y='0' font-family='ArialMT' font-size='14'%3EWhen writing about people who use the Library describe them as students, sta%3C/tspan%3E%3Ctspan x='485.6' y='0' font-family='ArialMT' font-size='14'%3Ef%3C/tspan%3E%3Ctspan x='489.28' y='0' font-family='ArialMT' font-size='14'%3Ef members,%3C/tspan%3E%3C/text%3E%3Ctext transform='translate(-46.124 -169.954)'%3E%3Ctspan x='0' y='0' font-family='ArialMT' font-size='14'%3Eresearchers, patrons or the RMI%3C/tspan%3E%3Ctspan x='197.63' y='0' font-family='ArialMT' font-size='14'%3ET%3C/tspan%3E%3Ctspan x='205.95' y='0' font-family='ArialMT' font-size='14'%3E Communit%3C/tspan%3E%3Ctspan x='273.63' y='0' font-family='ArialMT' font-size='14' letter-spacing='-1'%3Ey%3C/tspan%3E%3Ctspan x='279.61' y='0' font-family='ArialMT' font-size='14'%3E.%3C/tspan%3E%3Ctspan x='283.5' y='0' font-family='ArialMT' font-size='14'%3E%3C/tspan%3E%3Ctspan x='286.62' y='0' font-family='ArialMT' font-size='14'%3EA%3C/tspan%3E%3Ctspan x='295.7' y='0' font-family='ArialMT' font-size='14'%3Evoid the term “users”.%3C/tspan%3E%3C/text%3E%3Ctext transform='translate(-51.794 -130.1)'%3E%3Ctspan class='st17' x='0' y='0' font-family='Museo-500' font-size='18'%3E%3C/tspan%3E%3Ctspan class='st17' x='4.84' y='0' font-family='Museo-500' font-size='18'%3EL%3C/tspan%3E%3Ctspan class='st17' x='14.49' y='0' font-family='Museo-500' font-size='18'%3Eogo%3C/tspan%3E%3C/text%3E%3Ctext transform='translate(-46.124 -107.632)'%3E%3Ctspan x='0' y='0' font-family='ArialMT' font-size='14'%3EThe RMI%3C/tspan%3E%3Ctspan x='53.68' y='0' font-family='ArialMT' font-size='14'%3ET%3C/tspan%3E%3Ctspan x='61.98' y='0' font-family='ArialMT' font-size='14'%3E University logo is the preferred logo.%3C/tspan%3E%3C/text%3E%3Ctext transform='translate(-46.124 -23.631)'%3E%3Ctspan x='0' y='0' font-family='ArialMT' font-size='14'%3EHowever the Library sub-brand logo can be used if necessar%3C/tspan%3E%3Ctspan x='374.32' y='0' font-family='ArialMT' font-size='14'%3Ey%3C/tspan%3E%3Ctspan x='380.34' y='0' font-family='ArialMT' font-size='14'%3E.%3C/tspan%3E%3C/text%3E%3Ctext transform='translate(-46.124 60.369)' font-family='ArialMT' font-size='14'%3E%3C/text%3E%3Ctext transform='translate(-46.124 77.169)' font-family='ArialMT' font-size='14'%3EIn support of the One Library concept logos should not be used for individual services ie Study%3C/text%3E%3Cpath class='st2' d='M-45.5 90.75l1.25-.11c.06.5.2.91.41 1.23.22.32.55.58 1.01.78.46.2.97.3 1.54.3.51 0 .95-.08 1.34-.23.39-.15.68-.36.86-.62.19-.26.28-.55.28-.86 0-.31-.09-.59-.27-.82-.18-.23-.48-.43-.9-.59-.27-.1-.86-.27-1.78-.49-.92-.22-1.57-.43-1.93-.63-.48-.25-.84-.56-1.07-.93-.23-.37-.35-.79-.35-1.25 0-.51.14-.98.43-1.42.29-.44.71-.77 1.26-1 .55-.23 1.16-.34 1.84-.34.74 0 1.4.12 1.97.36s1 .59 1.31 1.06c.31.46.47.99.49 1.58l-1.27.1c-.07-.63-.3-1.11-.69-1.44-.39-.32-.98-.49-1.75-.49-.8 0-1.39.15-1.75.44-.37.29-.55.65-.55 1.06 0 .36.13.66.39.89.26.23.92.47 2 .71s1.82.46 2.22.64c.58.27 1.01.61 1.29 1.02.28.41.42.89.42 1.43 0 .53-.15 1.04-.46 1.51-.31.47-.74.84-1.32 1.1-.57.26-1.22.39-1.93.39-.91 0-1.67-.13-2.28-.4-.61-.26-1.09-.66-1.44-1.19-.36-.52-.55-1.12-.57-1.79zm14.39 3.22V92.9c-.57.82-1.33 1.23-2.3 1.23-.43 0-.83-.08-1.2-.25-.37-.16-.65-.37-.83-.62-.18-.25-.31-.55-.38-.91-.05-.24-.08-.62-.08-1.15v-4.5h1.23v4.03c0 .64.02 1.08.08 1.3.08.32.24.58.49.76.25.18.56.28.93.28s.72-.09 1.04-.28c.32-.19.55-.45.69-.77.13-.33.2-.8.2-1.42v-3.89H-30v7.26h-1.11zm3.03 2.78V86.71h1.12v.94c.26-.37.56-.65.9-.83.33-.18.74-.28 1.21-.28.62 0 1.17.16 1.64.48.47.32.83.77 1.07 1.35.24.58.36 1.22.36 1.91 0 .74-.13 1.41-.4 2.01s-.65 1.05-1.16 1.37c-.51.32-1.04.48-1.6.48-.41 0-.78-.09-1.1-.26-.33-.17-.59-.39-.8-.66v3.53h-1.24zm1.12-6.37c0 .93.19 1.62.57 2.07.38.45.84.67 1.37.67.55 0 1.02-.23 1.4-.69.39-.46.58-1.18.58-2.15 0-.93-.19-1.62-.57-2.08-.38-.46-.84-.69-1.36-.69-.52 0-.99.25-1.39.73-.4.49-.6 1.21-.6 2.14zm6.66 6.37V86.71h1.12v.94c.26-.37.56-.65.9-.83.33-.18.74-.28 1.21-.28.62 0 1.17.16 1.64.48.47.32.83.77 1.07 1.35.24.58.36 1.22.36 1.91 0 .74-.13 1.41-.4 2.01s-.65 1.05-1.16 1.37c-.51.32-1.04.48-1.6.48-.41 0-.78-.09-1.1-.26-.33-.17-.59-.39-.8-.66v3.53h-1.24zm1.12-6.37c0 .93.19 1.62.57 2.07.38.45.84.67 1.37.67.55 0 1.02-.23 1.4-.69.39-.46.58-1.18.58-2.15 0-.93-.19-1.62-.57-2.08-.38-.46-.84-.69-1.36-.69-.52 0-.99.25-1.39.73-.4.49-.6 1.21-.6 2.14zm6.21-.04c0-1.34.37-2.34 1.12-2.99.62-.54 1.39-.81 2.28-.81 1 0 1.81.33 2.45.98.63.65.95 1.56.95 2.71 0 .93-.14 1.67-.42 2.2a3 3 0 01-1.22 1.25c-.54.3-1.12.44-1.75.44-1.02 0-1.84-.33-2.46-.98-.64-.64-.95-1.58-.95-2.8zm1.27 0c0 .93.2 1.63.61 2.09.41.46.92.69 1.53.69s1.12-.23 1.52-.7c.41-.46.61-1.17.61-2.13 0-.9-.2-1.58-.61-2.04-.41-.46-.91-.69-1.52-.69-.62 0-1.13.23-1.53.69-.41.46-.61 1.16-.61 2.09zm6.96 3.63v-7.26h1.11v1.1c.28-.51.54-.85.78-1.02s.5-.25.79-.25c.41 0 .84.13 1.26.4l-.42 1.14c-.3-.18-.6-.27-.9-.27-.27 0-.51.08-.72.24-.21.16-.37.39-.46.67-.14.44-.21.92-.21 1.44v3.8h-1.23zm6.82-1.05c.14 0 .32-.02.54-.05l.18 1.09c-.35.07-.66.11-.93.11-.45 0-.79-.07-1.04-.21s-.42-.33-.52-.56c-.1-.23-.15-.71-.15-1.45v-4.18h-.9v-.96h.9v-1.8l1.22-.74v2.54h1.24v.96H1.38v4.25c0 .35.02.58.06.68.04.1.11.18.21.24.11.05.25.08.43.08zm5.84 1.05V83.95h1.33v4.12h5.21v-4.12h1.33v10.02h-1.33v-4.72H9.24v4.72H7.92zm14.66 0V92.9c-.57.82-1.33 1.23-2.3 1.23-.43 0-.83-.08-1.2-.25-.37-.16-.65-.37-.83-.62-.18-.25-.31-.55-.38-.91-.05-.24-.08-.62-.08-1.15v-4.5h1.23v4.03c0 .64.02 1.08.08 1.3.08.32.24.58.49.76.25.18.56.28.93.28s.72-.09 1.04-.28c.32-.19.55-.45.69-.77.13-.33.2-.8.2-1.42v-3.89h1.23v7.26h-1.1zm4.17 0H25.6V83.95h1.23v3.58c.52-.65 1.18-.98 1.99-.98.45 0 .87.09 1.27.27.4.18.73.43.98.76.26.33.46.72.6 1.18.15.46.22.95.22 1.48 0 1.24-.31 2.21-.92 2.88-.62.68-1.35 1.02-2.21 1.02-.86 0-1.53-.36-2.02-1.07v.9zm-.02-3.69c0 .87.12 1.5.36 1.89.39.63.91.95 1.57.95.54 0 1-.23 1.39-.7.39-.47.59-1.16.59-2.09 0-.95-.19-1.65-.56-2.1s-.83-.68-1.36-.68c-.54 0-1 .23-1.39.7-.4.47-.6 1.15-.6 2.03zm10.53 3.69V83.95h1.23v10.02h-1.23zm2.68-3.63c0-1.34.37-2.34 1.12-2.99.62-.54 1.39-.81 2.28-.81 1 0 1.81.33 2.45.98.63.65.95 1.56.95 2.71 0 .93-.14 1.67-.42 2.2a3 3 0 01-1.22 1.25c-.54.3-1.12.44-1.75.44-1.02 0-1.84-.33-2.46-.98-.64-.64-.95-1.58-.95-2.8zm1.26 0c0 .93.2 1.63.61 2.09.41.46.92.69 1.53.69s1.12-.23 1.52-.7c.41-.46.61-1.17.61-2.13 0-.9-.2-1.58-.61-2.04-.41-.46-.91-.69-1.52-.69-.62 0-1.13.23-1.53.69-.41.46-.61 1.16-.61 2.09zm6.75 4.23l1.2.18c.05.37.19.64.42.81.31.23.72.34 1.25.34.57 0 1.01-.11 1.32-.34.31-.23.52-.55.63-.96.06-.25.09-.78.09-1.58-.54.63-1.21.95-2.01.95-1 0-1.77-.36-2.32-1.08-.55-.72-.82-1.58-.82-2.59 0-.69.13-1.33.38-1.92.25-.59.61-1.04 1.09-1.36.48-.32 1.04-.48 1.68-.48.86 0 1.56.35 2.12 1.04v-.88h1.13v6.28c0 1.13-.12 1.93-.35 2.4-.23.47-.59.84-1.09 1.12s-1.11.41-1.84.41c-.87 0-1.57-.19-2.1-.58s-.8-.98-.78-1.76zm1.02-4.36c0 .95.19 1.65.57 2.08.38.44.85.66 1.42.66s1.04-.22 1.42-.65c.38-.44.57-1.12.57-2.05 0-.89-.2-1.56-.59-2.01-.39-.45-.87-.68-1.43-.68-.55 0-1.01.22-1.39.67s-.57 1.1-.57 1.98zm6.53.13c0-1.34.37-2.34 1.12-2.99.62-.54 1.39-.81 2.28-.81 1 0 1.81.33 2.45.98.63.65.95 1.56.95 2.71 0 .93-.14 1.67-.42 2.2a3 3 0 01-1.22 1.25c-.54.3-1.12.44-1.75.44-1.02 0-1.84-.33-2.46-.98-.63-.64-.95-1.58-.95-2.8zm1.27 0c0 .93.2 1.63.61 2.09.41.46.92.69 1.53.69s1.12-.23 1.52-.7c.41-.46.61-1.17.61-2.13 0-.9-.2-1.58-.61-2.04-.41-.46-.91-.69-1.52-.69-.62 0-1.13.23-1.53.69-.41.46-.61 1.16-.61 2.09zm10.38 1.46l1.22-.19c.07.49.26.86.57 1.12.31.26.75.39 1.31.39.57 0 .98-.12 1.26-.35.27-.23.41-.5.41-.81 0-.28-.12-.5-.36-.66-.17-.11-.59-.25-1.26-.42-.9-.23-1.53-.42-1.88-.59-.35-.17-.61-.4-.79-.69-.18-.29-.27-.62-.27-.97 0-.32.07-.62.22-.9s.35-.5.6-.69c.19-.14.45-.26.78-.36.33-.1.68-.15 1.06-.15.57 0 1.07.08 1.5.25s.75.39.95.67.35.66.42 1.12l-1.2.16c-.05-.37-.21-.67-.48-.88-.26-.21-.63-.31-1.11-.31-.57 0-.97.09-1.21.28-.24.19-.36.41-.36.66 0 .16.05.3.15.43.1.13.26.24.47.33.12.05.49.15 1.09.31.87.23 1.48.42 1.82.57.34.15.61.36.81.65.2.28.29.63.29 1.05 0 .41-.12.8-.36 1.16s-.58.64-1.04.84-.96.3-1.53.3c-.94 0-1.66-.2-2.16-.59-.47-.38-.79-.96-.92-1.73zm7.49 2.17V83.95h1.23v3.6c.57-.67 1.3-1 2.17-1 .54 0 1 .11 1.4.32s.68.5.85.88c.17.37.26.92.26 1.63v4.6h-1.23v-4.6c0-.62-.13-1.06-.4-1.34s-.64-.42-1.13-.42c-.36 0-.71.09-1.03.28-.32.19-.55.45-.69.77-.14.32-.21.77-.21 1.34v3.97h-1.22zm7.32-3.63c0-1.34.37-2.34 1.12-2.99.62-.54 1.39-.81 2.28-.81 1 0 1.81.33 2.45.98.63.65.95 1.56.95 2.71 0 .93-.14 1.67-.42 2.2a3 3 0 01-1.22 1.25c-.54.3-1.12.44-1.75.44-1.02 0-1.84-.33-2.46-.98-.63-.64-.95-1.58-.95-2.8zm1.27 0c0 .93.2 1.63.61 2.09.41.46.92.69 1.53.69s1.12-.23 1.52-.7c.41-.46.61-1.17.61-2.13 0-.9-.2-1.58-.61-2.04-.41-.46-.91-.69-1.52-.69-.62 0-1.13.23-1.53.69-.41.46-.61 1.16-.61 2.09zm11.73 3.63V92.9c-.57.82-1.33 1.23-2.3 1.23-.43 0-.83-.08-1.2-.25-.37-.16-.65-.37-.83-.62-.18-.25-.31-.55-.38-.91-.05-.24-.08-.62-.08-1.15v-4.5h1.23v4.03c0 .64.02 1.08.08 1.3.08.32.24.58.49.76.25.18.56.28.93.28s.72-.09 1.04-.28c.32-.19.55-.45.69-.77.13-.33.2-.8.2-1.42v-3.89h1.23v7.26h-1.1zm3 0V83.95h1.23v10.02h-1.23zm7.85 0v-.92c-.46.72-1.14 1.08-2.03 1.08-.58 0-1.11-.16-1.6-.48s-.86-.76-1.13-1.34c-.27-.57-.4-1.23-.4-1.97 0-.72.12-1.38.36-1.97.24-.59.6-1.04 1.09-1.36.48-.31 1.02-.47 1.62-.47.44 0 .83.09 1.17.28s.62.43.83.72v-3.6h1.22v10.02h-1.13zm-3.89-3.62c0 .93.2 1.62.59 2.08.39.46.85.69 1.39.69.54 0 .99-.22 1.37-.66.38-.44.56-1.11.56-2.01 0-.99-.19-1.72-.57-2.19s-.85-.7-1.42-.7c-.55 0-1 .22-1.37.67-.37.45-.55 1.15-.55 2.12zm11.99 3.62h-1.14V83.95H114v3.58c.52-.65 1.18-.98 1.99-.98.45 0 .87.09 1.27.27.4.18.73.43.98.76.26.33.46.72.6 1.18.15.46.22.95.22 1.48 0 1.24-.31 2.21-.92 2.88-.62.68-1.35 1.02-2.21 1.02-.86 0-1.53-.36-2.02-1.07v.9zm-.01-3.69c0 .87.12 1.5.36 1.89.39.63.91.95 1.57.95.54 0 1-.23 1.39-.7.39-.47.59-1.16.59-2.09 0-.95-.19-1.65-.56-2.1s-.83-.68-1.36-.68c-.54 0-1 .23-1.39.7-.41.47-.6 1.15-.6 2.03zm11.63 1.35l1.27.16c-.2.74-.57 1.32-1.11 1.73-.54.41-1.24.62-2.08.62-1.06 0-1.9-.33-2.53-.98-.62-.65-.93-1.57-.93-2.75 0-1.22.31-2.17.94-2.84.63-.67 1.44-1.01 2.45-1.01.97 0 1.76.33 2.38.99.62.66.92 1.59.92 2.79 0 .07 0 .18-.01.33h-5.41c.05.8.27 1.41.68 1.83.41.42.91.64 1.52.64.45 0 .84-.12 1.16-.36.31-.25.56-.63.75-1.15zm-4.04-1.99h4.05c-.05-.61-.21-1.07-.46-1.37-.39-.47-.9-.71-1.52-.71-.57 0-1.04.19-1.43.57-.39.37-.6.88-.64 1.51zm10.74 7.11V86.71h1.12v.94c.26-.37.56-.65.9-.83.33-.18.74-.28 1.21-.28.62 0 1.17.16 1.64.48.47.32.83.77 1.07 1.35.24.58.36 1.22.36 1.91 0 .74-.13 1.41-.4 2.01s-.65 1.05-1.16 1.37c-.51.32-1.04.48-1.6.48-.41 0-.78-.09-1.1-.26-.33-.17-.59-.39-.8-.66v3.53h-1.24zm1.12-6.37c0 .93.19 1.62.57 2.07.38.45.84.67 1.37.67.55 0 1.02-.23 1.4-.69.39-.46.58-1.18.58-2.15 0-.93-.19-1.62-.57-2.08-.38-.46-.84-.69-1.36-.69-.52 0-.99.25-1.39.73-.4.49-.6 1.21-.6 2.14zm6.67 3.59V83.95h1.23v3.6c.57-.67 1.3-1 2.17-1 .54 0 1 .11 1.4.32s.68.5.85.88c.17.37.26.92.26 1.63v4.6h-1.23v-4.6c0-.62-.13-1.06-.4-1.34s-.64-.42-1.13-.42c-.36 0-.71.09-1.03.28-.32.19-.55.45-.69.77-.14.32-.21.77-.21 1.34v3.97h-1.22zm12.77 0c-.13-.26-.21-.55-.25-.9-.46.39-.89.66-1.32.82-.42.16-.87.24-1.36.24-.8 0-1.41-.19-1.84-.58-.43-.39-.64-.89-.64-1.49 0-.36.08-.68.24-.97.16-.29.37-.53.64-.71.26-.18.56-.31.89-.4.24-.06.61-.13 1.09-.18.99-.12 1.72-.26 2.19-.42 0-.17.01-.28.01-.32 0-.5-.12-.85-.35-1.06-.31-.28-.78-.42-1.4-.42-.58 0-1.01.1-1.28.3-.28.2-.48.56-.61 1.08l-1.2-.16c.11-.51.29-.93.54-1.25.25-.32.61-.56 1.09-.73.47-.17 1.02-.26 1.65-.26.62 0 1.12.07 1.51.22.39.15.67.33.85.55.18.22.31.5.38.84.04.21.06.59.06 1.13v1.64c0 1.14.03 1.87.08 2.17.05.3.16.59.31.87h-1.28v-.01zm-.35-3.64c-.45.18-1.12.34-2.01.46-.51.07-.86.15-1.07.25-.21.09-.37.22-.49.4-.11.18-.17.37-.17.58 0 .33.12.6.37.82.25.22.61.33 1.09.33.47 0 .9-.1 1.26-.31.37-.21.64-.49.81-.85.13-.28.2-.69.2-1.23v-.45zm2.65 1.47l1.22-.19c.07.49.26.86.57 1.12.31.26.75.39 1.31.39.57 0 .98-.12 1.26-.35.27-.23.41-.5.41-.81 0-.28-.12-.5-.36-.66-.17-.11-.59-.25-1.26-.42-.9-.23-1.53-.42-1.88-.59-.35-.17-.61-.4-.79-.69-.18-.29-.27-.62-.27-.97 0-.32.07-.62.22-.9s.35-.5.6-.69c.19-.14.45-.26.78-.36.33-.1.68-.15 1.06-.15.57 0 1.07.08 1.5.25s.75.39.95.67.35.66.42 1.12l-1.2.16c-.05-.37-.21-.67-.48-.88-.26-.21-.63-.31-1.11-.31-.57 0-.97.09-1.21.28-.24.19-.36.41-.36.66 0 .16.05.3.15.43.1.13.26.24.47.33.12.05.49.15 1.09.31.87.23 1.48.42 1.82.57.34.15.61.36.81.65.2.28.29.63.29 1.05 0 .41-.12.8-.36 1.16s-.58.64-1.04.84-.96.3-1.53.3c-.94 0-1.66-.2-2.16-.59-.46-.38-.78-.96-.92-1.73zm12.47-.17l1.27.16c-.2.74-.57 1.32-1.11 1.73-.54.41-1.24.62-2.08.62-1.06 0-1.9-.33-2.53-.98-.62-.65-.93-1.57-.93-2.75 0-1.22.31-2.17.94-2.84.63-.67 1.44-1.01 2.45-1.01.97 0 1.76.33 2.38.99.62.66.92 1.59.92 2.79 0 .07 0 .18-.01.33h-5.41c.05.8.27 1.41.68 1.83.41.42.91.64 1.52.64.45 0 .84-.12 1.16-.36.31-.25.56-.63.75-1.15zm-4.04-1.99h4.05c-.05-.61-.21-1.07-.46-1.37-.39-.47-.9-.71-1.52-.71-.57 0-1.04.19-1.43.57-.39.37-.6.88-.64 1.51zm11.56 4.33v-.92c-.46.72-1.14 1.08-2.03 1.08-.58 0-1.11-.16-1.6-.48s-.86-.76-1.13-1.34c-.27-.57-.4-1.23-.4-1.97 0-.72.12-1.38.36-1.97.24-.59.6-1.04 1.09-1.36.48-.31 1.02-.47 1.62-.47.44 0 .83.09 1.17.28s.62.43.83.72v-3.6h1.22v10.02h-1.13zm-3.89-3.62c0 .93.2 1.62.59 2.08.39.46.85.69 1.39.69.54 0 .99-.22 1.37-.66.38-.44.56-1.11.56-2.01 0-.99-.19-1.72-.57-2.19s-.85-.7-1.42-.7c-.55 0-1 .22-1.37.67-.37.45-.55 1.15-.55 2.12zm10.4-.01c0-1.34.37-2.34 1.12-2.99.62-.54 1.39-.81 2.28-.81 1 0 1.81.33 2.45.98.63.65.95 1.56.95 2.71 0 .93-.14 1.67-.42 2.2a3 3 0 01-1.22 1.25c-.54.3-1.12.44-1.75.44-1.02 0-1.84-.33-2.46-.98-.64-.64-.95-1.58-.95-2.8zm1.26 0c0 .93.2 1.63.61 2.09.41.46.92.69 1.53.69s1.12-.23 1.52-.7c.41-.46.61-1.17.61-2.13 0-.9-.2-1.58-.61-2.04-.41-.46-.91-.69-1.52-.69-.62 0-1.13.23-1.53.69-.4.46-.61 1.16-.61 2.09zm11.74 3.63V92.9c-.57.82-1.33 1.23-2.3 1.23-.43 0-.83-.08-1.2-.25-.37-.16-.65-.37-.83-.62-.18-.25-.31-.55-.38-.91-.05-.24-.08-.62-.08-1.15v-4.5h1.23v4.03c0 .64.02 1.08.08 1.3.08.32.24.58.49.76.25.18.56.28.93.28s.72-.09 1.04-.28c.32-.19.55-.45.69-.77.13-.33.2-.8.2-1.42v-3.89h1.23v7.26h-1.1zm5.17-1.05c.14 0 .32-.02.54-.05l.18 1.09c-.35.07-.66.11-.93.11-.45 0-.79-.07-1.04-.21s-.42-.33-.52-.56c-.1-.23-.15-.71-.15-1.45v-4.18h-.9v-.96h.9v-1.8l1.22-.74v2.54h1.24v.96h-1.24v4.25c0 .35.02.58.06.68.04.1.11.18.21.24.11.05.25.08.43.08zm2.1 1.05v-1.4h1.4v1.4h-1.4zm7.14-3.22l1.25-.11c.06.5.2.91.41 1.23.22.32.55.58 1.01.78.46.2.97.3 1.54.3.51 0 .95-.08 1.34-.23.39-.15.68-.36.86-.62.19-.26.28-.55.28-.86 0-.31-.09-.59-.27-.82-.18-.23-.48-.43-.9-.59-.27-.1-.86-.27-1.78-.49-.92-.22-1.57-.43-1.93-.63-.48-.25-.84-.56-1.07-.93-.23-.37-.35-.79-.35-1.25 0-.51.14-.98.43-1.42.29-.44.71-.77 1.26-1 .55-.23 1.16-.34 1.84-.34.74 0 1.4.12 1.97.36s1 .59 1.31 1.06c.31.46.47.99.49 1.58l-1.27.1c-.07-.63-.3-1.11-.69-1.44-.39-.32-.98-.49-1.75-.49-.8 0-1.39.15-1.75.44-.37.29-.55.65-.55 1.06 0 .36.13.66.39.89.26.23.92.47 2 .71s1.82.46 2.22.64c.58.27 1.01.61 1.29 1.02.28.41.42.89.42 1.43 0 .53-.15 1.04-.46 1.51-.31.47-.74.84-1.32 1.1-.57.26-1.22.39-1.93.39-.91 0-1.67-.13-2.28-.4-.61-.26-1.09-.66-1.44-1.19a3.1 3.1 0 01-.57-1.79zm14.6.88l1.27.16c-.2.74-.57 1.32-1.11 1.73-.54.41-1.24.62-2.08.62-1.06 0-1.9-.33-2.53-.98-.62-.65-.93-1.57-.93-2.75 0-1.22.31-2.17.94-2.84.63-.67 1.44-1.01 2.45-1.01.97 0 1.76.33 2.38.99.62.66.92 1.59.92 2.79 0 .07 0 .18-.01.33h-5.41c.05.8.27 1.41.68 1.83.41.42.91.64 1.52.64.45 0 .84-.12 1.16-.36.31-.25.56-.63.75-1.15zm-4.04-1.99h4.05c-.05-.61-.21-1.07-.46-1.37-.39-.47-.9-.71-1.52-.71-.57 0-1.04.19-1.43.57-.39.37-.6.88-.64 1.51zm6.84 4.33v-7.26h1.11v1.1c.28-.51.54-.85.78-1.02s.5-.25.79-.25c.41 0 .84.13 1.26.4l-.42 1.14c-.3-.18-.6-.27-.9-.27-.27 0-.51.08-.72.24-.21.16-.37.39-.46.67-.14.44-.21.92-.21 1.44v3.8h-1.23zm6.69 0l-2.76-7.26h1.3l1.56 4.35c.17.47.32.96.46 1.46.11-.38.26-.84.46-1.38l1.61-4.43h1.26l-2.75 7.26h-1.14zm4.99-8.61v-1.42h1.23v1.42h-1.23zm0 8.61v-7.26h1.23v7.26h-1.23zm7.84-2.66l1.21.16c-.13.83-.47 1.49-1.02 1.96-.54.47-1.21.71-2.01.71-.99 0-1.79-.32-2.4-.97-.6-.65-.91-1.58-.91-2.79 0-.78.13-1.47.39-2.06s.66-1.03 1.19-1.32a3.56 3.56 0 011.73-.44c.79 0 1.43.2 1.93.6.5.4.82.97.96 1.7l-1.2.18c-.11-.49-.32-.85-.6-1.1-.29-.25-.64-.37-1.05-.37-.62 0-1.12.22-1.51.67-.39.44-.58 1.15-.58 2.11 0 .98.19 1.68.56 2.13.37.44.86.66 1.46.66.48 0 .89-.15 1.21-.44.35-.32.55-.78.64-1.39zm7.23.32l1.27.16c-.2.74-.57 1.32-1.11 1.73-.54.41-1.24.62-2.08.62-1.06 0-1.9-.33-2.53-.98-.62-.65-.93-1.57-.93-2.75 0-1.22.31-2.17.94-2.84.63-.67 1.44-1.01 2.45-1.01.97 0 1.76.33 2.38.99.62.66.92 1.59.92 2.79 0 .07 0 .18-.01.33h-5.41c.05.8.27 1.41.68 1.83.41.42.91.64 1.52.64.45 0 .84-.12 1.16-.36.31-.25.57-.63.75-1.15zm-4.04-1.99h4.05c-.05-.61-.21-1.07-.46-1.37-.39-.47-.9-.71-1.52-.71-.57 0-1.04.19-1.43.57-.38.37-.6.88-.64 1.51zm6.36 2.16l1.22-.19c.07.49.26.86.57 1.12.31.26.75.39 1.31.39.57 0 .98-.12 1.26-.35.27-.23.41-.5.41-.81 0-.28-.12-.5-.36-.66-.17-.11-.59-.25-1.26-.42-.9-.23-1.53-.42-1.88-.59-.35-.17-.61-.4-.79-.69-.18-.29-.27-.62-.27-.97 0-.32.07-.62.22-.9s.35-.5.6-.69c.19-.14.45-.26.78-.36.33-.1.68-.15 1.06-.15.57 0 1.07.08 1.5.25s.75.39.95.67.35.66.42 1.12l-1.2.16c-.05-.37-.21-.67-.48-.88-.26-.21-.63-.31-1.11-.31-.57 0-.97.09-1.21.28-.24.19-.36.41-.36.66 0 .16.05.3.15.43.1.13.26.24.47.33.12.05.49.15 1.09.31.87.23 1.48.42 1.82.57.34.15.61.36.81.65.2.28.29.63.29 1.05 0 .41-.12.8-.36 1.16s-.58.64-1.04.84-.96.3-1.53.3c-.94 0-1.66-.2-2.16-.59-.46-.38-.78-.96-.92-1.73zm16.13-.49l1.21.16c-.13.83-.47 1.49-1.02 1.96-.54.47-1.21.71-2.01.71-.99 0-1.79-.32-2.4-.97-.6-.65-.91-1.58-.91-2.79 0-.78.13-1.47.39-2.06s.66-1.03 1.19-1.32a3.56 3.56 0 011.73-.44c.79 0 1.43.2 1.93.6.5.4.82.97.96 1.7l-1.2.18c-.11-.49-.32-.85-.6-1.1-.29-.25-.64-.37-1.05-.37-.62 0-1.12.22-1.51.67-.39.44-.58 1.15-.58 2.11 0 .98.19 1.68.56 2.13.37.44.86.66 1.46.66.48 0 .89-.15 1.21-.44.34-.32.55-.78.64-1.39zm7.24 2.66c-.13-.26-.21-.55-.25-.9-.46.39-.89.66-1.32.82-.42.16-.87.24-1.36.24-.8 0-1.41-.19-1.84-.58-.43-.39-.64-.89-.64-1.49 0-.36.08-.68.24-.97.16-.29.37-.53.64-.71.26-.18.56-.31.89-.4.24-.06.61-.13 1.09-.18.99-.12 1.72-.26 2.19-.42 0-.17.01-.28.01-.32 0-.5-.12-.85-.35-1.06-.31-.28-.78-.42-1.4-.42-.58 0-1.01.1-1.28.3-.28.2-.48.56-.61 1.08l-1.2-.16c.11-.51.29-.93.54-1.25.25-.32.61-.56 1.09-.73.47-.17 1.02-.26 1.65-.26.62 0 1.12.07 1.51.22.39.15.67.33.85.55.18.22.31.5.38.84.04.21.06.59.06 1.13v1.64c0 1.14.03 1.87.08 2.17.05.3.16.59.31.87h-1.28v-.01zm-.35-3.64c-.45.18-1.12.34-2.01.46-.51.07-.86.15-1.07.25-.21.09-.37.22-.49.4-.11.18-.17.37-.17.58 0 .33.12.6.37.82.25.22.61.33 1.09.33.47 0 .9-.1 1.26-.31.37-.21.64-.49.81-.85.13-.28.2-.69.2-1.23v-.45zm3.15 3.64v-7.26h1.11v1.03c.53-.8 1.3-1.2 2.31-1.2.44 0 .84.08 1.21.24.37.16.64.36.82.62.18.26.31.56.38.91.05.23.07.63.07 1.2v4.46h-1.23v-4.42c0-.5-.05-.88-.14-1.12-.1-.25-.27-.45-.51-.59-.24-.15-.53-.22-.86-.22-.52 0-.98.17-1.36.5-.38.33-.57.96-.57 1.89v3.96h-1.23zm12.81 0h-1.14V83.95h1.23v3.58c.52-.65 1.18-.98 1.99-.98.45 0 .87.09 1.27.27.4.18.73.43.98.76.26.33.46.72.6 1.18.15.46.22.95.22 1.48 0 1.24-.31 2.21-.92 2.88-.62.68-1.35 1.02-2.21 1.02-.86 0-1.53-.36-2.02-1.07v.9zm-.01-3.69c0 .87.12 1.5.36 1.89.39.63.91.95 1.57.95.54 0 1-.23 1.39-.7.39-.47.59-1.16.59-2.09 0-.95-.19-1.65-.56-2.1s-.83-.68-1.36-.68c-.54 0-1 .23-1.39.7-.4.47-.6 1.15-.6 2.03zm11.63 1.35l1.27.16c-.2.74-.57 1.32-1.11 1.73-.54.41-1.24.62-2.08.62-1.06 0-1.9-.33-2.53-.98-.62-.65-.93-1.57-.93-2.75 0-1.22.31-2.17.94-2.84.63-.67 1.44-1.01 2.45-1.01.97 0 1.76.33 2.38.99.62.66.92 1.59.92 2.79 0 .07 0 .18-.01.33h-5.41c.05.8.27 1.41.68 1.83.41.42.91.64 1.52.64.45 0 .84-.12 1.16-.36.31-.25.57-.63.75-1.15zm-4.04-1.99h4.05c-.05-.61-.21-1.07-.46-1.37-.39-.47-.9-.71-1.52-.71-.57 0-1.04.19-1.43.57-.38.37-.6.88-.64 1.51zm10.76-4.28v-1.42h1.23v1.42h-1.23zm0 8.61v-7.26h1.23v7.26h-1.23zm7.81 0v-.92c-.46.72-1.14 1.08-2.03 1.08-.58 0-1.11-.16-1.6-.48s-.86-.76-1.13-1.34c-.27-.57-.4-1.23-.4-1.97 0-.72.12-1.38.36-1.97.24-.59.6-1.04 1.09-1.36.48-.31 1.02-.47 1.62-.47.44 0 .83.09 1.17.28s.62.43.83.72v-3.6h1.22v10.02h-1.13zm-3.89-3.62c0 .93.2 1.62.59 2.08.39.46.85.69 1.39.69.54 0 .99-.22 1.37-.66.38-.44.56-1.11.56-2.01 0-.99-.19-1.72-.57-2.19s-.85-.7-1.42-.7c-.55 0-1 .22-1.37.67-.37.45-.55 1.15-.55 2.12zm11.93 1.28l1.27.16c-.2.74-.57 1.32-1.11 1.73-.54.41-1.24.62-2.08.62-1.06 0-1.9-.33-2.53-.98-.62-.65-.93-1.57-.93-2.75 0-1.22.31-2.17.94-2.84.63-.67 1.44-1.01 2.45-1.01.97 0 1.76.33 2.38.99.62.66.92 1.59.92 2.79 0 .07 0 .18-.01.33h-5.41c.05.8.27 1.41.68 1.83.41.42.91.64 1.52.64.45 0 .84-.12 1.16-.36.31-.25.56-.63.75-1.15zm-4.04-1.99h4.05c-.05-.61-.21-1.07-.46-1.37-.39-.47-.9-.71-1.52-.71-.57 0-1.04.19-1.43.57-.39.37-.6.88-.64 1.51zm6.85 4.33v-7.26h1.11v1.03c.53-.8 1.3-1.2 2.31-1.2.44 0 .84.08 1.21.24.37.16.64.36.82.62.18.26.31.56.38.91.05.23.07.63.07 1.2v4.46h-1.23v-4.42c0-.5-.05-.88-.14-1.12-.1-.25-.27-.45-.51-.59-.24-.15-.53-.22-.86-.22-.52 0-.98.17-1.36.5-.38.33-.57.96-.57 1.89v3.96h-1.23zm9.94-1.05c.14 0 .32-.02.54-.05l.18 1.09c-.35.07-.66.11-.93.11-.45 0-.79-.07-1.04-.21s-.42-.33-.52-.56c-.1-.23-.15-.71-.15-1.45v-4.18h-.9v-.96h.9v-1.8l1.22-.74v2.54h1.24v.96h-1.24v4.25c0 .35.02.58.06.68.04.1.11.18.21.24.1.05.24.08.43.08zm1.75-7.56v-1.42h1.23v1.42h-1.23zm0 8.61v-7.26h1.23v7.26h-1.23zm3.43 0v-6.31h-1.09v-.95h1.09V86c0-.72.15-1.27.46-1.65.31-.38.8-.57 1.47-.57.45 0 .87.05 1.25.16l-.19 1.04a4.04 4.04 0 00-.66-.06c-.42 0-.71.08-.87.25-.15.17-.23.53-.23 1.07v.47h1.41v.95h-1.41v6.31h-1.23zm3.57-8.61v-1.42h1.23v1.42h-1.23zm0 8.61v-7.26h1.23v7.26h-1.23zm8.07-2.34l1.27.16c-.2.74-.57 1.32-1.11 1.73-.54.41-1.24.62-2.08.62-1.06 0-1.9-.33-2.53-.98-.62-.65-.93-1.57-.93-2.75 0-1.22.31-2.17.94-2.84.63-.67 1.44-1.01 2.45-1.01.97 0 1.76.33 2.38.99.62.66.92 1.59.92 2.79 0 .07 0 .18-.01.33h-5.41c.05.8.27 1.41.68 1.83.41.42.91.64 1.52.64.45 0 .84-.12 1.16-.36.31-.25.56-.63.75-1.15zm-4.04-1.99h4.05c-.05-.61-.21-1.07-.46-1.37-.39-.47-.9-.71-1.52-.71-.57 0-1.04.19-1.43.57-.39.37-.6.88-.64 1.51zm11.56 4.33v-.92c-.46.72-1.14 1.08-2.03 1.08-.58 0-1.11-.16-1.6-.48s-.86-.76-1.13-1.34c-.27-.57-.4-1.23-.4-1.97 0-.72.12-1.38.36-1.97.24-.59.6-1.04 1.09-1.36.48-.31 1.02-.47 1.62-.47.44 0 .83.09 1.17.28s.62.43.83.72v-3.6h1.22v10.02h-1.13zm-3.89-3.62c0 .93.2 1.62.59 2.08.39.46.85.69 1.39.69.54 0 .99-.22 1.37-.66.38-.44.56-1.11.56-2.01 0-.99-.19-1.72-.57-2.19s-.85-.7-1.42-.7c-.55 0-1 .22-1.37.67-.36.45-.55 1.15-.55 2.12zm11.99 3.62h-1.14V83.95h1.23v3.58c.52-.65 1.18-.98 1.99-.98.45 0 .87.09 1.27.27.4.18.73.43.98.76.26.33.46.72.6 1.18.15.46.22.95.22 1.48 0 1.24-.31 2.21-.92 2.88-.62.68-1.35 1.02-2.21 1.02-.86 0-1.53-.36-2.02-1.07v.9zm-.01-3.69c0 .87.12 1.5.36 1.89.39.63.91.95 1.57.95.54 0 1-.23 1.39-.7.39-.47.59-1.16.59-2.09 0-.95-.19-1.65-.56-2.1s-.83-.68-1.36-.68c-.54 0-1 .23-1.39.7-.4.47-.6 1.15-.6 2.03zm7.4 6.63c-.24 0-.5-.05-.79-.15l-.14-1.16c.27.07.5.11.7.11.27 0 .49-.05.66-.14.16-.09.3-.22.4-.38.08-.12.2-.43.38-.92.02-.07.06-.17.11-.3l-2.75-7.27h1.33l1.51 4.2c.2.53.37 1.09.53 1.68.14-.57.31-1.12.51-1.65l1.55-4.23h1.23l-2.76 7.38c-.3.8-.53 1.35-.69 1.65-.22.41-.47.7-.75.89-.3.2-.64.29-1.03.29zm12.3-3.99c.14 0 .32-.02.54-.05l.18 1.09c-.35.07-.66.11-.93.11-.45 0-.79-.07-1.04-.21s-.42-.33-.52-.56c-.1-.23-.15-.71-.15-1.45v-4.18h-.9v-.96h.9v-1.8l1.22-.74v2.54h1.24v.96h-1.24v4.25c0 .35.02.58.06.68.04.1.11.18.21.24.11.05.25.08.43.08zm6.72-1.29l1.27.16c-.2.74-.57 1.32-1.11 1.73-.54.41-1.24.62-2.08.62-1.06 0-1.9-.33-2.53-.98-.62-.65-.93-1.57-.93-2.75 0-1.22.31-2.17.94-2.84.63-.67 1.44-1.01 2.45-1.01.97 0 1.76.33 2.38.99.62.66.92 1.59.92 2.79 0 .07 0 .18-.01.33h-5.41c.05.8.27 1.41.68 1.83.41.42.91.64 1.52.64.45 0 .84-.12 1.16-.36.31-.25.56-.63.75-1.15zm-4.04-1.99h4.05c-.05-.61-.21-1.07-.46-1.37-.39-.47-.9-.71-1.52-.71-.57 0-1.04.19-1.43.57-.39.37-.6.88-.64 1.51zm6.03 4.33l2.65-3.77-2.45-3.49h1.54l1.11 1.7c.21.32.38.59.51.81.2-.3.39-.57.55-.8l1.22-1.72h1.47l-2.51 3.42 2.7 3.84h-1.51l-1.49-2.26-.4-.61-1.91 2.86h-1.48zm9.97-1.05c.14 0 .32-.02.54-.05l.18 1.09c-.35.07-.66.11-.93.11-.45 0-.79-.07-1.04-.21s-.42-.33-.52-.56c-.1-.23-.15-.71-.15-1.45v-4.18h-.9v-.96h.9v-1.8l1.22-.74v2.54h1.24v.96h-1.24v4.25c0 .35.02.58.06.68.04.1.11.18.21.24.1.05.24.08.43.08zm5.18-2.58c0-1.34.37-2.34 1.12-2.99.62-.54 1.39-.81 2.28-.81 1 0 1.81.33 2.45.98.63.65.95 1.56.95 2.71 0 .93-.14 1.67-.42 2.2a3 3 0 01-1.22 1.25c-.54.3-1.12.44-1.75.44-1.02 0-1.84-.33-2.46-.98-.64-.64-.95-1.58-.95-2.8zm1.26 0c0 .93.2 1.63.61 2.09.41.46.92.69 1.53.69s1.12-.23 1.52-.7c.41-.46.61-1.17.61-2.13 0-.9-.2-1.58-.61-2.04-.41-.46-.91-.69-1.52-.69-.62 0-1.13.23-1.53.69-.41.46-.61 1.16-.61 2.09zm6.98 3.63v-7.26h1.11v1.03c.53-.8 1.3-1.2 2.31-1.2.44 0 .84.08 1.21.24.37.16.64.36.82.62.18.26.31.56.38.91.05.23.07.63.07 1.2v4.46h-1.23v-4.42c0-.5-.05-.88-.14-1.12-.1-.25-.27-.45-.51-.59-.24-.15-.53-.22-.86-.22-.52 0-.98.17-1.36.5-.38.33-.57.96-.57 1.89v3.96h-1.23zm7.76 0V83.95h1.23v10.02h-1.23zm3.87 2.94c-.24 0-.5-.05-.79-.15l-.14-1.16c.27.07.5.11.7.11.27 0 .49-.05.66-.14.16-.09.3-.22.4-.38.08-.12.2-.43.38-.92.02-.07.06-.17.11-.3l-2.75-7.27h1.33l1.51 4.2c.2.53.37 1.09.53 1.68.14-.57.31-1.12.51-1.65l1.55-4.23h1.23l-2.76 7.38c-.3.8-.53 1.35-.69 1.65-.22.41-.47.7-.75.89-.3.2-.64.29-1.03.29z'%3E%3C/path%3E%3Ctext transform='translate(441.594 93.969)' font-family='ArialMT' font-size='14'%3E.%3C/text%3E%3Cg class='st2'%3E%3Cdefs%3E%3Cpath id='SVGID_5_' d='M-.77.36h187.5v39H-.77z'%3E%3C/path%3E%3C/defs%3E%3CclipPath id='SVGID_6_'%3E%3Cuse xlink:href='%23SVGID_5_' overflow='visible'%3E%3C/use%3E%3C/clipPath%3E%3Cg clip-path='url(%23SVGID_6_)'%3E%3Cimage width='782' height='163' xlink:href='data:image/jpeg;base64,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 /wAjkv3+RyX7/I5L9/kcl+/yOS/f5HJfv8vmr/0F7xbxIo7ob7RjW0URGQu0TQq2E0IqxlVdCS6y i+eaEu0W84kPeMT2DZEqIXaUYqdYsHvwl8/mZCrfB0MrmZkZ4LaZiqZGd8MsHT5b/9oACAEBAQY/ APBhjxXCK6EsCobWCPGK7ZegvortV6C+igMiFZF4Svqn0VbrOpf8Mmr69lBkIZTsINwfCuxCjxnV XaL0hXaL0hXaL0hXaL0hXaL0hXaL5xWog/T4NjIvnFdovSFdovSFdovSFeowa22xv4PrsF4zau0X pCu0XpCu0XpCu0XzjR2i9IV2i9IV2i9IV2i9IV2i9IVdWDDxg3rtF6QrtF6QrtF6QrtF6QrtF6Qr tF6QrtF6QrtF6QrtF6Qr1GDcRB0hZpUjJ1gOwW4+mviYumvpr4mLpr6a+Ji6a+mviYumvpr4mLpr 6a+Ji6a+mviYumvpr4mLpr6a+Ji6a+mviYumvpr4mLpr6a+Ji6a+mviYumvpr4mLpr6a+Ji6a+mv iYumvpr4mLpr6a+Ji6a+mviYumvpr4mLpr6a+Ji6a+mviYumvpr4mLpr6a+Ji6a+mviYumvpr4mL pr6a+Ji6a+mviYumvpr4mLpr6a+Ji6a+mviYumvpr4mLpr6a+Ji6a+mviYumvpr4mLpr6a+Ji6a+ nSq5UnVl9a6idnFXxA8x9FfEDzH0VC+K/WKiEMbEayR4/BG4eshPtRMdX0eKt+L1ZF9uI7R4JxIp uoYsG37E7OIiv/JDoN/XUuE85kaI2Li4B+i5rtG85qZY8owdSATvAte/Ewr/AMkOg39dXjz1dvEQ y/XvGgckuEJ9WVGJS/HQKZbuo+7J64+uo4PmMPVFtRnQ+qD5VoOhDKwuCNhBoipZh8xCiRiwXcbV c3t7dJkyZnXB23N0Bl/4jSszOFe+6bnXau0bzmpcORiRkJdbm/rL4MOFExHULdrG12ejHIzK66iC TqrtG85qWePM6gRMEIYFr3F/xCkkPzEEIwYjcbXY3/HRjvYlSt/otTN/3EC5JtuNwnn1E8mX1/XE gBQVtbjY12jec1DhrM0ZmbdDkkgfRev/ACQ6Df11PjzT9e3rvvgEcHlJp26xtbE7T46GQZTjY7ey 73JbiW4rX8zPQP8AXS5RzTMGcJugFdvDfeNdo3nNRQday9a4TeuTbeNr1f8A7mdf8h/romP5iHYD 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' transform='matrix(.2398 0 0 .2393 -.77 .357)' overflow='visible'%3E%3C/image%3E%3C/g%3E%3C/g%3E%3Cg class='st2'%3E%3Cdefs%3E%3Cpath id='SVGID_7_' d='M-.77-88.49h115.65v39H-.77z'%3E%3C/path%3E%3C/defs%3E%3CclipPath id='SVGID_8_'%3E%3Cuse xlink:href='%23SVGID_7_' overflow='visible'%3E%3C/use%3E%3C/clipPath%3E%3Cg clip-path='url(%23SVGID_8_)'%3E%3Cdefs%3E%3Cpath id='SVGID_9_' d='M-.77-88.49h116.74v39H-.77z'%3E%3C/path%3E%3C/defs%3E%3CclipPath id='SVGID_10_'%3E%3Cuse xlink:href='%23SVGID_9_' overflow='visible'%3E%3C/use%3E%3C/clipPath%3E%3Cg clip-path='url(%23SVGID_10_)'%3E%3Cimage width='487' height='163' xlink:href='data:image/jpeg;base64,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' transform='matrix(.2397 0 0 .2393 -.77 -88.486)' overflow='visible'%3E%3C/image%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg class='st2'%3E%3Ctext class='st17' transform='translate(-199.195 267.998)' font-family='ArialMT' font-size='14'%3E9%3C/text%3E%3C/g%3E%3Cg class='st2'%3E%3Cdefs%3E%3Cpath id='SVGID_11_' d='M-.77 124.58h491.75v96.25H-.77z'%3E%3C/path%3E%3C/defs%3E%3CclipPath id='SVGID_12_'%3E%3Cuse xlink:href='%23SVGID_11_' overflow='visible'%3E%3C/use%3E%3C/clipPath%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg class='st0' id='Ask_the_library'%3E%3Cpath fill='%23222160' d='M-1.15 125.49h63v33.07h-63z'%3E%3C/path%3E%3Cpath fill='%23e61e2a' d='M-1.15 164.71h162v33h-162z'%3E%3C/path%3E%3Cg class='st1'%3E%3Cpath fill='%23fde092' d='M-1.15 205.28H14.4v15.55H-1.15z'%3E%3C/path%3E%3Cpath fill='%23fac90e' d='M46.03 205.28h15.55v15.55H46.03z'%3E%3C/path%3E%3Cpath fill='%23fcd45d' d='M22.44 205.28h15.55v15.55H22.44z'%3E%3C/path%3E%3C/g%3E%3Cpath fill='none' d='M7.36 170.27H159.1v49.01H7.36z'%3E%3C/path%3E%3Ctext transform='translate(7.355 190.749)' fill='%23fff' font-family='Museo-500' font-size='29'%3Ethe Library%3C/text%3E%3Ctext transform='translate(7.355 152.056)' fill='%23fff' font-family='Museo-500' font-size='28'%3EAsk%3C/text%3E%3C/g%3E%3Cg id='Libary_logo'%3E%3Cg id='layer1' transform='translate(31.708 -356.127)'%3E%3Cg id='g5781' transform='matrix(7.3477 0 0 7.3477 -970.819 821.314)'%3E%3Cg id='g5104' transform='matrix(1.25 0 0 -1.25 224.224 -60.208)'%3E%3Cpath id='path5106' d='M-67.45 2.18h.32v.12h-1.12v-.12h.32V-.07h-.32v-.12h1.12v.12h-.32v2.25z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5108' transform='matrix(1.25 0 0 -1.25 -466.525 3.922)'%3E%3Cdefs%3E%3Cpath id='SVGID_13_' d='M474.23 48.31h14.61v6.53h-14.61v-6.53z'%3E%3C/path%3E%3C/defs%3E%3CclipPath id='SVGID_14_'%3E%3Cuse xlink:href='%23SVGID_13_' overflow='visible'%3E%3C/use%3E%3C/clipPath%3E%3Cg id='g5110' clip-path='url(%23SVGID_14_)'%3E%3Cg id='g5116' transform='translate(568.715 32.564)'%3E%3Cpath id='path5118' d='M-81.53 18.56v.12h-.34v2.27c.52.03.61-.09.68-.56h.11l-.04.65h-1.99l-.04-.65h.12c.07.47.16.59.68.56v-2.27h-.34v-.12h1.16'%3E%3C/path%3E%3C/g%3E%3Cg id='g5120' transform='translate(544.599 51.312)'%3E%3Cpath id='path5122' d='M-60.46 2.17v.12h-.92l-.54-1.7-.52 1.7h-.91v-.12h.32V-.08h-.35c-.32-.01-.33.27-.33.32 0 .6-.13.83-.71.91v.01c.35.04.79.13.79.55 0 .52-.48.56-.89.56h-1.2v-.1h.32V-.08h-.32V-.2h1.12v.12h-.32V1.1c.21.01.44-.04.54-.13.1-.08.15-.34.15-.64 0-.38.2-.52.57-.52h1.08v.12h-.31v2.21h.01l.74-2.33h.13l.74 2.33h.01V-.07h-.32v-.12h1.11v.12h-.32v2.25h.33zm-4.44-.94v.95h.32c.33 0 .45-.08.45-.5 0-.33-.14-.45-.47-.45h-.3'%3E%3C/path%3E%3C/g%3E%3Cg id='g5124' transform='translate(487.364 53.408)'%3E%3Cpath id='path5126' d='M-10.44.34h-.37v-.3h-.62v-.63h-.46v-.92h.46v-.63h.62v-.3h.33c.76 0 1.44.62 1.44 1.39-.01.76-.63 1.39-1.4 1.39' fill='%23e42a20'%3E%3C/path%3E%3C/g%3E%3Cg id='g5128' transform='translate(505.566 26.61)'%3E%3Cpath id='path5130' d='M-26.35 23.76c0 .02-.01.03-.03.03h-.06v.12h.14c.06 0 .09-.03.09-.09v-.54c0-.15.09-.23.23-.23s.23.09.23.23v.54c0 .06.03.09.09.09h.14v-.12h-.06c-.02 0-.03-.01-.03-.03v-.48c0-.21-.15-.36-.37-.36s-.37.14-.37.36v.48z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5132' transform='translate(512.893 21.016)'%3E%3Cpath id='path5134' d='M-32.75 28.65h.06c.02 0 .03.01.03.03v.82h.13l.43-.62c.04-.05.08-.13.08-.13s-.01.08-.01.13v.53c0 .06.03.09.09.09h.14v-.12h-.06c-.02 0-.03-.01-.03-.03v-.82h-.12l-.43.62c-.04.05-.08.13-.08.13s.01-.08.01-.13v-.53c0-.06-.03-.09-.09-.09h-.14v.12z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5136' transform='translate(521.607 21.016)'%3E%3Cpath id='path5138' d='M-40.36 28.65h.1v.74h-.1v.12h.32v-.12h-.1v-.74h.1v-.12h-.32v.12z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5140' transform='translate(525.343 26.61)'%3E%3Cpath id='path5142' d='M-43.63 23.76c-.01.02-.02.03-.05.03h-.02v.12h.08c.07 0 .09-.02.11-.08l.21-.6c.02-.05.04-.13.04-.13s.02.08.04.13l.21.6c.02.06.05.08.11.08h.08v-.12h-.02c-.02 0-.04-.01-.05-.03l-.31-.82h-.15l-.28.82z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5144' transform='translate(533.21 26.85)'%3E%3Cpath id='path5146' d='M-50.5 23.55h-.09v.12h.57c.06 0 .09-.03.09-.09v-.12h-.13v.06c0 .02-.01.03-.03.03h-.28v-.3h.34v-.12h-.34v-.28c0-.02.01-.03.03-.03h.28c.02 0 .03.01.03.03v.06h.13v-.12c0-.06-.03-.09-.09-.09h-.43c-.06 0-.09.03-.09.09v.76z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5148' transform='translate(542.087 24.086)'%3E%3Cpath id='path5150' d='M-58.26 25.97c.1 0 .17.07.17.18 0 .11-.06.17-.16.17h-.18v-.35h.17zm-.32.35h-.09v.12h.42c.17 0 .29-.11.29-.29 0-.16-.11-.24-.18-.26 0 0 .02-.01.04-.04l.12-.23c.01-.03.04-.03.07-.03h.02v-.12h-.07c-.08 0-.1.01-.13.07l-.13.26c-.02.05-.04.05-.1.05h-.13v-.39h-.14c.01 0 .01.86.01.86z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5152' transform='translate(546.49 21.869)'%3E%3Cpath id='path5154' d='M-62.11 27.9s.1-.12.24-.12c.09 0 .17.06.17.14 0 .2-.47.17-.47.48 0 .15.13.26.31.26.1 0 .28-.05.28-.18v-.08h-.13v.05c0 .05-.07.09-.15.09-.1 0-.17-.06-.17-.13 0-.2.47-.15.47-.47 0-.15-.12-.28-.31-.28-.21 0-.32.14-.32.14l.08.1z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5156' transform='translate(551.995 21.016)'%3E%3Cpath id='path5158' d='M-66.92 28.65h.1v.74h-.1v.12h.32v-.12h-.1v-.74h.1v-.12h-.32v.12z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5160' transform='translate(558.017 26.85)'%3E%3Cpath id='path5162' d='M-72.18 23.55h-.2c-.02 0-.03-.01-.03-.03v-.06h-.12v.13c0 .06.02.08.08.08h.67c.06 0 .08-.02.08-.08v-.13h-.12v.06c0 .02-.01.03-.03.03h-.2v-.85h-.14v.85z'%3E%3C/path%3E%3C/g%3E%3Cg id='g5164' transform='translate(564.99 23.442)'%3E%3Cpath id='path5166' d='M-78.27 26.53l-.25.4c-.02.03-.03.03-.06.03h-.03v.12h.06c.07 0 .09-.01.13-.07l.15-.25c.03-.05.06-.11.06-.11s.03.06.06.11l.15.24c.04.06.07.07.13.07h.06v-.12h-.03c-.03 0-.04-.01-.06-.03l-.25-.4v-.42h-.14v.43z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cpath fill='%23e61e2a' d='M116.85 1.58h70v23h-70z'%3E%3C/path%3E%3Cpath class='st17' d='M123.02 7.72c0-.25-.14-.4-.4-.4h-.78V5.31h2.32c.87 0 1.23.38 1.23 1.23v9.21c0 .25.15.4.4.4h2.8c.25 0 .4-.14.4-.4v-.78h2.15v1.96c0 .87-.36 1.23-1.23 1.23h-5.66c-.87 0-1.23-.36-1.23-1.23V7.72zM132.9 11.28c0-.27-.14-.4-.4-.4h-.72V8.93h2.19c.85 0 1.21.38 1.21 1.23v5.66c0 .25.15.4.4.4h.72v1.94h-2.19c-.85 0-1.21-.36-1.21-1.23v-5.65zm.11-5.97H135v2.12h-1.99V5.31zM138.17 7.66c0-.27-.15-.4-.4-.4h-.72V5.31h2.19c.85 0 1.23.38 1.23 1.23v2.68c0 .45-.04.78-.04.78h.04s.81-1.29 2.77-1.29c2.5 0 4.09 1.97 4.09 4.83 0 2.93-1.79 4.83-4.23 4.83-1.92 0-2.75-1.3-2.75-1.3h-.04s.04.25.04.62v.47h-2.17V7.66zm4.52 8.78c1.25 0 2.32-1.03 2.32-2.86 0-1.75-.94-2.9-2.3-2.9-1.19 0-2.32.87-2.32 2.91 0 1.44.76 2.85 2.3 2.85zM149.42 11.28c0-.27-.14-.4-.4-.4h-.72V8.93h2.1c.81 0 1.23.34 1.23 1.12v.54c0 .34-.04.58-.04.58h.04c.42-1.32 1.52-2.37 2.93-2.37.2 0 .42.04.42.04v2.26s-.23-.04-.56-.04c-.98 0-2.1.56-2.52 1.94-.13.45-.2.96-.2 1.5v3.66h-2.28v-6.88zM160.92 12.37h.29v-.07c0-1.32-.52-1.81-1.7-1.81-.42 0-1.23.11-1.23.62v.49h-2.14v-.98c0-1.72 2.42-1.9 3.38-1.9 3.08 0 3.98 1.61 3.98 3.67v3.44c0 .25.14.4.4.4h.72v1.94h-2.06c-.85 0-1.18-.47-1.18-1.01 0-.24.02-.4.02-.4h-.04s-.71 1.63-2.79 1.63c-1.65 0-3.15-1.03-3.15-2.88.01-2.91 3.99-3.14 5.5-3.14zm-1.78 4.21c1.23 0 2.1-1.3 2.1-2.43v-.22h-.4c-1.19 0-3.09.16-3.09 1.45 0 .62.45 1.2 1.39 1.2zM166.47 11.28c0-.27-.14-.4-.4-.4h-.72V8.93h2.1c.81 0 1.23.34 1.23 1.12v.54c0 .34-.04.58-.04.58h.04c.42-1.32 1.52-2.37 2.93-2.37.2 0 .42.04.42.04v2.26s-.23-.04-.56-.04c-.98 0-2.1.56-2.52 1.94-.13.45-.2.96-.2 1.5v3.66h-2.28v-6.88zM174.89 20.02c.63 0 1.19-.38 1.52-1.18l.31-.71-3.08-6.93c-.11-.27-.23-.33-.49-.33h-.27V8.93h1.52c.65 0 .98.24 1.21.87l1.81 4.62c.18.47.33 1.23.33 1.23h.04s.14-.76.31-1.23l1.57-4.62c.22-.63.6-.87 1.23-.87h1.56v1.95h-.27c-.27 0-.42.05-.52.33l-3.31 8.34c-.65 1.67-1.95 2.41-3.33 2.41-1.45 0-2.33-.94-2.33-.94l.89-1.63c-.02 0 .54.63 1.3.63z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+#printonly {
+  display: none;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+#footer-legal {
+  margin-top: 2.5em;
+  text-align: center;
+  color: var(--blue-rmit);
+}
+
+#footer-legal a {
+  color: var(--blue-rmit);
+}
+
+#footer {
+  width: inherit;
+  padding-top: 2rem;
+}
+
+#footer .container-fluid {
+  width: inherit;
+}
+
+#footer .container {
+  width: inherit;
+  max-width: 1024px;
+}
+
+#footer-2021 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-top: 2rem;
+  width: inherit;
+}
+
+#footer-2021 h3 {
+  font-family: "Museo300", "Century Gothic", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: var(--blue-rmit);
+  font-size: 3.92rem;
+  margin-bottom: 4rem;
+}
+
+#footer-2021 h3 svg {
+  height: 3rem;
+  position: relative;
+  bottom: -0.8rem;
+  padding-right: 2rem;
+  border-right: 1px solid var(--blue-rmit);
+}
+
+#footer-2021 h4 {
+  font-size: 1.54rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: var(--grey-dark);
+}
+
+#footer-2021 ul {
+  padding-left: 0;
+}
+
+#footer-2021 ul li {
+  font-size: 1.54rem;
+  list-style-type: none;
+  line-height: 2.7rem;
+}
+
+#footer-2021 hr {
+  border-top: 1px solid var(--grey-rmit);
+}
+
+#footer-2021 .footer-rmit ul li {
+  font-size: 1.4rem;
+  display: inline;
+  white-space: nowrap;
+}
+
+#footer-2021 .footer-rmit ul li svg {
+  color: var(--white);
+  margin: 0.5rem;
+  height: 2.3rem;
+}
+
+#footer-2021 .footer-rmit ul li svg path {
+  fill: var(--white);
+}
+
+#footer-2021 .footer-support .h5 {
+  font-weight: 400;
+}
+
+#footer-2021 .footer-support .media-heading {
+  margin: 1rem 0 0 2rem;
+}
+
+#footer-2021 .footer-support svg {
+  position: relative;
+  right: 0;
+  height: 8rem;
+  padding: 1rem 0 0 15px;
+  position: relative;
+}
+
+#footer-2021 .footer-support a {
+  color: var(--blue-rmit);
+  text-decoration: none;
+}
+
+#footer-2021 .footer-support a:hover {
+  color: var(--blue-rmit);
+  text-decoration: underline;
+}
+
+#footer-2021 .footer-learning-lab h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#footer-2021 .footer-learning-lab h4 a {
+  color: var(--grey-dark);
+}
+
+#footer-2021 .footer-learning-lab a {
+  text-decoration: none;
+  color: var(--grey-dark);
+}
+
+#footer-2021 .footer-learning-lab a:hover {
+  color: var(--blue-rmit);
+  text-decoration: underline;
+}
+
+#footer-2021 .footer-rmit {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: var(--grey-rmit);
+  background: var(--blue-rmit);
+}
+
+#footer-2021 .footer-rmit a {
+  color: var(--white);
+}
+
+
+
+
+/* ============================================== 
+    Menus
+   ============================================== */
+
+/* === Global bar =============================== */
+
+#header-inner {
+  background-color: var(--white);
+}
+
+#globalBar,
+.flex-control-nav {
+  background-color: var(--blue-rmit);
+  height: 50px;
+}
+
+#globalBar a {
+  color: var(--white);
+  font-size: 1.4rem;
+}
+
+#siteSections li {
+  border: none;
+}
+
+#globalNavItems {
+  padding-top: 10px;
+}
+
+.m-burger-menu .external-site-links a,
+.m-burger-menu .site-switcher a {
+  text-transform: none;
+}
+
+.m-burger-menu ul a,
+.m-burger-menu .external-site-links > div:last-child > div:last-child a {
+  padding: 12px 0 12px 15px;
+}
+
+.m-burger-menu .m-burger-menu-body {
+  width: 315px;
+}
+
+.m-burger-menu .m-burger-menu-close {
+  width: 365px;
+}
+
+/* === Global left navigation =============================== */
+
+#navbar-left.nav > .dropdown.active > a {
+  background-color: var(--white);
+  color: var(--blue-rmit);
+  padding-right: 16px;
+}
+
+#navbar-left.nav > .dropdown.active.open > a,
+.navbar-left > .dropdown .dropdown-menu {
+  background-color: var(--red-rmit);
+  border: none;
+  padding: 8px 15px 10px 15px;
+}
+
+#navbar-left .dropdown-menu > li > a,
+#navbar-left .dropdown-menu > li > a:focus,
+#navbar-left .dropdown-menu > li > a:active,
+#navbar-left .dropdown-menu > li > a:visited {
+  color: var(--white);
+}
+
+#navbar-left li.open a.dropdown-toggle.remove-outline {
+  color: var(--white);
+}
+
+.navbar-left .dropdown-menu > li {
+  border: none;
+}
+
+#navbar-left .dropdown-menu > li > a:before {
+  content: '';
+  background-image: url('data:image/svg+xml;utf-8,%3Csvg width="10" height="11" viewBox="520 80 10 11" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%23FFF" fill-rule="evenodd" d="M524.013 80.69l-2.627 2.367 2.366 2.628-2.628 2.365 2.366 2.628 2.627-2.366 2.628-2.365-2.366-2.628"/%3E%3C/svg%3E');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10px;
+  height: 11px;
+  display: inline-block;
+}
+
+.grunticon-arw-right-gryAD-20 {
+  background-image: none;
+}
+
+.grunticon-arw-down-gry91-20 {
+  background-image: url('data:image/svg+xml;utf-8,%3Csvg width="24" height="17" viewBox="0 3 24 17" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cpath fill="%23c1c1c1" d="M21 4.5l-9 9-9-9-3 3 6 6 6 6 6-6 6-6"/%3E%3C/g%3E%3C/svg%3E') !important;
+  display: inline-block;
+  width: 10px !important;
+  height: 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: 8px;
+}
+
+.grunticon-arw-up-gryAD-20 {
+  background-image: url('data:image/svg+xml;utf-8,%3Csvg width="24" height="17" viewBox="0 3 24 17" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cpath fill="%23FFF" d="M21 4.5l-9 9-9-9-3 3 6 6 6 6 6-6 6-6"/%3E%3C/g%3E%3C/svg%3E') !important;
+  display: inline-block;
+  width: 10px !important;
+  height: 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: 8px;
+}
+
+[class^="grunticon-"] {
+  width: 15px;
+}
+
+/* === Tutorial =============================== */
+
+#block-learning_lab_node_types-learning_lab_current_book_menu {
+  font-size: 1.4rem;
+}
+
+#block-learning_lab_node_types-learning_lab_current_book_menu .backlink a {
+   color: var(--blue-rmit);
+ }
+
+ #block-learning_lab_node_types-learning_lab_current_book_menu .backlink a:hover,
+ #block-learning_lab_node_types-learning_lab_current_book_menu .backlink a:focus {
+   color: var(--blue-rmit);
+   text-decoration: underline;
+ }
+
+ #block-learning_lab_node_types-learning_lab_current_book_menu .backlink a:hover,
+ #block-learning_lab_node_types-learning_lab_current_book_menu .backlink a:focus {
+   color: var(--blue-rmit);
+   text-decoration: underline;
+ }
+
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu {
+  /* Nav current page */
+  /* Nav hover */
+  /* Sub sub sub page - hover */
+  /* Sub sub sub page - active */
+  /* Sub sub sub page - active hover */
+}
+
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul a,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul a {
+  background-color: var(--white);
+  border-top: 1px solid var(--blue-rmit);
+  color: var(--blue-rmit);
+}
+
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a.active,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu a.active, 
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul a.active {
+  background-color: var(--blue-rmit); 
+  color: var(--grey-rmit);
+}
+
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a:hover,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a:focus, 
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul li a:hover,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul li a:focus {
+  background-color: var(--blue-rmit);
+  text-decoration: underline;
+  color: var(--white);
+}
+
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a.active:hover,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu a.active:hover,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul a.active:hover,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a.active:focus,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu a.active:focus,
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul a.active:focus {
+  color: var(--white);
+}
+
+/* === Top search bar =============================== */
+
+#block-search-form .block-inner .form-item-search-block-form input {
+  outline: none;
+  border-radius: 25px;
+  border: 1px solid var(--grey-rmit);
+  padding: 15px;
+  color: var(--blue-rmit);
+  font-family: "Museo500", "Century Gothic", Arial, Helvetica, sans-serif;
+}
+
+#globalBar .user-login a {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225%22%20height%3D%2225%22%20viewBox%3D%220%200%2025%2025%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M21.542%2019.853l-4.976-4.975c.663-1.088%201.051-2.36%201.051-3.725%200-3.966-3.227-7.192-7.192-7.192s-7.192%203.226-7.192%207.192%203.227%207.192%207.192%207.192c1.517%200%202.924-.475%204.085-1.28l4.91%204.91c.293.293.677.439%201.061.439s.768-.146%201.061-.439c.585-.586.585-1.536%200-2.122zm-16.108-8.7c0-2.752%202.239-4.992%204.992-4.992s4.992%202.239%204.992%204.992-2.239%204.992-4.992%204.992-4.992-2.239-4.992-4.992z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  padding: 4px 0 12px 30px;
+}
+
+#globalBar .accountButtons {
+    width: 14em !important;
+}
+
+#globalBar .accountButtons a {
+    padding: 4px 0 12px 30px;
+}
+
+#globalBar .user-links a {
+    padding-left: 15px;
+    margin-left: 15px;
+}
+
+#globalBar .user-login, #globalBar .user-links {
+    display: inline-block;
+}
+
+/* === Search bar =============================== */
+
+#block-learning_lab_node_types-learning_lab_search {
+  background-color: var(--blue-rmit);
+}
+
+#block-learning_lab_node_types-learning_lab_search .block-inner form > div .form-item-search-block-form label {
+  color: var(--white);
+}
+
+#block-learning_lab_node_types-learning_lab_search .block-inner form > div .form-item-search-block-form input {
+  outline: none;
+  font-family: "Museo500", "Century Gothic", Arial, Helvetica, sans-serif;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+/* === Hamburger =============================== */
+
+.b-trigger-burger-menu {
+  padding: 0 10px;
+}
+
+/* === Admin edit menu =============================== */
+ 
+.lower-level #content-header {
+  margin-top: -2em;
+}
+
+div.messages {
+  margin-top: 2em;
+}
+
+/* === Book navigation menu =============================== */
+ 
+#learning_lab_book_aware_menu {
+  background: none;
+}
+
+#learning_lab_book_aware_menu li a,
+#learning_lab_book_aware_menu li a:visited {
+  color: var(--blue-rmit);
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.4rem;
+  text-transform: none;
+}
+
+#learning_lab_book_aware_menu .active {
+  color: var(--red-rmit);
+  text-decoration: underline;
+}
+
+/* Global book navigation menu - child */
+.mega-menu {
+  background-color: var(--white);
+}
+
+.mega-menu .h2 {
+  color: var(--blue-rmit);
+}
+
+.mega-menu .row {
+  border: none;
+}
+
+.mega-menu .row > ul > li {
+  border: none;
+}
+
+.mega-menu .row > ul > li > a { 
+  display: inline; 
+} 
+
+.mega-menu .row > ul > li > a,
+.mega-menu .row > ul > li > a:visited {
+  margin-left: 5px;
+  text-transform: none;
+  font-size: 1.68rem;
+  font-weight: normal;
+  color: var(--blue-rmit);
+}
+
+.mega-menu .row > ul > li > a:first-letter {
+  text-transform: uppercase;
+}
+
+.mega-menu .row > ul > li > a:hover,
+.mega-menu .row > ul > li > a:focus {
+  text-decoration: underline;
+  color: var(--red-rmit);
+}
+
+/* Triangle */
+.primary-navigation > .nav > li.mega-hover:before {
+  border-top-color: var(--blue-rmit);
+}
+/* test updates */
+#learning_lab_book_aware_menu li {
+  padding: 0.9rem 1.4rem 1rem 1rem;
+  margin-left: 0rem;
+}
+
+#learning_lab_book_aware_menu li a, #learning_lab_book_aware_menu li a:visited {
+  color: var(--blue-rmit);
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.7rem;
+  text-transform: none;
+ border-bottom: 2px solid white;
+}
+
+#learning_lab_book_aware_menu li a:focus, #learning_lab_book_aware_menu li a:hover {
+text-decoration: none;
+ 
+  border-bottom: 2px solid var(--red-rmit);
+}
+#learning_lab_book_aware_menu {
+
+  /*padding: 15px 35px; */
+}
+
+.primary-navigation > .nav > li.mega-hover:before
+{
+display: none;
+}
+
+#block-learning_lab_node_types-learning_lab_book_aware_menu > div > div > section.mega-menu.equalize-heights-processed > div > p.h2
+{
+margin: 0 0 0 2.8rem;
+}
+
+.mega-menu .row > ul > li {
+    border: none;
+    margin-left: 1.8rem;
+}
+
+.mega-menu .row > ul > li > a:hover, .mega-menu .row > ul > li > a:focus {
+  text-decoration: none;
+    color: var(--blue-rmit); 
+   border-bottom: 2px solid var(--red-rmit);
+
+} 
+
+
+/* === Restyled menu, e.g. In this tutorial =============================== */
+ 
+.restyle0 {
+  padding-left: 10px;
+}
+
+.restyle2,
+ul.restyle0 li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.restyle2:before,
+ul.restyle0 li:before {
+  content: '\203A \0020';
+  font-size: 2.1rem;
+  color: var(--red-rmit);
+}
+
+.tutorial-introduction {
+  color: var(--blue-rmit);
+  margin-top: 25px !important;
+  font-weight: normal;
+}
+
+.restyle1,
+.restyle0 a {
+  color: var(--blue-rmit) !important;
+}
+
+.restyle1:hover,
+.restyle1:focus,
+.restyle0 a:hover,
+.restyle0 a:focus {
+  color: var(--red-rmit) !important;
+}
+
+.restyle0 p {
+  margin-left: 40px;
+}
+
+
+/* ============================================================== 
+    FlexSlider
+   ============================================================== */
+.flexslider .body-content-on-side,
+.flex-control-nav {
+  background-color: var(--red-rmit);
+  color: var(--white);
+}
+
+.flexslider .body-content-on-side .title-field a:hover,
+.flexslider .body-content-on-side .title-field a:focus {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.flexslider .body-content-over-image .title-field a {
+  color: var(--blue-rmit);
+}
+
+.flexslider .body-content-over-image .title-field a:hover,
+.flexslider .body-content-over-image .title-field a:focus {
+  text-decoration: none;
+  color: rgba(34, 33, 96, 0.85);
+}
+
+/* FlexSlider paragraph text */
+.flexslider .body-content-on-side .body-field .field-content {
+  color: var(--white);
+}
+
+/* FlexSlider page dot - active */
+.flex-control-paging li a.flex-active {
+  background-color: var(--blue-rmit);
+}
+
+/* FlexSlider page dot - inactive */
+.flex-control-paging li a {
+  background-color: rgba(34, 33, 96, 0.5);
+}
+
+/* FlexSlider pause play button */
+.flex-pauseplay a::before {
+  color: var(--blue-rmit);
+}
+
+/* FlexSlider CTA button */
+.flexslider .body-content-on-side .link-field a,
+.flexslider .body-content-over-image .link-field a {
+  text-transform: none;
+  display: inline-block;
+  height: 50px;
+  padding: 14px 40px 0 40px;
+  color: var(--blue-rmit);
+  font-family: "Museo500", "Century Gothic", Arial, Helvetica, sans-serif;
+  font-size: 1.89rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: normal;
+  margin-top: 10px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  position: relative;
+  z-index: 0;
+}
+
+/* === FlexSlider - Yellow button =============================== */
+ 
+.flexslider .body-content-on-side .link-field a {
+  color: var(--blue-rmit);
+  text-transform: none;
+  font-size: 2.38rem;
+  background: var(--yellow-rmit);
+}
+
+/* Yellow button hover */
+.flexslider .body-content-on-side .link-field a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--yellow-rmit);
+  opacity: 0.3;
+  border-radius: 25px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/* Yellow button hover final state */
+.flexslider .body-content-on-side .link-field a:hover:before,
+.flexslider .body-content-on-side .link-field a:focus:before,
+.flexslider .body-content-on-side .link-field a:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform: opacity(1);
+  transform: opacity(1);
+}
+
+/* === FlexSlider - Red button =============================== */
+
+.flexslider .body-content-over-image .link-field a {
+  color: var(--white);
+  text-transform: none;
+  font-size: 2.38rem;
+  background: var(--red-rmit);
+}
+
+/* Red button hover */
+.flexslider .body-content-over-image .link-field a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #320608;
+  border-radius: 25px;
+  opacity: 0.3;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/* Red button hover final state */
+.flexslider .body-content-over-image .link-field a:hover:before,
+.flexslider .body-content-over-image .link-field a:focus:before,
+.flexslider .body-content-over-image .link-field a:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform: opacity(1);
+  transform: opacity(1);
+}
+
+
+
+/* ============================================================== 
+    Page types
+   ============================================================== */
+
+/* === Book page =============================== */
+
+.landing-page #page #main #content-inner #content-area {
+  margin-top: 15px;
+}
+
+.landing-page #page #main #content-inner {
+  background: var(--white);
+}
+
+.landing-page #page #main #content-inner .block-learning-lab-node-types h2 {
+  color: var(--blue-rmit);
+}
+
+.landing-page #learning_lab_current_book_menu li a {
+  color: var(--blue-rmit);
+}
+
+.landing-page #page #main #content-inner #content-area .node .content .field-item p:first-child {
+  color: var(--blue-rmit);
+  font-size: 1.68rem;
+  line-height: 1.82rem;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .landing-page #page #main #content-inner #content-area .node .content .field-item p:first-child { 
+    padding-top: 30px !important; 
+  } 
+}
+
+.landing-page #page #main #content-inner #content-area .node .content .field-item p:first-child:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 4px;
+  margin: 20px 0 20px 20px;
+  background: var(--red-rmit);
+}
+
+.landing-page #learning_lab_current_book_menu li:first-child {
+  border-top: none;
+  border-bottom: 1px solid var(--grey-rmit);
+}
+
+.landing-page #learning_lab_current_book_menu li {
+  border-bottom: 1px solid var(--grey-rmit);
+}
+
+.landing-page #learning_lab_current_book_menu li a {
+  background-image: url('data:image/svg+xml;utf-8,%3Csvg width="10" height="11" viewBox="520 80 10 11" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%23e61e2a" fill-rule="evenodd" d="M524.013 80.69l-2.627 2.367 2.366 2.628-2.628 2.365 2.366 2.628 2.627-2.366 2.628-2.365-2.366-2.628"/%3E%3C/svg%3E');
+  background-position: 1.8rem 1rem;
+}
+
+#content td.landing-page-menu-column-details a,
+#main .landing-page-menu-column-details a,
+.landing-page-menu-column-topic a {
+  font-weight: bold;
+  color: var(--blue-rmit);
+}
+
+#content td.landing-page-menu-column-details a:hover,
+#content td.landing-page-menu-column-details a:active,
+#content td.landing-page-menu-column-details a:focus,
+#main .landing-page-menu-column-details a:hover,
+#main .landing-page-menu-column-details a:active,
+#main .landing-page-menu-column-details a:focus,
+.landing-page-menu-column-topic a:hover,
+.landing-page-menu-column-topic a:active,
+.landing-page-menu-column-topic a:focus {
+  color: var(--red-rmit);
+}
+
+.media {
+  clear: both;
+}
+
+.media-menu .media-body {
+  border-bottom: 1px solid var(--grey-rmit);
+  padding-left: 100px;
+  display: block;
+  width: 95%;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 25px;
+}
+
+.media-body:last-of-type {
+  border-bottom: none;
+}
+
+.media-menu h3 {
+  color: var(--blue-rmit);
+}
+
+.media-menu a {
+  font-weight: bold;
+}
+
+.media-menu a.plain {
+  font-weight: normal;
+}
+
+.media-tips {
+  background-image: url("../../../all/themes/ll/images/study_tip_icon.png");
+}
+
+.media-tutorials {
+  background-image: url("../../../all/themes/ll/images/tutorial_icon.png");
+}
+
+.media-video {
+  background-image: url("../../../all/themes/ll/images/video_icon.png");
+}
+
+.media-audio {
+  background-image: url("../../../all/themes/ll/images/audio_icon.png");
+}
+
+.media-links {
+  background-image: url("../../../all/themes/ll/images/links_icon.png");
+}
+
+/* === Landing page - text with line above =============================== */
+ 
+.lower-level #page #main h2#page-title {
+  background-color: var(--white);
+  color: var(--blue-rmit);
+  padding-top: 20px;
+  margin-top: 60px;
+}
+
+.lower-level #page #main h2#page-title:before {
+  position: absolute;
+  content: '';
+  width: 44px;
+  height: 4px;
+  margin: -20px 0 20px 0;
+  background: var(--yellow-rmit);
+}
+
+/* ============================================================== 
+    In-page content
+   ============================================================== */
+
+/* === Accordion =============================== */
+
+.transcript h4.panel-title {
+font-size: 1em;
+font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
+font-weight: normal;
+}
+
+.transcript .panel-default>.panel-heading {
+background-color: var(--white);
+text-align: right;
+}
+
+.transcript a {
+padding-right: 10px;
+}
+
+.transcript a:link, .transcript a:visited  {
+color: var(--blue-rmit);
+}
+
+.transcript .panel, .transcript .panel-heading {
+    border: none;
+}
+
+/* === Tables and panels =============================== */
+
+.table>tbody>tr.success>td, .table>tbody>tr.success>th, .table>tbody>tr>td.success, .table>tbody>tr>th.success, .table>tfoot>tr.success>td, .table>tfoot>tr.success>th, .table>tfoot>tr>td.success, .table>tfoot>tr>th.success, .table>thead>tr.success>td, .table>thead>tr.success>th, .table>thead>tr>td.success, .table>thead>tr>th.success {
+   background-color: var(--green-light) !important;
+}
+
+.table>tbody>tr.danger>td, .table>tbody>tr.danger>th, .table>tbody>tr>td.danger, .table>tbody>tr>th.danger, .table>tfoot>tr.danger>td, .table>tfoot>tr.danger>th, .table>tfoot>tr>td.danger, .table>tfoot>tr>th.danger, .table>thead>tr.danger>td, .table>thead>tr.danger>th, .table>thead>tr>td.danger, .table>thead>tr>th.danger {
+background-color: var(--red-light) !important;
+}
+
+.table>tbody>tr.warning>td, .table>tbody>tr.warning>th, .table>tbody>tr>td.warning, .table>tbody>tr>th.warning, .table>tfoot>tr.warning>td, .table>tfoot>tr.warning>th, .table>tfoot>tr>td.warning, .table>tfoot>tr>th.warning, .table>thead>tr.warning>td, .table>thead>tr.warning>th, .table>thead>tr>td.warning, .table>thead>tr>th.warning {
+background-color: var(--yellow-light) !important;
+}
+
+.table>tbody>tr.active>td, .table>tbody>tr.active>th, .table>tbody>tr>td.active, .table>tbody>tr>th.active, .table>tfoot>tr.active>td, .table>tfoot>tr.active>th, .table>tfoot>tr>td.active, .table>tfoot>tr>th.active, .table>thead>tr.active>td, .table>thead>tr.active>th, .table>thead>tr>td.active, .table>thead>tr>th.active {
+background-color: var(--blue-light) !important;
+}
+
+.alert-info, .btn-info, .panel-info>.panel-heading { 
+  color: var(--blue); 
+  border-color: var(--blue-med); 
+  background-color: var(--blue-light); 
+}
+.alert-danger, .btn-danger, .panel-danger>.panel-heading { 
+  color: var(--red); 
+  border-color: var(--red-med);
+  background-color: var(--red-light); 
+}
+.alert-success, .btn-success, .panel-success>.panel-heading { 
+  color: var(--green);
+  border-color: var(--green-med);
+  background-color: var(--green-light); 
+}
+.alert-warning, .btn-warning, .panel-warning>.panel-heading { 
+  color: var(--yellow);
+  border-color: var(--yellow-med);
+  background-color: var(--yellow-light);
+}
+
+/* === Video accordions =============================== */
+ 
+#content-area .video-accordion .panel-body {
+  background-color: var(--white);
+}
+
+#content-area .video-accordion h4 a:link:after {
+  content: '\203A';
+  display: inline-block;
+  margin-right: 15px;
+  float: right;
+  line-height: 20px;
+  font-size: 2.1rem;
+  color: var(--grey-med);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#content-area .video-accordion .panel-body,
+#content-area .video-accordion .video-accordion-button:visited {
+  color: var(--grey-dark);
+}
+
+/* Video accordion buttons */
+#content-area .video-accordion .video-accordion-button {
+  background-color: var(--grey-rmit) !important;
+}
+
+#content-area .video-accordion .panel-body a {
+  color: var(--grey-dark);
+}
+
+#content-area .video-accordion .video-accordion-button {
+  display: inline-block;
+  text-align: center;
+  margin: 0 15px 10px 0;
+  color: var(--grey-rmit);
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  padding: 5px;
+  border-radius: 25px;
+  width: 150px;
+  border: none;
+}
+
+/* === Accessibility button =============================== */
+ 
+/*button.accessibility-button-on:before {*/
+/*    content: 'Please note: Accessibility is turned on.';*/
+/*    background-color: #FAEBBC;*/
+/*    border: 1px solid #E1CC89;*/
+/*    padding: 5px 10px;*/
+/*    position: absolute;*/
+/*    margin: 0 auto;*/
+/*    left: 45%;*/
+/*    top: 70px;*/
+/*    display: inline-block;*/
+/*}*/
+
+/* === Responsive video embed =============================== */
+ 
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Aspect ratio fix for 4:3 videos */
+.video43 {
+  padding-bottom: 75%;
+}
+
+.red-square li {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.red-square li::before {
+  margin-right: 8px;
+  margin-left: -12px !important;
+  content: '\25AA ';
+  color: var(--red-rmit);
+}
+
+/* === iframe resizer =============================== */
+
+iframe#resizeIframe {
+    width: 1px;
+    min-width: 100%;
+}
+
+
+/* ============================================
+   Other helpers
+   ============================================ */
+/* Bugfix 'updates page' */
+#block-learning_lab_node_types-learning_lab_landing_menu > div > h2 {
+  display: none;
+}
+
+/* tag styles */
+.taglink a:link,
+.taglink a:visited {
+  /*enter css */
+  color: var(--grey-dark) !important;
+  font-size: 1.4rem;
+}
+
+/* Bugfix 'updates page' */
+#block-learning_lab_node_types-learning_lab_landing_menu > div > h2 {
+  display: none;
+}
+
+/* Hide author and page time created */
+span.submitted {
+  display: none;
+}
+
+/* Sample document */
+#sample-document {
+  border: solid 0 var(--grey-rmit);
+  border-bottom: none;
+  padding: 3rem 4rem;
+  margin: 20px 20px 0 20px;
+  -webkit-box-shadow: 0 0 27px 0 black;
+  -moz-box-shadow: 0 0 27px 0 rgba(0, 0, 0, 0.44);
+  box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.44);
+  max-width: 800px;
+  
+
+}
+#sample-document p{
+    z-index: 0;
+}
+
+.bg-text {
+    color: var(--grey-rmit);
+    font-size: 3rem;
+    line-height: 4rem;
+    z-index: -5;
+    transform: rotate(330deg);
+    -webkit-transform: rotate(330deg);
+    padding-top: 10rem;
+}
+
+ .background-watermark {
+    position: absolute;
+   
+    display: block;
+    margin: auto;
+}
+
+/* moves close button on colorbox modal to top of modal */
+#cboxClose
+{
+top: 0;    
+}
+
+/* ==== Feedback form =============================== */
+
+.feedback-heading {
+  display: none;
+}

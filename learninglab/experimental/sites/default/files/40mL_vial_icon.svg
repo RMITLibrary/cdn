@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="330 62.5 300 435" style="enable-background:new 330 62.5 300 435;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:#CDE6C7;}
+	.st3{fill:none;stroke:#4A494A;stroke-width:3;stroke-miterlimit:10;}
+	.st4{fill:#FFFFFF;stroke:#4A494A;stroke-width:3;stroke-miterlimit:10;}
+	.st5{fill:#A09F9F;}
+	.st6{fill:#15499A;}
+	.st7{font-family:'ArialMT';}
+	.st8{font-size:51.5112px;}
+</style>
+<g id="reference" class="st0">
+	<g id="ocVzZ8.tif" class="st1">
+	</g>
+	<g id="w3lq9X.tif" class="st1">
+	</g>
+</g>
+<g id="prescription_page">
+	<g>
+		<path class="st2" d="M558.9,139.9h-11.8v-35.4H412.7v34.6h-7.4c-13.2,1.2-23.8,12.5-23.8,26.2v14.5v13v248.7
+			c0,14.5,11.8,26.5,26.2,26.5H552c14.5,0,26.2-11.8,26.2-26.5V192.8v-13v-14.5C578.5,153.1,570.1,142.8,558.9,139.9z"/>
+		<path class="st3" d="M568.7,118.5V98.4H391.3v20.1c-15.7,1.5-28.2,15-28.2,31.2V460c0,17.2,14,31.4,31.4,31.4h171
+			c17.2,0,31.4-14,31.4-31.4V149.7C596.9,133.5,584.4,120.2,568.7,118.5z"/>
+		<rect x="363.1" y="222.9" class="st4" width="233.5" height="167.5"/>
+		<g>
+			<path class="st5" d="M592.2,75.6c0-3.9-3.2-6.9-6.9-6.9H374.9c-3.9,0-6.9,3.2-6.9,6.9v18.6c0,3.9,3.2,6.9,6.9,6.9h210.2
+				c3.9,0,6.9-3.2,6.9-6.9V75.6H592.2z"/>
+			<path class="st3" d="M592.2,75.6c0-3.9-3.2-6.9-6.9-6.9H374.9c-3.9,0-6.9,3.2-6.9,6.9v18.6c0,3.9,3.2,6.9,6.9,6.9h210.2
+				c3.9,0,6.9-3.2,6.9-6.9V75.6H592.2z"/>
+		</g>
+		<rect x="367.8" y="288.3" class="st6" width="224.2" height="31.4"/>
+		<rect x="367.8" y="369.5" class="st6" width="224.2" height="5.2"/>
+		<rect x="381.5" y="336.3" class="st5" width="196.7" height="5.2"/>
+		<rect x="381.5" y="351.1" class="st5" width="172.4" height="5.2"/>
+		<text transform="matrix(1 0 0 1 377.2592 276.4685)" class="st7 st8">40mL</text>
+	</g>
+</g>
+</svg>

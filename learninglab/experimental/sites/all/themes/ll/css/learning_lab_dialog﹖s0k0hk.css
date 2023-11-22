@@ -1,0 +1,160 @@
+.learning-lab-activity-container{
+    float:left;
+    position: relative;
+    margin-right: 3.5em;
+    padding-left: 3.5em;
+    width:580px;
+}
+
+.learning-lab-activity{
+    float: left;
+    width:400px;
+}
+
+.learning-lab-activity h3
+{
+   border-bottom: 1px solid #969696;
+   color:#969696;
+}
+
+.learning-lab-quiz-feedback-dialog{
+    width:100%;
+    padding: 0em;
+    text-align: center;
+}
+
+.learning-lab-activity-feedback{
+    float:right;
+    height: 100%;
+    width: 110px;
+    margin-right: 0.5em;
+    top: 0;
+}
+
+.learning-lab-quiz-drag_bar{
+    width: 100%;
+    height: 15px;
+    background-color: #DDD;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.learning-lab-quiz-feedback-dialog .learning-lab-quiz-score{
+    font-size: 3.2em;
+    margin-top:0.5em;
+    margin-bottom: 0.5em;
+}
+
+.learning-lab-quiz-progress{
+    font-size: 1.5em;
+    margin:0.7em;
+}
+
+.learning-lab-quiz-feedback{
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+.learning-lab-quiz-close-btn{
+    width:100%;
+    display: block;
+    height:26px;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    background-color: #DDD;
+}
+
+.learning-lab-vquiz-progress{
+    float:left;
+    font-size:0.8em;
+    margin-left:13.5em;
+    margin-top: 0.5em;
+}
+
+#learning-lab-quiz-close-link{
+    display: block;
+    padding: 1.2em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    background-color: #DDD;
+    float:right;
+    cursor: pointer;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    margin-right: 4px;
+    margin-top: 4px;
+    font-size: 0.8em;
+}
+
+.learning-lab-quiz-next-link{
+    display: block;
+    padding: 1.2em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    background-color: #DDD;
+    float:right;
+    cursor: pointer;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    margin-right: 4px;
+    margin-top: 4px;
+    font-size: 0.8em;
+}
+
+#learning-lab-quiz-retry-link{
+    display: block;
+    padding: 1.2em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    background-color: #DDD;
+    float:left;
+    cursor: pointer;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    margin-right: 4px;
+    margin-top: 4px;
+    font-size: 0.8em;
+}
+
+#learning-lab-quiz-close-link:hover{
+    background-color: #EEE;
+}
+
+#learning-lab-quiz-retry-link:hover{
+    background-color: #EEE;
+}
+
+.book-navigation{
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+#learning-lab-quiz-feedback-sidebar{
+    text-align: center;
+}
+
+#learning-lab-quiz-feedback-sidebar .learning-lab-quiz-score{
+    margin:0em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 3.2em;
+    text-align:center;
+    width: 100%;
+}
+
+.quiz-wrong-answer{
+    color:#FF0000;
+    background-color: #ffc9c9;
+}
+
+.learning-lab-button-spacer{
+    width:280px;
+    text-align: center;
+    float: left;
+}

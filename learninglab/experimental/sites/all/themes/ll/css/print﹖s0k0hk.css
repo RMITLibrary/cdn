@@ -1,0 +1,111 @@
+
+/* Layout -------------------------------- */
+
+#page {
+  width: 100%; 
+  margin: 0; 
+  float: none;
+}
+
+a, blockquote, table, pre {
+  page-break-inside:avoid
+}
+
+h1, h2, h3, h4, h5, h6, img { 
+  page-break-after:avoid; 
+  page-break-inside:avoid 
+}
+
+ul, ol, dl  { 
+  page-break-before:avoid 
+}
+
+@page { 
+  margin: 2cm 
+}
+
+/* Hide -------------------------------- */
+
+.sidebar,
+#navigation,
+#search-region,
+#search-theme-form,
+#footer,
+.breadcrumb,
+.tabs,
+.feed-icon,
+.links,
+#skip,
+.region-page-top,
+#skipDiv,
+#header,
+#sub_header,
+.accessibility-button-wrapper, 
+.field-type-taxonomy-term-reference, 
+#globalBar, 
+.responsive-video, 
+.transcript-link-container {
+  display: none;
+}
+
+/* Display fixes -------------------------------- */
+
+#content-area {
+  margin: 20px 0 !important;
+  width: auto !important;
+}
+
+#content {
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+}
+
+#title-wrapper {
+  margin-bottom: 0 !important;
+}
+
+h2#page-title {
+  padding-left: 0 !important;  
+  padding-right: 0 !important;
+}
+
+h3 {
+  margin-top: 0 !important;
+}
+
+#printonly, .accessibility-show {
+  display: block !important;
+}
+
+.media-menu .media-body {
+  padding-left: 0 !important;
+}
+
+
+/* Links -------------------------------- */
+
+a:link, a:visited, a {
+  background: transparent;
+  text-decoration: underline;
+  text-align: left;
+}
+
+a:hover, a:active, a:link, a:visited {
+  color: black;
+}
+
+a[href^=http]:after {
+  content:" < " attr(href) "> ";
+}
+
+$a:after > img {
+  content: "";
+}
+
+article a[href^="#"]:after {
+  content: "";
+}
+
+a:not(:local-link):after {
+  content:" < " attr(href) "> ";
+}

@@ -1,0 +1,3620 @@
+@font-face {
+  font-family: 'Museo300';
+  src: url("../webfonts/museo_300_macroman/Museo300-Regular-webfont.eot");
+  src: url("../webfonts/museo_300_macroman/Museo300-Regular-webfont%EF%B9%96.eot#iefix") format("embedded-opentype"), url("../webfonts/museo_300_macroman/Museo300-Regular-webfont.woff") format("woff"), url("../webfonts/museo_300_macroman/Museo300-Regular-webfont.ttf") format("truetype"), url("../webfonts/museo_300_macroman/Museo300-Regular-webfont.svg#Museo500") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museo500';
+  src: url("../webfonts/museo_500_macroman/Museo500-Regular-webfont.eot");
+  src: url("../webfonts/museo_500_macroman/Museo500-Regular-webfont%EF%B9%96.eot#iefix") format("embedded-opentype"), url("../webfonts/museo_500_macroman/Museo500-Regular-webfont.woff") format("woff"), url("../webfonts/museo_500_macroman/Museo500-Regular-webfont.ttf") format("truetype"), url("../webfonts/museo_500_macroman/Museo500-Regular-webfont.svg#Museo500") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 25, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* Font styles. */
+/* line 30, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+body {
+  margin: 0;
+  /* Chrome bug - https://code.google.com/p/chromium/issues/detail?id=319623
+   Use rem everywhere else */
+  font: 1.4em/1.571em "Helvetica Neue", helvetica, Arial, sans-serif;
+  background: url(../images/background.png) no-repeat 50% 150px #dcdcd6;
+  letter-spacing: 0.039rem;
+}
+
+/* Links */
+/* line 40, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+a:link {
+  color: #d30900;
+  text-decoration: none;
+}
+
+/* line 44, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+a:visited {
+  color: #d30900;
+}
+
+/* line 47, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+/* line 50, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+}
+
+/* line 53, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h1 {
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  font-size: 2.86rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* line 60, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h1 a:link, h1 a:visited {
+  color: #000;
+  display: block;
+}
+
+/* line 65, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h2 {
+  font-size: 4.2rem;
+}
+
+/* line 69, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h3 {
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  color: #D30900;
+  font-size: 1.8rem;
+  margin: 2.8rem 0 1.4rem;
+}
+/* line 75, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h3:first-child {
+  margin-top: 0;
+}
+
+/* line 80, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h4, h5, h6 {
+  color: #000;
+}
+
+/* line 84, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h4 {
+  font-family: "Museo500", "Cambria", "Times New Roman", Times, serif;
+  margin: 2.8rem 0 1.4rem;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+/* line 90, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* line 95, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+h6 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Paragraph styles. */
+/* line 101, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+p {
+  margin: 0 0 1.4rem 0;
+}
+
+/* List styles. */
+/* line 105, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+ul, ol {
+  margin-left: 0;
+  padding-left: 2.8rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Table styles. */
+/* line 111, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+table {
+  width: 99%;
+}
+
+/* line 115, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+tbody {
+  border: 0 none;
+}
+
+/* line 119, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+tr.even td,
+tr.odd td {
+  padding: 10px 5px;
+}
+
+/* line 123, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+tr.odd {
+  background-color: white;
+}
+
+/* Code. */
+/* line 127, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+pre, code, tt {
+  font: 1.4rem "andale mono", "lucida console", monospace;
+  line-height: 1.5;
+}
+
+/* line 131, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+pre {
+  background-color: #efefef;
+  display: block;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #aaaaaa;
+}
+
+/* List styles. */
+/* line 139, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+ul {
+  list-style-type: disc;
+}
+
+/* line 141, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+ul ul {
+  list-style-type: circle;
+}
+
+/* line 144, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+ul ul ul {
+  list-style-type: square;
+}
+
+/* line 146, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+ul ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 149, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 151, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+/* line 153, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+ol ol ol {
+  list-style-type: decimal;
+}
+
+/* Abbreviation. */
+/* line 157, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+abbr {
+  border-bottom: 1px dotted #666666;
+  cursor: help;
+  white-space: nowrap;
+}
+
+/* line 162, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+input[type="submit"] {
+  padding: 7px 10px;
+  border: 0 none;
+  border-radius: 4px;
+  background: #ddd;
+}
+
+/* About Default Styles
+ * ---------------------
+ * default.css is used to establish general rules, browser reset, or admin user interface styles.
+ * Browser Reset
+ * -------------
+ * For a more complete reset, go to http://developer.yahoo.com/yui/reset/ */
+/* line 175, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Clear Floats Without Structural Markup
+ * ---------------------------------------
+ * http://www.positioniseverything.net/easyclearing.html */
+/* line 183, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* line 186, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Hides from IE-mac \ */
+/* line 195, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 199, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.clearfix {
+  display: block;
+}
+
+/* End hide from IE-mac */
+/* clear classes */
+/* line 205, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.clearleft, .clearl, .cleft {
+  clear: left;
+}
+
+/* line 209, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.clearright, .clearr, .cright {
+  clear: right;
+}
+
+/* line 213, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.clear, .clearboth, .clearall {
+  clear: both;
+}
+
+/* Float classes */
+/* line 218, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.floatleft, .fleft, .floatl {
+  float: left;
+  margin: 0 10px 5px 0;
+}
+
+/* line 223, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.floatright, .fright, .floatr {
+  float: right;
+  margin: 0 0 5px 10px;
+}
+
+/* "Skip to Main Content" link
+ * ---------------------------
+ * This link useful for both visually impaired people and those with mobility impairments
+ * who cannot use a mouse. http://www.webaim.org/techniques/css/invisiblecontent/ */
+/* line 232, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+#skip a:link, #skip a:hover, #skip a:visited {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* line 240, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+#skip a:active, #skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/* bug fix with views 2 edit links. */
+/* line 247, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+div.view div.views-admin-links {
+  width: auto;
+}
+
+/* Rollover edit links for blocks. */
+/* line 252, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+div.block {
+  position: relative;
+}
+
+/* line 255, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+div.block .edit {
+  display: none;
+  position: absolute;
+  right: -20px;
+  top: -5px;
+  z-index: 40;
+  padding: 3px 8px 0;
+  font-size: 10px;
+  line-height: 16px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  /*let's get fancy! */
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0 1px 3px #888888;
+  -webkit-box-shadow: -1px 1px 2px #666666;
+}
+
+/* line 272, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+div.block .edit a {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 278, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+div.block:hover .edit {
+  display: block;
+}
+
+/* Wireframe styles. */
+/* line 284, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.with-wireframes #header,
+.with-wireframes #content-top,
+.with-wireframes #content-top > *,
+.with-wireframes #content-header,
+.with-wireframes #content-header > *,
+.with-wireframes #content-area,
+.with-wireframes #content-area > *,
+.with-wireframes #content-bottom,
+.with-wireframes #content-bottom > *,
+.with-wireframes #primary,
+.with-wireframes #secondary,
+.with-wireframes #sidebar-left-inner,
+.with-wireframes #sidebar-right-inner,
+.with-wireframes .block {
+  padding: 2px;
+  border: 1px solid #bbbbbb;
+}
+/* line 301, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.with-wireframes .node {
+  border-bottom: 1px solid #bbbbbb;
+  margin-bottom: 10px;
+}
+/* line 305, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.with-wireframes .block {
+  margin-bottom: 3px;
+}
+/* line 308, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.with-wireframes #content-top,
+.with-wireframes #content-header,
+.with-wireframes #content-area,
+.with-wireframes #content-bottom {
+  margin: 0 3px 3px;
+}
+/* line 314, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.with-wireframes #footer {
+  margin-top: 3px;
+  padding: 2px;
+  border: 1px solid #cccccc;
+}
+/* line 319, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.with-wireframes.with-navigation #content, .with-wireframes.with-navigation .sidebar {
+  margin-top: 50px;
+}
+/* line 323, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/default.scss */
+.with-wireframes #navigation {
+  height: 50px;
+}
+
+/* dropMenu Country selector styles */
+/* line 2, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+ul.navbar-left.nav {
+  background-color: #242424;
+  float: left;
+  position: relative;
+  z-index: 100;
+  list-style: none;
+}
+
+/* line 10, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left > .dropdown {
+  width: 160px;
+}
+
+/* line 14, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav > li {
+  position: relative;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+/* line 20, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav li li:focus {
+  left: 0;
+}
+
+/* line 24, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav > li:hover .dropSubmenu {
+  z-index: 1000;
+}
+
+/* line 28, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#navbar-left .dropdown-menu > li > a,
+#navbar-left .dropdown-menu > li > a:focus,
+#navbar-left .dropdown-menu > li > a:active,
+#navbar-left .dropdown-menu > li > a:visited {
+  color: #333;
+  font-weight: 700;
+  background-color: inherit;
+}
+
+/* line 37, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left .dropdown-menu > li > a {
+  padding: 10px 0;
+}
+
+/* line 40, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* line 50, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#navbar-left.nav > .dropdown.active > a {
+  background-color: #dcddd7;
+  color: #333;
+}
+/* line 54, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#navbar-left.nav > .dropdown.active > a:hover {
+  text-decoration: none;
+}
+
+/* line 59, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left > .dropdown .dropdown-menu {
+  border: 0;
+  margin: 0;
+}
+
+/* line 64, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 69, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left .dropdown-menu {
+  box-shadow: none;
+  padding: 0 15px 30px 15px;
+  border-radius: 0;
+}
+
+/* line 74, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left .inner-menu {
+  width: 210px;
+}
+
+/* line 78, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav > li > a {
+  border-right: 0;
+  padding: 8px 10px 8px 16px;
+  margin: 5px 0 0;
+  position: relative;
+  display: block;
+  line-height: 20px;
+  height: 35px;
+  cursor: default;
+}
+
+/* line 89, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav > .dropdown > a > .arrow {
+  float: right;
+}
+
+/* line 93, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav > .dropdown > a > span,
+.navbar-left.nav > .dropdown > a > .arrow {
+  display: inline;
+}
+
+/* line 98, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav .dropdown-toggle div {
+  padding-top: 3px;
+}
+
+/* line 102, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav > .dropdown .arrow span:first-child, .navbar-left.nav > .dropdown.open .arrow span:last-child {
+  display: block;
+}
+
+/* line 106, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left.nav > .dropdown.open .arrow span:first-child, .navbar-left.nav > .dropdown .arrow span:last-child {
+  display: none;
+}
+
+/* line 110, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left .dropdown-menu > li.current {
+  padding-left: 0;
+  color: #666;
+  cursor: default;
+}
+
+/* line 115, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left .dropdown-menu > li {
+  border-bottom: 1px solid #e4e4e4;
+  line-height: 2.3rem;
+}
+
+/* line 120, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#navbar-left.nav > .dropdown.active.open > a {
+  background-color: #fff;
+}
+
+/* line 124, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left .dropdown-menu > li span:first-child {
+  vertical-align: middle;
+  height: 20px;
+}
+
+/* line 128, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.navbar-left .dropdown-menu > li span {
+  position: relative;
+  right: 8px;
+}
+
+/* line 133, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#siteSections .myrmit-link span {
+  vertical-align: top;
+  background-size: contain;
+}
+
+/* line 138, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#siteSections .myrmit-link .grunticon-user-red-20.icon-user {
+  display: none;
+  height: 18px;
+  float: left;
+}
+
+/* line 143, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#siteSections .myrmit-link:hover .grunticon-user-red-20.icon-user {
+  display: inline-block;
+}
+
+/* line 146, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#siteSections .myrmit-link .grunticon-user-gryA-20.icon-user {
+  height: 18px;
+  float: left;
+}
+
+/* line 150, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#siteSections .myrmit-link:hover .grunticon-user-gryA-20.icon-user {
+  display: none;
+}
+
+/*=====GlobalBar========*/
+/* line 156, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#globalBar {
+  background: #242424;
+  color: #D6D6D6;
+  position: relative;
+  height: 40px;
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+
+/* line 166, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#globalNavItems {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 171, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#globalNavItems #firstDropMenuLink {
+  border-right: 0;
+  margin-top: 5px !important;
+  padding: 8px 10px 8px 16px;
+  margin: 0;
+  background-color: #dcddd7;
+  color: #333;
+}
+
+/* line 181, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#globalBar a {
+  font-size: 12px;
+  color: #D6D6D6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 189, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#globalBar a:hover, #globalBar a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* line 194, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#globalBar .accountButtons {
+  float: right;
+  margin: 8px 0 6px;
+  width: 200px;
+}
+/* line 199, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#globalBar .accountButtons a {
+  line-height: 2.0rem;
+}
+
+/* line 204, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#header-inner {
+  position: relative;
+  background-color: #DCDCD6;
+  height: 81px;
+}
+/* line 209, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#header-inner #block-search-form {
+  width: 206px;
+}
+
+/* line 214, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#siteSections, .navbar-left.nav {
+  margin: 0;
+  float: left;
+  list-style: none;
+  padding: 0;
+}
+
+/* line 221, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#siteSections li {
+  float: left;
+  margin: 8px 0 6px;
+  border-left: 1px solid #585858;
+  vertical-align: middle;
+}
+
+/* line 228, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#siteSections a {
+  display: block;
+  padding: 3px 15px;
+  line-height: 2.0rem;
+}
+
+/*Skip to content*/
+/* line 235, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#skipDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 241, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#skipToContent {
+  font: 12px Arial,Verdana,sans-serif;
+  background-color: #C7C7C3;
+  position: absolute;
+  left: -9999px;
+  top: 66px;
+  z-index: 5000;
+  display: block;
+  color: #2C2C2C !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0 !important;
+  padding: 4px 10px 4px 10px !important;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 258, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+a#skipToContent:focus, a#skipToContent:hover {
+  text-decoration: underline;
+  left: 660px;
+}
+
+/* Titles. */
+/* line 264, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#site-name {
+  line-height: 3rem;
+  font-weight: 300;
+  padding: 0 20px;
+  float: left;
+  border-left: 1px solid #666;
+}
+
+/* line 272, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#block-search-form {
+  text-align: right;
+  margin-top: 0;
+  height: 50px;
+}
+/* line 277, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#block-search-form .block-inner {
+  float: right;
+}
+/* line 280, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#block-search-form .block-inner h2 {
+  display: none;
+}
+/* line 284, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#block-search-form .block-inner .form-item-search-block-form input {
+  font-size: 1.6rem;
+  padding-left: 0.5rem;
+  background-image: url(../images/search_icon.png);
+  background-position: 96% center;
+  background-repeat: no-repeat;
+  border: 1px solid #b8b3b2;
+}
+/* line 293, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#block-search-form .block-inner .form-submit {
+  display: none;
+}
+
+/* line 299, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#header {
+  position: relative;
+}
+
+/* line 303, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#search-region {
+  width: 206px;
+  float: right;
+  margin-top: 23px;
+}
+
+/* line 309, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#navigation {
+  float: left;
+  margin-left: 0;
+  margin-right: -100%;
+  padding: 0;
+  width: 100%;
+  height: 40px;
+}
+
+/* line 317, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.with-navigation #content,
+.with-navigation .sidebar {
+  margin-top: 40px;
+}
+
+/* line 321, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#rmit-logo {
+  display: block;
+  float: left;
+  margin-top: 21px;
+}
+/* line 326, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#rmit-logo span {
+  display: block;
+  background-size: cover;
+  width: 100px;
+  height: 35px;
+}
+
+/* line 334, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#header-nav {
+  color: #FFFFFF;
+  float: left;
+  height: 25px;
+  margin: 0;
+}
+
+/* line 341, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#name-and-slogan {
+  margin-top: 0;
+}
+
+/* line 345, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-search-menu,
+#header-inner .right-icons {
+  display: none;
+}
+
+/* line 352, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#header-inner .right-icons > a,
+#header-inner .right-icons span {
+  height: 50px;
+  width: 44px;
+  vertical-align: middle;
+}
+/* line 359, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#header-inner .right-icons > a {
+  vertical-align: top;
+}
+/* line 362, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#header-inner .right-icons > a.search-icon {
+  display: inline-block;
+  padding: 11px 0 0 9px;
+}
+/* line 367, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#header-inner .right-icons > a.search-icon span {
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+}
+
+/* line 376, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-search-menu, .m-search-menu-bg, .m-search-menu-body, .m-search-menu-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+}
+
+/* line 385, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-search-menu-bg {
+  background: #000;
+  opacity: .75;
+}
+
+/* line 390, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-search-menu-body {
+  bottom: auto;
+}
+
+/* line 394, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-search-menu-close {
+  position: absolute;
+  right: 50px;
+  background: #464646;
+  z-index: 100001;
+}
+
+/* line 401, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-search-menu-close a {
+  display: block;
+  width: 44px;
+  height: 50px;
+  padding-top: 13px;
+  padding-left: 9px;
+}
+
+/* line 409, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-search-menu-content {
+  top: 50px;
+  bottom: auto;
+  background: #464646;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  left: auto;
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  /* line 420, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region {
+    display: none;
+    width: 100%;
+    float: none;
+    margin-top: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  /* line 428, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form {
+    text-align: left;
+    height: auto;
+  }
+  /* line 432, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form .block-inner {
+    width: auto;
+    float: none;
+  }
+  /* line 436, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form .block-inner h2 {
+    float: none;
+    margin: 0 0 10px;
+    color: #c7c7c7;
+    display: block;
+    font: 2rem/2.4rem Museo300;
+  }
+  /* line 444, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form .block-inner .form-item-search-block-form {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+  }
+  /* line 449, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form .block-inner .form-item-search-block-form input {
+    background-image: none;
+    width: 100%;
+    height: 34px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  /* line 456, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form .block-inner .form-item-search-block-form input:focus {
+    outline: 2px solid #0ff;
+    outline-offset: 0;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
+    border-collapse: separate;
+  }
+  /* line 467, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form .block-inner .form-actions {
+    display: table-cell;
+    width: 1%;
+    vertical-align: top;
+  }
+  /* line 472, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form .block-inner .form-actions .form-submit {
+    display: inline-block;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225%22%20height%3D%2225%22%20viewBox%3D%220%200%2025%2025%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M21.542%2019.853l-4.976-4.975c.663-1.088%201.051-2.36%201.051-3.725%200-3.966-3.227-7.192-7.192-7.192s-7.192%203.226-7.192%207.192%203.227%207.192%207.192%207.192c1.517%200%202.924-.475%204.085-1.28l4.91%204.91c.293.293.677.439%201.061.439s.768-.146%201.061-.439c.585-.586.585-1.536%200-2.122zm-16.108-8.7c0-2.752%202.239-4.992%204.992-4.992s4.992%202.239%204.992%204.992-2.239%204.992-4.992%204.992-4.992-2.239-4.992-4.992z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: 8px 4px;
+    background-color: #BA100D;
+    margin-left: -1px;
+    border: 0 none;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    text-indent: -9999px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: left;
+    min-width: 45px;
+    height: 34px;
+  }
+  /* line 492, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #search-region #block-search-form .block-inner .container-inline {
+    display: table;
+  }
+
+  /* line 500, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+  #header-inner .right-icons {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* line 511, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.c-icon-25 {
+  display: block;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+
+/* line 518, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu, .m-burger-menu .m-burger-menu-bg, .m-burger-menu .m-burger-menu-body, .m-burger-menu .m-burger-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* line 526, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu {
+  color: #fff;
+  z-index: 100000;
+  height: 100%;
+  position: fixed;
+}
+
+/* line 532, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu.m-burger-menu-collapse {
+  display: none;
+}
+
+/* line 535, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .m-burger-menu-bg {
+  background: #000;
+  opacity: 0;
+  transition: opacity .25s ease-out;
+  height: 100%;
+}
+
+/* line 541, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .m-burger-menu-close {
+  background: #2e2e2e;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 315px;
+  -webkit-transform: translateX(315px);
+  transform: translateX(315px);
+  -webkit-transition: -webkit-transform .25s ease-out;
+  transition: transform 0.25s ease-out;
+}
+
+/* line 552, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .m-burger-menu-close a {
+  display: block;
+  padding: 10px;
+  width: 45px;
+}
+
+/* line 557, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .m-burger-menu-body {
+  left: auto;
+  width: 270px;
+  -webkit-transform: translateX(270px);
+  transform: translateX(270px);
+  -webkit-transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  background: #3d3d3d;
+}
+
+/* line 566, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .m-burger-menu-content {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 570, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu.m-burger-menu-show .m-burger-menu-bg {
+  opacity: 0.65;
+}
+
+/* line 573, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu.m-burger-menu-show .m-burger-menu-close, .m-burger-menu.m-burger-menu-show .m-burger-menu-body {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* line 577, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu-content > ul {
+  border-top: 1px solid #474747;
+}
+
+/* line 580, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.user-login {
+  color: #c1c1c1;
+  text-align: right;
+  padding-right: 15px;
+}
+/* line 584, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.user-login a {
+  color: #c1c1c1;
+}
+/* line 588, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.user-login span span {
+  padding-right: 10px;
+}
+
+/* line 592, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .user-login {
+  display: block;
+  line-height: 45px;
+}
+
+/* line 597, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+#globalBar .user-login {
+  padding: 3px 0;
+}
+
+/* line 601, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu ul a {
+  display: block;
+  color: #c1c1c1;
+  padding: 12px 15px 12px;
+  text-decoration: none;
+}
+
+/* line 607, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu li a:active {
+  color: #fff;
+  background: #333333;
+}
+
+/* line 611, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu li a:link,
+.m-burger-menu li a:visited {
+  color: #c1c1c1;
+}
+
+/* line 615, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu li.expanded {
+  padding: 0;
+}
+
+/* line 618, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.site-switcher a,
+.m-burger-menu li.expanded a,
+.m-burger-menu a.active {
+  border-bottom: 1px solid #474747;
+}
+
+/* line 623, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.site-switcher a,
+.m-burger-menu a.active {
+  border-top: 1px solid #474747;
+}
+
+/* line 628, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.site-switcher ul a {
+  border-top: 0 none;
+}
+
+/* line 631, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable a {
+  position: relative;
+  overflow: hidden;
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+
+/* line 637, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable > a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+}
+
+/* line 644, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable a:active {
+  background: black;
+}
+
+/* line 647, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable > a span {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 8px;
+}
+
+/* line 653, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable.expanded, .m-burger-menu .expandable div {
+  background: #1f1f1f;
+}
+
+/* line 656, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable.expanded > a span.grunticon-arw-down-gry91-20, .m-burger-menu .expandable > a span.grunticon-arw-up-gryAD-20 {
+  display: none;
+}
+
+/* line 659, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable.expanded > a span.grunticon-arw-up-gryAD-20 {
+  display: inline-block;
+}
+
+/* line 662, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .site-switcher a {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 666, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable div {
+  transition: height .25s ease-out;
+  overflow: hidden;
+}
+
+/* line 670, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable div.collapsed {
+  height: 0 !important;
+}
+
+/* line 673, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .expandable ul a {
+  padding-left: 30px;
+}
+
+/* line 676, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .site-switcher .current a {
+  color: #666666;
+}
+
+/* line 679, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .parent-links {
+  border-bottom: 1px solid #474747;
+}
+
+/* line 682, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .parent-links a {
+  padding-left: 30px;
+}
+
+/* line 685, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .parent-links a span {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  margin-top: -8px;
+}
+
+/* line 691, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .external-site-links > div > div {
+  width: 49%;
+  display: inline-block;
+  margin: 5px 0;
+  border-right: 1px solid #474747;
+}
+
+/* line 697, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .external-site-links > div {
+  border-bottom: 1px solid #474747;
+  display: table;
+  width: 100%;
+}
+
+/* line 702, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .external-site-links a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 708, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .external-site-links > div:last-child > div:last-child a {
+  text-transform: none;
+  padding-left: 7px;
+}
+
+/* line 712, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu .external-site-links span.grunticon-user-gryA-20.icon-user {
+  height: 18px;
+  background-size: contain;
+  float: left;
+  position: relative;
+  bottom: 3px;
+}
+
+/* line 719, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu-children.expandable > a {
+  font: 1.8rem/1.8rem "Museo300", "Cambria", "Times New Roman", Times, serif;
+}
+
+/* line 722, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu-children.expandable > a.active {
+  background-color: #2e2e2e;
+}
+
+/* line 725, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.m-burger-menu-children.expandable.expanded > a {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #474747;
+  border-top: 1px solid #474747;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* line 733, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 738, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.c-icon-20 {
+  display: block;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+/* line 745, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.text-small-emphasis {
+  font: 700 1.2rem/1.8rem sans-serif !important;
+  font-family: inherit !important;
+  text-transform: uppercase !important;
+}
+
+/* line 751, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.grunticon-user-gryA-20 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12.884%209%2012.884%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M9-12h-9v12h9z%22%2F%3E%3Cpath%20stroke%3D%22%23343433%22%20stroke-width%3D%222.5%22%20stroke-miterlimit%3D%2210%22%20fill%3D%22none%22%20d%3D%22M1-1l5.5-5.5-5.5-5.5%22%2F%3E%3C%2Fsymbol%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cpath%20fill%3D%22%23AAAAAC%22%20d%3D%22M12.315%203.719c.11.445.121.482.111.939-.003.177-.105.992-.078%201.242.022.206.074.223.155.393.142.296.095.704.04%201.002-.029.163-.093.396-.188.529-.104.147-.315.147-.409.319-.134.246-.059.593-.143.859-.097.302-.341.323-.359.719l.359.051c.12.256.34.769.564.924l.564.154c.66.271%201.393.594%202.054.873.603.254%201.323.344%201.541.976%200%20.428.04%202.44.029%203.002h-13.111c-.012-.561.029-2.574.029-3.002.217-.632.938-.722%201.54-.976.661-.279%201.394-.603%202.054-.873l.564-.154c.225-.154.444-.668.564-.924l.268-.064c-.06-.338-.269-.364-.356-.603l-.102-1.078c.001.017-.246-.046-.278-.065-.349-.219-.355-1.106-.39-1.475-.015-.169.219-.307.154-.616-.382-1.812.165-2.658%201.03-2.939.601-.244%201.723-.695%202.769-.052l.26.241.42.072c.21.121.345.526.345.526z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+/* line 755, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.grunticon-user-red-20 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12.884%209%2012.884%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M9-12h-9v12h9z%22%2F%3E%3Cpath%20stroke%3D%22%23343433%22%20stroke-width%3D%222.5%22%20stroke-miterlimit%3D%2210%22%20fill%3D%22none%22%20d%3D%22M1-1l5.5-5.5-5.5-5.5%22%2F%3E%3C%2Fsymbol%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cpath%20fill%3D%22%23DC291E%22%20d%3D%22M12.315%203.719c.11.445.121.482.111.939-.003.177-.105.992-.078%201.242.022.206.074.223.155.393.142.296.095.704.04%201.002-.029.163-.093.396-.188.529-.104.147-.315.147-.409.319-.134.246-.059.593-.143.859-.097.302-.341.323-.359.719l.359.051c.12.256.34.769.564.924l.564.154c.66.271%201.393.594%202.054.873.603.254%201.323.344%201.541.976%200%20.428.04%202.44.029%203.002h-13.111c-.012-.561.029-2.574.029-3.002.217-.632.938-.722%201.54-.976.661-.279%201.394-.603%202.054-.873l.564-.154c.225-.154.444-.668.564-.924l.268-.064c-.06-.338-.269-.364-.356-.603l-.102-1.078c.001.017-.246-.046-.278-.065-.349-.219-.355-1.106-.39-1.475-.015-.169.219-.307.154-.616-.382-1.812.165-2.658%201.03-2.939.601-.244%201.723-.695%202.769-.052l.26.241.42.072c.21.121.345.526.345.526z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+/* line 759, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.grunticon-arw-down-gry91-20 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23919191%22%20d%3D%22M10.361%2014.139c-.362%200-.707-.157-.944-.43l-4.924-5.67c-.452-.522-.396-1.311.125-1.764.521-.453%201.311-.397%201.764.124l3.98%204.583%203.971-4.574c.452-.521%201.242-.577%201.763-.124.521.453.577%201.242.125%201.763l-4.915%205.661c-.238.274-.582.431-.945.431z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* line 763, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.grunticon-arw-up-gryAD-20 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23ADADAD%22%20d%3D%22M14.777%2013.355c-.35%200-.697-.146-.944-.43l-3.98-4.583-3.971%204.574c-.453.521-1.243.577-1.763.124-.521-.453-.577-1.242-.125-1.763l4.915-5.661c.474-.547%201.413-.548%201.888%200l4.924%205.67c.453.521.397%201.311-.124%201.763-.238.206-.53.306-.82.306z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* line 767, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.grunticon-mglass-red-30 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2235%22%20height%3D%2235%22%20viewBox%3D%220%200%2035%2035%22%3E%3Csymbol%20viewBox%3D%220%20-12.884%209%2012.884%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M9-12h-9v12h9z%22%2F%3E%3Cpath%20stroke%3D%22%23343433%22%20stroke-width%3D%222.5%22%20stroke-miterlimit%3D%2210%22%20fill%3D%22none%22%20d%3D%22M1-1l5.5-5.5-5.5-5.5%22%2F%3E%3C%2Fsymbol%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23D2201E%22%20d%3D%22M29.317%2026.511c.878.877.878%202.304%200%203.182-.877.877-2.304.877-3.176%200l-6.504-6.499c-1.517.945-3.306%201.495-5.231%201.495-5.474%200-9.906-4.432-9.906-9.906s4.433-9.907%209.906-9.907%209.906%204.433%209.906%209.907c0%201.919-.549%203.713-1.495%205.231l6.5%206.497zm-7.834-11.728c0-3.906-3.17-7.076-7.076-7.076-3.906%200-7.076%203.17-7.076%207.076%200%203.905%203.17%207.076%207.076%207.076%203.905%200%207.076-3.171%207.076-7.076z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+/* line 771, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.grunticon-menu-ham-red-18 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225%22%20height%3D%2225%22%20viewBox%3D%220%200%2025%2025%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.03%200-5-1.88-5-6.033V-12h10v.832c0%204.153-2.97%206.034-5%206.034zM7.5-4L7-5H3l-.5%201H2v2.312l.5.47L4%200h2l1.5-1.22.5-.468V-4z%22%2F%3E%3C%2Fsymbol%3E%3Cpath%20fill%3D%22%23CF130F%22%20d%3D%22M22%206c0%20.55-.45%201-1%201H4c-.55%200-1-.45-1-1V4c0-.55.45-1%201-1h17c.55%200%201%20.45%201%201v2zm0%207c0%20.55-.45%201-1%201H4c-.55%200-1-.45-1-1v-2c0-.55.45-1%201-1h17c.55%200%201%20.45%201%201v2zm0%207c0%20.55-.45%201-1%201H4c-.55%200-1-.45-1-1v-2c0-.55.45-1%201-1h17c.55%200%201%20.45%201%201v2z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+/* line 775, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.grunticon-cross-gryAD-15 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2015%2015%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23ADADAD%22%20d%3D%22M12.811%203.061l-1.061-1.061-3.845%203.845-3.844-3.845-1.061%201.061%203.845%203.844-3.845%203.845%201.061%201.061%203.844-3.845%203.845%203.845%201.061-1.061-3.845-3.845z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* line 779, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
+.grunticon-arw-right-gryAD-20 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23ADADAD%22%20d%3D%22M6.182%2017.653c-.35%200-.697-.146-.944-.431-.453-.521-.397-1.311.125-1.763l6.689-5.809-6.678-5.796c-.522-.453-.578-1.242-.125-1.763.452-.521%201.242-.578%201.763-.125l7.765%206.741c.273.237.431.582.431.944s-.157.707-.431.944l-7.777%206.752c-.236.206-.528.306-.818.306z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* Footer */
+/* line 2, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_footer.scss */
+#footer {
+  float: none;
+  clear: both;
+  border-top: 1px solid #ccc;
+}
+
+/* line 8, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_footer.scss */
+#footer-legal {
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+  padding: 0 15px 30px;
+}
+/* line 13, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_footer.scss */
+#footer-legal p {
+  margin-bottom: 0;
+}
+
+/* line 1, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_current_book_menu {
+  margin-bottom: 2.6rem;
+}
+/* line 4, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_current_book_menu ul {
+  padding-left: 0;
+}
+/* line 9, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_current_book_menu ul.child-menu li a {
+  background-image: none;
+  padding-left: 0;
+}
+/* line 17, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_current_book_menu li {
+  list-style-type: none;
+  border-bottom: 1px solid #D9DADB;
+}
+/* line 21, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_current_book_menu li.last {
+  border-bottom: none;
+}
+/* line 26, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_current_book_menu a {
+  color: #000;
+  display: block;
+  line-height: 2rem;
+  background-repeat: no-repeat;
+}
+/* line 33, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_current_book_menu .active {
+  color: #D01B27;
+}
+
+/* line 38, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_book_aware_menu {
+  background-color: #1f1f1f;
+  width: 100%;
+  line-height: 2;
+  padding: 9px 19px;
+}
+/* line 44, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_book_aware_menu ul {
+  padding-left: 0;
+  margin: 0;
+}
+/* line 49, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_book_aware_menu li {
+  float: left;
+  list-style: none;
+  margin-left: 2.1rem;
+}
+/* line 54, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_book_aware_menu li:first-child {
+  margin-left: 0;
+}
+/* line 58, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_book_aware_menu li a {
+  font-family: "Archivo Narrow", sans-serif;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding: 0;
+}
+/* line 65, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_book_aware_menu li a:focus, #learning_lab_book_aware_menu li a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* line 73, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#learning_lab_book_aware_menu .active {
+  color: #ff1612;
+}
+
+/* line 78, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#blearning_lab_book_aware_menu {
+  width: 100%;
+  line-height: 2;
+  padding: 9px 0 21px;
+}
+/* line 83, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#blearning_lab_book_aware_menu ul {
+  padding-left: 0;
+  margin: 0;
+}
+/* line 88, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#blearning_lab_book_aware_menu li {
+  float: left;
+  list-style: none;
+  margin-left: 1.7rem;
+}
+/* line 93, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#blearning_lab_book_aware_menu li:first-child {
+  margin-left: 0;
+}
+/* line 97, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#blearning_lab_book_aware_menu li a {
+  font-family: "Museo500", "Cambria", "Times New Roman", Times, serif;
+  color: #333;
+  font-size: 1.5rem;
+  padding: 0;
+}
+/* line 103, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#blearning_lab_book_aware_menu li a:focus, #blearning_lab_book_aware_menu li a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* line 111, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#blearning_lab_book_aware_menu .active {
+  color: #ff1612;
+}
+
+@media (min-width: 768px) {
+  /* line 117, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+  .mega-menu .row > ul {
+    width: 33.33333333333333%;
+    float: left;
+  }
+}
+/* line 123, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu [class^=grunticon-] {
+  height: 14px;
+  margin-left: -8px;
+  padding-left: 0;
+  vertical-align: middle;
+}
+
+/* line 130, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.grunticon-arw-right-red-20 {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23DC291E%22%20d%3D%22M7.772%2014.844c-.341%200-.681-.142-.922-.42-.442-.509-.388-1.28.121-1.722l4.475-3.886-4.467-3.879c-.509-.442-.563-1.213-.121-1.722.442-.508%201.213-.563%201.722-.121l5.528%204.8c.267.232.42.568.42.922%200%20.354-.153.69-.42.922l-5.536%204.808c-.231.199-.516.298-.8.298z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+}
+
+/* line 135, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+[class^="grunticon-"] {
+  display: inline-block;
+  width: 25px;
+  height: 12px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -ms-behavior: url("http://jit.rmit.co.vu:8080/rmit_public/app/scripts/backgroundsize.min.htc");
+}
+
+/* line 144, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.cta {
+  font-size: .923em;
+  line-height: 1.257em;
+  text-decoration: none;
+}
+
+/* line 150, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 20px;
+  /* display:none */
+}
+
+/* line 159, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu .h2 {
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font: 1.54em Museo300;
+  line-height: 1.2em;
+}
+
+/* line 168, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu [class^=grunticon-] {
+  height: 14px;
+  margin-left: -8px;
+  padding-left: 0;
+  vertical-align: middle;
+}
+
+/* line 175, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu .row {
+  border-bottom: 1px solid #e4e4e4;
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 181, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu .row > ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* line 186, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu .row > ul > li {
+  list-style: none;
+  width: 100%;
+  border-top: 1px solid #e4e4e4;
+  height: 2.925em;
+}
+
+/* line 193, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu .row ul li:last-child {
+  border-bottom: none;
+}
+
+/* line 197, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu .row > ul > li > a {
+  text-decoration: none;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 5px 10px;
+  position: relative;
+  padding: 5px;
+  margin-left: -5px;
+  min-width: 80%;
+  max-width: 90%;
+  display: inline-table;
+}
+
+/* line 211, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.mega-menu .row > ul > li > a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* line 216, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+.primary-navigation > .nav > li.mega-hover:before {
+  bottom: -2.3em;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #1f1f1f;
+  border-width: 12px;
+  margin-left: -12px;
+  z-index: 999;
+}
+
+@media (max-width: 991px) {
+  /* line 232, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+  .primary-navigation > .nav > li.mega-hover:before {
+    border: 0;
+  }
+}
+/* line 237, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu {
+  position: relative;
+  width: 235px;
+  right: -8px;
+  top: 0;
+}
+/* line 243, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 248, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+/* line 254, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a {
+  background-image: none;
+  background-color: #474747;
+  color: #c8c8c8;
+  padding: 9px;
+  margin: 0;
+  line-height: 1.6rem;
+  display: block;
+  border-top: 1px solid #5a5a5a;
+}
+/* line 263, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a:hover {
+  background-color: #525252;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 268, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul li a.active {
+  background-color: #5a5a5a;
+  color: #fff;
+}
+/* line 277, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu a {
+  padding-left: 30px;
+}
+/* line 280, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu a.active {
+  background-color: #666;
+}
+/* line 285, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul a {
+  background-color: #333;
+  padding-left: 45px;
+  background-position: 25px 15px;
+}
+/* line 290, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul a:hover {
+  background-color: #525252;
+  color: #fff;
+}
+/* line 295, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu #learning_lab_current_book_menu ul.child-menu ul a.active {
+  background-color: #666;
+  color: #fff;
+}
+/* line 303, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu .backlink a {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23DC291E%22%20d%3D%22M12.52%2015.82c-.284%200-.569-.098-.8-.299l-5.528-4.8c-.267-.232-.42-.568-.42-.922%200-.354.153-.69.42-.922l5.536-4.808c.509-.442%201.279-.388%201.722.121.442.509.388%201.28-.121%201.722l-4.475%203.888%204.467%203.878c.509.442.563%201.213.121%201.722-.241.277-.581.42-.922.42z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  padding-left: 15px;
+  margin-bottom: 5px;
+  background-position: -6px 0;
+  color: #c8c8c8;
+}
+/* line 310, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu .backlink a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/* line 316, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_menus.scss */
+#block-learning_lab_node_types-learning_lab_current_book_menu .backlink-top a {
+  margin-top: -19px;
+}
+
+/* line 1, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_sidebars.scss */
+.sidebar {
+  float: left;
+}
+
+/* line 5, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_sidebars.scss */
+.two-sidebars .center,
+.sidebar-first .center {
+  margin-left: 190px;
+}
+
+/* line 10, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_sidebars.scss */
+#sidebar-first {
+  width: 190px;
+  margin-right: -190px;
+}
+
+/* line 15, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_sidebars.scss */
+.two-sidebars .center,
+.sidebar-second .center {
+  margin-right: 200px;
+}
+
+/* line 20, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_sidebars.scss */
+#sidebar-second {
+  float: right;
+  margin-right: 2.2em;
+  margin-top: -110px;
+  width: 200px;
+}
+
+/* line 1, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_blocks.scss */
+#block-menu-devel {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+/* line 7, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_blocks.scss */
+#block-menu-devel li {
+  float: left;
+  list-style: none;
+  margin-left: 1.5em;
+}
+
+/* line 14, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_blocks.scss */
+#block-masquerade-masquerade {
+  float: left;
+  clear: both;
+}
+
+/* line 19, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_blocks.scss */
+#block-menu-menu-extras {
+  margin-bottom: 2em;
+}
+
+/* line 23, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_blocks.scss */
+.books_in_blocks_column {
+  float: left;
+  width: 960px;
+}
+
+/* line 1, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider {
+  border: none;
+  border-radius: 0;
+  background: unset;
+  margin-bottom: 20px;
+}
+
+/* line 8, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-on-side {
+  background-color: #333;
+  position: absolute;
+  padding: 15px;
+  padding-top: 55px;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 255px;
+}
+
+/* line 19, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-over-image {
+  position: absolute;
+  width: 275px;
+  left: 62px;
+  top: 100px;
+}
+
+/* line 26, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-over-image .body-field .field-content {
+  color: #757575;
+  font-weight: 300;
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+}
+
+/* line 33, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-on-side .body-field .field-content {
+  color: #c8c8c8;
+  font-weight: normal;
+  margin-top: 1.6rem;
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+/* line 41, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-on-side .link-field a {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+/* line 47, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-over-image .link-field a {
+  color: #c72727;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* line 54, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-over-image .link-field {
+  position: unset;
+  margin-top: 1.6rem;
+}
+
+/* line 59, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-on-side .title-field a {
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  font-weight: normal;
+  line-height: 3.2rem;
+  font-size: 3.2rem;
+  color: #FFF;
+}
+
+/* line 67, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-over-image .title-field {
+  position: unset;
+}
+
+/* line 71, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flexslider .body-content-over-image .title-field a {
+  font-family: "Museo500", "Cambria", "Times New Roman", Times, serif;
+  font-weight: normal;
+  line-height: 5rem;
+  font-size: 5rem;
+  color: #333;
+}
+
+/* line 79, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flex-control-nav {
+  padding-top: 20px;
+  padding-left: 15px;
+  background-color: #333;
+  z-index: 10;
+  text-align: left;
+  right: 0;
+  border: 72px;
+  height: 50px;
+}
+
+/* line 90, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flex-control-paging li {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+/* line 95, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flex-control-paging li a {
+  background-color: #646464;
+}
+
+/* line 99, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flex-control-paging li a.flex-active {
+  background-color: #dc291e;
+}
+
+/* line 103, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flex-pauseplay {
+  position: absolute;
+  bottom: 11px;
+  right: 43px;
+}
+
+/* line 109, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flex-pauseplay a::before {
+  font-size: 14px;
+  color: #aaaaac;
+}
+
+/* line 114, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_slider.scss */
+.flex-control-nav {
+  bottom: 0;
+  width: 240px;
+}
+
+/* line 1, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#content-area-front {
+  float: left;
+}
+
+/* line 5, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.front #content-header {
+  height: unset;
+  margin: 0;
+}
+
+/* line 10, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.front #content-header div.status {
+  position: unset;
+  margin: 0;
+}
+
+/* line 15, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.front div.messages {
+  width: 100%;
+}
+
+/* line 19, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#block-learning_lab_node_types-learning_lab_search {
+  background-color: #333;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  overflow: hidden;
+}
+/* line 25, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#block-learning_lab_node_types-learning_lab_search .block-inner form > div {
+  width: 100%;
+  position: relative;
+  display: table;
+  float: left;
+  padding: 0 15px;
+}
+/* line 32, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#block-learning_lab_node_types-learning_lab_search .block-inner form > div .form-item-search-block-form {
+  display: table-cell;
+  position: relative;
+  width: 100%;
+}
+/* line 37, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#block-learning_lab_node_types-learning_lab_search .block-inner form > div .form-item-search-block-form label {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 19px;
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  color: #c7c7c7;
+  margin-top: 2px;
+}
+/* line 47, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#block-learning_lab_node_types-learning_lab_search .block-inner form > div .form-item-search-block-form input {
+  font-size: 14px;
+  height: 34px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #C7C7C7;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  line-height: normal;
+  padding: 8px;
+  width: 70%;
+  margin-left: 30%;
+}
+/* line 62, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#block-learning_lab_node_types-learning_lab_search .block-inner form > div .form-actions {
+  width: 1%;
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
+}
+/* line 68, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#block-learning_lab_node_types-learning_lab_search .block-inner form > div .form-actions input {
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  font-size: 14px;
+  border: none;
+  color: #fff;
+  line-height: 1.428571429;
+  border-radius: 0 4px 4px 0;
+  background-color: #cf120f;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225%22%20height%3D%2225%22%20viewBox%3D%220%200%2025%2025%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M21.542%2019.853l-4.976-4.975c.663-1.088%201.051-2.36%201.051-3.725%200-3.966-3.227-7.192-7.192-7.192s-7.192%203.226-7.192%207.192%203.227%207.192%207.192%207.192c1.517%200%202.924-.475%204.085-1.28l4.91%204.91c.293.293.677.439%201.061.439s.768-.146%201.061-.439c.585-.586.585-1.536%200-2.122zm-16.108-8.7c0-2.752%202.239-4.992%204.992-4.992s4.992%202.239%204.992%204.992-2.239%204.992-4.992%204.992-4.992-2.239-4.992-4.992z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 8px 4px;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 7px 12px;
+  text-align: left;
+  width: 45px;
+  height: 34px;
+}
+
+/* line 90, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.learning_lab_book_in_block {
+  background-repeat: no-repeat;
+  background-color: #fff;
+  position: relative;
+  float: left;
+}
+/* line 96, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.learning_lab_book_in_block:hover {
+  background-color: #dddddd;
+}
+
+/* line 102, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#learning_lab_book_in_block_751:hover {
+  background-color: #dddddd;
+}
+/* line 106, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#learning_lab_book_in_block_751 .learning_lab_book_in_block_body_bg {
+  display: none;
+}
+
+@media (max-width: 939px) {
+  /* line 112, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+  .learning_lab_book_in_block_body {
+    background-color: #1f1f1f;
+  }
+}
+/* line 119, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.learning_lab_book_in_block_body_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* line 126, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.learning_lab_book_in_block_body_box_off {
+  display: none;
+}
+
+/* line 130, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.learning_lab_book_in_block_body_box_on {
+  display: block;
+}
+
+/* line 134, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.learning_lab_book_in_block_body {
+  position: absolute;
+  overflow: hidden;
+  color: #FFF;
+  padding: 15px;
+}
+
+/* line 141, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.learning_lab_book_in_block_body_bg {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  width: 320px;
+  height: 275px;
+}
+
+/* line 151, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+.learning_lab_book_in_block_title a:link, .learning_lab_book_in_block_title a:visited {
+  color: #333;
+  font-weight: 700;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: block;
+  padding-left: 40px;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23DC291E%22%20d%3D%22M7.772%2014.844c-.341%200-.681-.142-.922-.42-.442-.509-.388-1.28.121-1.722l4.475-3.886-4.467-3.879c-.509-.442-.563-1.213-.121-1.722.442-.508%201.213-.563%201.722-.121l5.528%204.8c.267.232.42.568.42.922%200%20.354-.153.69-.42.922l-5.536%204.808c-.231.199-.516.298-.8.298z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* line 166, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_front.scss */
+#learning_lab_book_in_block_751 .learning_lab_book_in_block_body {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/*status messages */
+/* line 2, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page div.status {
+  display: none;
+}
+
+/* line 6, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #title-wrapper {
+  margin: 0;
+  background-repeat: no-repeat;
+  height: 480px;
+  position: relative;
+}
+/* line 12, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #title-wrapper h2 {
+  width: 100%;
+  position: absolute;
+  font-size: 6rem;
+  margin: 0;
+  line-height: 6rem;
+  display: table-cell;
+  vertical-align: bottom;
+  padding: 0 33% 0 19px;
+  bottom: 20px;
+  color: #FFF;
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  font-weight: normal;
+}
+
+/* line 29, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner .block-learning-lab-node-types {
+  float: right;
+}
+/* line 33, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page .tabs {
+  position: relative;
+  bottom: 1px;
+}
+
+/* line 39, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main {
+  background-color: #333333;
+  height: 100%;
+}
+
+/* line 44, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner {
+  width: 100%;
+  margin: 0;
+  background: unset;
+}
+
+/* line 50, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner #content-area {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+/* line 56, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner #content-area .block-system {
+  width: 305px;
+  margin: 0;
+  float: left;
+  padding-left: 19px;
+  padding-top: 20px;
+}
+
+/* line 64, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner #content-area .region-content {
+  position: relative;
+}
+
+/* line 68, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner #content-area .node {
+  color: #c8c8c8;
+}
+
+/* line 73, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner #content-area .node .content {
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  font-size: 1.4rem;
+}
+
+/* line 78, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner #content-area .node .content .field-item p:first-child {
+  font-size: 1.8rem;
+}
+
+/* line 82, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner #content-area .node .book_printer a {
+  color: #c8c8c8;
+}
+
+/* line 86, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner .block-learning-lab-node-types h2 {
+  display: block;
+  color: #FFF;
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 0;
+  font-family: "Museo500", "Cambria", "Times New Roman", Times, serif;
+}
+
+/* line 95, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #learning_lab_current_book_menu li a {
+  color: #C8C8C8;
+  font-size: 1.3rem;
+  padding: 0.7rem 0 0.7rem 4.0rem;
+}
+
+/* line 101, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #learning_lab_current_book_menu li {
+  border-bottom: 1px solid #4e4e4e;
+}
+/* line 104, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #learning_lab_current_book_menu li a {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23DC291E%22%20d%3D%22M7.772%2014.844c-.341%200-.681-.142-.922-.42-.442-.509-.388-1.28.121-1.722l4.475-3.886-4.467-3.879c-.509-.442-.563-1.213-.121-1.722.442-.508%201.213-.563%201.722-.121l5.528%204.8c.267.232.42.568.42.922%200%20.354-.153.69-.42.922l-5.536%204.808c-.231.199-.516.298-.8.298z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position: 1.6rem 0.7rem;
+}
+
+/* line 110, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #learning_lab_current_book_menu li:first-child {
+  border-top: 1px solid #4e4e4e;
+}
+
+/* line 114, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page h2.title-node-63 {
+  width: 325px !important;
+}
+
+/* line 118, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page h2.title-node-199 {
+  width: 425px !important;
+}
+
+/* line 122, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_landing.scss */
+.landing-page #page #main #content-inner .block-learning-lab-node-types {
+  float: right;
+}
+
+/* line 1, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_search.scss */
+.page-search #main #content #content-inner {
+  background: unset;
+  background-color: #FFF;
+}
+/* line 5, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_search.scss */
+.page-search #main #content #content-inner #content-area .search-result a {
+  color: #000;
+  text-decoration: underline;
+}
+/* line 10, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_search.scss */
+.page-search #main #content #content-inner #content-area .search-result {
+  border-bottom: 1px solid #ededed;
+}
+/* line 14, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_search.scss */
+.page-search #main #content #content-inner #content-area .search-result .search-snippet-info {
+  color: #666;
+}
+/* line 18, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_search.scss */
+.page-search #main #content #content-inner #content-area #edit-keys {
+  border: 1px solid #b8b3b2;
+  height: 30px;
+  width: 50%;
+  font-size: 1.2em;
+  padding-left: 0.3em;
+}
+/* line 26, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_search.scss */
+.page-search #main #content #content-inner #content-area #edit-basic {
+  margin-bottom: 2em;
+}
+
+/* line 31, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_search.scss */
+.page-search #main #content #content-area {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+/* line 39, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_search.scss */
+.page-search ol {
+  padding-left: 0;
+}
+
+/* line 1, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_comments.scss */
+.comment-forbidden {
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+}
+
+/* line 6, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_comments.scss */
+.node .content .comment-forbidden a:link {
+  text-decoration: none;
+}
+/* line 9, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_comments.scss */
+.node .content .comment-forbidden a:link:hover {
+  text-decoration: underline;
+}
+
+/* line 1, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-header h2 {
+  font-family: "Museo500", "Cambria", "Times New Roman", Times, serif;
+  color: #D30900;
+}
+
+/* line 6, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.content-area h1, .content-area h2 {
+  display: none;
+}
+
+/* UI improvements. */
+/* line 11, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.btn {
+  margin-right: 10px;
+}
+
+/* line 16, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#edit-title {
+  font-size: 24px;
+  width: 99%;
+}
+
+/* line 20, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#edit-delete {
+  color: #cc0000;
+}
+
+/* line 24, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#system-themes-form img {
+  width: 100px;
+}
+
+/* line 27, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.form-item .description {
+  font-style: italic;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  color: #777777;
+  width: 370px;
+}
+
+/* line 36, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.node .content a:link {
+  text-decoration: underline;
+}
+
+/* line 40, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#main #content #content-inner {
+  float: left;
+  margin-bottom: 2.8rem;
+  width: 665px;
+  margin-left: 2.8rem;
+  margin-top: 2.1rem;
+}
+
+/* line 48, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#site-map .description {
+  display: none;
+}
+
+/* line 52, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.lower-level #page #main {
+  background-color: #FFF;
+}
+/* line 55, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.lower-level #page #main h2#page-title {
+  background-color: #333;
+  color: #FFF;
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+}
+/* line 62, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.lower-level #page #main #content-area .links {
+  margin-bottom: 2.8rem;
+}
+/* line 67, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.lower-level #page #main #content-inner {
+  margin: 0;
+  width: 100%;
+  background: none;
+}
+/* line 74, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.lower-level #page #main #content-header .tabs {
+  position: absolute;
+}
+/* line 77, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.lower-level #page #main #content-header .tabs ul.tabs {
+  border: none;
+}
+/* line 81, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.lower-level #page #main #content-header .tabs li a {
+  background-color: #333333;
+  color: #FFF;
+  border: none;
+}
+/* line 87, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.lower-level #page #main #content-header .tabs li.active a {
+  background-color: #777;
+  color: #FFF;
+  border: none;
+}
+
+/* Pagination */
+/* line 97, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.pagination li a {
+  background-image: url("../images/pagination.png");
+  width: 13px;
+}
+
+/* line 102, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.pagination li.current a {
+  background-position: 0 -14px;
+}
+
+/* Views */
+/* line 107, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.views-table {
+  float: left;
+}
+
+/* line 111, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.view-header {
+  float: left;
+}
+
+/* line 115, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.view-header .tabs, .view-header p {
+  float: left;
+  clear: both;
+  margin-bottom: 1.4rem;
+}
+
+/* Share */
+/* line 122, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#block-shareButtons-share_buttons {
+  float: left;
+  clear: both;
+}
+
+/* line 127, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.share-buttons, .share-buttons-facebook-like, .share-buttons-linkedin {
+  float: left;
+}
+
+/* line 131, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#main .landing-page-menu-column-title h3 {
+  margin: 0;
+}
+
+/* line 135, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#main .landing-page-menu-column-details a {
+  color: #333;
+  font-weight: bold;
+}
+
+/* ---- TABS -------------------------  */
+/* line 142, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs {
+  font-family: 'Museo300', 'Museo300FF', Arial, Helvetica, Geneva, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+/* line 151, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs a:link,
+#learning-lab-tutorial-tabs a:visited {
+  color: #3B3B39;
+  text-decoration: none;
+}
+
+/* line 157, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs a:hover,
+#learning-lab-tutorial-tabs a:focus,
+#learning-lab-tutorial-tabs a:active {
+  text-decoration: underline;
+}
+
+/* line 163, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs li.active a:link,
+#learning-lab-tutorial-tabs li.active a:visited {
+  color: #2C2C2C;
+}
+
+/* line 168, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs ul {
+  border-bottom: 1px solid #CDCDC7;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5px;
+  width: 100%;
+}
+
+/* line 177, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs ul li.leaf {
+  margin-top: 5px;
+  float: left;
+  padding-left: 3px;
+  list-style: none outside none;
+}
+
+/* line 184, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs span {
+  color: #666;
+  border: 1px solid #E5E5E0;
+  display: block;
+  position: relative;
+  border-bottom: 0;
+  float: none;
+}
+
+/* line 193, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs span a {
+  padding: 12px 13px;
+  background-color: #E5E5E0;
+  display: block;
+  line-height: 1;
+}
+
+/* line 200, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs li.active {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: -1px;
+}
+
+/* line 206, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-tutorial-tabs li.active span {
+  padding: 12px 13px;
+  color: #333;
+  border: 1px solid #CDCDC7;
+  background-color: #FFFFFF;
+  border-bottom: 0px;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* line 215, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+iframe {
+  border: none;
+  overflow: hidden;
+}
+
+/* line 220, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.quiz-wrong-answer {
+  color: #FF0000;
+  background-color: #ffc9c9;
+}
+
+/* line 225, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.quiz-missed-answer {
+  color: #FF0000;
+  text-decoration: underline;
+}
+
+/* line 230, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content table {
+  margin-bottom: 2.8rem;
+}
+
+/* line 234, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content #toc-table td {
+  padding-top: 0.7rem;
+}
+
+/* line 238, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td {
+  padding: 1.4rem;
+  padding-bottom: 0.7rem;
+}
+
+/* line 245, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 250, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content th {
+  padding: 1.4rem;
+  padding-bottom: 0.7rem;
+}
+
+/* line 255, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td ul {
+  list-style: none;
+}
+
+/* line 259, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td li {
+  margin-bottom: 0.7rem;
+}
+
+/* line 263, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content thead td {
+  font-weight: bold;
+  color: #666;
+  padding-bottom: 1.4rem;
+}
+
+/* line 269, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content thead th {
+  font-weight: bold;
+  color: #666;
+  padding-bottom: 1.4rem;
+}
+
+/* line 275, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.table-cell-centred {
+  text-align: center;
+}
+
+/* line 279, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+tbody {
+  border: none;
+}
+
+/* line 283, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+tr.even td,
+tr.odd td {
+  padding: 10px 5px;
+}
+
+/* line 288, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+tr.odd {
+  background-color: white;
+}
+
+/* line 292, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+td {
+  vertical-align: top;
+  padding-bottom: 0.7rem;
+}
+
+/* line 297, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+pre {
+  background-color: #efefef;
+  display: block;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #aaaaaa;
+}
+
+/* line 305, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+ul {
+  list-style-type: disc;
+}
+
+/* line 309, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+ul ul {
+  list-style-type: circle;
+}
+
+/* line 313, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+ul ul ul {
+  list-style-type: square;
+}
+
+/* line 317, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+ul ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 321, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 325, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+/* line 329, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+ol ol ol {
+  list-style-type: decimal;
+}
+
+/* line 333, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+abbr {
+  border-bottom: 1px dotted #666666;
+  cursor: help;
+  white-space: nowrap;
+}
+
+/* line 339, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+div.messages {
+  padding: 9px;
+  margin: 0;
+  color: #003366;
+  background: #bbddff;
+  border: 1px solid #aaccee;
+  width: 737px;
+}
+
+/* line 348, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+div.warning {
+  color: #884400;
+  background: #ffee66;
+  border-color: #eedd55;
+}
+
+/* line 354, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+div.error {
+  color: white;
+  background: #ee6633;
+  border-color: #dd5522;
+}
+
+/* line 360, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+div.status {
+  color: #336600;
+  background: #ccff88;
+  border-color: #bbee77;
+}
+
+/* line 366, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.focus-text {
+  color: #877450;
+  font-size: 2.1rem;
+  margin-bottom: 2.1rem;
+}
+
+/* line 372, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.view-display-id-block li {
+  list-style: none;
+  list-style-position: inside;
+}
+
+/* line 378, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.item-list ul li {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* line 383, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.view-display-id-block li a {
+  color: #877450;
+}
+
+/* line 387, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.view-display-id-block li a:visited {
+  color: #877450;
+}
+
+/* line 391, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.region-vocab-nav {
+  float: left;
+}
+
+/* line 395, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.region-vocab-nav .block {
+  background-image: url(../images/term_line.png);
+  background-repeat: repeat;
+}
+
+/* line 400, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.region-vocab-nav .block ul {
+  float: left;
+  width: 100%;
+}
+
+/* line 405, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.views-field {
+  color: #877450;
+}
+
+/* line 409, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.field-type-taxonomy-term-reference {
+  margin-top: 2.8rem;
+  float: left;
+}
+
+/* line 415, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.field-type-taxonomy-term-reference .field-label {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* line 421, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.field-type-taxonomy-term-reference .field-items a {
+  color: #877450;
+  float: left;
+}
+
+/* line 427, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.field-type-taxonomy-term-reference .field-items div {
+  display: inline-block;
+  width: 215px;
+  padding-right: 2.1rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+}
+
+/* line 436, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#masquerade-block-1 {
+  float: left;
+  clear: both;
+}
+
+/* line 441, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#block-menu-devel {
+  float: left;
+  clear: both;
+}
+
+/* line 446, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#block-masquerade-masquerade h2 {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 451, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+fieldset .fieldset-wrapper {
+  margin-top: 2.8rem;
+}
+
+/* line 455, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.node-selectable-text a {
+  color: #000;
+}
+
+/* line 459, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.highlight-1 {
+  color: #5A7700;
+}
+
+/* line 463, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.highlight-2 {
+  color: #1454A2;
+}
+
+/* line 467, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.highlight-3 {
+  color: #F38A2F;
+}
+
+/* line 471, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.highlight-4 {
+  color: #589A47;
+}
+
+/* line 475, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.highlight-5 {
+  color: #EC3D6B;
+}
+
+/* line 479, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-select-legend-toggle span {
+  border: 1px dashed #BEBDBD;
+  background-color: #FFF;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 487, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-legend span {
+  border: 1px dashed #BEBDBD;
+  background-color: #FFF;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin: 0.3rem;
+  display: inline-block;
+}
+
+/* line 497, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-example-no-highlights a {
+  border: none;
+}
+
+/* line 501, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+a.highlight-1 {
+  color: #787878;
+  border: 1px dashed #BEBDBD;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 509, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+a.highlight-2 {
+  color: #1454A2;
+  border: 1px dashed #BEBDBD;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 517, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+a.highlight-3 {
+  color: #F38A2F;
+  border: 1px dashed #BEBDBD;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 525, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+a.highlight-4 {
+  color: #589A47;
+  border: 1px dashed #BEBDBD;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 533, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+a.highlight-5 {
+  color: #EC3D6B;
+  border: 1px dashed #BEBDBD;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 541, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+div.links {
+  width: 100%;
+  margin-top: 1.4rem;
+  padding-top: 0.7rem;
+  float: left;
+  margin-right: 4.9rem;
+}
+
+/* line 549, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+a.example-item {
+  cursor: pointer;
+}
+
+/* line 553, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+a:hover.example-item {
+  color: #FF0000;
+}
+
+/* line 557, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+a.active-legend {
+  border: 1px solid #000;
+}
+
+/* line 561, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+h3.activity-heading {
+  font-family: "Museo300","Cambria", "Times New Roman", Times, serif;
+  line-height: 1.8rem;
+  font-weight: normal;
+  padding-bottom: 5px;
+  color: #d30900;
+  border-bottom: 1px solid #d30900;
+}
+
+/* line 571, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-activity {
+  background-image: url("../images/activity-notebook.png");
+  background-repeat: no-repeat;
+  padding-left: 4.2rem;
+}
+
+/* line 578, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.activity-container {
+  background-image: url("../images/activity-notebook.png");
+  background-repeat: no-repeat;
+  margin: 2.9rem 0 0;
+  padding-left: 56px;
+  min-height: 39px;
+}
+
+/* line 586, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.field-item > .activity-container:first-child {
+  margin-top: 0;
+}
+
+/* line 590, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#tutorial-heading h2 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 596, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.service-links {
+  float: left;
+  clear: both;
+  margin-top: 2.1rem;
+}
+
+/* line 602, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.service-links ul {
+  float: left;
+  padding: 0;
+}
+
+/* line 607, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.service-links li {
+  float: left;
+  list-style-type: none;
+  margin-right: 0.7rem;
+}
+
+/* line 613, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.service-label {
+  float: left;
+  margin-right: 1.4rem;
+}
+
+/* line 618, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#learning-lab-vquiz-progress-counter {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+/* line 624, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-instructions {
+  font-style: italic;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  float: left;
+  width: 100%;
+}
+
+/* line 633, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-default-instructions {
+  margin-bottom: 0.7rem;
+}
+
+/* line 637, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-supplementary-text {
+  float: left;
+  font-style: italic;
+}
+
+/* line 642, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.transcript-link-container {
+  margin: 1.4rem 0 0;
+  width: 100%;
+  float: left;
+}
+
+/* line 648, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.transcript-link-container a {
+  color: #454545;
+  text-decoration: underline;
+  float: right;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+}
+
+/* line 656, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.transcript-link-container a:before {
+  display: inline-block;
+  content: "\f0f6\00a0";
+  font-family: 'FontAwesome';
+}
+
+/* line 662, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.text-alternative-container {
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+  width: 100%;
+  float: left;
+}
+
+/* line 669, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.text-alternative-container a {
+  color: #454545;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  background-image: url(../images/text_alt_icon.png);
+  background-repeat: no-repeat;
+  float: left;
+  padding-left: 20px;
+  margin-bottom: 1.4rem;
+}
+
+/* line 680, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.file-link-info {
+  font-weight: normal;
+}
+
+/* line 684, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu {
+  border-collapse: separate;
+  font-size: 1.3rem;
+  border: 0 none;
+  width: 100%;
+}
+/* line 690, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu caption, #content-area .landing-page-menu thead {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+/* line 699, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu tr:last-child td {
+  border-bottom: 0 none;
+}
+/* line 704, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu td {
+  border: 0 none;
+  border-bottom: 1px solid #ddd;
+}
+/* line 708, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu td h3 {
+  text-indent: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 58px;
+  height: 45px;
+  background-repeat: no-repeat;
+}
+/* line 718, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu .landing-video {
+  background-image: url("../images/video_icon.png");
+  text-indent: 100%;
+}
+/* line 723, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu .landing-tips {
+  background-image: url("../images/study_tip_icon.png");
+  text-indent: 100%;
+}
+/* line 728, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu .landing-tutorial {
+  background-image: url("../images/tutorial_icon.png");
+  text-indent: 100%;
+}
+/* line 733, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu .landing-audio {
+  background-image: url("../images/audio_icon.png");
+  text-indent: 100%;
+}
+/* line 738, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content-area .landing-page-menu .landing-links {
+  background-image: url("../images/links_icon.png");
+  text-indent: 100%;
+}
+
+/* line 744, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.landing-page-menu-column-topic {
+  width: 245px;
+}
+
+/* line 748, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.landing-page-menu-column-topic a {
+  color: #000;
+  font-weight: bold;
+}
+
+/* line 753, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.landing-page-menu-column-video {
+  width: 50px;
+}
+
+/* line 757, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.landing-page-menu-column-video a {
+  color: #000;
+}
+
+/* line 761, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.landing-page-menu-column-pdf {
+  width: 60px;
+}
+
+/* line 765, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.landing-page-menu-column-pdf a {
+  color: #000;
+}
+
+/* line 770, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td.landing-page-menu-column-details a {
+  font-weight: bold;
+  color: #000;
+}
+/* line 775, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td.landing-page-menu-column-details ul {
+  padding-left: 0;
+}
+/* line 779, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td.landing-page-menu-column-details li {
+  margin-bottom: 1rem;
+}
+/* line 784, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td.landing-page-menu-column-details p, #content td.landing-page-menu-column-details p:last-child {
+  margin-bottom: 2rem;
+}
+/* line 788, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td.landing-page-menu-column-details p.resource-heading {
+  line-height: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+/* line 795, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.landing-page-menu-column-title {
+  vertical-align: top;
+}
+
+/* line 799, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content td.td-no-right-border {
+  border-right: none;
+}
+
+/* line 803, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.tip-box {
+  float: left;
+  position: relative;
+  background-image: url("../images/icon_tip.png");
+  background-repeat: no-repeat;
+  margin-right: 9.1rem;
+  padding-left: 3.1rem;
+  width: 440px;
+  min-height: 50px;
+}
+
+/* line 814, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.table-tip-title {
+  background-image: url("../images/tiny_tip_icon.png");
+  background-repeat: no-repeat;
+  font-size: 0.14rem;
+  text-indent: -5000px;
+  width: 57px;
+  height: 30px;
+  float: left;
+  clear: both;
+  margin-bottom: 1.4rem;
+}
+
+/* line 827, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+h3.tip-box-title {
+  font-family: "Museo500","Cambria", "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  border-bottom: 1px solid #969696;
+  color: #969696;
+  text-transform: lowercase;
+  margin-top: 0.14rem;
+}
+
+/* line 837, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+blockquote.style3 {
+  padding: 8px 20px;
+  background-color: #faebbc;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin: 5px;
+  border-left: 0;
+  font-size: 14px;
+}
+
+/* line 847, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+blockquote.style2 {
+  padding: 10px 20px;
+  background-color: #EEEEEE;
+  border-left: 5px solid #DE260E;
+  margin: 5px;
+  font-size: 13px;
+  color: #333;
+}
+
+/* line 856, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+blockquote.style1 {
+  display: table;
+  margin: 2.1rem 1rem;
+  padding: 0.7rem 2rem;
+  font-style: italic;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  font-size: 14px;
+}
+
+/* line 864, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+blockquote.style1:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 5.6rem;
+  line-height: 35px;
+  vertical-align: top;
+  width: 35px;
+  display: table-cell;
+}
+
+/* line 873, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+blockquote.style1:after {
+  content: close-quote;
+  visibility: hidden;
+}
+
+/* line 877, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+blockquote.style1 p {
+  display: inline;
+  font-style: italic;
+}
+
+/* line 882, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.video-transcript-container {
+  float: left;
+  width: 100%;
+}
+
+/* line 887, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.video-wrapper {
+  width: 360px;
+  float: left;
+}
+
+/* line 892, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.transcript-box {
+  float: left;
+  width: 215px;
+  margin-left: 1.4rem;
+  background-image: url("../images/tiny_transcript.png");
+  background-repeat: no-repeat;
+  padding-top: 3.4rem;
+  font-size: 1.3rem;
+}
+
+/* line 902, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.transcript-intro {
+  float: left;
+  width: 215px;
+}
+
+/* line 907, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.transcript-box p {
+  margin-bottom: 0;
+}
+
+/* line 911, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.transcript-box .transcript-title {
+  display: none;
+}
+
+/* line 915, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.hint-box {
+  float: left;
+  width: 360px;
+  margin-bottom: 1.4rem;
+  font-size: 1.3rem;
+  margin-right: 26.6rem;
+  margin-top: 0.7rem;
+}
+
+/* line 924, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.clear-text-box {
+  float: left;
+}
+
+/* line 928, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-show-all {
+  position: relative;
+  padding-left: 4.9rem;
+  margin-right: 4.9rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  width: 530px;
+  overflow: hidden;
+}
+
+/* line 939, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-example-show-all {
+  float: left;
+  width: 60%;
+}
+
+/* line 945, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-legend-show-all {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 952, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-legend-show-all span {
+  padding-left: 3.5rem;
+  padding-top: 1rem;
+  margin: 0;
+  float: left;
+  clear: both;
+  width: 170px;
+  height: 34px;
+  background-image: url("../images/legend_arrow.png");
+  background-repeat: no-repeat;
+}
+
+/* line 965, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-legend-show-all span.vertical-spacer {
+  background-image: none;
+  height: 10px;
+  visibility: hidden;
+}
+
+/* line 973, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.learning-lab-select-legend-show-all span.mobile-spacer {
+  background-image: none;
+  height: 0px;
+  visibility: hidden;
+  display: none;
+}
+
+/* line 981, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.node-webform {
+  padding: 1.4rem;
+  width: 485px;
+}
+
+/* line 986, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.introductory-paragraph {
+  font-family: "Museo300", "Cambria", "Times New Roman", Times, serif;
+  color: #71717a;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+}
+
+/* line 993, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.oral-presentation-container * {
+  box-sizing: content-box;
+}
+
+/* line 997, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#block-learning_lab_node_types-learning_lab_search .block-inner .content #edit-actions input {
+  text-indent: -9999px;
+}
+
+/* line 1003, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.page-node-42 .content *,
+.page-node-226 .content * {
+  box-sizing: content-box;
+}
+
+/* line 1008, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.page-node-43 h4 {
+  clear: both;
+}
+
+/* line 1013, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.page-node-26 h3,
+.page-node-615 h3 {
+  clear: both;
+}
+
+/* line 1018, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.page-node-727 .outlined-container {
+  float: none;
+}
+
+/* line 1023, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .accordion-show-all {
+  text-align: right;
+  padding-bottom: 5px;
+}
+/* line 1027, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .accordion-show-all a {
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+}
+/* line 1037, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .accordion-show-all a:hover {
+  text-decoration: underline;
+}
+/* line 1042, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .accordion-show-all .accordion-label,
+#content .rmit-accordion .accordion-show-all .accordion-icon {
+  display: inline-block;
+  vertical-align: bottom;
+}
+/* line 1048, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .accordion-show-all .accordion-label {
+  padding-right: 5px;
+}
+/* line 1052, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .accordion-show-all .accordion-icon {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+/* line 1060, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .accordion-show-all .accordion-show-all-arrow {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  background-position: center center;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23ADADAD%22%20d%3D%22M9.861%2014.139c-.362%200-.707-.157-.944-.43l-4.924-5.67c-.452-.522-.396-1.311.125-1.764.521-.453%201.311-.397%201.764.124l3.98%204.583%203.971-4.574c.452-.521%201.242-.577%201.763-.124.521.453.577%201.242.125%201.763l-4.915%205.661c-.238.274-.582.431-.945.431z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+}
+/* line 1069, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .accordion-show-all .open {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23ADADAD%22%20d%3D%22M14.777%2013.355c-.35%200-.697-.146-.944-.43l-3.98-4.583-3.971%204.574c-.453.521-1.243.577-1.763.124-.521-.453-.577-1.242-.125-1.763l4.915-5.661c.474-.547%201.413-.548%201.888%200l4.924%205.67c.453.521.397%201.311-.124%201.763-.238.206-.53.306-.82.306z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+/* line 1074, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .panel {
+  border-radius: 0;
+  border: 0 none;
+  box-shadow: none;
+  margin: 0;
+}
+/* line 1080, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .panel > .panel-heading, #content .rmit-accordion .panel > .panel-body {
+  color: #333;
+  background-color: transparent;
+  border-radius: 0;
+  border: 0 none;
+  border-top: 1px solid #e4e4e4;
+}
+/* line 1090, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .panel > .panel-heading {
+  padding: 0;
+}
+/* line 1094, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .panel > .panel-body {
+  padding: 15px;
+}
+/* line 1098, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .panel h4 {
+  margin: 0;
+}
+/* line 1101, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .panel h4 a {
+  box-shadow: none !important;
+  outline: 0 !important;
+  padding: 15px 15px 15px 30px;
+  color: #333;
+  display: block;
+  font-size: 2rem;
+  font-family: Museo300, "Century Gothic", CenturyGothic, AppleGothic, Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23DC291E%22%20d%3D%22M10.361%2015.675c-.362%200-.707-.157-.944-.43l-6.257-7.206c-.453-.522-.397-1.311.124-1.764.521-.453%201.311-.397%201.764.124l5.314%206.119%205.303-6.108c.452-.521%201.242-.578%201.763-.124.521.453.577%201.242.125%201.763l-6.247%207.195c-.238.274-.582.431-.945.431z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 0.4rem 1.6rem;
+}
+/* line 1115, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .panel h4 a:hover {
+  background-color: #f6f6f4;
+}
+/* line 1119, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#content .rmit-accordion .panel h4 a.open {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cg%3E%3Cpath%20fill%3D%22%23DC291E%22%20d%3D%22M16.608%2014.892c-.35%200-.697-.146-.944-.43l-5.314-6.12-5.303%206.108c-.453.521-1.243.577-1.763.124-.521-.453-.577-1.242-.125-1.763l6.247-7.195c.474-.547%201.413-.548%201.888%200l6.258%207.206c.453.521.397%201.311-.124%201.763-.237.206-.529.307-.82.307z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* line 1127, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.gruntrmit-logo_RMIT-artboard {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%22160px%22%20height%3D%2256px%22%20viewBox%3D%220%200%20160%2056%22%20enable-background%3D%22new%200%200%20160%2056%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20fill%3D%22%23231F20%22%20d%3D%22M127.292%2C3.983h4.203V2.435H116.85v1.548h4.226v29.468h-4.226v1.535h14.646v-1.535h-4.203V3.983z%20%20%20M153.941%2C34.979v-1.526h-4.488V3.656c6.861-0.342%2C8.031%2C1.126%2C8.908%2C7.351h1.512l-0.536-8.572h-26.056l-0.53%2C8.572h1.544%20%20c0.887-6.226%2C2.044-7.693%2C8.918-7.351v29.796h-4.494v1.526H153.941%22%2F%3E%20%3Cpath%20fill%3D%22%23231F20%22%20d%3D%22M55.751%2C16.359V3.946h4.24c4.338%2C0%2C5.942%2C1.09%2C5.942%2C6.562c0%2C4.363-1.8%2C5.851-6.187%2C5.851H55.751%20%20%20M114.063%2C3.946V2.41h-12.002l-7.054%2C22.254L88.193%2C2.41H76.237v1.536h4.206v29.458L75.9%2C33.4c-4.22%2C0.102-4.284-3.496-4.265-4.239%20%20c0.058-7.933-1.714-10.801-9.315-11.976V17.08c4.533-0.479%2C10.33-1.769%2C10.33-7.264c0-6.768-6.317-7.405-11.644-7.405h-15.69v1.536%20%20h4.2v29.471h-4.2v1.532h14.636v-1.532h-4.2V17.879c2.7-0.107%2C5.74%2C0.581%2C7.114%2C1.763c1.267%2C1.074%2C1.95%2C4.396%2C1.95%2C8.427%20%20c0%2C4.977%2C2.571%2C6.861%2C7.498%2C6.861h14.104v-1.525h-4.107V4.451h0.1l9.686%2C30.479h1.646l9.746-30.479h0.15v28.953h-4.191v1.527%20%20h14.617v-1.527h-4.194V3.946H114.063z%22%2F%3E%20%3Cpath%20fill%3D%22%23DC291E%22%20d%3D%22M19.07%2C0.48h-4.859v3.947H6.122v8.229H0.035V24.81h6.163v8.022h8.013v4.078h4.284%20%20c10.007%2C0%2C18.838-8.08%2C18.838-18.168C37.332%2C8.718%2C29.094%2C0.48%2C19.07%2C0.48%22%2F%3E%20%3Cpath%20fill%3D%22%23231F20%22%20d%3D%22M49.503%2C44.721c0-0.273-0.147-0.4-0.4-0.4h-0.787v-1.57h1.844c0.821%2C0%2C1.169%2C0.348%2C1.169%2C1.168v7.141%20%20c0%2C1.934%2C1.223%2C3.086%2C3.086%2C3.086s3.086-1.152%2C3.086-3.104v-7.122c0-0.82%2C0.363-1.168%2C1.184-1.168h1.828v1.57h-0.786%20%20c-0.254%2C0-0.4%2C0.127-0.4%2C0.4v6.41c0%2C2.811-1.956%2C4.729-4.894%2C4.729c-2.959%2C0-4.93-1.918-4.93-4.729V44.721z%20M61.81%2C54.068h0.784%20%20c0.257%2C0%2C0.403-0.145%2C0.403-0.399V42.751h1.662l5.733%2C8.16c0.475%2C0.694%2C1.077%2C1.754%2C1.077%2C1.754h0.038c0%2C0-0.13-1.024-0.13-1.754%20%20v-6.992c0-0.821%2C0.348-1.168%2C1.189-1.168h1.826v1.569h-0.786c-0.256%2C0-0.401%2C0.127-0.401%2C0.402v10.918h-1.643l-5.751-8.162%20%20c-0.475-0.694-1.06-1.752-1.06-1.752h-0.036c0%2C0%2C0.109%2C1.039%2C0.109%2C1.752v6.992c0%2C0.823-0.348%2C1.17-1.169%2C1.17H61.81V54.068z%20%20%20M76.001%2C54.068h1.26v-9.75h-1.26v-1.567h4.255v1.567h-1.263v9.75h1.263v1.572h-4.255V54.068z%20M82.245%2C44.721%20%20c-0.111-0.33-0.294-0.4-0.603-0.4h-0.259v-1.57h1.024c0.914%2C0%2C1.223%2C0.2%2C1.514%2C1.059l2.831%2C7.942%20%20c0.239%2C0.694%2C0.494%2C1.771%2C0.494%2C1.771h0.036c0%2C0%2C0.238-1.076%2C0.494-1.771l2.828-7.942c0.312-0.858%2C0.603-1.059%2C1.517-1.059h1.024%20%20v1.57h-0.256c-0.33%2C0-0.494%2C0.072-0.604%2C0.4l-4.055%2C10.92H86.3L82.245%2C44.721L82.245%2C44.721z%20M95.393%2C44.318h-1.186V42.75h7.577%20%20c0.821%2C0%2C1.167%2C0.346%2C1.167%2C1.169v1.623h-1.661v-0.821c0-0.273-0.147-0.4-0.399-0.4h-3.67v4.035h4.508v1.57h-4.508v3.743%20%20c0%2C0.256%2C0.145%2C0.401%2C0.399%2C0.401h3.761c0.258%2C0%2C0.403-0.146%2C0.403-0.401v-0.821h1.679v1.625c0%2C0.82-0.347%2C1.168-1.167%2C1.168%20%20h-5.733c-0.824%2C0-1.17-0.347-1.17-1.168V44.318z%20M105.912%2C44.318h-1.188V42.75h5.625c2.264%2C0%2C3.854%2C1.423%2C3.854%2C3.779%20%20c0%2C2.154-1.407%2C3.213-2.318%2C3.412v0.037c0%2C0%2C0.327%2C0.166%2C0.547%2C0.584l1.555%2C3.088c0.18%2C0.383%2C0.474%2C0.42%2C0.91%2C0.42h0.238v1.57%20%20h-0.895c-1.004%2C0-1.37-0.127-1.79-0.969l-1.753-3.469c-0.327-0.604-0.565-0.694-1.278-0.694h-1.679v5.132h-1.826V44.318H105.912z%20%20%20M110.111%2C48.939c1.388%2C0%2C2.209-0.895%2C2.209-2.336c0-1.444-0.821-2.285-2.172-2.285h-2.412v4.621H110.111z%20M117.162%2C52.646%20%20c0%2C0%2C1.314%2C1.551%2C3.23%2C1.551c1.205%2C0%2C2.209-0.73%2C2.209-1.916c0-2.702-6.224-2.283-6.224-6.301c0-1.935%2C1.696-3.451%2C4.125-3.451%20%20c1.369%2C0%2C3.67%2C0.621%2C3.67%2C2.373v1.062h-1.681v-0.603c0-0.676-0.969-1.17-1.99-1.17c-1.387%2C0-2.264%2C0.767-2.264%2C1.734%20%20c0%2C2.61%2C6.207%2C2.027%2C6.207%2C6.264c0%2C1.971-1.532%2C3.67-4.09%2C3.67c-2.739%2C0-4.271-1.918-4.271-1.918L117.162%2C52.646L117.162%2C52.646z%20%20%20M126.107%2C54.068h1.262v-9.75h-1.262v-1.567h4.254v1.567h-1.258v9.75h1.258v1.572h-4.254V54.068z%20M136.171%2C44.318h-2.592%20%20c-0.259%2C0-0.403%2C0.127-0.403%2C0.4v0.823h-1.626v-1.698c0-0.822%2C0.276-1.094%2C1.097-1.094h8.873c0.824%2C0%2C1.096%2C0.273%2C1.096%2C1.094%20%20v1.698h-1.623v-0.821c0-0.273-0.145-0.4-0.403-0.4h-2.592v11.32h-1.826V44.318L136.171%2C44.318z%20M147.82%2C50.016l-3.268-5.238%20%20c-0.238-0.385-0.402-0.457-0.787-0.457h-0.363v-1.571h0.84c0.878%2C0%2C1.223%2C0.129%2C1.734%2C0.985l1.953%2C3.252%20%20c0.422%2C0.713%2C0.784%2C1.443%2C0.784%2C1.443h0.036c0%2C0%2C0.348-0.732%2C0.787-1.443l1.936-3.252c0.508-0.856%2C0.877-0.985%2C1.731-0.985h0.842%20%20v1.571h-0.345c-0.385%2C0-0.566%2C0.072-0.807%2C0.457l-3.248%2C5.238v5.625h-1.826V50.016L147.82%2C50.016z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* line 1131, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.feedback-heading {
+  clear: both;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+/* line 1139, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#webform-client-form-924 .webform-component-textarea {
+  margin-top: 0;
+}
+/* line 1143, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#webform-client-form-924 .form-type-radio {
+  display: inline-block;
+  min-width: 50px;
+}
+/* line 1147, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#webform-client-form-924 .form-type-radio input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 1158, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#webform-client-form-924 .form-type-radio label {
+  padding: 7px 10px;
+  min-width: 40px;
+  border-radius: 4px;
+  background-color: #ddd;
+  margin-right: 15px;
+  cursor: pointer;
+}
+/* line 1168, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#webform-client-form-924 label {
+  font-weight: normal;
+}
+/* line 1172, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#webform-client-form-924 .form-submit {
+  color: #fff;
+  background: #d30900;
+}
+/* line 1177, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#webform-client-form-924 .feedback-response {
+  font-weight: bold;
+}
+
+/* line 1183, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.node .nav-tabs > li a, .node .nav-tabs > li a:link {
+  text-decoration: none;
+  color: #555;
+}
+/* line 1188, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.node .nav-tabs > li a:hover {
+  text-decoration: underline;
+}
+/* line 1192, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.node .nav-tabs > li.active a {
+  color: #d30900;
+}
+
+/* line 1197, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.field-item > h3:nth-of-type(1) {
+  margin-top: 0;
+}
+
+/* line 1201, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+.new-window-text {
+  padding-right: 8px;
+  background: url("../images/extlink.gif") no-repeat 100% 3px;
+}
+
+/* line 1206, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_custom.scss */
+#main .mejs-overlay-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 45px;
+  width: 90px;
+  height: 90px;
+  margin-left: -45px;
+  margin-top: -45px;
+  opacity: .8;
+  transition: opacity .25s ease;
+  background-position: 22px 22px;
+  background-color: #cf120f;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Csymbol%20viewBox%3D%220%20-12.884%209%2012.884%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M9-12h-9v12h9z%22%2F%3E%3Cpath%20stroke%3D%22%23343433%22%20stroke-width%3D%222.5%22%20stroke-miterlimit%3D%2210%22%20fill%3D%22none%22%20d%3D%22M1-1l5.5-5.5-5.5-5.5%22%2F%3E%3C%2Fsymbol%3E%3Csymbol%20viewBox%3D%220%20-12%2010%2012%22%3E%3Cg%3E%3Cpath%20fill%3D%22%23DB2B27%22%20d%3D%22M5-5.134c-2.031%200-5-1.879-5-6.033v-.833h10v.832c0%204.153-2.969%206.034-5%206.034zM7.5-4l-.5-1h-4l-.5%201h-.5v2.312l.5.469%201.5%201.219h2l1.5-1.219.5-.469v-2.312z%22%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M5.313%2016.274c-.107%200-.214-.028-.31-.083-.189-.11-.306-.313-.307-.532l-.016-12.115c0-.219.116-.423.306-.533.189-.111.424-.112.615-.004l10.685%206.062c.193.11.312.314.312.536s-.12.427-.312.536l-10.669%206.053c-.094.054-.199.08-.304.08z%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 46px 46px;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */

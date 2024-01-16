@@ -879,7 +879,7 @@ a#skipToContent:focus, a#skipToContent:hover {
 @media (max-width: 768px) {
   /* line 420, /Volumes/ACA_LandT/EMG/1_Current/NAP/EMG/Drupal7_standalone/learninglab/sites/all/themes/ll/scss/_header.scss */
   #search-region {
-
+	display: none;
     width: 100%;
     float: none;
     margin-top: 0;

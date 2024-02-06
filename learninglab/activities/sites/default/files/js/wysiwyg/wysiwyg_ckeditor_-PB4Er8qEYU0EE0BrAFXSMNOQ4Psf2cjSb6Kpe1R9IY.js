@@ -1,0 +1,1 @@
+window.CKEDITOR_BASEPATH = '/learninglab/sites/all/libraries/ckeditor/';

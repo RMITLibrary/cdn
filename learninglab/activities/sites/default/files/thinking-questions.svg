@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.4 98.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #222160;
+        stroke-miterlimit: 10;
+        stroke-width: 2.34px;
+      }
+
+      .cls-2 {
+        fill: #e61e2a;
+        font-family: Helvetica-Bold, Helvetica;
+        font-size: 21.96px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m56.09,50.24c0,4.99-4.04,9.03-9.03,9.03s-9.02-4.04-9.02-9.03,4.04-9.03,9.02-9.03,9.03,4.04,9.03,9.03Z"/>
+  <path class="cls-1" d="m64.95,80.95c0-9.95-8.05-18.02-17.99-18.02s-17.99,8.07-17.99,18.02"/>
+  <line class="cls-1" x1="65.05" y1="79.92" x2="29.07" y2="79.92"/>
+  <path class="cls-1" d="m54.84,17.26c-6.19-6.26-14.08-2.69-15.64-.2-.52-.11-1.06-.18-1.62-.18-4.74,0-8.58,4.41-8.58,9.84s4.55,8.21,10.62,6.5c3.8,5.93,13.42,3.31,15,1.2,6.65,0,10.56-3.92,10.42-7.91-.19-5.43-2.32-10.14-10.2-9.26Z"/>
+  <circle class="cls-1" cx="67.12" cy="37.3" r="3.5"/>
+  <circle class="cls-1" cx="62.95" cy="45.21" r="1.75"/>
+  <text class="cls-2" transform="translate(39.63 33.22)"><tspan x="0" y="0">?</tspan></text>
+</svg>

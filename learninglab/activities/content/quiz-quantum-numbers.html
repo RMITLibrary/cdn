@@ -46,8 +46,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz - quantum numbers | Learning Lab</title>
   
-<style type="text/css" media="all">@import url("../sites/default/files/css_injector/css_injector_12%EF%B9%96s0k0hk.css");
-</style>
+
   <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../misc/jquery.once%EF%B9%96v=1.2.js"></script>
 <script type="text/javascript" src="../misc/drupal%EF%B9%96s0k0hk.js"></script>
@@ -90,10 +89,19 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
 </script>
   <script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
 
-  <script src="../sites/all/themes/ll/js/iframeResizer.min.js"></script> 
+   
 
-<!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ 
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style%EF%B9%96s0k0hk.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome%EF%B9%96s0k0hk.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12%EF%B9%96s0k0hk.css"); 
+</style> 
+<!-- end activities style chunk -->     
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -115,13 +123,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
 
 </head>
 <body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-1469 node-type-book book-child lower-level" >
-  <div id="skip">
-    <a href="#main-menu">Jump to Navigation</a>
-  </div>
-    <div id="skipDiv">
-  <a id="skipToContent" href="#main">Skip to content</a>
-</div>
-<!-- RMIT Global Bar -->
+  
 
   <div id="globalBar">
     <div id="globalNavItems">
@@ -161,9 +163,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
   </div>
 <!-- /RMIT Global Bar -->
 
-  <div id="printonly">
-	<img src="../sites/default/files/print-logo.png" alt="RMIT University Library - Learning Lab" />
-  </div>
+  
 
 <div id="page" class="page">
 <div class="headroom-wrapper body-headroom">
@@ -451,7 +451,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
 </div> <!-- /block-inner /block -->  </div>
       </div> <!-- /sub_header -->
       </div> <!-- /header -->
-  <!-- ______________________ MAIN _______________________ -->
+  
 
   <div id="main" class="clearfix">
 
@@ -463,21 +463,13 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
 
       <div id="content-inner" class="inner column center">
 
-         <!-- /content_header -->
+         
 
-                  <div id="content-area-head-basic">&nbsp;</div>
-         <!-- /content_header -->
+                  
+         
 
 
-                  <div id="content-header">
-
-            
-            
-            
-                          <div class="tabs"></div>
-            
-            
-          </div> <!-- /#content-header -->
+                  
         
         
         <div id="content-area" class="content-area">
@@ -951,7 +943,7 @@ The orbital quantum number \(\ell\) indicates the shape of the subshell electron
   	</div>
   	
       	
-    	    <div class="links"></div>
+    	    
 	          
 	</div> <!-- /node-inner -->
 </div> <!-- /node-->
@@ -983,7 +975,7 @@ The orbital quantum number \(\ell\) indicates the shape of the subshell electron
 
   </div> <!-- /main -->
 
-  <!-- ______________________ FOOTER _______________________ -->
+  
 
       <div id="footer">
         <div class="region region-footer">
@@ -1148,7 +1140,12 @@ The orbital quantum number \(\ell\) indicates the shape of the subshell electron
 
   </div>
 </div> <!-- /block-inner /block -->  </div>
-    </div> <!-- /footer -->
+    </div> 
     </div>
-</div> <!-- /page -->  </body>
+</div> <!-- /page -->  
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+</body>
 </html>

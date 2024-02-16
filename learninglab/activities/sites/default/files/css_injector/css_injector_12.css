@@ -200,6 +200,12 @@ Exception: grey-med passes against white bg  */
 .color8 { color: var(--yellow); }
 .color8-b { border: var(--yellow-med) 1px solid; }
 .color8-h { background-color: var(--yellow-light); }
+.color9 {color: var(--red) !important;}
+.color9-b {border: 1px solid var(--red) !important}
+.color9-h {background-color: var(--grey-superlight) !important;}
+.color10 {color: var(--pink) !important;}
+.color10-b {border: 1px solid var(--pink) !important}
+.color10-h {background-color: var(--grey-superlight) !important;}
 
 .highlight-1 { color: var(--green) !important; }
 .highlight-2 { color: var(--blue) !important; }
@@ -218,6 +224,8 @@ Exception: grey-med passes against white bg  */
 .progress-bar-warning { background-color: var(--yellow-med);  }
 .progress-bar-danger { background-color: var(--red);  }
 
+/* Colours used in activities ------------------------- */
+
 .correct {
 	color: var(--teal);
 	border: var(--teal-med) 1px solid;
@@ -226,6 +234,12 @@ Exception: grey-med passes against white bg  */
 	color: var(--red);
 	border: var(--red-med) 1px solid;
 	background-color: var(--red-light); }
+
+.fa-check { color: var(--teal); }
+.fa-times { color: var(--red); }
+
+.correct input { background-color: var(--teal-light); }
+.incorrect input { background-color: var(--red-light); }
 
 /* Temporary/old/being phased out colours, remove when no longer needed ------------------------- */
 

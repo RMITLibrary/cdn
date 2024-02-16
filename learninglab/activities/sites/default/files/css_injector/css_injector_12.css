@@ -218,6 +218,14 @@ Exception: grey-med passes against white bg  */
 .progress-bar-warning { background-color: var(--yellow-med);  }
 .progress-bar-danger { background-color: var(--red);  }
 
+.correct {
+	color: var(--teal);
+	border: var(--teal-med) 1px solid;
+	background-color: var(--teal-light); }
+.incorrect {
+	color: var(--red);
+	border: var(--red-med) 1px solid;
+	background-color: var(--red-light); }
 
 /* Temporary/old/being phased out colours, remove when no longer needed ------------------------- */
 

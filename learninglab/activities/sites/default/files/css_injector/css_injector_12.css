@@ -200,6 +200,12 @@ Exception: grey-med passes against white bg  */
 .color8 { color: var(--yellow); }
 .color8-b { border: var(--yellow-med) 1px solid; }
 .color8-h { background-color: var(--yellow-light); }
+.color9 {color: var(--red) !important;}
+.color9-b {border: 1px solid var(--red) !important}
+.color9-h {background-color: var(--grey-superlight) !important;}
+.color10 {color: var(--pink) !important;}
+.color10-b {border: 1px solid var(--pink) !important}
+.color10-h {background-color: var(--grey-superlight) !important;}
 
 .highlight-1 { color: var(--green) !important; }
 .highlight-2 { color: var(--blue) !important; }

@@ -218,6 +218,8 @@ Exception: grey-med passes against white bg  */
 .progress-bar-warning { background-color: var(--yellow-med);  }
 .progress-bar-danger { background-color: var(--red);  }
 
+/* Colours used in activities ------------------------- */
+
 .correct {
 	color: var(--teal);
 	border: var(--teal-med) 1px solid;
@@ -226,6 +228,12 @@ Exception: grey-med passes against white bg  */
 	color: var(--red);
 	border: var(--red-med) 1px solid;
 	background-color: var(--red-light); }
+
+.fa-check { color: var(--teal); }
+.fa-times { color: var(--red); }
+
+.correct input { background-color: var(--teal-light); }
+.incorrect input { background-color: var(--red-light); }
 
 /* Temporary/old/being phased out colours, remove when no longer needed ------------------------- */
 

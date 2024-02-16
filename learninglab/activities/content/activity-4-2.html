@@ -240,10 +240,10 @@
         <div id="wrapper">
             <p style="margin:10px 0;text-align:left">Drag and drop the cards in correct order from lowest to highest concentration. Check your answer when you have finished. </p>
             <div id="container-horizontal" class="container">
-                <div id="3" class="item color6 color6-b color6-h ">100mg/100ml</div>
-                <div id="2" class="item color6 color6-b color6-h">25mg/50ml</div>
+                <div id="4" class="item color6 color6-b color6-h ">30mg/10ml</div>
+                <div id="3" class="item color6 color6-b color6-h">100mg/100ml</div>
                 <div id="1" class="item color6 color6-b color6-h">6mg/30ml</div>
-                <div id="4" class="item color6 color6-b color6-h">30mg/10ml</div>
+                <div id="2" class="item color6 color6-b color6-h">25mg/50ml</div>
             </div>
             <div class="gradient"><span class="pull-left">Low</span><span class="pull-right">High</span></div>
         </div>
@@ -267,69 +267,69 @@
 <script src="../sites/default/files/enhanced/sortable%20copy.js"></script>
 <script>
     jQuery(document).ready(function(){
-        var dataHorizontal=jQuery('#container-horizontal .item').sortable({
-            flow: 'horizontal',
-            wrapPadding: [10, 10, 0, 0],
-            elMargin: [0, 10, 0, 10],
-            elHeight: 'auto',
-            timeout: 100
-        });
+                var dataHorizontal=jQuery('#container-horizontal .item').sortable({
+                    flow: 'horizontal',
+                    wrapPadding: [10, 10, 0, 0],
+                    elMargin: [0, 10, 0, 10],
+                    elHeight: 'auto',
+                    timeout: 100
+                });
 
-        //check answer
-        jQuery("#check_btn").click(function (){
-            jQuery("#container-horizontal").find('span').remove()
-            jQuery(".item").removeClass (function (index, css) {
-                return (css.match (/(^|\s)color\S+/g) || []).join(' ');
-            });
-            console.log(dataHorizontal.getOrder().toString())
-            if(dataHorizontal.getOrder().toString()=="2,3,1,0"){
-                jQuery(".item").each(function(){
-                    jQuery(this).removeClass (function (index, css) {
+                //check answer
+                jQuery("#check_btn").click(function (){
+                    jQuery("#container-horizontal").find('span').remove()
+                    jQuery(".item").removeClass (function (index, css) {
                         return (css.match (/(^|\s)color\S+/g) || []).join(' ');
-                    }).addClass("color2 color2-b color2-h");
+                    });
+                    console.log(dataHorizontal.getOrder().toString())
+                    if(dataHorizontal.getOrder().toString()=="2,3,1,0"){
+                        jQuery(".item").each(function(){
+                            jQuery(this).removeClass (function (index, css) {
+                                return (css.match (/(^|\s)color\S+/g) || []).join(' ');
+                            }).addClass("color2 color2-b color2-h");
+                        })
+                        jQuery("#container-horizontal").append('<span class="color2"><i class="fa fa-check" aria-hidden="true"></i></span>')
+                    }else{
+                        jQuery(".item").each(function(){
+                            jQuery(this).removeClass (function (index, css) {
+                                return (css.match (/(^|\s)color\S+/g) || []).join(' ');
+                            }).addClass("color4 color4-b color4-h")
+                        })
+                        jQuery("#container-horizontal").append('<span class="color4"><i class="fa fa-times" aria-hidden="true"></i></span>')
+                    }
                 })
-                jQuery("#container-horizontal").append('<span class="color2"><i class="fa fa-check" aria-hidden="true"></i></span>')
-            }else{
-                jQuery(".item").each(function(){
-                    jQuery(this).removeClass (function (index, css) {
-                        return (css.match (/(^|\s)color\S+/g) || []).join(' ');
-                    }).addClass("color4 color4-b color4-h")
-                })
-                jQuery("#container-horizontal").append('<span class="color4"><i class="fa fa-times" aria-hidden="true"></i></span>')
-            }
-        })
 
-        //show answers
-        jQuery("#show_btn").click(function () {
-            jQuery("#container-horizontal").find('span').remove()
-            jQuery("#show_btn").prop("disabled",true);
-            jQuery("#check_btn").prop("disabled",true);
-            jQuery("#clear_btn").prop("disabled",false);
-            jQuery(".item").each(function(){
-                i = jQuery(this).attr("id") -1
-                jQuery(this).css("left",i*115).removeClass (function (index, css) {
-                    return (css.match (/(^|\s)color\S+/g) || []).join(' ');
-                }).addClass("color1 color1-b color1-h")
+                //show answers
+                jQuery("#show_btn").click(function () {
+                    jQuery("#container-horizontal").find('span').remove()
+                    jQuery("#show_btn").prop("disabled",true);
+                    jQuery("#check_btn").prop("disabled",true);
+                    jQuery("#clear_btn").prop("disabled",false);
+                    jQuery(".item").each(function(){
+                        i = jQuery(this).attr("id") -1
+                        jQuery(this).css("left",i*115).removeClass (function (index, css) {
+                            return (css.match (/(^|\s)color\S+/g) || []).join(' ');
+                        }).addClass("color1 color1-b color1-h")
+                    })
+                })
+
+                //clear answers
+                jQuery("#clear_btn").click(function () {
+                    jQuery("#show_btn").prop("disabled",false);
+                    jQuery("#check_btn").prop("disabled",false);
+                    jQuery("#clear_btn").prop("disabled",false);
+                    jQuery("#4").css("left",0)
+                    jQuery("#3").css("left",115)
+                    jQuery("#1").css("left",230)
+                    jQuery("#2").css("left",345)
+                                        jQuery("#container-horizontal span").remove()
+                    jQuery(".item").removeClass (function (index, css) {
+                        return (css.match (/(^|\s)color\S+/g) || []).join(' ');
+                    }).addClass("color6 color6-b color6-h")
+                })
+
+
             })
-        })
-
-        //clear answers
-        jQuery("#clear_btn").click(function () {
-            jQuery("#show_btn").prop("disabled",false);
-            jQuery("#check_btn").prop("disabled",false);
-            jQuery("#clear_btn").prop("disabled",false);
-            jQuery("#4").css("left",0)
-            jQuery("#3").css("left",115)
-            jQuery("#1").css("left",230)
-            jQuery("#2").css("left",345)
-                                jQuery("#container-horizontal span").remove()
-            jQuery(".item").removeClass (function (index, css) {
-                return (css.match (/(^|\s)color\S+/g) || []).join(' ');
-            }).addClass("color6 color6-b color6-h")
-        })
-
-
-    })
 
 </script>
 </div>

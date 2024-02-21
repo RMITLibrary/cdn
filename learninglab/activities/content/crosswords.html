@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
   
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="Academic word list 1 &amp; 2. Crossword learning activity for improving your English vocabulary." />
 <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet" type="text/css" />
-<title>Crosswords | Learning Lab</title>
-<!--Styles-->
+<title>Crosswords - Academic word list 1 & 2 | Learning Lab</title>
 
 
-	<!-- keep this style chunk so that activities work - 05/02/2024 --> 
-<style type="text/css" media="all">@import url("../sites/all/modules/colorbox/styles/default/colorbox_style%EF%B9%96s0k0hk.css");
-@import url("../sites/all/libraries/fontawesome/css/font-awesome%EF%B9%96s0k0hk.css");
-</style>
-
-<!-- end activities style chunk -->  
 <!--jQuery-->
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../misc/jquery.once%EF%B9%96v=1.2.js"></script>
@@ -51,12 +44,10 @@
 <script type="text/javascript" src="../sites/all/themes/ll/js/bookboxmenus%EF%B9%96s0k0hk.js"></script>
 <script type="text/javascript" src="../sites/all/themes/ll/js/mobile%EF%B9%96s0k0hk.js"></script>
 <script type="text/javascript" src="../sites/all/themes/ll/js/new_window%EF%B9%96s0k0hk.js"></script>
-<script type="text/javascript">
 
-</script>
   <script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
 
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+
  
 	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
 <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
@@ -75,49 +66,10 @@
     gtag('config', 'G-VLHPB23GYR');
   </script>
 
-
-
-</head>
-<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-875 node-type-enhanced-page book-child lower-level" >
-<div id="page" class="page">	
-  <div id="main" class="clearfix">  
-    <div id="content">
-      <div id="content-inner" >        
-        <div id="content-area" class="content-area">
-            <div class="region region-content">  
-    
-  	<div class="content">
-  	  <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-    <div class="field-items">
-          <div class="field-item clearfix even" property="content:encoded">	  
-
-		<h3>Crossword puzzle instructions</h3>
-	<p>Read the definition and guess what word it might be.</p>
-	<div id="crossword">&nbsp;</div>
-	<table id="clues">
-		<thead>
-			<tr>
-				<th style="width:50%">Across</th>
-				<th>Down</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					<ul id="across"></ul>
-				</td>
-				<td>
-					<ul id="down"></ul>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-<button class="btn btn-default btn-sm" id="check_btn">Check all words</button><button class="btn btn-default btn-sm" id="show_btn">Show all words</button><button class="btn btn-default btn-sm" id="clear_btn">Clear all words</button></div>
-		<p>&nbsp;</p>
 <style type="text/css">
 #crossword {
     text-align: center; 
-    overflow: scroll; 
+    overflow: auto; 
 }
 
 .crossword {
@@ -182,7 +134,6 @@
 #clues td {
     vertical-align:top;
 }
-
 
 
 
@@ -305,6 +256,47 @@
     }
 }</style>
 
+</head>
+
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-875 node-type-enhanced-page book-child lower-level" >
+<div id="page" class="page">	
+  <div id="main" class="clearfix">  
+    <div id="content">
+      <div id="content-inner" >        
+        <div id="content-area" class="content-area">
+            <div class="region region-content">  
+    
+  	<div class="content">
+  	  <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item clearfix even" property="content:encoded">	  
+
+
+	<p>Read the definition and guess what word it might be.</p>
+	<div id="crossword">&nbsp;</div>
+	<table id="clues">
+		<thead>
+			<tr>
+				<th style="width:50%">Across</th>
+				<th>Down</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<ul id="across"></ul>
+				</td>
+				<td>
+					<ul id="down"></ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+			  <button class="btn btn-primary" disabled="disabled" id="check_this_btn">Check this word</button><button class="btn btn-primary" disabled="disabled" id="show_this_btn">Show this word</button><button class="btn btn-primary" disabled="disabled" id="clear_this_btn">Clear this word</button><button class="btn btn-primary" id="replayBtn" style="display:none">Play another game</button>
+	<hr style="margin:5px 0" />
+<button class="btn btn-primary" id="check_btn">Check all words</button><button class="btn btn-primary" id="show_btn">Show all words</button><button class="btn btn-primary" id="clear_btn">Clear all words</button></div>
+	
+
       </div>
 </div>
   	</div>
@@ -319,8 +311,6 @@
 <script type="text/javascript" src="../sites/default/files/enhanced/crossword%EF%B9%96s0k0hk.js"></script>
 <script type="text/javascript" src="../sites/default/files/enhanced/main-new%EF%B9%96s0k0hk.js"></script>
 	<!-- partial -->
-<script src='https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js'></script>
 
 <!-- Iframe resizer --> 
 <script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 

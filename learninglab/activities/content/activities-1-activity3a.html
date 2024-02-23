@@ -55,7 +55,8 @@
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
  
-	<!-- keep this style chunk so that activities work - 05/02/2024 --><link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
 <style type="text/css" media="all"> 
   @import url("../sites/all/modules/colorbox/styles/default/colorbox_style%EF%B9%96s0k0hk.css"); 
   @import url("../sites/all/libraries/fontawesome/css/font-awesome%EF%B9%96s0k0hk.css"); 
@@ -314,19 +315,19 @@ hr {
 		<div id="custom-tab-0-Activity-3a" title="Activity 3(a)" class="tab-pane">
 	<div id="component-identifier-container">
 		<div class="activity-container">
-		
+			<h3 class="activity-heading">Activity 3(a): Identify features of a reflection</h3>
 			<div class="component" id="part-a">
-			
-				<p class="part-description">Reflection is about documenting the development of ideas and learning. A clear sense of movement in the writer&#39;s understanding is important. Read the following reflection and note the highlighted text that shows where the writer&#39;s understanding/beliefs have changed or developed.<br />
-					<br />
+				<h4>Part A: Development of learning</h4>
+				<p class="part-description">Reflection is about documenting the development of ideas and learning. A clear sense of movement in the writer's understanding is important. Read the following reflection and note the highlighted text that shows where the writer's understanding/beliefs have changed or developed.<br>
+					<br>
 					Now, identify the remaining <u>three examples</u> by clicking on the correct text in the <u>last paragraph</u>. Correct answers will remain highlighted.</p>
-				<hr />
+				<hr>
 				<p>During the project for ... <span class="blue-colour blue-colour-highlight">I realised</span> the importance of face-to-face meetings for teams. Regular and detailed team meetings are an essential part of the team-building process and for building collaboration and improved outcomes (American Marketing Association 2008). Our team meetings were compulsory and scheduled into the project. <span class="blue-colour blue-colour-highlight">At first I felt</span> that these were a burden, <span class="blue-colour blue-colour-highlight">but I began to enjoy them and appreciate their value</span> as the project progressed.</p>
 				<p><span class="blue-colour blue-colour-highlight">My understanding of teamwork has evolved</span> through these meetings because <span class="blue-colour blue-colour-highlight">I used to think</span> that the success of a team lay in everyone having access to up to date information about the project. However, <span class="blue-colour blue-colour-highlight">I have come to realise</span> that face to face communication can be more effective because it is synchronous, and the participants are more engaged. Bodell and Levins (2012) found that a group of geographically dispersed occupational therapists collaborating on a project online did not continue the rich and sociable communicative interaction that had been established initially face to face. Their interactions online became task oriented and information based. In the same way, I found that our best ideas and solutions grew out of the meetings.</p>
-				<p><span class="blue-colour blue-colour-highlight">I have also realised</span> that richer communication between team members can build rapport and enrich understanding of your team members. Consequently, <span class="blue-colour blue-colour-highlight">I now think</span> that a team can be more than the sum of its component parts. The regular meetings <span class="blue-colour blue-colour-highlight">made me become more conscious</span> of my teammates&#39; personalities, skills, strengths and needs. For example, Sharifa was able to teach Reyan how to use some software that she needed. The synergies of our skills became obvious in the face-to-face context. Cascio (as cited in Ebrahim, Ahmed &amp; Taha, 2012, p. 2660) cites &quot;loss of face to face synergies&quot; as one of the five key challenges to virtual teams&#39; success. Meetings also built a sense of commitment to each other. We did not want to disappoint our team by missing timelines or making poor quality submissions.</p>
+				<p><span class="blue-colour blue-colour-highlight">I have also realised</span> that richer communication between team members can build rapport and enrich understanding of your team members. Consequently, <span class="blue-colour blue-colour-highlight">I now think</span> that a team can be more than the sum of its component parts. The regular meetings <span class="blue-colour blue-colour-highlight">made me become more conscious</span> of my teammates' personalities, skills, strengths and needs. For example, Sharifa was able to teach Reyan how to use some software that she needed. The synergies of our skills became obvious in the face-to-face context. Cascio (as cited in Ebrahim, Ahmed &amp; Taha, 2012, p. 2660) cites "loss of face to face synergies" as one of the five key challenges to virtual teams' success. Meetings also built a sense of commitment to each other. We did not want to disappoint our team by missing timelines or making poor quality submissions.</p>
 				<div class="help-bubble-1">
 					<p class="instructions">Identify the remaining three examples by clicking on the correct text in this paragraph.</p>
-					<div class="bubble-well-done-1"><span class="well-done">Well done! </span></div>
+					<div class="bubble-well-done-1" style="display: none;"><span class="well-done">Well done! </span></div>
 				</div>
 				<p id="action-paragraph-1"><span class="option">For any future teamwork</span>, <span class="option blue correct">I am much more aware</span> <span class="option">of the importance of the group meeting together.</span> <span class="option">In a professional setting</span>, <span class="option blue correct">I now consider</span> <span class="option">that some incentive (e.g. free lunch or transport) to get a group together, if necessary,</span> <span class="option">would be a sound investment</span>. <span class="option">During my future studies</span>, <span class="option">I will always try to join teams who can get together because</span> <span class="option blue correct">I now realise how</span> <span class="option">crucial this is to success</span>.</p>
 				<div id="component-identifier-button-container"><button class="show-btn btn btn-default">Show answers</button><button class="clear-btn btn btn-default">Clear answers</button></div>
@@ -377,7 +378,9 @@ jQuery('#clear-answers').click(function() {
     jQuery('#quiz-container button').removeAttr('disabled').css('background-color', '#FFFFFF');
     jQuery('.feedback').slideUp();
 });
-</script><!-- Activity 2 --><script>
+</script>
+			  <!-- Activity 2 -->
+			  <script>
     jQuery(document).ready(function() {
 
         var tick_count = 0;
@@ -467,7 +470,8 @@ jQuery('#clear-answers').click(function() {
 
     });
 </script>
-<p><!-- Activity 3 --><script>
+<!-- Activity 3 -->
+	<script>
 
 jQuery(document).ready(function() {
 
@@ -562,7 +566,7 @@ jQuery(document).ready(function() {
     });
 
 });
-</script></p>
+</script>
 </div>
       </div>
 </div>

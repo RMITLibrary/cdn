@@ -266,9 +266,7 @@
 
         </div>
         <div style="width: 100%; padding-top: 50px; margin-bottom:20px">
-            <button id="show_btn" class="btn btn-default" onclick="showAnswer()">
-                Show Answer
-            </button>
+            <button id="show_btn" class="btn btn-default" onclick="showAnswer()">Show answer</button>
             <button id="clear_btn" class="btn btn-default" onclick="clearAnswer()">
                 Clear
             </button>
@@ -378,7 +376,7 @@
                 correctCount=0;
             }
 
-            //check answer
+            //Check answer
             function checkComplete(){
                 if(correctCount >=4 ){
                     jQuery("#show_btn").prop('disabled',true);

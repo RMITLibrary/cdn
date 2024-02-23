@@ -225,8 +225,8 @@
         </div>
     </div>
     <div style="width: 100%; padding: 20px 0; ">
-        <button id="check_btn" class="btn btn-default" onclick="checkAnswer()"> Check Answer </button>
-        <button id="show_btn" class="btn btn-default" onclick="showAnswer()"> Show Answer </button>
+        <button id="check_btn" class="btn btn-default" onclick="checkAnswer()"> Check answer </button>
+        <button id="show_btn" class="btn btn-default" onclick="showAnswer()">Show answer</button>
         <button id="clear_btn" class="btn btn-default" onclick="clearAnswer()"> Clear </button>
     </div>
     <div id="debug"></div>
@@ -269,7 +269,7 @@ jQuery("#show_btn").prop("disabled",false);
             jQuery(".question input").val("")
             jQuery(".activity-container").find("span").remove()
         }
-        //check answer
+        //Check answer
         function checkAnswer() {
             var correctCount = 0
             jQuery('.question').each(function (index) {

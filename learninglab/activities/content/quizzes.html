@@ -249,7 +249,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
     <div class="field-items">
           <div class="field-item clearfix even" property="content:encoded"><p class="introductory-paragraph">Complete the following quizzes to test your understanding of the basic concepts of Business Law.</p>
 <div class="accessibility-hide">
-	<p><strong>When you have completed all of the questions, click &lsquo;Check Answer&rsquo; to see your score.</strong></p>
+	<p><strong>When you have completed all of the questions, click &lsquo;Check answer&rsquo; to see your score.</strong></p>
 	<div id="paragraph" style="width:100%; margin-bottom: 20px; text-align:center">
 		<style type="text/css">.question{position: relative;line-height: 25px;}
         .options{width:90%;}
@@ -269,7 +269,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
         		</style>
 		<!--
 <p style=" text-align:left;line-height:24px">Complete the multiple choices.
-Click ‘Check Answer’ after you have completed each one.
+Click ‘Check answer’ after you have completed each one.
 </p>
 --></div>
 	<ul class="nav nav-tabs" id="custom-tabs-0"><li class="active"><a href="#custom-tab-0-Multiple-choice" data-toggle="tab">Multiple choice</a></li><li><a href="#custom-tab-0-True-or-false" data-toggle="tab">True or false</a></li></ul><div class="tab-content"> <div id="custom-tab-0-Multiple-choice" title="Multiple choice" class="tab-pane active">
@@ -336,10 +336,8 @@ Click ‘Check Answer’ after you have completed each one.
 		</div>
 		<div style="text-align:right;width:90%;">
 			<h3 class="score" style="float:left; margin: 5px;">&nbsp;</h3>
-			<button class="btn btn-default" id="check_btn" onclick="checkAnswer1()">Check Answer</button><!--
-<button id="show_btn" onclick="showAnswer()">
-Show Answer
-</button>
+			<button class="btn btn-default" id="check_btn" onclick="checkAnswer1()">Check answer</button><!--
+<button id="show_btn" onclick="showAnswer()">Show answer</button>
 --><button class="btn btn-default" id="clear_btn" onclick="clearAnswer1()">Clear</button></div>
 	</div>
 	</div> <div id="custom-tab-0-True-or-false" title="True or false" class="tab-pane">
@@ -406,10 +404,8 @@ Show Answer
 		</div>
 		<div style="text-align:right;width:90%;margin-top:25px">
 			<h3 class="score" style="float:left; margin:5px 0px;">&nbsp;</h3>
-			<button class="btn btn-default" id="check_btn" onclick="checkAnswer2()">Check Answer</button><!--
-<button id="show_btn" onclick="showAnswer()">
-Show Answer
-</button>
+			<button class="btn btn-default" id="check_btn" onclick="checkAnswer2()">Check answer</button><!--
+<button id="show_btn" onclick="showAnswer()">Show answer</button>
 --><button class="btn btn-default" id="clear_btn" onclick="clearAnswer2()">Clear</button></div>
 	</div>
 	</div> </div> <script>
@@ -436,7 +432,7 @@ Show Answer
          jQuery('#activity1 #check_btn').removeClass('disabled');  
     }
 
-    //check answer
+    //Check answer
     function checkAnswer1(){
 
         if(jQuery('#activity1 input[type=radio]:checked').length<10){
@@ -485,7 +481,7 @@ Show Answer
         jQuery('#activity2 #check_btn').removeClass('disabled');  
     }
 
-    //check answer
+    //Check answer
     function checkAnswer2(){
 
         if(jQuery('#activity2 input[type=radio]:checked').length<10){

@@ -310,7 +310,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
 		</tbody>
 	</table>
 	<p></div> <div id="custom-tab-0-Activity-1" title="Activity 1" class="tab-pane"></p>
-	<p>Read the following questions and choose the right answer. You must answer all questions before clicking on the &lsquo;Check Answer&rsquo; button.</p>
+	<p>Read the following questions and choose the right answer. You must answer all questions before clicking on the &lsquo;Check answer&rsquo; button.</p>
 	<div id="tab2">
 		<div style="width:100%;">
 			<div answer="a" class="question" id="q1">
@@ -371,11 +371,11 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
 		</div>
 		<div style="text-align:right;width:90%;margin-top:25px">
 			<h3 id="score" style="float:left; margin:5px 0px;">&nbsp;</h3>
-			<button class="btn btn-default" id="check_btn" onclick="checkAnswer('tab2')">Check Answer</button><button class="btn btn-default" id="show_btn" onclick="showAnswer('tab2')">Show Answer</button><button class="btn btn-default" id="clear_btn" onclick="clearAnswer('tab2')">Clear</button></div>
+			<button class="btn btn-default" id="check_btn" onclick="checkAnswer('tab2')">Check answer</button><button class="btn btn-default" id="show_btn" onclick="showAnswer('tab2')">Show Answer</button><button class="btn btn-default" id="clear_btn" onclick="clearAnswer('tab2')">Clear</button></div>
 		<div id="debug">&nbsp;</div>
 	</div>
 	<p></div> <div id="custom-tab-0-Activity-2" title="Activity 2" class="tab-pane"></p>
-	<p>Read the following statements and identify if they are true or false. You must answer all questions before clicking on the &lsquo;Check Answer&rsquo; button.</p>
+	<p>Read the following statements and identify if they are true or false. You must answer all questions before clicking on the &lsquo;Check answer&rsquo; button.</p>
 	<div id="tab3">
 		<div style="width:100%;">
 			<div answer="F" class="question" id="q1">
@@ -411,7 +411,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
 		</div>
 		<div style="text-align:right;width:90%;margin-top:25px">
 			<h3 id="score" style="float:left; margin:5px 0px;">&nbsp;</h3>
-			<button class="btn btn-default" id="check_btn" onclick="checkAnswer('tab3')">Check Answer</button><button class="btn btn-default" id="show_btn" onclick="showAnswer('tab3')">Show Answer</button><button class="btn btn-default" id="clear_btn" onclick="clearAnswer('tab3')">Clear</button></div>
+			<button class="btn btn-default" id="check_btn" onclick="checkAnswer('tab3')">Check answer</button><button class="btn btn-default" id="show_btn" onclick="showAnswer('tab3')">Show Answer</button><button class="btn btn-default" id="clear_btn" onclick="clearAnswer('tab3')">Clear</button></div>
 	</div>
 	<p></div> </div> <script>
         //show answers
@@ -440,7 +440,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\..\/","pathPrefix":"","ajaxPageStat
             })
         }
 
-        //check answer
+        //Check answer
         var checkAnswer = function(tab){
             var tab = "#"+tab
             if(jQuery(tab+' input[type=radio]:checked').length<5){

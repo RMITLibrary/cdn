@@ -260,11 +260,9 @@
 
             <div style="width: 100%; padding-top: 0px; ">
                 <button id="check_btn" class="btn btn-default" onclick="checkAnswer()">
-                    Check Answer
+                    Check answer
                 </button>
-                <button id="show_btn" class="btn btn-default" onclick="showAnswer()">
-                    Show Answer
-                </button>
+                <button id="show_btn" class="btn btn-default" onclick="showAnswer()">Show answer</button>
                 <button id="clear_btn" class="btn btn-default" onclick="clearAnswer()">
                     Clear
                 </button>
@@ -299,7 +297,7 @@
                 jQuery("#clear_btn").prop("disabled",false);
             }
 
-            //check answer
+            //Check answer
             function checkAnswer(){
                 var correctCount = 0
                 jQuery('.activity-container .question').each(function(index){

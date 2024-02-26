@@ -93,6 +93,26 @@
     })(window, document, "clarity", "script", "bbzr2pniz1");
 </script>
 
+            <style>.activity-container input {
+                    position: relative;
+                    width: 55px;
+                    height: 25px;
+                    font-size: 20px;
+                    text-align: center;
+                    vertical-align: middle
+                }
+                .activity-container .fa{font-size: 20px;vertical-align: middle;}
+                .sign {
+                    position: absolute;
+                    font-size: 40px
+                }
+                
+                .question {
+                    position: relative;
+                    display: block;
+                }
+    
+            </style>
 </head>
 <body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-994 node-type-enhanced-page book-child lower-level" >
 
@@ -129,26 +149,6 @@
           <div class="field-item clearfix even" property="content:encoded"><div class="activity-container accessibility-hide">
     <div id="wrapper">
         <div id="paragraph" style="float: left; margin-bottom: 20px; text-align:center">
-            <style>.activity-container input {
-                    position: relative;
-                    width: 55px;
-                    height: 25px;
-                    font-size: 20px;
-                    text-align: center;
-                    vertical-align: middle
-                }
-                .activity-container .fa{font-size: 20px;vertical-align: middle;}
-                .sign {
-                    position: absolute;
-                    font-size: 40px
-                }
-                
-                .question {
-                    position: relative;
-                    display: block;
-                }
-    
-            </style>
             <p style=" text-align:left">The pediatric patient below has a body mass of 15kg. The dosage of the prescribed drug is weight dependent. The dosage is 50 mg/kg. What total dosage did they require? Cheack your answer when you have finished.</p>
             <div style="margin:auto;width:60%;position:relative">
                 <svg style="height:400px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-413 140.9 132.9 280.1" enable-background="new -413 140.9 132.9 280.1" xml:space="preserve">
@@ -199,14 +199,14 @@
                 <div class="question" style="top:300px;position:absolute;right:0"> =
                     <input answer="750"> mg </div>
             </div>
-        </div>
     </div>
     <div style="width: 100%; padding: 20px 0; ">
         <button id="check_btn" class="btn btn-default" onclick="checkAnswer()"> Check answer </button>
         <button id="show_btn" class="btn btn-default" onclick="showAnswer()">Show answer</button>
         <button id="clear_btn" class="btn btn-default" onclick="clearAnswer()"> Clear </button>
+        </div>
     </div>
-    <div id="debug"></div>
+    <!-- <div id="debug"></div> -->
     <script>
         var textState = 0;
         var animateText = function () {

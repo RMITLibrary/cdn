@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://openajax.org/metadata" spec="1.0" id="tag:adobe.com,2012-03:edge:oam:compid:EDGE-16047130" name="intro-animation-plane-3" version="1">
+
+  <description type="text/html"><![CDATA[Widget Exported from Adobe Edge (V1.DW.Edge)]]></description>
+  <category name="Adobe Edge Animation"/>
+
+  <remarks>Compatible with: InDesign CC, Dreamweaver CC, Muse</remarks>
+
+  <icon src="images/Poster.png" width="1024" height="627" />
+
+  <require type="other" src="intro-animation-plane-3.html" />
+  <require type="other" src="images/passport_inside_stamp.gif" />
+
+  <require type="javascript" src="intro-animation-plane-3_edge.js" />
+  <require type="javascript" src="edge_includes/edge.5.0.1.min.js" />
+
+  <require type="image" src="images/5879305105_050ee49666_n.jpg" />
+  <require type="image" src="images/parker_pen_transparent.png" />
+  <require type="image" src="images/passport_back.png" />
+  <require type="image" src="images/passport_back2.png" />
+  <require type="image" src="images/passport_inside.png" />
+  <require type="image" src="images/passport_inside_2.png" />
+  <require type="image" src="images/passport_open.png" />
+  <require type="image" src="images/Poster.png" />
+  <require type="image" src="images/slide_traveling_bg.png" />
+  <require type="image" src="images/traveling_italy.png" />
+  <require type="image" src="images/traveling_italy_edit.png" />
+  <require type="image" src="images/traveling_italy_new.png" />
+  <require type="image" src="images/traveling_plane.png" />
+  <require type="image" src="images/travelling_journal_new.png" />
+  <require type="image" src="images/travelling_plane_new.png" />
+
+  <require type="folder" src="edge_includes" />
+  <require type="folder" src="images" />
+
+
+  <content><![CDATA[
+    <div class="EDGE-16047130"></div>
+  ]]></content>
+   
+  <properties name="Properties">
+    <property name="default-width" defaultValue="1024" hidden="true"/>
+    <property name="default-height" defaultValue="627" hidden="true"/>
+    <property name="resizable" defaultValue="true" hidden="true"/>				
+		<property name="centering" defaultValue="none" hidden="true"/>				
+		<property name="scaling" defaultValue="both" hidden="true"/>
+    <property name="html-page" defaultValue="intro-animation-plane-3.html" hidden="true"/>
+  </properties>
+
+</widget>

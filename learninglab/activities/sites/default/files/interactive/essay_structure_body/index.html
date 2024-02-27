@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Essay structure body</title>
+    <style>
+        body {
+            width: 550px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-size: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            margin: 20px 0;
+            padding: 0px;
+            line-height: 27px;
+            color: #555;
+        }
+
+        #panel {
+            float: right;
+            width: 20%;
+            height: 330px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .green {
+            background-color: #7dac21;
+            color: white;
+        }
+
+        .green_shadow{
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(125,172,33,1);
+            -moz-box-shadow: 0px 0px 10px 2px rgba(125,172,33,1);
+            box-shadow: 0px 0px 10px 2px rgba(125,172,33,1);
+        }
+
+        .pink {
+            background-color: #ec416c;
+            color: white;
+        }
+        .pink_shadow{
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(236,65,108,1);
+            -moz-box-shadow: 0px 0px 10px 2px rgba(236,65,108,1);
+            box-shadow: 0px 0px 10px 2px rgba(236,65,108,1);
+        }
+
+        .lightBlue {
+            background-color: #9bd8f3;
+            color: white;
+        }
+
+        .lightBlue_shadow{
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(155,216,243,1);
+            -moz-box-shadow: 0px 0px 10px 2px rgba(155,216,243,1);
+            box-shadow: 0px 0px 10px 2px rgba(155,216,243,1);
+        }
+
+        .darkBlue {
+            background-color: #1f5ba4;
+            color: white;
+        }
+        .darkBlue_shadow{
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(31,91,164,1);
+            -moz-box-shadow: 0px 0px 10px 2px rgba(31,91,164,1);
+            box-shadow: 0px 0px 10px 2px rgba(31,91,164,1);
+        }
+
+        .orange {
+            background-color: #f2883a;
+            color: white;
+        }
+
+        .orange_shadow{
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(242,136,58,1);
+            -moz-box-shadow: 0px 0px 10px 2px rgba(242,136,58,1);
+            box-shadow: 0px 0px 10px 2px rgba(242,136,58,1);
+
+        }
+
+        #origin span {
+            border-radius: 3px;
+            padding: 3px 2px;
+            margin: 0px;
+        }
+
+        .sideButton {
+            width: 70px;
+            height: 32px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: table;
+            cursor: pointer;
+        }
+
+        .sideButton p {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 13px;
+            color: white;
+        }
+
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="tooltipster.css"/>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="jquery.tooltipster.min.js"></script>
+</head>
+
+<body>
+<div>
+    <div id="paragraph" style="float: left; width: 75%; line-height: 20px; height: 330px;">
+        <p id="origin"><span aria-describedby="topic_description" id="topic"
+                             title="This is a brief sentence that introduces the concept or argument covered in that paragraph. ">Teams have become integral to the way in which organisations function.</span><span
+                aria-describedby="explain_description" id="explain"
+                title="This sentence expands on the concept introduced in the topic sentence.   It adds depth or detail to the concept or argument. ">Currently, much of the work of industry and other organisations reflects the output of teams (Maxwell 2011).</span>
+            <span id="evidence" aria-describedby="evidence_description"
+                  title="This section expands on and strengthens the introduced concept or argument by referring to the literature. ">According to Lau (2009), these teams underpin the structure of many organisations.</span>
+            <span id="example" aria-describedby="example_description"
+                  title="This section cites an outcome of a specific experience or event (usually from research) that adds support to the concept or argument introduced in the topic sentence.   "> Today teams have become central to many organisations, contributing in many ways such as setting goals,
+            budgeting, solving operational problems and building effective interpersonal relations.</span> <span
+                    id="link" aria-describedby="link_description"
+                    title="This sentence rounds off the paragraph by emphasizing the new understanding gained from the paragraph.   It may link it to either a) the original question or title of the text overall or b) a related idea continuing in the following paragraph.  ">There are
+            significant benefits of teams for organisations, including reduced costs, creativity, new ideas and new
+            policies (Naumes 1992).</span>
+        </p>
+    </div>
+    <div class="hide">
+        <span id="topic_description" role="tooltip">This is a brief sentence that introduces the concept or argument covered in that paragraph.  </span>
+        <span id="explain_description" role="tooltip">This sentence expands on the concept introduced in the topic sentence.   It adds depth or detail to the concept or argument. </span>
+        <span id="evidence_description" role="tooltip">This section expands on and strengthens the introduced concept or argument by referring to the literature.  </span>
+        <span id="example_description" role="tooltip">This section cites an outcome of a specific experience or event (usually from research) that adds support to the concept or argument introduced in the topic sentence.   </span>
+        <span id="link_description" role="tooltip">This sentence rounds off the paragraph by emphasizing the new understanding gained from the paragraph.   It may link it to either a) the original question or title of the text overall or b) a related idea continuing in the following paragraph.  </span>
+    </div>
+    <div id="panel">
+        <div id="green" class="sideButton green"><p>Topic</p></div>
+        <div id="orange" class="sideButton orange"><p>Explain</p></div>
+        <div id="pink" class="sideButton pink"><p>Evidence</p></div>
+        <div id="darkBlue" class="sideButton darkBlue"><p>Example</p></div>
+        <div id="lightBlue" class="sideButton lightBlue"><p>Link</p></div>
+    </div>
+</div>
+<!--<div style="margin: 0px">-->
+<!--<button onclick="showAnswer()">Show Answer</button>-->
+<!--<button onclick="clearAnswer()">Clear</button>-->
+<!--</div>-->
+<script>
+    $(".hide").hide()
+    $("span").tooltipster({
+        maxWidth: 300,
+        position: 'top',
+        trigger: 'none',
+        functionInit: function () {
+            return $(this).attr("topic")
+        },
+        functionReady: function () {
+            var id=$(this).attr('id')
+            $("#"+id+"_description").attr('aria-hidden', false);
+        },
+        functionAfter: function () {
+            var id=$(this).attr('id')
+            $("#"+id+"_description").attr('aria-hidden', true);
+        }
+    });
+
+    $(".sideButton").click(function () {
+
+        $(".sideButton").each(function () {
+            dehighlight(this)
+
+        });
+        highlight(this)
+
+    })
+    function highlight(context) {
+        var type = $(context).text().toLowerCase();
+        var highlight = $(context).attr('id');
+        console.log(type + " " + highlight)
+        $("#" + type).addClass(highlight, 300).tooltipster('show');
+        $(context).addClass(highlight+"_shadow")
+    }
+    function dehighlight(context) {
+        var type = $(context).text().toLowerCase();
+        var highlight = $(context).attr('id');
+        console.log(type + " " + highlight)
+        $("#" + type).removeClass(highlight, 500).tooltipster('hide');
+        $(context).removeClass(highlight+"_shadow")
+
+    }
+
+
+</script>
+</body>
+</html>

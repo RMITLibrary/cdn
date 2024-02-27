@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Paragraphs (tutorial)</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/tooltipster.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
+    <script src="./assets/jquery.js"></script>
+    <script src="./assets/jquery-ui.min.js"></script>
+    <script src="./assets/jquery.tooltipster.min.js"></script>
+    <script src="./assets/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./assets/jquery.transit.min.js"></script>
+    <script src="./assets/jquery.color-2.1.2.min.js"></script>
+
+</head>
+
+<body>
+<div>
+    <div id="paragraph" style="float: left; width: 450px; line-height: 20px; display: block ">
+        <p style="font-size: 15px; display: inline-block; line-height: 30px"><span
+                style="display: inline-block; margin-right: 5px;position: relative; top: 12px;"><img
+                src="./assets/three.svg" height="35"></span></span>
+            <span id="placeHolder"> </span>Good office systems ensure the work is done efficiently. They also enable clear procedures and communications. These help to maintain good relationships in the office. Most importantly, they enable each worker to clearly understand what is required.
+        </p>
+    </div>
+
+    <div style="text-align: center" id="panel">
+        <form id="form3">
+            <fieldset data-role="controlgroup">
+                <legend style="font-size: 14px; font-weight:normal">Choose your answer:</legend>
+                <label style="font-size: 14px; font-weight:normal" for="a" title="Try again, what this paragraph is really about?">A well run office is one where staff respect each other.</label>
+                <input type="radio" name="answer" id="a" value="answer1">
+                <label style="font-size: 14px; font-weight:normal" for="b">Good organisation is the basis of a well run office.</label>
+                <input type="radio" name="answer" id="b" value="answer2">
+                <label style="font-size: 14px; font-weight:normal" for="c" title="Try again, what this paragraph is really about?">Happy staff make an efficient office.</label>
+                <input type="radio" name="answer" id="c" value="answer3">
+            </fieldset>
+        </form>
+    </div>
+    <div id="nav" style="float: left; width: 450px; position: absolute; top:400px">
+        <div id="previous" style="float:left;width: 45px; height: 45px">
+           <a href="index2.html"data-transition='slidefade' data-ajax='false'>
+               <svg class="toFlip" version="1.1" x="0px" y="0px" width="45px" height="45px" viewBox="0 0 504 504">
+                   <circle id="circle" stroke="#000000"  cx="252" cy="252" r="234"/>
+                   <g id="left">
+                       <path fill="#FFFFFF" d="M127.4,297.1v-44.6v-44.6h69.4h58.5v-80.5l66.3,67.8l56,57.2l-55,56.3l-67.2,68.8v-80.5h-57.6H127.4z"/>
+                   </g>
+               </svg>
+           </a>
+        </div>
+        <div id="next" style="float:right; width: 45px; height: 45px">
+            <svg version="1.1" x="0px" y="0px" width="45px" height="45px" viewBox="0 0 504 504">
+                <circle id="circle" stroke="#000000"  cx="252" cy="252" r="234"/>
+                    <g id="right">
+                    	<path fill="#FFFFFF" d="M127.4,297.1v-44.6v-44.6h69.4h58.5v-80.5l66.3,67.8l56,57.2l-55,56.3l-67.2,68.8v-80.5h-57.6H127.4z"/>
+                    </g>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("label").tooltipster({
+        maxWidth: 80,
+        position: 'right',
+        trigger: 'none',
+        timer:1500,
+        onlyOne:true
+    })
+
+    $(".hide").hide()
+    var answered;
+    $('input[type=radio]').click(function () {
+        console.log($(this).val());
+        answered = $(this).val();
+    });
+
+    $("#next").click(function () {
+        console.log(answered)
+        if (answered == "answer2") {
+            $("#b").hide()
+            $("[for='b']").animate({
+                "left": $("#placeHolder").position().left - 25,
+                "top": -240,
+                "width": 280
+            }, function () {
+                $(this).fadeOut();
+                $("#placeHolder").html("Good organisation is the basis of a well run office.").addClass("finished").css("display", "inline");
+            })
+            $(this).find("#circle").attr("stroke","#7dac21").attr("stroke-width","25").animate({
+                fill:'#d3e4b1',
+                opacity: 0.5
+            })
+                    $("#right").children().attr("stroke","#bed690").attr("stroke-width","15");
+            $(this).unbind("click")
+        }
+        else if (answered == "answer1") {
+            $("[for='a']").effect("shake");
+            $("[for='a']").tooltipster('show');
+            wrong()
+        }
+        else if (answered == "answer3") {
+            $("[for='c']").effect("shake");
+            $("[for='c']").tooltipster('show');
+            wrong()
+        }
+        else {
+            $("#panel").effect("shake");
+            wrong()
+        }
+
+        jQuery.Color.hook("fill");
+
+        function wrong() {
+            $("#next").transition({rotate: '-180deg'})
+            $("#right").html("<path fill='#FFFFFF' d='M171,378l-45-43l83-83l-83-83l44.9-42.1L252,209l83-83l43,45l-82,81l82,82l-43,44l-83-81L171,378z'/>")
+            $("#next").find("#circle").animate({
+                fill:'red'
+            })
+            setTimeout(function () {
+                $("#next").transition({rotate: '0deg'})
+                $("#right").html("<path fill='#FFFFFF' d='M127.4,297.1v-44.6v-44.6h69.4h58.5v-80.5l66.3,67.8l56,57.2l-55,56.3l-67.2,68.8v-80.5h-57.6H127.4z'/>")
+                $("#next").find("#circle").animate({
+                    fill:'black'
+                })
+            }, 1500)
+
+        }
+
+    })
+
+    jQuery.Color.hook("fill");
+
+
+    $("#previous").mouseenter(function(){
+        $(this).find("#circle").animate({
+            fill:'#7dac21'
+        })
+    }).mouseleave(function(){
+        $(this).find("#circle").animate({
+            fill:'black'
+        })
+    })
+
+
+</script>
+</body>
+</html>

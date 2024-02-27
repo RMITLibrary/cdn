@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Essay structure activity</title>
+    <style>
+        body {
+            width: 550px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-size: 100%;
+            padding: 0;
+            margin:0;
+        }
+
+        p {
+            margin: 20px 0;
+            padding: 0px;
+        }
+
+
+        #panel {
+            float: right;
+            width: 20%;
+            height: 330px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .green {
+            background-color: #7dac21;
+            color: white;
+        }
+
+        .red {
+            background-color: #ec416c;
+            color: white;
+        }
+
+        .blue {
+            background-color: #9bd8f3;
+            color: white;
+        }
+
+        .blank {
+            background-color: white;
+            color: black;
+        }
+
+        span{
+            border-radius: 2px;
+            padding: 1px 0;
+            margin: 0;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+</head>
+
+<body>
+<div>
+    <div id="paragraph" style="float: left; width: 75%; line-height: 20px; height: 330px;">
+        <p class="hide" id="origin" > Self esteem is belief in oneself and enables the individual to act decisively. Healy (2002)
+            identifies two
+            aspects of self esteem: self efficacy and self respect. Importantly, self esteem is respect for oneself and
+            having the confidence to attempt new challenges (Swan 2010). In contrast, individuals who lack self esteem
+            have
+            negative perceptions about themselves and are unlikely to respond positively to difficult or changing
+            circumstances. Black (2011) emphasises the link between low self esteem and low self confidence, where an
+            individual lacking in self esteem believes that they are incapable of being successful. These individuals
+            tend
+            to generally have negative thoughts and use expressions such as "I'm hopeless" or "I can't do this." Thus
+            those with self esteem believe that they can be effective and are therefore more likely to achieve. </p>
+        <p id="output"></p>
+    </div>
+
+    <table id="panel">
+        <tbody>
+        <tr>
+            <td id="green_btn" style="text-align:center"><img src="./images/green_btn.png" width="40" height="40"
+                                                              alt="Topic sentence switch button" style="margin:auto"/>
+            </td>
+        </tr>
+        <tr>
+            <td id="red_btn" style="text-align:center"><img src="./images/red_btn.png" width="40" height="40"
+                                                            alt="Reporting words switch button" style="margin:auto"/>
+            </td>
+        </tr>
+        <tr>
+            <td id="blue_btn" style="text-align:center"><img src="./images/blue_btn.png" width="40" height="40"
+                                                             alt="Linking word/phrases switch button"
+                                                             style="margin:auto"/></td>
+        </tr>
+        <tr></tr>
+        </tbody>
+    </table>
+</div>
+<div style="margin: 0px">
+    <button  onclick="showAnswer()">Show Answer</button>
+    <button  onclick="clearAnswer()"> Clear</button>
+</div>
+<script>
+    String.prototype.splice = function(startL,startR,replacement) {
+        return this.substring(0,startL)+replacement+this.substring(startR);
+    }
+    $(".hide").hide();
+    var originParagraph = $("#origin").text();
+    var workParagraph = "";
+    var testText = "";
+    var highlightColour = "white";
+    var redCount=0;
+    var blueCount=0;
+
+    //token words
+    function tokenWords() {
+
+        workParagraph = originParagraph;
+        var words = originParagraph.split(/[\W,]+/);
+        var startIndex = 0;
+        for (var i = 0; i < words.length; i++) {
+            startIndex = workParagraph.indexOf(words[i], startIndex);
+            var wordLength = words[i].length;
+            workParagraph = [workParagraph.slice(0, startIndex), "<span>", workParagraph.slice(startIndex)].join('');
+            startIndex += 6 + wordLength;
+            workParagraph = [workParagraph.slice(0, startIndex), "</span>", workParagraph.slice(startIndex)].join('');
+            startIndex += 7;
+        }
+        //a bit modification to the tokenised result
+        workParagraph = [workParagraph.slice(0, workParagraph.indexOf("In")), "In ", workParagraph.slice(workParagraph.indexOf("contrast</span>"))].join('');
+        workParagraph = [workParagraph.slice(0, workParagraph.indexOf("such")), "such ", workParagraph.slice(workParagraph.indexOf("such")+18)].join('');
+
+        if(highlightColour=="red"){
+            startIndex = workParagraph.indexOf(">identifies", 0);
+            workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+            startIndex = workParagraph.indexOf(">emphasises", 0);
+            workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+        }
+        if(highlightColour=="blue"){
+            startIndex = workParagraph.indexOf(">Importantly", 0);
+            workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+            startIndex = workParagraph.indexOf(">In contrast", 0);
+            workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+            startIndex = workParagraph.indexOf(">such as", 0);
+            workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+        }
+        checkComplete();
+        output();
+
+    }
+
+    //token sentences
+    function tokenSentences() {
+
+        var sentences = originParagraph.split(".");
+        workParagraph = "<span id='answer'>";
+        workParagraph += sentences.join(".</span> <span>");
+        workParagraph += "</span>";
+
+        //a bit modification to the tokenised result
+        workParagraph = [workParagraph.slice(0, workParagraph.indexOf("do this.")+8), "\"", workParagraph.slice(workParagraph.indexOf("do this.")+8)].join('');
+        workParagraph = [workParagraph.slice(0, workParagraph.indexOf(">\"")), " >", workParagraph.slice(workParagraph.indexOf("Thus"))].join('');
+
+
+        checkComplete();
+        output();
+
+    }
+
+    tokenWords();
+
+
+
+    //output the processed string
+    function output() {
+        $("#splitted").html("<span>" + testText + "</span>");
+        $("#output").html(workParagraph);
+        $("span").mouseover(function () {
+            if (highlightColour != "white" && $(this).attr("id")!="answered") {
+                $(this).removeClass("blank");
+                $(this).addClass(highlightColour);
+                $(this).css("cursor", "pointer");
+            }
+        });
+        $("span").mouseout(function () {
+            if (highlightColour != "white" && $(this).attr("id")!="answered") {
+                $(this).addClass("blank", 100);
+            }
+            //$(this).removeClass(highlightColour);
+        });
+        $("span").click(function () {
+            if (highlightColour != "white" && $(this).attr("id")!="answered") {
+                var tempColour;
+                var button;
+
+                switch (highlightColour) {
+                    case "green":
+                        tempColour = "#7dac21"
+                        break;
+                    case "red":
+                        tempColour = "#ec416c"
+                        break;
+                    case "blue":
+                        tempColour = "#9bd8f3"
+                        break;
+                }
+                $(this).css("background-color", tempColour);
+                $(this).css("color", "white");
+
+                if ($(this).attr("id") != "answer") {
+                    $(this).removeClass("blank");
+                    $(this).css("background-color", "");
+                    $(this).css("color", "");
+                    $(this).addClass("blank", 1000, "easeOutSine");
+                }
+                else {
+                    button = highlightColour + "_btn";
+                    switch (highlightColour){
+                        case "green":
+                            $("#" + button).html("<img id='" + button + "_correct" + "' src='./images/" + button + "_correct" + ".png' width='40' height='40' alt='Topic sentence switch button' style='margin:auto'/>");
+                            $("#" + button + "_correct").animate({
+                                width: 50, height: 50
+                            }, 1000, "easeOutElastic");
+                            break;
+                        case "red":
+                            redCount++;
+                            console.log(redCount)
+                            if(redCount==2){
+                                $("#" + button).html("<img id='" + button + "_correct" + "' src='./images/" + button + "_correct" + ".png' width='40' height='40' alt='Topic sentence switch button' style='margin:auto'/>");
+                                $("#" + button + "_correct").animate({
+                                    width: 50, height: 50
+                                }, 1000, "easeOutElastic");
+                            }
+                            break;
+                        case "blue":
+                            blueCount++;
+                            console.log(blueCount)
+                            if(blueCount==3){
+                                $("#" + button).html("<img id='" + button + "_correct" + "' src='./images/" + button + "_correct" + ".png' width='40' height='40' alt='Topic sentence switch button' style='margin:auto'/>");
+                                $("#" + button + "_correct").animate({
+                                    width: 50, height: 50
+                                }, 1000, "easeOutElastic");
+                            }
+                            break;
+                    }
+                    $(this).attr('id', 'answered');
+                }
+                //show complete icon and animation
+//                function setComplete(){
+//                    console.log("setcomplete")
+//                    $("#" + button).html("<img id='" + button + "_correct" + "' src='./images/" + button + "_correct" + ".png' width='40' height='40' alt='Topic sentence switch button' style='margin:auto'/>");
+//                    $("#" + button + "_correct").animate({
+//                        width: 50, height: 50
+//                    }, 1000, "easeOutElastic");
+//                }
+            }
+        });
+    }
+
+
+
+    //check completed
+    function checkComplete() {
+        var startIndex;
+        if($("#green_btn_correct").length !=0 ){
+            //console.log(workParagraph.indexOf("Healy"))
+            startIndex=workParagraph.indexOf("Healy");
+           // console.log(workParagraph.substring(0,startIndex))
+            //workParagraph.replace(workParagraph.substring(0,startIndex),"dcc")
+            var subString=workParagraph.substring(startIndex, workParagraph.length);
+            workParagraph="<span id='answered' class='green'> Self esteem is belief in oneself and enables the individual to act decisively.</span><span> "+subString;
+             // console.log(workParagraph)
+        }
+        if($("#red_btn_correct").length !=0 ){
+            if(workParagraph.indexOf(">identifies", 0)>0) {
+                startIndex = workParagraph.indexOf(">identifies", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='red'", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf(">emphasises", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='red'", workParagraph.slice(startIndex)].join('');
+            }
+            else{
+                startIndex = workParagraph.indexOf("identifies", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), "<span id='answered' class='red'>", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf("identifies", 0)+10;
+                workParagraph = [workParagraph.slice(0, startIndex), "</span>", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf("emphasises", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), "<span id='answered' class='red'>", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf("emphasises", 0)+10;
+                workParagraph = [workParagraph.slice(0, startIndex), "</span>", workParagraph.slice(startIndex)].join('');
+            }
+        }
+        if($("#blue_btn_correct").length !=0 ){
+            if(workParagraph.indexOf(">In contrast", 0)>0) {
+                startIndex = workParagraph.indexOf(">Importantly", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='blue'", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf(">In contrast", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='blue'", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf(">such as", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='blue'", workParagraph.slice(startIndex)].join('');
+            }
+            else{
+                startIndex = workParagraph.indexOf("Importantly", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), "<span id='answered' class='blue'>", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf("Importantly", 0)+11;
+                workParagraph = [workParagraph.slice(0, startIndex), "</span>", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf("In contrast", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), "<span id='answered' class='blue'>", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf("In contrast", 0)+11;
+                workParagraph = [workParagraph.slice(0, startIndex), "</span>", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf("such as", 0);
+                workParagraph = [workParagraph.slice(0, startIndex), "<span id='answered' class='blue'>", workParagraph.slice(startIndex)].join('');
+                startIndex = workParagraph.indexOf("such as", 0)+7;
+                workParagraph = [workParagraph.slice(0, startIndex), "</span>", workParagraph.slice(startIndex)].join('');
+            }
+        }
+
+    }
+
+    //show answers
+    function showAnswer(){
+        var buttons=["green_btn","red_btn","blue_btn"];
+        for(var i=0; i<3; i++) {
+            $("#" + buttons[i]).html("<img id='" + buttons[i] + "_correct" + "' src='./images/" + buttons[i] + "_correct" + ".png' width='40' height='40' alt='Topic sentence switch button' style='margin:auto'/>");
+            $("#" + buttons[i] + "_correct").animate({
+                width: 50, height: 50
+            }, 1000, "easeOutElastic");
+            console.log(buttons[i] + "_correct: "+$('#'+buttons[i] + "_correct").length );
+        }
+
+        checkComplete();
+        output();
+    }
+
+    //clear
+    function clearAnswer(){
+        console.log("hello");
+        var buttons=["green_btn","red_btn","blue_btn"];
+        console.log("hello")
+        for(var i=0; i<3; i++) {
+            $("#" + buttons[i]).html("<img id='"+buttons[i]+"_normal"+ "' src='./images/" + buttons[i] + ".png' width='50' height='50' alt='Topic sentence switch button' style='margin:auto'/>");
+            $("#" + buttons[i]+"_normal").animate({
+                width: 40, height: 40
+            }, 1000, "easeOutElastic");
+            console.log(buttons[i] + ": "+$('#'+buttons[i]).length );
+        }
+        tokenWords();
+    }
+
+    //btn controllers
+    $("[id$=btn]").css("width", "65px");
+    $("[id$=btn]").css("height", "100px");
+    $("[id$=btn]").css('cursor', "pointer");
+    $(function () {
+        $("[id$=btn]").click(function () {
+            //reset the highlight
+
+            $("[id$=btn]").css("background", "");
+            $("[id$=btn]").css("background-size", "");
+            switch ($(this).attr("id")) {
+                case "green_btn":
+                    $(this).css("background", "url(./images/green_shadow.png) no-repeat center center");
+                    $(this).css("background-size", "100%");
+                    highlightColour = "green";
+                    tokenSentences();
+                    break;
+                case "red_btn":
+                    colour = "red";
+                    $(this).css("background", "url(./images/red_shadow.png) no-repeat center center");
+                    $(this).css("background-size", "100%");
+                    highlightColour = "red";
+                    tokenWords();
+                    break;
+                case "blue_btn":
+                    colour = "darkBlue";
+                    $(this).css("background", "url(./images/blue_shadow.png) no-repeat center center");
+                    $(this).css("background-size", "100%");
+                    highlightColour = "blue";
+                    tokenWords();
+                    break;
+            }
+        });
+
+
+
+    });
+
+
+</script>
+</body>
+</html>

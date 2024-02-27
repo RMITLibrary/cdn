@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Integrated reference activity</title>
+		<style>
+			body {
+				width: 550px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+				background-size: 100%;
+				padding: 0;
+				margin: 0;
+			}
+
+			p {
+				margin: 20px 0;
+				padding: 0px;
+			}
+
+			#panel {
+				float: right;
+				width: 20%;
+				
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.green {
+				background-color: #7dac21;
+				color: white;
+			}
+
+			.red {
+				background-color: #ec416c;
+				color: white;
+			}
+
+			.blue {
+				background-color: #9bd8f3;
+				color: white;
+			}
+
+			.blank {
+				background-color: white;
+				color: black;
+			}
+
+			span {
+				border-radius: 2px;
+				padding: 1px 0;
+				margin: 0;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script src="jquery-ui.min.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<div id="paragraph" style="float: left; width: 75%; line-height: 20px;">
+				<p class="hide" id="origin" >
+					Motivation and differing individual goals were also issues for our team. Most of our team were not highly motivated. According to Dickie and Dickie (2006) team morale and identity should be strongest in the performing stage resulting in high productivity. Although some students were highly motivated to excel in this project, the identity of the group related to the 'just pass' attitude therefore not holding much importance for each member. As a result we never really worked effectively together in either the 'norming' or 'performing stage' and so we only achieved the minimum. Therefore the effect of differing individual goals on team morale, identity and consequently productivity is significant.				</p>
+				<p id="output"></p>
+			</div>
+
+			<table id="panel">
+				<tbody>
+					<!--<tr>-->
+						<!--<td id="green_btn" style="text-align:center"><img src="./images/green_btn.png" width="40" height="40"-->
+						<!--alt="Topic sentence switch button" style="margin:auto"/></td>-->
+					<!--</tr>-->
+					<tr>
+						<td id="red_btn" style="text-align:center"><img src="./images/red_btn.png" width="40" height="40"
+						alt="Reporting words switch button" style="margin:auto"/></td>
+					</tr>
+					<tr>
+						<td id="blue_btn" style="text-align:center"><img src="./images/blue_btn.png" width="40" height="40"
+						alt="Linking word/phrases switch button"
+						style="margin:auto"/></td>
+					</tr>
+					<tr></tr>
+				</tbody>
+			</table>
+		</div>
+		<div style="margin: 0px">
+			<button  onclick="showAnswer()">
+				Show Answer
+			</button>
+			<button  onclick="clearAnswer()">
+				Clear
+			</button>
+		</div>
+		<script>
+			String.prototype.splice = function(startL, startR, replacement) {
+				return this.substring(0, startL) + replacement + this.substring(startR);
+			}
+			$(".hide").hide();
+			var originParagraph = $("#origin").text();
+			var workParagraph = "";
+			var testText = "";
+			var highlightColour = "white";
+			var redCount = 0;
+			var blueCount = 0;
+
+			//token words
+			function tokenWords() {
+
+				workParagraph = originParagraph;
+				var words = originParagraph.split(/[\W,]+/);
+				var startIndex = 0;
+				for (var i = 0; i < words.length; i++) {
+					startIndex = workParagraph.indexOf(words[i], startIndex);
+					var wordLength = words[i].length;
+					workParagraph = [workParagraph.slice(0, startIndex), "<span>", workParagraph.slice(startIndex)].join('');
+					startIndex += 6 + wordLength;
+					workParagraph = [workParagraph.slice(0, startIndex), "</span>", workParagraph.slice(startIndex)].join('');
+					startIndex += 7;
+				}
+				//a bit modification to the tokenised result
+				workParagraph = [workParagraph.slice(0, workParagraph.indexOf("According")), "According ", workParagraph.slice(workParagraph.indexOf("to</span>"))].join('');
+				workParagraph = [workParagraph.slice(0, workParagraph.indexOf("As")), "As a ", workParagraph.slice(workParagraph.indexOf("result</span>"))].join('');
+//				workParagraph = [workParagraph.slice(0, workParagraph.indexOf("according")), "according ", workParagraph.slice(workParagraph.indexOf("according") + 23)].join('');
+
+				if (highlightColour == "red") {
+					startIndex = workParagraph.indexOf(">According to", 0);
+					workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+				}
+				if (highlightColour == "blue") {
+					startIndex = workParagraph.indexOf(">Although", 0);
+					workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+					startIndex = workParagraph.indexOf(">As a result", 0);
+					workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+					startIndex = workParagraph.indexOf(">so<", 0);
+					workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+					startIndex = workParagraph.indexOf(">Therefore", 0);
+					workParagraph = [workParagraph.slice(0, startIndex), " id='answer'", workParagraph.slice(startIndex)].join('');
+				}
+				checkComplete();
+				output();
+
+			}
+
+
+			tokenWords();
+
+			//output the processed string
+			function output() {
+				$("#splitted").html("<span>" + testText + "</span>");
+				$("#output").html(workParagraph);
+				$("span").mouseover(function() {
+					if (highlightColour != "white" && $(this).attr("id") != "answered") {
+						$(this).removeClass("blank");
+						$(this).addClass(highlightColour);
+						$(this).css("cursor", "pointer");
+					}
+				});
+				$("span").mouseout(function() {
+					if (highlightColour != "white" && $(this).attr("id") != "answered") {
+						$(this).addClass("blank", 100);
+					}
+					//$(this).removeClass(highlightColour);
+				});
+				$("span").click(function() {
+					if (highlightColour != "white" && $(this).attr("id") != "answered") {
+						var tempColour;
+						var button;
+
+						switch (highlightColour) {
+						case "red":
+							tempColour = "#ec416c"
+							break;
+						case "blue":
+							tempColour = "#9bd8f3"
+							break;
+						}
+						$(this).css("background-color", tempColour);
+						$(this).css("color", "white");
+
+						if ($(this).attr("id") != "answer") {
+							$(this).removeClass("blank");
+							$(this).css("background-color", "");
+							$(this).css("color", "");
+							$(this).addClass("blank", 1000, "easeOutSine");
+						} else {
+							button = highlightColour + "_btn";
+							switch (highlightColour) {
+							case "red":
+								redCount++;
+								console.log(redCount)
+								if (redCount == 1) {
+									$("#" + button).html("<img id='" + button + "_correct" + "' src='./images/" + button + "_correct" + ".png' width='40' height='40' alt='Topic sentence switch button' style='margin:auto'/>");
+									$("#" + button + "_correct").animate({
+										width : 50,
+										height : 50
+									}, 1000, "easeOutElastic");
+								}
+								break;
+							case "blue":
+								blueCount++;
+								console.log(blueCount)
+								if (blueCount == 4) {
+									$("#" + button).html("<img id='" + button + "_correct" + "' src='./images/" + button + "_correct" + ".png' width='40' height='40' alt='Topic sentence switch button' style='margin:auto'/>");
+									$("#" + button + "_correct").animate({
+										width : 50,
+										height : 50
+									}, 1000, "easeOutElastic");
+								}
+								break;
+							}
+							$(this).attr('id', 'answered');
+						}
+					}
+				});
+			}
+
+			//check completed
+			function checkComplete() {
+				var startIndex;
+				if ($("#red_btn_correct").length != 0) {
+					//tokenised by words.
+					if (workParagraph.indexOf(">According to", 0) > 0) {
+						startIndex = workParagraph.indexOf(">According to", 0);
+						workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='red'", workParagraph.slice(startIndex)].join('');
+					}
+				}
+				if ($("#blue_btn_correct").length != 0) {
+					//tokenised by words.
+					if (workParagraph.indexOf(">Although", 0) > 0) {
+						startIndex = workParagraph.indexOf(">Although", 0);
+						workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='blue'", workParagraph.slice(startIndex)].join('');
+						startIndex = workParagraph.indexOf(">As a result", 0);
+						workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='blue'", workParagraph.slice(startIndex)].join('');
+						startIndex = workParagraph.indexOf(">Therefore", 0);
+						workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='blue'", workParagraph.slice(startIndex)].join('');
+						startIndex = workParagraph.indexOf(">so", workParagraph.indexOf(">so", 0)+5);
+						workParagraph = [workParagraph.slice(0, startIndex), " id='answered' class='blue'", workParagraph.slice(startIndex)].join('');
+					}
+				}
+
+			}
+
+			//show answers
+			function showAnswer() {
+				var buttons = ["red_btn", "blue_btn"];
+				for (var i = 0; i < 2; i++) {
+					$("#" + buttons[i]).html("<img id='" + buttons[i] + "_correct" + "' src='./images/" + buttons[i] + "_correct" + ".png' width='40' height='40' alt='Topic sentence switch button' style='margin:auto'/>");
+					$("#" + buttons[i] + "_correct").animate({
+						width : 50,
+						height : 50
+					}, 1000, "easeOutElastic");
+					console.log(buttons[i] + "_correct: " + $('#' + buttons[i] + "_correct").length);
+				}
+
+				checkComplete();
+				output();
+			}
+
+			//clear
+			function clearAnswer() {
+				console.log("hello");
+				var buttons = ["red_btn", "blue_btn"];
+				console.log("hello")
+				for (var i = 0; i < 2; i++) {
+					$("#" + buttons[i]).html("<img id='" + buttons[i] + "_normal" + "' src='./images/" + buttons[i] + ".png' width='50' height='50' alt='Topic sentence switch button' style='margin:auto'/>");
+					$("#" + buttons[i] + "_normal").animate({
+						width : 40,
+						height : 40
+					}, 1000, "easeOutElastic");
+					console.log(buttons[i] + ": " + $('#' + buttons[i]).length);
+				}
+				redCount = 0;
+				blueCount = 0;
+				tokenWords();
+			}
+
+			
+			//bit layout fix
+			$('#panel').css('height',$('#paragraph').height());
+			$("[id$=btn]").css("width", "65px");
+			$("[id$=btn]").css("height", ($('#paragraph').height()-30)/2);
+			
+			//btn controllers
+			$("[id$=btn]").css('cursor', "pointer");
+			$(function() {
+				$("[id$=btn]").click(function() {
+					//reset the highlight
+
+					$("[id$=btn]").css("background", "");
+					$("[id$=btn]").css("background-size", "");
+					switch ($(this).attr("id")) {
+					case "red_btn":
+						colour = "red";
+						$(this).css("background", "url(./images/red_shadow.png) no-repeat center center");
+						$(this).css("background-size", "100%");
+						highlightColour = "red";
+						tokenWords();
+						break;
+					case "blue_btn":
+						colour = "darkBlue";
+						$(this).css("background", "url(./images/blue_shadow.png) no-repeat center center");
+						$(this).css("background-size", "100%");
+						highlightColour = "blue";
+						tokenWords();
+						break;
+					}
+				});
+
+			});
+
+		</script>
+	</body>
+</html>

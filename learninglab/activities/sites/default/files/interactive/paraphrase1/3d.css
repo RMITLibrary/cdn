@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container_3d {
+	position: relative;
+	margin: 10px auto;
+	width: 400px;
+	height: 160px;
+	z-index: 1;
+}
+.container_3d {
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	perspective: 1000px;
+}
+.card {
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 0.2s linear;
+	-moz-transform-style: preserve-3d;
+	-moz-transition: all 0.2s linear;
+	-o-transform-style: preserve-3d;
+	-o-transition: all 0.2s linear;
+	transform-style: preserve-3d;
+	transition: all 0.2s linear;
+	
+}
+.container_3d:hover .card, .container_3d.hover_effect .card {
+	-webkit-transform: rotateY(-20deg);
+	-moz-transform: rotateY(-20deg);
+	-o-transform: rotateY(-20deg);
+	transform: rotateY(-20deg);
+}
+
+.shadow{
+ -webkit-box-shadow: 0px 1px 10px #aaa;
+  -moz-box-shadow: 0px 1px 10px #aaa;
+  box-shadow: 0px 1px 10px #aaa;
+  
+
+}
+.face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+		border-radius: 10px;
+  background-color: #9bd8f3;
+
+  color:white;
+  	display:table;
+  	cursor:pointer;
+
+}
+.face.back {
+	-webkit-transform: rotateY(180deg);
+	-webkit-box-sizing: border-box;
+	-moz-transform: rotateY(180deg);
+	-moz-box-sizing: border-box;
+	-o-transform: rotateY(180deg);
+	-o-box-sizing: border-box;
+	transform: rotateY(180deg);
+	box-sizing: border-box;
+	color: white;
+	background-color: #aaa;
+}

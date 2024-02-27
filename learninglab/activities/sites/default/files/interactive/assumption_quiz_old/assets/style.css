@@ -1,0 +1,98 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body { font-family: arial; }
+
+.masonry {
+  max-width: 450px;
+  font-family: museo, museo500, arial;
+}
+
+.card {
+  width:  450px;
+  min-height: 150px;
+  float: left;
+
+  border-radius: 12px;
+  padding: 15px 20px 65px 20px;
+  position: relative;
+
+  margin: 15px 0;
+}
+.blue {
+  background: #d9efff;
+  border: 1pt solid #9dd8f2;
+  color: #005dbb;
+}
+.orange {
+  background: #FFEDD7;
+  border: 1pt solid #FEB55F;
+  color: #a65101;
+}
+.orange button{
+  background: #a65101;
+  border: 1pt solid #705504;
+  /*color:#FE9026;*/
+}
+.blue button{
+  background: #005dbb;
+  border: 1pt solid #0e6892;
+}
+/*.blue button:hover{*/
+  /*background: #5fbef2;*/
+/*}*/
+.red {
+  background: #f5d3db;
+  border: 1pt solid #eb4f76;
+  color: #ad133a;
+  padding-bottom: 25px;
+}
+.red button {
+  background: #ffc2ca;
+  border: 1pt solid #eb4f76;
+}
+/*.red button:hover {*/
+  /*background: #eb4f76;*/
+/*}*/
+.green {
+  background: #E2EBCF;
+  border: 1pt solid #7eab2f;
+  color: #49631b;
+  padding-bottom: 25px;
+
+}
+.green button {
+  background: #49631b;
+  border: 1pt solid #374b15;
+}
+/*.green button:hover {*/
+  /*background: #7eab2f;*/
+/*}*/
+.clicked {
+  opacity: .4;
+  outline: none;
+  cursor: default;
+}
+
+button{
+  margin: 5px 15px 0px 15px;
+  font-size: 16px;
+  min-width: 110px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 12px;
+  color: white;
+  padding: 0 15px;
+}
+
+
+.nav{
+  background: #7d756c;
+  border: 1pt solid #6c665e;
+}
+strong{
+  font-size: x-large;
+}

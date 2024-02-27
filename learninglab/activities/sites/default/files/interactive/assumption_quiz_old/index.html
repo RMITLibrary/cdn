@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Quiz</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+
+<div id="debug" class="hide" style="display: none; width: 600px">
+<p><button id="append-button" onclick="addChild()">Append new cards</button>
+<p><button onclick="delateUpper()">Delete upper</button>
+<p><button onclick="delateLower()">Delete lower</button>
+<p><button onclick="refresh()">refresh</button>
+<p><button onclick="lastCard()">last card</button>
+<p><button onclick="nextCard()">next card</button>
+</div>
+
+
+
+<div class="masonry">
+
+
+</div>
+
+  <div id="template" class="hide">
+      <div class="card blue" id="00" style="display: none">
+          <strong class="title">#0</strong>
+          <img class="nav" src="assets/nav_up.svg" width="30px" style="float: right; display: none" />
+          <p>
+              Students know that copying from each other is wrong, so they must realise that copying from a text book is also wrong.
+          </p>
+          <div style="text-align: center; position:absolute; bottom: 23px">
+              <div id="buttonGroup" style="margin: 0 auto; width: 400px">
+                <button class="agree" onclick="agree(this)">Sounds reasonable</button>
+                <button class="disagree" onclick="disagree(this)">I don't think so</button>
+              </div>
+          </div>
+      </div>
+      <div class="card red" id="01" style="display: none">
+          <strong class="title">Hmm... think about this</strong>
+          <img class="nav" src="assets/nav_up.svg" width="30px" style="float: right;display: none"/>
+          <p>
+              Some students see printed texts as authoritative and  to be emulated. Some students consider this to be diligent scholarship and respectful to that author. It is not equated with ‘cutting corners by copying your friend’s homework’.             </p>
+          <div style="text-align: center; position:absolute; bottom: 23px">
+              <div style="margin: 0 auto; width: 400px">
+                  <button onclick="addChild(this)">Ok, got it</button>
+              </div>
+          </div>
+      </div>
+      <div class="card green" id="02" style="display: none">
+          <strong class="title">You're right!</strong>
+          <img class="nav" src="assets/nav_up.svg" width="30px" style="float: right;display: none"/>
+
+          <p>
+              Some students see printed texts as authoritative and  to be emulated. Some students consider this to be diligent scholarship and respectful to that author. It is not equated with ‘cutting corners by copying your friend’s homework’.             </p>
+          <div style="text-align: center; position:absolute; bottom: 23px">
+              <div style="margin: 0 auto; width: 400px">
+                  <button onclick="addChild(this)">Ok, got it</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="assets/jquery.js"></script>
+  <script src="assets/jquery-ui.min.js"></script>
+  <script src="assets/jquery.transit.min.js"></script>
+  <script src="assets/masonry.pkgd.min.js"></script>
+
+<script src="assets/questions.js"></script>
+<script src="assets/index.js"></script>
+
+</body>
+
+</html>

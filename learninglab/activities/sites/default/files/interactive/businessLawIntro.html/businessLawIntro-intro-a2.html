@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>activity2</title>
+        <link rel="stylesheet" href="../../../../assets/widget.css"/>
+        <link rel="stylesheet" href="../../../../assets/style.css"/>
+        <link rel="stylesheet" href="steps.css"/>
+        <!--        <script src="assets/snap.svg-min.js"></script>-->
+
+        <script src="../../../../lib/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    </head>
+
+    <body>
+        <div id="wrapper" style="min-height:350px;max-width:750px">
+            <div id="paragraph" style="width:100%; margin-bottom: 20px; text-align:center">          
+                <style>
+                    @font-face {
+                        font-family: "Museo300";
+                        src: url("../../../../assets/fonts/Museo300-RegularWeb.woff");
+                        font-weight: normal;
+                    }
+                    body{font-family:sans-serif;font-size: 14px}
+                    .question{position: relative;display: none;line-height: 25px;width:80%;text-align: left;margin:auto;font-size: 16px;font-family: Museo300}
+                    /*                    .question p{min-height: 100px}*/
+                    .question > p:before{content: "Definition: ";font-weight: bold;font-family: sans-serif}
+                    .options{width:80%;margin:auto}
+                    input{height: 27.5px; font-size: 15px; vertical-align: top;width:150px}
+                    a{cursor: pointer}
+                    .outcome{width: 25px;height: 25px;display: inline-block;vertical-align: middle;background-position: center}
+                    .list-group{margin-top:15px}
+                    .progress .bar {position: relative;width: 10%;height: 6px;margin-left: -5px;margin-right: -5px;border-left: none;border-right: none;border-radius: 0;}
+                    input{display: none}
+                </style>
+
+                <p style=" text-align:left;line-height:24px">Read the following definitions and type the correct term into the text box. Correct spelling is required. Click on the ‘Check Answer’ button to check your answer.
+                </p>
+            </div>
+
+
+            <div class="progress">
+                <div class="circle">
+                    <span class="label">1</span>
+                    <span class="title">25%</span>
+                </div>
+                <span class="bar"></span>
+                <div class="circle">
+                    <span class="label">2</span>
+                    <span class="title">50%</span>
+                </div>
+                <span class="bar"></span>
+                <div class="circle">
+                    <span class="label">3</span>
+                    <span class="title">75%</span>
+                </div>
+                <span class="bar"></span>
+                <div class="circle">
+                    <span class="label">4</span>
+                    <span class="title">100%</span>
+                </div>
+                <span class="bar"></span>
+                <div class="circle">
+                    <span class="label">5</span>
+                    <span class="title">100%</span>
+                </div>
+                <span class="bar"></span>
+                <div class="circle">
+                    <span class="label">6</span>
+                    <span class="title">100%</span>
+                </div>
+            </div>
+
+            <div id="content" style="width:100%;min-height:60px;margin-bottom:20px">
+                <div id="q1" class="question" style="display:block">
+                    <p>An Act or law made by both Commonwealth and state parliaments.</p>
+                </div>
+
+                <div id="q2" class="question">
+                    <p>Decisions of a higher court are binding on lower courts in the same court hierachy when judging similar cases.</p>
+                </div>
+
+                <div id="q3" class="question" >
+                    <p>The person defending legal action against another party.</p>
+                </div>
+
+                <div id="q4" class="question">
+                    <p>Laws made by judges in court.</p>
+                </div>
+
+                <div id="q5" class="question" >
+                    <p>A previous decision that influences future decisions but need not be followed.</p>
+                </div>
+
+                <div id="q6" class="question" >
+                    <p>Any proceeding in a court.</p>
+                </div>
+
+                <div id="q7" class="question" style="text-align:center;">
+                    <br>
+                    <h2 style="font-family:arial">Well done!</h2>
+                </div>
+                <!--                <hr style="width:80%">-->
+            </div>
+            <div id="panel" style="width:80%;text-align:right;margin:auto;border-top:1px solid #ccc; padding-top:20px">
+                <div class="input-group" style="display:inline-block;float:left">
+                    <span id="term" style="font-size:16px; font-weight:bold;">Term: </span>
+                    <input class="q1 form-control" answer="legislation" style="display:inline-block">
+                    <input class="q2" answer="doctrine of precedent">
+                    <input class="q3" answer="defendant">
+                    <input class="q4" answer="common law">
+                    <input class="q5" answer="persuasive precedent">
+                    <input class="q6" answer="legal action">
+                    <input class="q7" >
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" id="check_btn" onclick="checkAnswer()">
+                            Check Answer
+                        </button>
+                    </span>
+                    <!--                    <span class="correct" style="width:20px;height:20px;display: inline-block;"></span>-->
+                </div>
+
+
+                <button class="btn btn-default" id="show_btn" onclick="showAnswer()">
+                    Show Answer
+                </button>
+                <button class="btn btn-default" id="next_btn" onclick="checkAnswer()" style="display:none">
+                    Go Next
+                </button>
+                <button class="btn btn-default" id="clear_btn" onclick="clearAnswer()" >
+                    Clear 
+                </button>
+            </div>
+        </div>
+
+        <div id="debug"></div>
+        <script>
+            $("a").click(function(){
+                $(this).children().prop('checked', true);
+            })
+
+            var currentIndex = 1
+
+            var loadQuestion = function(){
+                $('#show_btn').show()
+                $('#next_btn').hide()
+                $('#check_btn').removeClass('disabled')
+                $('.outcome').hide()
+                $("#q"+currentIndex).fadeIn(1000);
+                $(".q"+currentIndex).show();
+                $('.progress .circle:nth-of-type(' + currentIndex + ')').addClass('active',400);
+            }
+            loadQuestion()
+
+            $('.circle').click(function(){
+                if ($(this).hasClass('done')||$(this).hasClass('active')){
+                    $('.circle').removeClass('select')
+                    if(!$(this).hasClass('active'))
+                        $(this).addClass('select')
+                        displayIndex=$('.circle').index(this)+1
+                        console.log(displayIndex)
+                        $('.input-group').fadeIn()
+                        $('.question').hide()
+                        $('input').hide()
+                        $('#q'+displayIndex).fadeIn();
+                    $('.q'+displayIndex).show();
+                    if($(this).hasClass('done')){
+                        $('#check_btn').addClass('disabled')
+                        $('#show_btn').addClass('disabled')
+                        $('#clear_btn').addClass('disabled')
+                    }else{
+                        //                        $('#check_btn').removeClass('disabled')
+                        //                        $('#show_btn').removeClass('disabled')
+                        //                        $('#clear_btn').removeClass('disabled')
+                        clearAnswer()
+                    }
+                }
+            })
+
+            $( "input" ).keypress(function(e) {
+                var key = e.which;
+                if(key == 13)  // the enter key code
+                {
+                    checkAnswer()
+                    return false;  
+                }
+            });
+
+            //show answers
+            function showAnswer() {
+                $('#check_btn').addClass('disabled')
+                $('#show_btn').hide()
+                $('#next_btn').show()
+                $('#clear_btn').removeClass('disabled')
+                var answer = $(".q"+currentIndex).attr('answer')
+                $(".q"+currentIndex).val(answer).prop("readonly",true).on('focus',function(){$(this).blur()})
+
+            }
+
+            //clear answers
+            function clearAnswer() {
+                console.log("clear answer");
+                //                $(".question").find('span').remove()
+                $(".outcome").remove()
+                $('#check_btn').removeClass('disabled')
+                $('#show_btn').removeClass('disabled').show()
+                $('#next_btn').hide()
+                $('#clear_btn').removeClass('disabled')
+                $(".q"+currentIndex).val('').prop("readonly",false).off('focus')
+            }
+
+            //check answer
+            function checkAnswer(){
+                var correctCount = 0
+                $(".outcome").remove()
+                var answer = $(".q"+currentIndex).attr('answer')
+                var answered = $(".q"+currentIndex).val().toLowerCase()
+                console.log(answered)
+                if(answer==answered){
+                    $(".input-group-btn").append('<span class="outcome tick"></span>')
+                    $(".q"+currentIndex).prop('disabled', true);
+                    $('.progress .circle:nth-of-type(' + currentIndex + ')').find(".label").html('<img src="../../../../assets/images/tick_right_white.svg" width="12">')
+                    $('.progress .circle:nth-of-type(' + currentIndex + ')').removeClass("active",100).addClass('done',300);
+                    $('.progress .bar:nth-of-type(' + currentIndex + ')').addClass('active');
+                    if(currentIndex>1)
+                        $('.progress .bar:nth-of-type(' + (currentIndex-1) + ')').removeClass('active').addClass('done');
+
+                    $("#q"+currentIndex).delay(1000).fadeOut()
+
+                    setTimeout(function(){
+                        $(".q"+currentIndex).hide()
+                        currentIndex++
+                        loadQuestion()
+
+                        if(currentIndex==7){
+                            $('#panel').css("border-top:none")
+                            $('#show_btn').fadeOut()
+                            $('.input-group').fadeOut()
+                            $("#clear_btn").click(function(){
+                                location.reload();
+                            }).text("Retry");
+                        }
+                    },2000)
+                }
+                else{
+                    $(".input-group-btn").append('<span class="outcome cross"></span>')
+                    $("#q"+currentIndex).effect('shake')
+                }
+            }
+
+
+
+        </script>
+    </body>
+</html>

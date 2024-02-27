@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link href="./3d.css" type="text/css" rel="stylesheet">
+    <style>
+        body {
+            width: 550px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            margin:0;
+            padding:0;
+        }
+
+        h3 {
+            text-transform: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 1em;
+            color: #D01B27;
+        }
+
+        p {
+            line-height: 20px;
+            width: 460px;
+        }
+
+        .card p {
+            padding: 0 20px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #answer_wrong {
+            background-color: #f6a3b7;
+        }
+
+        #answer_right {
+            background-color: #c2d895;
+        }
+        
+
+        .redHighlight {
+            background-color: #ec416c;
+            color: white;
+        }
+
+        .greenHighlight {
+            background-color: #7dac21;
+            color: white;
+        }
+        .greenHighlight2 {
+            background-color: #C3C21C;
+            color: white;
+        }
+        .greenHighlight3 {
+            background-color: #78C21D;
+            color: white;
+        }
+
+        span {
+            border-radius: 2px;
+            padding: 2px 2px;
+            cursor: default;
+        }
+
+        .ui-tooltip {
+            padding: 3px 10px;
+            color: #555;
+            border-radius: 5px;
+            font: 13px "Helvetica Neue", Sans-Serif;
+            box-shadow: 0 0 7px black;
+            width: 90px;
+            text-align: center;
+            background: white;
+            border: 2px solid white;
+        }
+    </style>
+    <!--<script src="./jquery.js"></script>-->
+    <!--<script src="./jquery-ui.min.js"></script>-->
+    <!--<script src="./jquery.transit.min.js"></script>   -->
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="jquery.transit.min.js"></script>
+</head>
+
+<body>
+<!--<div id="debug" style="width:80px; height:50px; background-color: red"></div>-->
+<div id="paragraph">
+    <h3>Original text</h3>
+
+    <p id="origin">Studying in a new environment is different and therefore can be stressful. Tertiary students come from a variety of backgrounds and are studying for different purposes. Students may have come straight from secondary school, they may be a ‘mature age’ student who has decided to pursue another career, or they may be an international student and have just arrived in Australia. For many students whatever their background, tertiary learning is different from their previous studies. Students may be worried about the amount of reading required, or whether they will be able to study efficiently enough to get through their exams. They may also worry about the tertiary learning expectations and requirements.</p>
+
+</div>
+<div id="summary1" style="float: left">
+    <h3>Summary 1</h3>
+
+    <div class="container_3d" style="display: inline-block; float: left; margin-left: 10px">
+        <div class=" card" id="card1">
+            <div class="front face shadow">
+                <p>Students from different backgrounds, including secondary, mature age and international, are concerned about the amount of reading required in tertiary study.</p>
+            </div>
+            <div id="answer_wrong" class="back face shadow">
+                <p>This summary represents the student group reasonably well, but reading is the only challenge mentioned.   The problems of the original are broader and more specific.   The notion of ‘stress ‘ or ‘a new learning environment’ have been omitted in the summary.  </p>
+            </div>
+        </div>
+    </div>
+    <div id="cross1" class="hide" style="display: inline-block; float: left; margin: 90px 0 0 20px"><img src="cross.png">
+    </div>
+</div>
+<div id="summary2" style="float: left">
+    <h3>Summary 2</h3>
+
+    <div class="container_3d" style="display: inline-block; float: left;margin-left: 10px">
+        <div class=" card" >
+            <div class="front face shadow">
+                <p>Tertiary learning is often a new environment for students particularly internationals as they are unsure of what is expected of them.</p>
+            </div>
+            <div id="answer_wrong" class="back face center shadow">
+                <p>This summary is not inaccurate although not the best.  It emphasizes international students which does not reflect the original.  The original specifies problems (i.e. reading and exams) that are not implicit in the words “Being unsure of what is expected”.</p>
+
+            </div>
+        </div>
+    </div>
+    <div id="cross2" class="hide" style="display: inline-block; float: left; margin: 90px 0 0 20px"><img src="cross.png">
+    </div>
+</div>
+<div id="summary3" style="float: left">
+    <h3>Summary 3</h3>
+
+    <div class="container_3d" style="display: inline-block; float: left;margin-left: 10px">
+        <div class=" card">
+            <div class="front face shadow">
+                <p>For many students, including those from diverse backgrounds, it is often difficult to adapt to new tertiary learning environments. Managing workloads, understanding expectations and how to study effectively for exams can be extremely stressful.</p>
+            </div>
+            <div id="answer_right" class="back face center shadow">
+                <p>An accurate and well balanced summary.  </p>
+
+            </div>
+        </div>
+    </div>
+    <div id="tick" class="hide" style="display: inline-block; float: left; margin: 90px 0 0 20px"><img src="tick.png">
+    </div>
+</div>
+<script>
+    $(".hide").hide();
+
+    //trigger flip
+    $(".container_3d").click(function () {
+        console.log($(this).attr("class"))
+        var context = $(this).parent().attr('id');
+        console.log("context: " + context)
+        if($(this).attr("class")!="container_3d flipped") {
+
+            if (detectIE()) {
+                $(this).children(".card").transition({
+                    perspective: '1000px',
+                    rotateY: '89.9deg',
+                    duration: 500
+                }, function () {
+                    $(this).children(".back").css("transform", "rotateY(0deg)")
+                }).transition({
+                    perspective: '1000px',
+                    rotateY: '0deg',
+                    duration: 500
+                }, function () {
+                })
+            }
+            else {
+                $(this).children(".card").transition({
+                    perspective: '1000px',
+                    rotateY: '180deg',
+                    duration: 500
+                }, function () {
+                })
+            }
+
+            if (context == "summary1") {
+                $("#cross1").show();
+            } else if (context == "summary2") {
+                $("#cross2").show();
+            } else {
+                $("#tick").show();
+            }
+            $(this).addClass("flipped")
+        }else{
+            if (detectIE()) {
+                $(this).children(".card").transition({
+                    perspective: '1000px',
+                    rotateY: '89.9deg',
+                    duration: 500
+                }, function () {
+                    $(this).children(".back").css("transform", "rotateY(180deg)")
+                }).transition({
+                    perspective: '1000px',
+                    rotateY: '0deg',
+                    duration: 500
+                }, function () {})
+            }
+            else {
+                $(this).children(".card").transition({
+                    perspective: '1000px',
+                    rotateY: '0deg',
+                    duration: 500
+                }, function () {})
+            }
+            if (context == "summary1") {
+                $("#cross1").hide();
+            } else if (context == "summary2") {
+                $("#cross2").hide();
+            } else {
+                $("#tick").hide();
+            }
+            $(this).removeClass("flipped")
+        }
+        buildHover(context)
+
+    })
+
+
+
+    //build hover effect for the card
+    function buildHover(context) {
+        $("[class='container_3d']").mouseenter(function () {
+            $(this).children(".card").transition({
+                perspective: '1000px',
+                rotateY: '-20deg',
+                duration: 500
+            })
+        }).mouseleave(function () {
+            $(this).children(".card").transition({
+                perspective: '1000px',
+                rotateY: '0deg',
+                duration: 300
+            })
+        });
+        $("[class='container_3d flipped']").unbind('mouseenter mouseleave')
+    }
+
+
+    //highlight corresponding parts
+    function bindHoverForWords() {
+        $("span").mouseenter(function () {
+            var id = $(this).attr("answer");
+            console.log($("[answer=id]"))
+            $('[answer=' + id + ']').animate({opacity: .5})
+        });
+        $("span").mouseleave(function () {
+            var id = $(this).attr("answer");
+            console.log($("[answer=id]"))
+            $('[answer=' + id + ']').animate({opacity: 1})
+        });
+    }
+    function unbindHoverForWords() {
+        $("span").unbind('mouseenter mouseleave');
+    }
+
+
+    //for reset to initial state when flip back
+    function reset(context) {
+        var another = "";
+        if (context == "summary1") {
+            another = "summary2"
+        } else {
+            another = "summary1"
+        }
+        console.log("another: " + another)
+        dehighlight(another)
+        $("#" + another + "_fbk").hide();
+        if (detectIE()) {
+//            $("#" + another).children(".container_3d").children().transition({
+//                perspective: '1000px',
+//                rotateY: '0deg',
+//                duration: 0
+//            },function(){
+            $("#" + another).children(".container_3d").children().fadeOut(400,function(){
+                $("#" + another).children(".container_3d").children().children(".back").css("transform", "rotateY(180deg)")
+                $("#" + another).children(".container_3d").children().css("transform", "rotateY(0deg)")
+            })
+            $("#" + another).children(".container_3d").children().fadeIn()
+
+//            $("#" + another).children(".container_3d").children().fadeIn("slow")
+//                $(this).children(".back").css("transform", "rotateY(180deg)")
+//                $(this).fadeIn("slow")
+//            }).transition({
+//                perspective: '1000px',
+//                rotateY: '0deg'
+//            });
+        } else {
+            $("#" + another).children(".container_3d").children().transition({
+            perspective: '1000px',
+            rotateY: '0deg',
+                duration: 250
+            });
+        }
+        $("#origin").show();
+        $("#" + another + "_origin").hide();
+    }
+
+    //highlight & dehighlight
+    function highlight(context) {
+        for (var i = 0; i < 5; i++) {
+            var id = "[answer=" + context + "_" + i + "]";
+            if (context == "summary1")
+                $(id).delay(1500 * i + 1000).addClass("redHighlight", 400)
+            else {
+                if(i==0)
+                $(id).delay(1500 * i + 1000).addClass("greenHighlight", 400)
+                if(i==1)
+                    $(id).delay(1500 * i + 1000).addClass("greenHighlight2", 400)
+                if(i==2)
+                    $(id).delay(1500 * i + 1000).addClass("greenHighlight3", 400)
+            }
+        }
+
+    }
+    function dehighlight(context) {
+        var id = "[answer^=" + context + "]";
+        if (context == "summary2")
+
+            $("span[answer]").stop().removeClass("redHighlight")
+        else
+            $("span[answer]").stop().removeClass("greenHighlight")
+        $("span[answer]").stop().removeClass("greenHighlight2")
+        $("span[answer]").stop().removeClass("greenHighlight3")
+    }
+
+    //replay
+//    $("#replay1").click(function () {
+//        dehighlight("summary1");
+//        highlight("summary1")
+//    }).css("cursor", "pointer");
+//    $("#replay2").click(function () {
+//        dehighlight("summary2");
+//        highlight("summary2")
+//    }).css("cursor", "pointer");
+
+
+    //detect IE
+    function detectIE() {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf('MSIE ');
+        var trident = ua.indexOf('Trident/');
+
+        if (msie > 0) {
+            // IE 10 or older => return version number
+            return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+        }
+
+        if (trident > 0) {
+            // IE 11 (or newer) => return version number
+            var rv = ua.indexOf('rv:');
+            return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+        }
+
+        // other browser
+        return false;
+    }
+
+</script>
+</body>
+</html>

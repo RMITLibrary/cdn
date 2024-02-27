@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="user-scalable" content="no">
+
+    <title>Essay structure activity</title>
+    <style>
+        body {
+            width: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-size: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            /*margin: 20px 0;*/
+            padding: 0px;
+        }
+
+        .small {
+            font-size: 13px;
+            width: 400px;
+            height: 250px;
+            line-height: 18px;
+        }
+
+        .large {
+            font-size: 18px;
+            width: 545px;
+            height: 300px;
+            line-height: 27px;
+
+        }
+
+        /*span {*/
+        /*background-color: aliceblue;*/
+        /*}*/
+
+        .word {
+            /*border: dashed;*/
+        }
+
+        .green {
+            background-color: #7dac21;
+            color: white;
+        }
+        .answer {
+            background-color: #7dac21;
+            color: white;
+        }
+
+        .red {
+            background-color: red;
+            color: white;
+        }
+
+        span {
+            border-radius: 2px;
+            padding: 0;
+            margin:0 1px;
+            display:inline-block;
+            cursor: pointer;
+        }
+
+        font{
+            border-radius: 2px;
+            /*margin:0 1px;*/
+            padding: 2px 0;
+
+        }
+
+        /*.mark{*/
+            /*background-color: #7dac21;*/
+            /*color: white;*/
+            /*padding:1px 25px;*/
+            /*margin: 0;*/
+        /*}*/
+
+    </style>
+    <link rel="stylesheet" href="./assets/anythingzoomer.css">
+    <link rel="stylesheet" href="./assets/tooltipster.css">
+    <script src="./assets/jquery.js"></script>
+    <script src="./assets/jquery-ui.min.js"></script>
+    <script src="./assets/jquery.anythingzoomer.min.js"></script>
+    <script src="./assets/jquery.mobile.custom.min.js"></script>
+</head>
+
+<body>
+<div style="position: relative; top: 25px;">
+    <div id="zoom">
+        <div class="small">
+            <p class="output" >It is clear that the Fitzgeralds’ leadership style failed to communicate clear goals and visions to their employees. Both Robbins et al. (1994) and Sief (1991) suggest that leadership is the ability to guide people towards shared goals and visions which are in the best interests of an organisation and its staff.<span class="answer"> Unfortunately the Fitzgerald’s leadership style failed to build shared objectives and visions with their employees. </span>Management’s lack of inclusiveness in the implementation of the changes has resulted in dissatisfied clients, staff and management who blamed staff for not taking responsibility for their jobs.<span class="answer">  The Fitzgerald's communication strategy was not effective </span>and did not build the mutual objectives necessary between the hotel staff and management to achieve organisational efficiency (Robbins et al. 1994).<span class="answer">  Rather, their style of leadership was destructive and divisive.</span></p>
+        </div>
+        <!--<-- the large content can be cloned from the small content &ndash;&gt;-->
+        <!--<div class="large">-->
+            <!--<p class="output" >It is clear that the Fitzgeralds’ leadership style failed to communicate clear goals and visions to their employees. Both Robbins et al. (1994) and Sief (1991) suggest that leadership is the ability to guide people towards shared goals and visions which are in the best interests of an organisation and its staff.<span class="answer"> Unfortunately the Fitzgerald’s leadership style failed to build shared objectives and visions with their employees. </span>Management’s lack of inclusiveness in the implementation of the changes has resulted in dissatisfied clients, staff and management who blamed staff for not taking responsibility for their jobs.<span class="answer">  The Fitzgerald's communication strategy was not effective </span>and did not build the mutual objectives necessary between the hotel staff and management to achieve organisational efficiency (Robbins et al. 1994).<span class="answer">  Rather, their style of leadership was destructive and divisive.</span></p>-->
+        <!--</div>-->
+        <div id="origin" class="hide">
+            <p id="withAnswer" style="display:inline-block">It is clear that the Fitzgeralds’ leadership style failed to communicate clear goals and visions to their employees. Both Robbins et al. (1994) and Sief (1991) suggest that leadership is the ability to guide people towards shared goals and visions which are in the best interests of an organisation and its staff.<span class="answer"> Unfortunately the Fitzgerald’s leadership style failed to build shared objectives and visions with their employees. </span>Management’s lack of inclusiveness in the implementation of the changes has resulted in dissatisfied clients, staff and management who blamed staff for not taking responsibility for their jobs.<span class="answer">  The Fitzgerald's communication strategy was not effective </span>and did not build the mutual objectives necessary between the hotel staff and management to achieve organisational efficiency (Robbins et al. 1994).<span class="answer">  Rather, their style of leadership was destructive and divisive.</span></p>
+        </div>
+    </div>
+    <!--<div id="correctCount" style="display:inline-block; position: absolute; left: 450px; font-size: 30pt">3</div>-->
+
+</div>
+<div style="position: relative; top:100px; left:50px;display:inline-block">
+    <button  onclick="showAnswer()">Show Answer</button>
+    <button  onclick="clearAnswer()">Clear</button>
+</div>
+<script>
+
+    //initialization
+    $(".hide").hide();
+    var originParagraph = $(".output").text();
+    var workParagraph = "";
+    var clickedText = "";
+    var startIndex;
+
+    function tokenWords() {
+//        workParagraph = originParagraph;
+//        var words = originParagraph.split(/[\W,]+/);
+//        var startIndex = 0;
+//        for (var i = 0; i < words.length; i++) {
+//            startIndex = workParagraph.indexOf(words[i], startIndex);
+//            var wordLength = words[i].length;
+//            workParagraph = [workParagraph.slice(0, startIndex), "<span class='word'>", workParagraph.slice(startIndex)].join('');
+//            startIndex += 19 + wordLength;
+//            workParagraph = [workParagraph.slice(0, startIndex), "</span>", workParagraph.slice(startIndex)].join('');
+//            startIndex += 7;
+//        }
+
+        workParagraph ="<span class='word'>"+ originParagraph.split(" ").join("</span><span class='word'>");
+    }
+
+    function markAnswer(workParagraph) {
+        startIndex = workParagraph.indexOf("<span class='word'>Unfortunately");
+        workParagraph = [workParagraph.slice(0, startIndex), "<font class='answer'>", workParagraph.slice(startIndex)].join('');
+        startIndex = workParagraph.indexOf("<span class='word'>Management");
+        workParagraph = [workParagraph.slice(0, startIndex), "</font>", workParagraph.slice(startIndex)].join('');
+
+        startIndex = workParagraph.indexOf("<span class='word'>The");
+        workParagraph = [workParagraph.slice(0, startIndex), "<font class='answer'>", workParagraph.slice(startIndex)].join('');
+        startIndex = workParagraph.indexOf("<span class='word'>and</span><span class='word'>did</span>");
+        workParagraph = [workParagraph.slice(0, startIndex), "</font>", workParagraph.slice(startIndex)].join('');
+
+        startIndex = workParagraph.indexOf("<span class='word'>Rather");
+        workParagraph = [workParagraph.slice(0, startIndex), "<font class='answer'>", workParagraph.slice(startIndex)].join('');
+        startIndex = workParagraph.length;
+        workParagraph = [workParagraph.slice(0, startIndex), "</font>", workParagraph.slice(startIndex)].join('');
+        $(".output").html(workParagraph);
+
+    }
+
+
+    tokenWords();
+//    markAnswer();
+    $(".output").html(workParagraph);
+    $('body').disableSelection();
+
+    $("#zoom").anythingZoomer({
+        // content areas
+        smallArea: 'small',    // class of small content area; the element with this class name must be inside of the wrapper
+        largeArea: 'large',    // class of large content area; this class must exist inside of the wrapper. When the clone option is true, it will add this automatically
+        clone: true,      // Make a clone of the small content area, use css to modify the style
+
+        // appearance
+        overlay: false,      // set to true to apply overlay class "az-overlay"; false to not apply it
+        speed: 200,        // fade animation speed (in milliseconds)
+        edge: 10,         // How far outside the wrapped edges the mouse can go; previously called "expansionSize"
+        offsetX: 0,          // adjust the horizontal position of the large content inside the zoom window as desired
+        offsetY: 10,          // adjust the vertical position of the large content inside the zoom window as desired
+
+        // functionality
+        switchEvent: 'none', // event that allows toggling between small and large elements - default is double click
+        delay: 0,          // time to delay before revealing the zoom window
+
+        // edit mode
+        edit: false,      // add x,y coordinates into zoom window to make it easier to find coordinates
+
+        // callbacks
+        initialzied: function (event, zoomer) {
+        }, // AnythingZoomer done initializing
+        zoom: function (event, zoomer) {
+        }, // zoom window visible
+        unzoom: function (event, zoomer) {
+        }  // zoom window hidden
+
+    });
+
+
+//        $('#zoom').anythingZoomer('disable');
+
+
+    //get the clicked text
+    var clickCount = 0;
+    var correctCount = 0;
+
+
+    $(".word").bind("click", function () {
+        clickText(this)
+    });
+//    $(".word").click(clickText(this));
+
+    function clickText (context) {
+
+        clickedText = $(context).text();
+        console.log("clicked text:" + clickedText);
+
+        if (clickCount == 0) {
+            $(context).addClass("start_mark mark green");
+            clickCount++;
+            synchronize()
+        } else {
+            switchBindClick(false)
+            $(context).addClass("end_mark mark green");
+            clickCount = 0;
+//            $(".word").unbind("click", function () {
+//                clickText(this)
+//            });
+            synchronize()
+            highlightSentence()
+            checkAnswer()
+
+
+            switchBindClick(true)
+
+        }
+    }
+
+    function synchronize(){
+        var duplicate = $(".az-large-inner").children(".output").clone();
+//        $(".az-small-inner").replaceWith(duplicate);
+        $(".az-small-inner").children(".output").replaceWith(duplicate);
+    }
+
+    function switchBindClick(toBind){
+//        if(toBind==true){
+////            console.log("binded")
+//            $(".word").bind("click", function () {
+//                clickText(this)
+//            });        }else{
+////            console.log("unbinded")
+//
+//            $(".word").unbind("click");
+//        }
+//        $(".correct").children(".word").removeClass("word")
+        $('.correct').children(".word").unbind("click")
+
+
+    }
+
+
+    function highlightSentence() {
+        //swap start_mark and end_mark if they are wrong way around.
+        if($('.start_mark:first').index() > $('.end_mark:first').index()){
+            $(".start_mark").addClass("temp_mark").removeClass("start_mark")
+            $(".end_mark").addClass("start_mark").removeClass("end_mark")
+            $(".temp_mark").addClass("end_mark").removeClass("temp_mark")
+        }
+
+        $(".start_mark").nextUntil(".end_mark").addClass("mark");
+        $(".az-large-inner").find(".mark").wrapAll("<font class=' answered' />");
+        $(".az-small-inner").find(".mark").wrapAll("<font class=' answered' />");
+        $(".start_mark").removeClass("start_mark green")
+        $(".end_mark").removeClass("end_mark green")
+    }
+
+    function checkAnswer(){
+        var count=0
+
+        $(".answer").each(function(){
+                    count++;
+            console.log($(".answered:first").text())
+            console.log($(this).text().replace(/\s+/g, ''))
+            if($(".answered:first").text()== $(this).text().replace(/\s+/g, ''))
+            {
+                console.log("correct")
+                $(".answered").addClass("correct green")
+                $(".answered").removeClass("answered")
+                $(".mark").removeClass("mark")
+                correctCount++;
+                return false;
+            }
+            else{
+                if(count==3) {
+                    console.log("incorrect")
+                    $(".word").unbind("click")
+
+                    $(".answered").removeClass("green")
+                    $(".answered").addClass("red", 200)
+                    $(".answered").delay(400).removeClass("red answered", 400);
+
+                    setTimeout(function () {
+                        $(".mark").unwrap("<font></font>")
+                        $(".mark").removeClass("mark")
+                        $(".word").bind("click", function () {
+                            clickText(this)
+                        });
+                    }, 1100)
+
+                    return false;
+                }
+            }
+        }
+
+    )
+
+    }
+
+    //show answers
+    function showAnswer() {
+        var duplicate = workParagraph
+        markAnswer(duplicate)
+    }
+
+    //clear
+    function clearAnswer() {
+        $(".output").html(workParagraph)
+        $(".word").bind("click", function () {
+            clickText(this)
+        });
+    }
+
+
+</script>
+</body>
+
+</html>

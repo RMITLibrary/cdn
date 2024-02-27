@@ -1,0 +1,33 @@
+/**
+ * Created by chengchengding on 25/03/15.
+ */
+
+var assmpArray=[
+    "Students know that copying from each other is wrong, so they must realise that copying from a text book is also wrong.  ",
+    "Even if a student has weak grammatical skills, they will at least know what a paragraph is for.",
+    "If a student can write with a reasonable level of grammatical accuracy, I would know what they are talking about.",
+    "Students do referencing at secondary school these days, so they should have some idea of what to do. ",
+    "I’m just asking them to reflect and explain their perspective on something.   This should not be difficult. ",
+    "After 12 years or more of education, students should be able to read books and find the information. ",
+    "After 12 years or more of education, students should be able to read a research article.",
+    "Surely just including 1 or 2 journal articles in their essay  is not too hard. ",
+    "If I give them a rubric, they will know what I want of them.  ",
+    "Students critically analyse texts in English at school.   They should be able to critique an article.  ",
+    "If the student knows the material, they should be able to answer a two or three lined question. ",
+    "If I have asked them to outline something and analyse it, they should know to spend at least half the assignment on the analysis.  "
+];
+
+var answers = [
+"Some students see printed texts as authoritative and to be emulated.   These students consider copying to be diligent scholarship, and respectful of the author.  Copying from authoritative texts is not equated with cutting corners by copying a friend’s assignment.",
+"Many native English speakers do not understand that a paragraph represents a single idea.  Paragraphing may not exist or have the same structure in other languages and needs to be taught explicitly.    Many students define their paragraph by word count rather than subject matter.  Topic sentences are often taught in Australian secondary schools, however deciding whether sentences are relevant to it is a more demanding task for academic writing.",
+    "Grammar makes individual sentences coherent, however these sentences still need to be organised into paragraphs.   These paragraphs need to be structured in the way that the reader expects a message to be conveyed.  Otherwise the text will come across as lacking purpose or direction or devoid of a clear argument.  Students need to be shown the appropriate structure and given feedback where their assignment structure is inappropriate or unclear.",
+    "While the concept is introduced at some secondary schools, the requirements are not applied as stringently as they are at tertiary level. Secondary school essays are not as densely packed with citable information and the research process is not as extensive.   Even if a reference list is required, in-text referencing (which is the greater challenge) is often not included.",
+    "Reflective writing is not a genre taught at secondary school and while students have been asked to express their opinions in writing, they are not asked to explain their affective stances or analyse a changing perspective. Placing themselves central to the learning enquiry goes against everything they have been taught within content focused disciplines requiring objective reasoning.",
+    "Students from secondary school or from overseas see reading as having defined limits and structured by the teacher. Students have not had to independently navigate entire texts, let alone a database of research articles. For some students reading is seen as an actionable task rather than as a means for gathering information.  Close reading (from beginning to end) may have been required for a thorough understanding of a text at school.   However, pre-reading strategies, (skimming and scanning) are required for efficiently locating information at tertiary level.",
+    "Reading research articles is quite demanding for many reasons. Some of the language or information in an article can be quite inscrutable. Students feel that an inability to understand some of the more complex sections (such as results and technical data) negates their ability to engage with the text at all. Students may need to be taught about which sections need to be engaged with first, and about how to read from an overview to finer detail, rather than sequentially.",
+    "Many students do not realise that research articles are highly focused texts aimed at readers who are highly conversant in the field. Students will be discouraged from the task if they try to engage with a journal article before they are ready. They need to know that their entry point to some topics may start at the level of a ‘secondary source’ such as a book or even a ‘tertiary source’ including course textbooks, dictionaries or encyclopaedias before they can engage meaningfully with the research article itself.",
+    "Some students can use a rubric well, however many interpret it as an assignment plan. While some rubrics provide this double function, a rubric that is purposed solely as a marking scheme may be applied as an outline inappropriately and the student might then overlook the original task statement.",
+    "Analysis of texts in English at VCE level focuses on language as a tool for persuasion. Students are cued to spot false premises or inconsistent logic however this is always within the context of everyday journalistic texts. The student is not expected to engage critically with the reality that is conveyed through an account of a research study and often they do not have the disciplinary knowledge or confidence to do so either.",
+    "Students frequently misinterpret questions unless explicitly taught how to analyse them. Students focus primarily on the content words within a question. They pay less attention to the directives (eg. compare analyse etc.) and are likely to overlook limiting terms (eg. “in the Australian context”). Long preambles before the core of the question frequently distract and confuse.",
+    "Without a concept of Bloom’s Taxonomy of Cognitive Levels, ‘outlining’ and ‘analysing’ might be seen as equally important. Secondary and overseas education focuses on a grasp of content information and such students will prioritise outlining. Outlines deal with defined knowledge or texts while analysis demands a degree of originality.   Students do not see generating new knowledge (rather than demonstrating accepted knowledge) as core to their learning. Therefore higher order tasks tend to get marginalised to the status of concluding comments."
+];

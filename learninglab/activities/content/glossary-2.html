@@ -92,7 +92,7 @@
 </script>
 
 </head>
-<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-1067 node-type-book book-child lower-level" >
+<body>
 
 
 <div id="page" class="page">
@@ -165,59 +165,59 @@
 			<button class="btn btn-default" id="check_btn" onclick="checkAnswer('tab3')">Check answer</button><button class="btn btn-default" id="show_btn" onclick="showAnswer('tab3')">Show Answer</button><button class="btn btn-default" id="clear_btn" onclick="clearAnswer('tab3')">Clear</button></div>
 	</div>
 	
-			  <script>
-        //show answers
-        var showAnswer = function(tab) {
-            var tab = "#"+tab
+  <script>
+    //show answers
+    var showAnswer = function(tab) {
+        var tab = "#"+tab
+        jQuery(tab+" #show_btn").addClass('disabled');  
+        jQuery(tab+" #check_btn").addClass('disabled');  
+        jQuery(tab+" #clear_btn").show();
+
+        jQuery(tab+' .question').each(function(){
+            var answer = jQuery(this).attr('answer')
+            jQuery(this).find('input[value='+answer+']').prop("checked", true).parent().css('background','#DFF0D8')
+        })
+    }
+
+    //clear answers
+    var clearAnswer= function(tab) {
+        var tab = "#"+tab
+        jQuery(tab+" #show_btn").removeClass('disabled');
+        jQuery(tab+" #check_btn").removeClass('disabled');
+        jQuery(tab+" #clear_btn").removeClass('disabled');
+        jQuery(tab+" .outcome").remove();
+        jQuery(tab+' #score').text("")
+        jQuery(tab+' .question').each(function(){
+            jQuery(this).find('input[type="radio"]').prop("checked", false).parent().css('background','')
+        })
+    }
+
+    //Check answer
+    var checkAnswer = function(tab){
+        var tab = "#"+tab
+        if(jQuery(tab+' input[type=radio]:checked').length<5){
+            jQuery(tab+' #score').text("Please answer all the questions.")
+        }else{
             jQuery(tab+" #show_btn").addClass('disabled');  
-            jQuery(tab+" #check_btn").addClass('disabled');  
-            jQuery(tab+" #clear_btn").show();
-
             jQuery(tab+' .question').each(function(){
+                var $checked=jQuery(this).find('input[type=radio]:checked')
+                var checked = $checked.attr("value")
                 var answer = jQuery(this).attr('answer')
-                jQuery(this).find('input[value='+answer+']').prop("checked", true).parent().css('background','#DFF0D8')
+
+                if(answer==checked){
+                    $checked.parent().append('<span class="outcome right"><i class="fa fa-check" aria-hidden="true"></i></span>')
+                }else{
+                    $checked.parent().append('<span class="outcome wrong"><i class="fa fa-times" aria-hidden="true"></i></span>')
+                    if(tab!="#tab3")$checked.parent().addClass("color4-h");
+                }
+                if(tab!="#tab3")jQuery(this).find('input[value='+answer+']').parent().addClass("color2-h");
             })
+            jQuery(tab+' #score').text("You scored "+jQuery(".right").length+" out of 5.");
+            jQuery(tab+' #check_btn').addClass('disabled');                    
         }
 
-        //clear answers
-        var clearAnswer= function(tab) {
-            var tab = "#"+tab
-            jQuery(tab+" #show_btn").removeClass('disabled');
-            jQuery(tab+" #check_btn").removeClass('disabled');
-            jQuery(tab+" #clear_btn").removeClass('disabled');
-            jQuery(tab+" .outcome").remove();
-            jQuery(tab+' #score').text("")
-            jQuery(tab+' .question').each(function(){
-                jQuery(this).find('input[type="radio"]').prop("checked", false).parent().css('background','')
-            })
-        }
-
-        //Check answer
-        var checkAnswer = function(tab){
-            var tab = "#"+tab
-            if(jQuery(tab+' input[type=radio]:checked').length<5){
-                jQuery(tab+' #score').text("Please answer all the questions.")
-            }else{
-                jQuery(tab+" #show_btn").addClass('disabled');  
-                jQuery(tab+' .question').each(function(){
-                    var $checked=jQuery(this).find('input[type=radio]:checked')
-                    var checked = $checked.attr("value")
-                    var answer = jQuery(this).attr('answer')
-
-                    if(answer==checked){
-                        $checked.parent().append('<span class="outcome right"><i class="fa fa-check" aria-hidden="true"></i></span>')
-                    }else{
-                        $checked.parent().append('<span class="outcome wrong"><i class="fa fa-times" aria-hidden="true"></i></span>')
-                        if(tab!="#tab3")$checked.parent().addClass("color4-h");
-                    }
-                    if(tab!="#tab3")jQuery(this).find('input[value='+answer+']').parent().addClass("color2-h");
-                })
-                jQuery(tab+' #score').text("You scored "+jQuery(".right").length+" out of 5.");
-                jQuery(tab+' #check_btn').addClass('disabled');                    
-            }
-
-        }
-    </script>
+    }
+</script>
 
 
 </div>

@@ -1,0 +1,549 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sacale=1, maximum-scale=1, user-salable=no">
+    <title>language and academic skills</title>
+    <script src="assets/jquery.js"></script>
+    <script src="assets/jquery-ui.min.js"></script>
+    <!--<script src="./packery.pkgd.min.js"></script>-->
+    <!--<script src="assets/masonry.pkgd.min.js"></script>-->
+    <script src="assets/jquery.ui.touch-punch.min.js"></script>
+</head>
+
+<body>
+    <!--<div class="droppable" style="float: right">debug</div>-->
+    <div>
+        <div id="paragraph" style="float: left; width: 360px; margin-bottom: 30px">
+            <div class="droppable purpose" id="purpose"></div>
+            <div class="droppable structure" id="structure"></div>
+            <div class="droppable integrating" id="integrating"></div>
+            <div class="droppable referencing" id="referencing"></div>
+            <div class="droppable sentences" id="sentences"></div>
+        </div>
+        <div id="panel">
+            <div id="sortable" style="position: absolute; text-align: right;float: right">
+                <div id="draggable1" class="answer " ref="referencing" style="width: 130px">
+                    <p><strong>Referencing</strong>
+                        <br> in text reference list</p>
+                </div>
+                <div id="draggable2" class="answer " ref="sentences" style="width: 150px">
+                    <p><strong>Sentences</strong>
+                        <br> spelling punctuation grammar</p>
+                </div>
+                <div id="draggable3" class="answer " ref="integrating" style="width: 170px">
+                    <p><strong>Integrating references</strong>
+                        <br> paraphrases, synthesis</p>
+                </div>
+                <div id="draggable4" class="answer " ref="purpose" style="width: 190px">
+                    <p><strong>Purpose</strong>
+                        <br> Understanding the task Addressing the question</p>
+                </div>
+                <div id="draggable5" class="answer " ref="structure" style="width: 210px">
+                    <p><strong>Structure</strong>
+                        <br> thesis/argument, introduction, conclusion, paragraphs</p>
+                </div>
+            </div>
+        </div>
+        <div style="width: 400px; position: absolute; left:300px" id="note" class="hide">
+            <p style="color: red; text-align: left; margin:50px 100px 50px 100px"><strong>Higher order skills</strong>
+                <br>
+                <br> Can be supported by the lecturer using the rubric, models, examples and practice activities e.g. Learning Lab
+            </p>
+            <p style="color: blue;text-align: left; width: 200px; float: left"><strong>Lower order skills</strong>
+                <br>
+                <br> Mainly a student responsibility, with general feedback from the lecturer
+            </p>
+        </div>
+        <div style="width: 600px; position: absolute;top:380px;" id="note2" class="hide">
+            <p style="color: black; text-align: left">
+                Academics may not be English teachers but they can give very valuable feedback to their students on higher order skills. This formative feedback provides students with clear strategies for improvement.
+            </p>
+        </div>
+    </div>
+    <div style="position: absolute; top:450px">
+        <button id="show_btn" class="btn btn-default" onclick="showAnswer()">
+            Show Answer
+        </button>
+        <button id="clear_btn" class="btn btn-default" onclick="clearAnswer()">
+            Clear
+        </button>
+    </div>
+    <script>
+    console.log("script running")
+    $(".hide").hide();
+    var correctCount = 0;
+    //			var mouseoverId="";
+    var droppableId = "";
+
+
+    //initialise sortables and draggables
+    //			var $container = $('#sortable').packery({
+    //				columnWidth: 25,
+    ////				isInitLayout: true,
+    //				"isHorizontal": true,
+    //				"isOriginLeft": true,
+    //				rowHeight: 20,
+    //				"gutter": 5
+    //				});
+    //			 $('#sortable').masonry({
+    //				columnWidth: 25,
+    //				isInitLayout: true,
+    //				"isHorizontal": true,
+    //				"isOriginLeft": true,
+    //				rowHeight: 20,
+    //				"gutter": 5
+    //				});
+    //
+
+    $(".answer").draggable({
+        scroll: false,
+        revert: function(droppableContainer) {
+            if (droppableContainer) {
+                //if drop is valid i.e. draggable is dropped on a valid droppable or droppable has accepted the draggable
+                //						$('#sortable').masonry( 'layout')
+                $(this).addClass('highlight_container');
+                $(this).css("height", "46px")
+
+            } else {
+                //if drop is invalid i.e. droppable has not accepted the draggable
+                $(this).effect("shake");
+            }
+            return (!droppableContainer) //returns true if invalid drop i.e draggable will revert and false if the draggable has been dropped correctly and thus no revert
+        },
+
+        //				stop: function() {
+        //					$('#container_drop').removeClass('highlight_container');
+        //				}
+    });
+
+
+
+
+    //initialise droppables
+    $("#referencing").droppable({
+        accept: "#draggable1",
+        activeClass: "",
+        hoverClass: "",
+        drop: function(event, ui) {
+            $(this).html($("#draggable1").children()).removeClass("droppable").addClass("answered ");
+            $("#draggable1").hide();
+            correctCount++;
+            checkComplete()
+        }
+    });
+    $("#sentences").droppable({
+        accept: "#draggable2",
+        activeClass: "",
+        hoverClass: "",
+        drop: function(event, ui) {
+            $(this).css({
+                "padding-top": "2px",
+                "margin": "4px 0"
+            }).html($("#draggable2").children().css('width', '50px')).removeClass("droppable").addClass("answered ");
+            $("#draggable2").hide();
+            correctCount++;
+            checkComplete()
+        }
+    });
+    $("#integrating").droppable({
+        accept: "#draggable3",
+        activeClass: "",
+        hoverClass: "",
+        drop: function(event, ui) {
+            $(this).html($("#draggable3").children()).removeClass("droppable").addClass("answered ");
+            $("#draggable3").hide();
+            correctCount++;
+            checkComplete()
+        }
+    });
+    $("#purpose").droppable({
+        accept: "#draggable4",
+        activeClass: "",
+        hoverClass: "",
+        drop: function(event, ui) {
+            $(this).html($("#draggable4").children()).removeClass("droppable").addClass("answered ");
+            $("#draggable4").hide();
+            correctCount++;
+            checkComplete()
+        }
+    });
+    $("#structure").droppable({
+        accept: "#draggable5",
+        activeClass: "",
+        hoverClass: "",
+        drop: function(event, ui) {
+            $(this).css({
+                "padding-top": "2px",
+                "margin": "4px 0"
+            }).html($("#draggable5").children().css('width', '250px')).removeClass("droppable").addClass("answered");
+            $("#draggable5").hide();
+            correctCount++;
+            checkComplete()
+        }
+    });
+
+
+    //check answer
+    function checkComplete() {
+        $("#show_btn").hide();
+        $("#clear_btn").show();
+        if (correctCount >= 5) {
+            $("#sortable").hide();
+            $("#note").delay(1000).fadeIn(1500);
+            $("#note2").delay(2000).show("bounce", 1500);
+
+            $("#purpose").animate({
+                opacity: 0
+            }, 1000).addClass("purpose_done", 100).animate({
+                opacity: 100
+            }, 1000);
+            $("#structure").animate({
+                opacity: 0
+            }, 1000).addClass("structure_done", 100).animate({
+                opacity: 100
+            }, 1000);
+            $("#integrating").animate({
+                opacity: 0
+            }, 1000).addClass("integrating_done", 100).animate({
+                opacity: 100
+            }, 1000);
+            $("#referencing").animate({
+                opacity: 0
+            }, 1000).addClass("referencing_done", 100).animate({
+                opacity: 100
+            }, 1000);
+            $("#sentences").animate({
+                opacity: 0
+            }, 1000).addClass("sentences_done", 100).animate({
+                opacity: 100
+            }, 1000);
+        }
+    }
+
+
+
+    //show answers
+    function showAnswer() {
+        $("#show_btn").hide();
+        $("#clear_btn").show();
+
+        for (var i = 1; i < 6; i++) {
+            droppableId = "#" + $("#draggable" + i).attr("ref");
+            console.log("droppableId: " + droppableId)
+            console.log($(droppableId).position().top)
+            $("#draggable" + i).animate({
+                top: $(droppableId).position().top - $("#draggable" + i).position().top,
+                left: ($(droppableId).position().left - $(droppableId).width() / 1.2)
+            }, 500);
+            console.log($("#draggable" + i).position().top)
+        }
+
+
+        setTimeout(function() {
+
+            $("#referencing").html($("#draggable1").children()).removeClass("droppable").addClass("answered ");
+            $("#sentences").css({
+                "padding-top": "2px",
+                "margin": "4px 0"
+            }).html($("#draggable2").children().css('width', '50px')).removeClass("droppable").addClass("answered ");
+            $("#integrating").html($("#draggable3").children()).removeClass("droppable").addClass("answered ");
+            $("#purpose").html($("#draggable4").children()).removeClass("droppable").addClass("answered ");
+            $("#structure").css({
+                "padding-top": "2px",
+                "margin": "4px 0"
+            }).html($("#draggable5").children().css('width', '250px')).removeClass("droppable").addClass("answered");
+
+
+            for (var k = 1; k < 6; k++) {
+                //					var droppableId="#"+$("#draggable"+k).attr("ref");
+                //					$(droppableId).html($("#draggable"+k).children())
+                //					$(droppableId).removeClass("droppable");
+                //					$(droppableId).addClass("answered");
+                $("#draggable" + k).animate({
+                    opacity: 0
+                }, 300, function() {
+                    correctCount++;
+                    checkComplete()
+                });
+            }
+        }, 420);
+    }
+
+    //clear answers
+    function clearAnswer() {
+        console.log("clear answer");
+        location.reload(true);
+        correctCount = 0;
+    }
+
+
+    //utility
+    function isObjOnObj(a, b) {
+        var al = a.left;
+        var ar = a.left + a.width;
+        var bl = b.left;
+        var br = b.left + b.width;
+
+        var at = a.top;
+        var ab = a.top + a.height;
+        var bt = b.top;
+        var bb = b.top + b.height;
+
+        if (bl > ar || br < al) {
+            return false;
+        } //overlap not possible
+        if (bt > ab || bb < at) {
+            return false;
+        } //overlap not possible
+
+        if (bl > al && bl < ar) {
+            return true;
+        }
+        if (br > al && br < ar) {
+            return true;
+        }
+
+        if (bt > at && bt < ab) {
+            return true;
+        }
+        if (bb > at && bb < ab) {
+            return true;
+        }
+
+        return false;
+    }
+
+    //bit layout fix
+    </script>
+    <style>
+    body {
+        width: 480px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        background-size: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    p {
+        margin: auto;
+        padding: 0px;
+        text-align: center;
+        color: white;
+    }
+    
+    #panel {
+        float: right;
+        width: 210px;
+        position: absolute;
+        left: 350px;
+    }
+    
+    #sortable {
+        float: right;
+    }
+    
+    .droppable {
+        /*margin: 5px;*/
+        text-align: center;
+        height: 46px;
+        padding-top: 10px;
+    }
+    
+    .answer {
+        border-radius: 5px;
+        padding: 4px 5px 7px 5px;
+        background-color: #7dac21;
+        color: white;
+        cursor: pointer;
+        /*white-space:nowrap;*/
+        text-align: center;
+        float: right;
+        margin-bottom: 18px;
+        font-size: 9pt;
+    }
+    
+    strong {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .answered {
+        color: white;
+        /*margin: 5px;*/
+        padding-top: 10px;
+        text-align: center;
+        height: 46px;
+        font-size: 9pt;
+        vertical-align: middle;
+    }
+    
+    .purpose {
+        background: url(./assets/purpose.svg) no-repeat center
+    }
+    
+    .structure {
+        background: url(./assets/structure.svg) no-repeat center
+    }
+    
+    .integrating {
+        background: url(./assets/integrating.svg) no-repeat center
+    }
+    
+    .referencing {
+        background: url(./assets/referencing.svg) no-repeat center
+    }
+    
+    .sentences {
+        background: url(./assets/sentences.svg) no-repeat center;
+        height: 100px;
+    }
+    
+    .purpose_done {
+        background: url(./assets/purpose_done.svg) no-repeat center;
+        opacity: 0;
+    }
+    
+    .structure_done {
+        background: url(./assets/structure_done.svg) no-repeat center;
+        opacity: 0;
+    }
+    
+    .integrating_done {
+        background: url(./assets/integrating_done.svg) no-repeat center;
+        opacity: 0;
+    }
+    
+    .referencing_done {
+        background: url(./assets/referencing_done.svg) no-repeat center;
+        opacity: 0;
+    }
+    
+    .sentences_done {
+        background: url(./assets/sentences_done.svg) no-repeat center;
+        opacity: 0;
+    }
+    
+    .highlight_container {
+        height: 50px;
+        display: block;
+        width: 100px;
+        background: red;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+    
+    .btn:hover,
+    .btn:focus,
+    .btn.focus {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .btn:active,
+    .btn.active {
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    }
+
+    .btn.disabled,
+    .btn[disabled],
+    fieldset[disabled] .btn {
+        pointer-events: none;
+        cursor: not-allowed;
+        filter: alpha(opacity=65);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        opacity: .65;
+    }
+    
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    
+    .btn-default:hover,
+    .btn-default:focus,
+    .btn-default.focus,
+    .btn-default:active,
+    .btn-default.active,
+    .open > .dropdown-toggle.btn-default {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad;
+    }
+    
+    .btn-default:active,
+    .btn-default.active,
+    .open > .dropdown-toggle.btn-default {
+        background-image: none;
+    }
+    
+    .btn-default.disabled,
+    .btn-default[disabled],
+    fieldset[disabled] .btn-default,
+    .btn-default.disabled:hover,
+    .btn-default[disabled]:hover,
+    fieldset[disabled] .btn-default:hover,
+    .btn-default.disabled:focus,
+    .btn-default[disabled]:focus,
+    fieldset[disabled] .btn-default:focus,
+    .btn-default.disabled.focus,
+    .btn-default[disabled].focus,
+    fieldset[disabled] .btn-default.focus,
+    .btn-default.disabled:active,
+    .btn-default[disabled]:active,
+    fieldset[disabled] .btn-default:active,
+    .btn-default.disabled.active,
+    .btn-default[disabled].active,
+    fieldset[disabled] .btn-default.active {
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    
+    .btn-default .badge {
+        color: #fff;
+        background-color: #333;
+    }
+    </style>
+</body>
+
+</html>

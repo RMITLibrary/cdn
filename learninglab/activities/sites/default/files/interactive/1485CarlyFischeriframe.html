@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/modules/system/system.base.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/system/system.menus.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/system/system.messages.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/system/system.theme.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/overlay/overlay-parent.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.button.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.resizable.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.dialog.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.selectable.min.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/contextual/contextual.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/modules/book/book.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox_node/colorbox_node.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/comment/comment.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/field/theme/field.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/logintoboggan/logintoboggan.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/node/node.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/search/search.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/user/user.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/views/css/views.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox/styles/default/colorbox_style.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/ctools/css/ctools.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/ldap/ldap_help/ldap_help.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/css/lab_helper.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/lightbox2/css/lightbox.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/BookMadeSimple/book_made_simple.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/modules/webform/css/webform.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/libraries/fontawesome/css/font-awesome.css?r1mc0o");
+</style>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" />
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/modules/shortcut/shortcut.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/modules/toolbar/toolbar.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/default.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/style.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/layout.css?r1mc0o");
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/learning_lab_dialog.css?r1mc0o");
+</style>
+<style type="text/css" media="print">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/css/print.css?r1mc0o");
+</style>
+<style type="text/css" media="all">
+@import url("https://emedia.rmit.edu.au/learninglab/sites/default/fil../sites/default/files/css_injector/css_injector_12.css?r1mc0o");
+</style>
+  <script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/drupal.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/misc/1.9/jquery.ba-bbq.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/misc/1.9/overlay-parent.js?v=1.0"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/modules/contextual/contextual.js?v=1.0"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/ajax.js?v=7.56"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/libraries/colorbox/jquery.colorbox-min.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox/js/colorbox.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox/styles/default/colorbox_style.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox/js/colorbox_load.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/js/js.cookie-2.1.1.min.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/lightbox2/js/auto_image_handling.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/lightbox2/js/lightbox_video.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/lightbox2/js/lightbox.js?1635311741"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/devel/devel_krumo_path.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/textarea.js?v=7.56"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/progress.js?v=7.56"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/webform/js/webform.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/js/feedback.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/google_analytics/googleanalytics.js?r1mc0o"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-18193581-7", {"cookieDomain":"auto"});ga("require", "linkid", "linkid.js");ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/bs_shortcodes/includes/js/bootstrap-shortcodes-tooltip.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/bs_shortcodes/includes/js/bootstrap-shortcodes-popover.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/js/jquery.ui.touch-punch.min.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/misc/autocomplete.js?v=7.56"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/modules/toolbar/toolbar.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/colorbox_node/colorbox_node.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/modules/LearningLabNodeTypes/js/lab_helper.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/js/global.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/js/bookboxmenus.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/js/mobile.js?r1mc0o"></script>
+<script type="text/javascript" src="https://emedia.rmit.edu.au/learninglab/sites/all/themes/ll/js/new_window.js?r1mc0o"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/learninglab\/","pathPrefix":"","ajaxPageState":{"theme":"ll","theme_token":"buS34IW1y2AAzNkuWC5UfHQ3Y79gTC-Zcakrdck1eBY","jquery_version":"1.10","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/1.9\/jquery.ba-bbq.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/1.9\/overlay-parent.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.button.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.mouse.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.draggable.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.position.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.resizable.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.dialog.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.droppable.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.sortable.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.selectable.min.js":1,"modules\/contextual\/contextual.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/LearningLabNodeTypes\/js\/js.cookie-2.1.1.min.js":1,"sites\/all\/modules\/lightbox2\/js\/auto_image_handling.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox_video.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/devel\/devel_krumo_path.js":1,"misc\/textarea.js":1,"misc\/progress.js":1,"sites\/all\/modules\/webform\/js\/webform.js":1,"sites\/all\/modules\/LearningLabNodeTypes\/js\/feedback.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/modules\/bs_shortcodes\/includes\/js\/bootstrap-shortcodes-tooltip.js":1,"sites\/all\/modules\/bs_shortcodes\/includes\/js\/bootstrap-shortcodes-popover.js":1,"sites\/all\/modules\/LearningLabNodeTypes\/js\/jquery.ui.touch-punch.min.js":1,"misc\/autocomplete.js":1,"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.6\/js\/bootstrap.min.js":1,"modules\/toolbar\/toolbar.js":1,"sites\/all\/modules\/colorbox_node\/colorbox_node.js":1,"sites\/all\/modules\/LearningLabNodeTypes\/js\/lab_helper.js":1,"sites\/all\/themes\/ll\/js\/global.js":1,"sites\/all\/themes\/ll\/js\/bookboxmenus.js":1,"sites\/all\/themes\/ll\/js\/mobile.js":1,"sites\/all\/themes\/ll\/js\/new_window.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"modules\/overlay\/overlay-parent.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"misc\/ui\/jquery.ui.selectable.css":1,"modules\/contextual\/contextual.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/colorbox_node\/colorbox_node.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/ldap\/ldap_help\/ldap_help.css":1,"sites\/all\/modules\/LearningLabNodeTypes\/css\/lab_helper.css":1,"sites\/all\/modules\/lightbox2\/css\/lightbox.css":1,"sites\/all\/modules\/BookMadeSimple\/book_made_simple.css":1,"sites\/all\/modules\/webform\/css\/webform.css":1,"sites\/all\/libraries\/fontawesome\/css\/font-awesome.css":1,"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.6\/css\/bootstrap.min.css":1,"modules\/shortcut\/shortcut.css":1,"modules\/toolbar\/toolbar.css":1,"sites\/all\/themes\/ll\/css\/default.css":1,"sites\/all\/themes\/ll\/css\/style.css":1,"sites\/all\/themes\/ll\/css\/layout.css":1,"sites\/all\/themes\/ll\/css\/learning_lab_dialog.css":1,"sites\/all\/themes\/ll\/css\/print.css":1,"public:\../sites/default/files/css_injector\/css_injector_12.css":1}},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.85","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":false,"maxWidth":"98%","maxHeight":"98%","initialWidth":"300","initialHeight":"250","fixed":false,"scrolling":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"lightbox2":{"rtl":0,"file_path":"\/learninglab\/(\\w\\w\/)public:\/","default_image":"\/learninglab\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"img.inline","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":1,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":1,"flvPlayer":"\/learninglab\/sites\/all\/libraries\/jwplayer\/player.swf","flvFlashvars":""},"overlay":{"paths":{"admin":"node\/*\/webform\nnode\/*\/webform\/*\nnode\/*\/webform-results\nnode\/*\/webform-results\/*\nnode\/*\/submission\/*\nnode\/*\/outline\nnode\/*\/outline\/remove\nnode\/*\/book_access\nbook_access\/*\nfield-collection\/*\/*\/edit\nfield-collection\/*\/*\/delete\nfield-collection\/*\/add\/*\/*\nuser\/*\/linkchecker\nlinkchecker\/*\/edit\nnode\/*\/edit\nnode\/*\/delete\nnode\/*\/revisions\nnode\/*\/revisions\/*\/revert\nnode\/*\/revisions\/*\/delete\nnode\/add\nnode\/add\/*\nnode\/*\/nodequeue\noverlay\/dismiss-message\nuser\/*\/shortcuts\nadmin\nadmin\/*\nbatch\ntaxonomy\/term\/*\/edit\nuser\/*\/cancel\nuser\/*\/edit\nuser\/*\/edit\/*\ndevel\/*\nnode\/*\/devel\nnode\/*\/devel\/*\ncomment\/*\/devel\ncomment\/*\/devel\/*\nuser\/*\/devel\nuser\/*\/devel\/*\ntaxonomy\/term\/*\/devel\ntaxonomy\/term\/*\/devel\/*","non_admin":"admin\/structure\/block\/demo\/*\nadmin\/reports\/status\/php"},"pathPrefixes":[],"ajaxCallback":"overlay-ajax"},"ajax":{"edit-submit--2":{"callback":"ajax_feedback_callback","wrapper":"webform-client-form-924","method":"replaceWith","effect":"fade","event":"mousedown","keypress":true,"prevent":"click","url":"\/learninglab\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Submit feedback"}}},"urlIsAjaxTrusted":{"\/learninglab\/system\/ajax":true,"\/learninglab\/content\/artist-statement-1-gunshydesign":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1,"trackUrlFragments":1},"colorbox_node":{"width":"600px","height":"600px"},"tableHeaderOffset":"Drupal.toolbar.height"});
+//--><!]]>
+</script>
+  <script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+</head>
+	<style type="text/css">
+.selection {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin: 10px 4px;
+    line-height: 30px;
+	}
+	</style>
+<body>
+
+
+
+
+<h3>Carly Fischer&nbsp;</h3>
+
+<p class="introductory-paragraph">This vocabulary quiz will test your knowledge of common words used in creative practice writing.</p>
+<div class="activity-container" id="select-activity">
+<h3 class="activity-heading">Artist statement – exhibition (116 words)</h3>
+	<div class="accessibility-hide" id="activity">
+		<div class="panel-body">
+			<div>
+			  <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button><svg class="bi bi-info-circle-fill" fill="currentColor" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path> </svg> To complete this quiz, <strong>select the missing word</strong> from each drop-down menu and then check your answers.</div>
+			</div>
+	  </div>
+		<div>
+	  </div>
+	
+			<div class="buttons" style="margin-left: 40px;"><button class="btn btn-default" id="check-answers" type="button">Check Answers</button><button class="btn btn-default" id="show-answers" type="button">Show Answers</button><button class="btn btn-default" id="clear" type="button">Clear</button></div>
+		
+	  <div id="sample-document">
+				<p><strong>Carly Fischer<br />
+					From Little Things Big Things Grow</strong></p>
+				<p>From Little Things Big Things Grow is a sculptural <span class="4"><select class="options" id="first"></select></span> that reflects on how contemporary drives towards a more cultural, environmental and political awareness in Australia have been used by corporations to market their products. Drawing on the famous protest song by Paul Kelly and Kev Carmody, the installation asks whether such cultural resistance can escape being <span class="1"><select class="options" id="first"></select></span>, commodified and sold back to us as gentrified lifestyle packages. In the installation, these products and the <span class="2"><select class="options" id="first"></select></span> objects they <span class="6"><select class="options" id="first"></select> </span> are reassembled, remixed and reconstructed as strange hybrid sculptural <span class="3"><select class="options" id="first"></select></span>. Shape-shifting between home furnishings, totems, makeshift armatures and props, the sculptures <span class="5"><select class="options" id="first"></select></span> on the complex and often contradictory repurposing of cultural resistance in a contemporary Australian <span class="0"><select class="options" id="first"></select></span>.</p>
+				<p>&nbsp;</p>
+				
+			<p><img src="../sites/default/files/1474CarlyFischerImage2.jpg" width="400" height="264" alt="photograph of sculptural installation by Carly Fischer"/> </p>
+	<p>&nbsp;</p>
+			<p><strong>Carly Fischer</strong> <br /><em>From Little Things Big Things Grow</em>, 2017 <br>
+	       Sculptural installation at Bundoora Homestead Art Centre, Melbourne, Australia<br />
+	&copy;Copyright Carly Fischer</p>
+		</div>
+		
+		
+  </div>
+</div>
+
+<script>
+/*Activity 1 script */
+  jQuery(document).ready(function() {
+
+    var i = 0;
+
+  
+    var answers = [
+        "context", "appropriated", "cultural", "propositions", "installation", "reflect", "reference"
+    ];
+
+
+    jQuery(".options").append(new Option("-- Select --"));
+
+    /* Add options to select dropdown */
+    for (i = 0; i < answers.length; i++) {
+        jQuery(".options").append(new Option(answers[i], answers[i]));
+    };
+    
+    /* Capitalisation */
+   /* jQuery("#first option").each(function() {
+        jQuery(this).text(jQuery(this).text().charAt(0).toUpperCase() + jQuery(this).text().slice(1));
+    });*/
+
+    /* Remove if selected, show if unselected */
+    jQuery("#select-activity select").on("change", function(event) {
+        var previous_value = jQuery(this).data("previous");
+        var value = jQuery(this).val();
+        jQuery("#select-activity select").not(this).find("option[value='" + previous_value + "']").show();
+        jQuery(this).data("previous", value);
+        jQuery("#select-activity select").not(this).find("option[value='" + value + "']").hide();
+
+    });
+
+    /* If there's an icon already */
+    jQuery("select").on("change", function() {
+        jQuery("select").each(function() {
+                if (jQuery(this).parent().find(".fa-times")) {
+                jQuery(this).parent().find(".fa-times").remove();
+                jQuery("#check-answers").prop("disabled", false);
+            }
+        });
+    });
+
+    /* Check answers */
+    jQuery("#check-answers").click(function() {
+        jQuery("select").each(function() {
+            jQuery(this).parent().find(".fa").remove();
+            var answer_num = jQuery(this).parent().attr("class");
+            var answer_text = answers[answer_num];
+            var correct = "<span class=\"color2\"><i class=\"fa fa-check\" aria-hidden=\"true\"></i></span>";
+            var incorrect = "<span class=\"color4\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span>";
+            if (jQuery(this).val() == answer_text) {
+                jQuery(this).parent().append(correct);
+            } else {
+                jQuery(this).parent().append(incorrect);
+            }
+
+        });
+       jQuery("#check-answers").prop("disabled", true);
+    });
+
+    /* Show answers */
+    jQuery("#show-answers").click(function() {
+        jQuery("select").each(function() {
+            var answer_num = jQuery(this).parent().attr("class");
+            jQuery(this).val(answers[answer_num]);
+            jQuery(this).parent().find(".fa").remove();
+            jQuery(this).prop("disabled", true);
+        });
+        jQuery("#check-answers").prop("disabled", true);
+        jQuery("#show-answers").prop("disabled", true);
+    });
+
+    /* Clear answers */
+    jQuery("#clear").click(function() {
+        jQuery("select").each(function() {
+            jQuery(this).find(".fa").remove();
+            jQuery(this).val(jQuery("select option:first").val());
+            jQuery("#check-answers").prop("disabled", false);
+            jQuery("#show-answers").prop("disabled", false);
+            jQuery(this).parent().find(".fa").remove();
+            jQuery(this).prop("disabled", false);
+        });
+        /* Empty, and populate the dropdown */
+        jQuery(".options").empty().append(new Option("-- Select --"));
+        for (i = 0; i < answers.length; i++) {
+            jQuery(".options").append(new Option(answers[i], answers[i]));
+        };
+        /* Capitalise */
+        jQuery("#first option").each(function() {
+            jQuery(this).text(jQuery(this).text().charAt(0).toUpperCase() + jQuery(this).text().slice(1));
+        });
+    });
+});
+</script>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<style type="text/css">
+.options {
+		width: 115px !important;
+		margin-right: 5px;
+    margin-top: 5px; 
+	}
+.color2 {
+  	color: #134D13 !important;
+  }
+.color4 {
+		color: #D50000 !important;
+	}</style>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+.oral-presentation-container{
+    margin-top: 2em;
+}
+
+.oral-presentation-title{
+    font-family: "Museo500","Cambria", "Times New Roman", Times, serif;
+    font-size: 1.5em;
+}
+/*======Row 1======*/
+.oral-presentation-row-1{
+    float:left;
+    height:109px;
+}
+
+.oral-presentation-row-1-LH{
+    float:left;
+    width:175px;
+    height:100%;
+    background-image:url(../sites/emedia.rmit.edu.au.learninglab/files/custom/balloons/oral_pr_balloon_green.png);
+    background-repeat: no-repeat;
+    color: #84B02C;
+    padding-left: 65px;
+    padding-top: 33px;
+}
+
+.oral-presentation-row-1-RH{
+    float:right;
+    width: 360px;
+    height: 100%;
+    padding-top: 15px;
+}
+/*======Row 2======*/
+.oral-presentation-row-2{
+    float:left;
+    height:157px;
+}
+
+.oral-presentation-row-2-LH{
+    float:left;
+    width:175px;
+    height:100%;
+    background-image:url(../sites/emedia.rmit.edu.au.learninglab/files/custom/balloons/oral_pr_balloon_pink1.png);
+    background-repeat: no-repeat;
+    color: #EE4971;
+    padding-left: 65px;
+    padding-top: 15px;
+}
+
+.oral-presentation-row-2-LH p{
+    color: #FFF;
+    font-size: 1.1em;
+    margin-bottom: 0.1em;
+    font-weight: bold;
+}
+
+.oral-presentation-row-2-LH li{
+    font-size: 0.9em;
+}
+
+.oral-presentation-row-2-RH{
+    float:right;
+    width: 360px;
+    height: 100%;
+    padding-top: 50px;
+}
+/*======Row 3======*/
+.oral-presentation-row-3{
+    float:left;
+    height:99px;
+}
+
+.oral-presentation-row-3-LH{
+    float:left;
+    width:175px;
+    height:100%;
+    background-image:url(../sites/emedia.rmit.edu.au.learninglab/files/custom/balloons/oral_pr_balloon_pink2.png);
+    background-repeat: no-repeat;
+    color: #EE4971;
+    padding-left: 65px;
+    padding-top: 15px;
+}
+
+.oral-presentation-row-3-LH p{
+    color: #FFF;
+    font-size: 1.1em;
+    margin-bottom: 0.1em;
+    font-weight: bold;
+}
+
+.oral-presentation-row-3-RH{
+    float:right;
+    width: 360px;
+    height: 100%;
+}
+/*======Row 4======*/
+.oral-presentation-row-4{
+    float:left;
+    height:99px;
+}
+
+.oral-presentation-row-4-LH{
+    float:left;
+    width:175px;
+    height:100%;
+    background-image:url(../sites/emedia.rmit.edu.au.learninglab/files/custom/balloons/oral_pr_balloon_pink2.png);
+    background-repeat: no-repeat;
+    color: #EE4971;
+    padding-left: 65px;
+    padding-top: 15px;
+}
+
+.oral-presentation-row-4-LH p{
+    color: #FFF;
+    font-size: 1.1em;
+    margin-bottom: 0.1em;
+    font-weight: bold;
+}
+
+.oral-presentation-row-4-RH{
+    float:right;
+    width: 360px;
+    height: 100%;
+}
+/*======Row 5======*/
+.oral-presentation-row-5{
+    float:left;
+    height:97px;
+}
+
+.oral-presentation-row-5-LH{
+    float:left;
+    width:175px;
+    height:100%;
+    background-image:url(../sites/emedia.rmit.edu.au.learninglab/files/custom/balloons/oral_pr_balloon_orange.png);
+    background-repeat: no-repeat;
+    color: #FF6633;
+    padding-left: 65px;
+    padding-top: 15px;
+}
+
+.oral-presentation-row-5-LH p{
+    color: #FFF;
+    font-size: 1.1em;
+    margin-bottom: 0.1em;
+    font-weight: bold;
+}
+
+.oral-presentation-row-5-RH{
+    float:right;
+    width: 360px;
+    height: 100%;
+    padding-top: 22px;
+}

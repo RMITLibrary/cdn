@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>Overall structure of a report | Learning Lab</title>
+  
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
+
+<script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12.css"); 
+</style> 
+<!-- end activities style chunk -->     
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLHPB23GYR');
+  </script>
+
+<!-- Microsoft Bing --> 
+<meta name="msvalidate.01" content="8E4954E1DFAB7E2F8A92DD0A0BD6ED09" />
+
+<!-- Microsoft Clarity --> 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bbzr2pniz1");
+</script>
+<style type="text/css">@media (min-width: 768px) {
+.nav-stacked {float:left; width: 26%; margin-right: 5%;}
+.tab-content {float:left; width: 68%;}
+    }
+
+.lower-level #main #content-area {
+    width: 100% 
+}
+
+.lower-level #main #content-area input, #sidebar-second {
+    display: none
+}
+
+li.active a {color: #fff !important;}
+
+h3.navhead {color: #222160; font-size: 1.1em;}
+
+
+    
+    [id='contents'] ol {
+        list-style-type: none;
+        counter-reset: item;
+        margin: 0;
+        padding: 0;
+    }
+    
+    [id='contents'] ol > li {
+        display: table;
+        counter-increment: item;
+        margin-bottom: 0.6em;
+    }
+    
+    [id='contents'] ol > li:before {
+        content: counters(item, ".") ". ";
+        display: table-cell;
+        padding-right: 0.6em;
+    }
+    
+    [id='contents'] li ol > li {
+        margin: 0;
+    }
+    
+    [id='contents'] li ol > li:before {
+        content: counters(item, ".") " ";
+    }
+    
+    .box {
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+    
+    .legends {
+        width: 16%;
+        float: right;
+        vertical-align: top;
+        margin-left: 5%;
+    }
+    
+    .legends button {
+        text-align: center;
+        padding: 2px 5px;
+        margin: 5px auto 10px auto;
+        border-radius: 5px;
+    }
+    
+    p.method-content {
+        width: 80%;
+    }
+
+</style>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
+	
+	<div id="main" class="clearfix">
+
+		<div class="field-item clearfix even" property="content:encoded">
+
+<p class="lead">There are as many structures for a report as there are reasons for writing one. The differences between reports occur chiefly in the body.</p>
+                                                                    <p>
+      Reports follow a principle of moving from a 
+      <strong>problem</strong>
+       or 
+      <strong>issue</strong>
+       through to 
+      <strong>solutions</strong>
+      . The structure (headings, sub-headings) needs to be tailored to fit the context (rather than vice versa).
+                                                                    </p>
+                                                                    <p>Your lecturer may provide a structure by giving headings or questions to answer. Follow the instructions of your teacher first.</p>
+                                                                    <p>You need to determine the most logical and efficient way to:</p>
+                                                                    <ol>
+      <li>chunk the information</li>
+      <li>order the information</li>
+      <li>label the information using headings or subheadings.</li>
+                                                                    </ol>
+                                                                    <p>Reports vary in style and purpose but the following sections are common to most reports. The sections described below should be used as a guide and are not prescriptive.</p>
+
+                                                                    <hr/>
+
+                                                                    <!-- Nav tabs -->
+                                                                    <ul class="nav nav-pills nav-stacked" role="tablist">
+      <li>
+          <h3 class="navhead">Beginning</h3>
+      </li>
+      <li role="presentation" class="active">
+          <a href="#title" aria-controls="title" role="tab" data-toggle="tab">Title page</a>
+      </li>
+      <li role="presentation">
+          <a href="#abstract" aria-controls="abstract" role="tab" data-toggle="tab">Abstract or executive summary</a>
+      </li>
+      <li role="presentation">
+          <a href="#contents" aria-controls="contents" role="tab" data-toggle="tab">Table of contents</a>
+      </li>
+      <li role="presentation">
+          <a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">Introduction</a>
+      </li>
+      <li>
+          <h3 class="navhead">Middle (body)</h3>
+      </li>
+      <li role="presentation">
+          <a href="#method" aria-controls="method" role="tab" data-toggle="tab">
+              Method/
+              <br/>
+              methodology
+          </a>
+      </li>
+      <li role="presentation">
+          <a href="#results" aria-controls="results" role="tab" data-toggle="tab">Results</a>
+      </li>
+      <li role="presentation">
+          <a href="#discussion" aria-controls="discussion" role="tab" data-toggle="tab">Discussion</a>
+      </li>
+      <li>
+          <h3 class="navhead">End</h3>
+      </li>
+      <li role="presentation">
+          <a href="#conclusion" aria-controls="conclusion" role="tab" data-toggle="tab">Conclusion</a>
+      </li>
+      <li role="presentation">
+          <a href="#recomm" aria-controls="recomm" role="tab" data-toggle="tab">Recommendations</a>
+      </li>
+      <li role="presentation">
+          <a href="#refs" aria-controls="refs" role="tab" data-toggle="tab">References</a>
+      </li>
+      <li role="presentation">
+          <a href="#append" aria-controls="append" role="tab" data-toggle="tab">Appendices</a>
+      </li>
+                                                                    </ul>
+
+                                                                    <!-- Tab panes -->
+                                                                    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="title">
+          <h3>Beginning</h3>
+          <p>Your report should start by setting the context for the body of the report. It is the section where the reader is informed of what they need to know to understand the rest of the report.</p>
+
+          <h3>Title page</h3>
+
+          			This includes:
+          			
+          <ul>
+              <li>the title of report</li>
+              <li>your name</li>
+              <li>date.</li>
+          </ul>
+          <blockquote class="style2">Tip: Microsoft Word can help you generate title pages.</blockquote>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="abstract">
+          <h3>Abstract or executive summary</h3>
+
+          			In 5-10% of the total word count, give an overview of the entire report. Identify:
+          			
+          <ul>
+              <li>
+                  the 
+                  <b class="color1 color1-h">purpose [1]</b>
+                   of the report
+              </li>
+              <li>
+                  the 
+                  <b class="color2 color2-h">methods [2]</b>
+                   used to conduct the research
+              </li>
+              <li>
+                  the 
+                  <b class="color3 color3-h">result [3]</b>
+                   of the research
+              </li>
+              <li>
+                  the 
+                  <b class="color4 color4-h">conclusions [4]</b>
+                   drawn from the research
+              </li>
+              <li>
+                  <b class="color5 color5-h">recommendations [5]</b>
+                   for future actions.
+              </li>
+          </ul>
+          <h4>Sample executive summary</h4>
+          <div>
+              <p class="paragraph">
+                  <span class="color1 color1-h">[1] The study is a quantitative investigation of university graduates&rsquo; awareness of social media [SM] use in the recruitment process.</span>
+                  <span class="color2 color2-h">[2] Likert-scaled questionnaires were emailed to randomly selected students approaching the end of their course in three departments of the university.</span>
+                  <span class="color3 color3-h">[3] The results showed that most students did not agree with the proposition that various social media platforms were used for screening.</span>
+                  <span class="color4 color4-h">[4] This indicates a significant underestimation of how prevalent SM is as a recruitment and screening tool despite the prevalence SM has in the lives of the cohort sample.</span>
+                  <span class="color5 color5-h">[5] It was recommended that explicit awareness raising be integrated into Careers &amp; Employment communications and professionally oriented courses.</span>
+              </p>
+
+          </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="contents">
+          <h3>Table of contents</h3>
+          <p>This is a list of the sections of your report. Major and minor sections are identified through headings and subheadings (and possibly sub-sub headings!)</p>
+          <h4>Sample table of contents</h4>
+          <div class="box">
+              <ol>
+                  <li>
+                      Introduction
+                      						
+                      <ol>
+                          <li>Social media as a social phenomena</li>
+                          <li>Recruitment processes in the 21st Century</li>
+                          <li>The use of social media in recruitment</li>
+                      </ol>
+                  </li>
+                  <li>
+                      The study
+                      						
+                      <ol>
+                          <li>Methodology</li>
+                          <li>Participants</li>
+                      </ol>
+                  </li>
+                  <li>Findings</li>
+                  <li>
+                      Discussion
+                      						
+                      <ol>
+                          <li>Student awareness of social media as a recruitment tool</li>
+                          <li>Students attitudes towards social media in screening and recruitment</li>
+                          <li>
+                              Potential misrepresentation and discrimination through social media
+                              								
+                              <ol>
+                                  <li>Tailored profiling</li>
+                                  <li>Specific interest communities</li>
+                                  <li>Non users</li>
+                              </ol>
+                          </li>
+                          <li>The graduates awareness gaps about social media and job-seeking</li>
+                      </ol>
+                  </li>
+                  <li>Conclusions</li>
+                  <li>Recommendations</li>
+                  <li>Appendices</li>
+              </ol>
+          </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="intro">
+          <h3>Introduction</h3>
+
+          			An introduction can:
+          			
+          <ul>
+              <li>
+                  set the 
+                  <b class="color1 color1-h">context and background [1]</b>
+                   of the problem, issue or investigation
+                  					
+                  <ul>
+                      <li>may include an outline of the sections so that the reader understands the structure</li>
+                      <li>provide an hypothesis to be analysed</li>
+                  </ul>
+              </li>
+              <li>
+                  state the 
+                  <b class="color2 color2-h">purpose [2]</b>
+                   of the report.
+              </li>
+          </ul>
+          <h4>Sample introduction</h4>
+          <div>
+              <p class="paragraph">
+                  <span class="color1 color1-h">[1] There has been an increase in the use of social media over recent years in the recruitment and job-seeking process with every indication that this practice will continue to expand. Social media has become a tool for potential employers to gather information and evaluate a candidate&rsquo;s suitability for a job. While this practice has become widespread, there is little in the way of systematic approaches to using social media as a recruitment tool. Expectations about social media presence are seldom explicit, and both potential employers and employees need clarity on appropriate use of this information.</span>
+                  <span class="color2 color2-h">[2] This report will discuss research into graduating students awareness of social media usage as a recruitment tool for graduate employment.</span>
+              </p>
+          </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="method">
+          <h3>Middle (body)</h3>
+
+          			Organise the sections in a logical sequence based on:
+          			
+          <ul>
+              <li>how you investigated the issue or problem (method, methodology, materials, participants, length of study time)</li>
+              <li>what you found through the investigation, (results)</li>
+              <li>what judgements/ interpretations you have made about the process or the findings (discussion, analysis)</li>
+          </ul>
+          <h3>Method/methodology</h3>
+
+          			The method section of a report details how the research was conducted, the research methods used and the reasons for choosing those methods. It should:
+          			
+          <ul>
+              <li>outline the participants and research methods used, e.g. surveys/questionnaire, interviews</li>
+              <li>refer to other relevant studies.</li>
+          </ul>
+
+          			The methodology is a step-by-step explanation of the research process. It should be:
+          			
+          <ul>
+              <li>factual</li>
+              <li>mainly written in past tense.</li>
+          </ul>
+
+          			The method section of a scientific/engineering report provides:
+          			
+          <ul>
+              <li>an explanation of the experimental procedures (so that the experiment can be repeated for validation in the future).</li>
+              <li>mainly written in passive tense.</li>
+          </ul>
+          <h4>Sample methodology</h4>
+
+          <p>Use the buttons to explore the sample methodology.</p>
+
+          <div class="legends">
+              <button class="btn btn-default button" id="method_btn">method</button>
+              <button class="btn btn-default button" id="procedure_btn">procedure</button>
+              <button class="btn btn-default button" id="relevant_btn">relevant study</button>
+              <button class="btn btn-default button" id="participant_btn">participants</button>
+          </div>
+
+          <p class="method-content">
+              <span class="method">
+                  The research used a quantitative methodology based on the approach advocated by 
+                  <span class="relevant">Williams (2009)</span>
+                  .
+              </span>
+              <span class="procedure">
+                  This study was conducted by 
+                  <span class="method">questionnaire</span>
+                   and investigated 
+                  <span class="participant">graduates</span>
+                   attitudes and knowledge of the use of social media in recruitment (see Appendix 1). The questionnaire used a 
+                  <span class="method">4-point Likert scale</span>
+                   to assess awareness 
+                  <span class="relevant">(Jones 2007)</span>
+                   and attitudes towards social media in recruitment and provided open-ended responses for additional comments. The survey was voluntary and anonymous. A total of 412 questionnaires were distributed online
+              </span>
+               to 
+              <span class="participant">randomly selected graduating students from each of the three colleges within the university.</span>
+               The completed questionnaires were returned by email.
+          </p>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="results">
+          <h3>Results</h3>
+          <p>The results section of a report details the results or findings of the research. It answers the following questions:</p>
+          <ul>
+              <li>What happened?</li>
+              <li>What was found?</li>
+          </ul>
+          <p>There is no interpretation of the results, it only states the facts.</p>
+          <p>Scientific and engineering reports will be rich with visual data (tables, graphs) and minimal text. Interpretation of the results will be made in the Discussion section.</p>
+          <h4>Presenting the data</h4>
+          <p>
+              Use visual data to summarise the results and make them easy to understand. Any data that is there to 
+              <strong>explain or illustrate</strong>
+               a point should be included in the text. If the data is not essential to the explanation, but 
+              <strong>is supportive, then it can be an appendix</strong>
+               to the report but 
+              <strong>still referred to within the text</strong>
+              . Dot points/bullet lists are also useful ways to present information.
+          </p>
+          <h4>Sample results</h4>
+          <p>There was an 85% response rate to the distribution of questionnaires to new graduates. The results in Table 1 suggest that there is little awareness of the potential dangers of employees using personal profiles and information on social media when applying for jobs.</p>
+
+          			Table 1
+          			
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>Graduates know that employers review potential candidates using</th>
+                      <th style="background:#DDF5FD">Strongly agree (%)</th>
+                      <th style="background:#E5F7FD">Agree (%)</th>
+                      <th style="background:#ECF9FD">Disagree (%)</th>
+                      <th style="background:#F5FCFF">Strongly disagree (%)</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>LinkedIn</td>
+                      <td style="background:#DDF5FD">60</td>
+                      <td style="background:#E5F7FD">20</td>
+                      <td style="background:#ECF9FD">15</td>
+                      <td style="background:#F5FCFF">5</td>
+                  </tr>
+                  <tr>
+                      <td>Facebook</td>
+                      <td style="background:#DDF5FD">16</td>
+                      <td style="background:#E5F7FD">4</td>
+                      <td style="background:#ECF9FD">40</td>
+                      <td style="background:#F5FCFF">40</td>
+                  </tr>
+                  <tr>
+                      <td>Twitter</td>
+                      <td style="background:#DDF5FD">9</td>
+                      <td style="background:#E5F7FD">36</td>
+                      <td style="background:#ECF9FD">35</td>
+                      <td style="background:#F5FCFF">20</td>
+                  </tr>
+                  <tr>
+                      <td>Instagram</td>
+                      <td style="background:#DDF5FD">3</td>
+                      <td style="background:#E5F7FD">17</td>
+                      <td style="background:#ECF9FD">50</td>
+                      <td style="background:#F5FCFF">30</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="discussion">
+          <h3>Discussion</h3>
+          <p>The discussion section of a report interprets the results of the research. It is here that the findings are woven together and the major issues/themes are identified and discussed. The discussion section aims to:</p>
+          <ul>
+              <li>state/identify the main research findings/themes</li>
+              <li>interpret and weave the results together to show what they mean</li>
+              <li>link the results to other research.</li>
+          </ul>
+          <p>Identifying the major themes in the results will help structure the discussion. This will keep the report focussed on specific points that have developed from the data or research. This helps to clarify identifiable outcomes which can often be used as headings.</p>
+          <h4>Sample discussion</h4>
+
+          <p>
+              <span class="color1 color1-h">Discussion of results [1].</span>
+              <span class="color2 color2-h">Link to other research [2].</span>
+              <span class="color3 color3-h">Student analysis/ comments [3].</span>
+          </p>
+
+          <p>
+              <span class="color1 color1-h">[1]This study highlights the lack of awareness amongst graduate job seekers of the use of social media for recruitment. The practice of employers accessing the personal profiles of potential employees is widespread and is not considered to be an ethical issue by employers.</span>
+              <span class="color2 color2-h">[2] As the data (Smith &amp; Watson, 2014) demonstrates, over 90% of recruitment professionals refer to LinkedIn and approximately 60% check Facebook and Twitter when considering candidates who have applied for positions. Further, Starr&rsquo;s (2015) research of school leavers indicates that less than 25% are aware of what privacy settings they use on social media and even fewer were aware that these sites may be used for judging people for various reasons (see Appendix 2).</span>
+              <span class="color3 color3-h">[3] Clearly, the job seeking public needs to be made aware that employers are increasingly accessing their personal profiles on social media for recruitment purposes. Educating the public on the consequences of this recruitment practice needs to start early.</span>
+          </p>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="conclusion">
+          <h3>End</h3>
+          <p>Reports are often about solving problems or exploring issues. The end of the report should give the reader a sense of outcome and future direction after the body.</p>
+          <h3>Conclusion</h3>
+          <p>
+              This is a summary statement of key findings or outcomes. Have your aims been successful or not? Was your hypothesis proven to be true? A 
+              <span class="color1 color1-h">synthesis and interpretation of findings [1]</span>
+               makes them meaningful for the reader.
+          </p>
+          <h4>Sample conclusion</h4>
+          <div>
+              <p>
+                  <span class="color1 color1-h">[1] Usage of social media in recruitment is widely established and expected to increase as social media becomes further integrated with business and personal lifestyles.</span>
+                   Current research has found that over 90% of recruitment professionals refer to LinkedIn and approximately 60% engage with Facebook and Twitter when making decisions about the appropriateness of prospective employees. However results show that graduates were sufficiently aware or alarmed by this practice and the potential discriminatory effect on their employment opportunities.
+              </p>
+
+          </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="recomm">
+          <h3>Recommendations</h3>
+          <p>A good way to present your recommendations is to list them in bullet points for easy reading.</p>
+          <p>What actions do you suggest, given your conclusions? What questions for further study are raised by this research or investigation?</p>
+          <h4>Sample recommendations</h4>
+          <ul>
+              <li>
+                  <p>There is a need for a program of awareness raising among graduates approaching the job market. A large percentage of millennial job seekers surveyed do not realise the extent that their social media profiles can affect their future prospects and such awareness raising could be incorporated into Careers and Employment programs within universities.</p>
+              </li>
+              <li>
+                  <p>Awareness of these issues should be introduced in the early years of a course. This would allow students to cultivate career appropriate social media profiles and practices before these issues become crucial.</p>
+              </li>
+          </ul>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="refs">
+          <h3>References</h3>
+          <p>This is a list of all the sources referred to in the report. This should be on a separate page and should be done in accordance with the referencing style chosen by your school. Author date systems list the references in alphabetical order of the first author&rsquo;s surname. Footnoting styles list them in order of their appearance in the report.</p>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="append">
+          <h3>Appendices</h3>
+          <p>This includes any documentation that has not been incorporated in the text, but is relevant at some point in the text. This may include:</p>
+          <ul>
+              <li>data (graphs, charts, tables) or</li>
+              <li>other documentation that is too long or complex to include in the body.</li>
+          </ul>
+    </div>
+</div>
+      </div>
+		
+	</div>
+<script type="text/javascript" src="../sites/default/files/enhanced/jquery.sticky-kit.min_.js"></script>
+	<script type="text/javascript" src="../sites/default/files/enhanced/overallStructure_0.js"></script>
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+</body>
+</html>

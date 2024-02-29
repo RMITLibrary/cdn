@@ -29,7 +29,7 @@
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
-	
+
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
@@ -62,15 +62,96 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "bbzr2pniz1");
 </script>
+<style>
+        .stagewrap {
+            width: 690px;
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-top: 2px;
+            line-height: 17px
+        }
 
+        #Stage_nav_backButton, #Stage_nav_nextButton {
+            cursor: pointer
+        }
+        </style>
 </head>
 <body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
 	
 	<div id="main" class="clearfix">
 
-		<!-- content here -->
-		
+<p>Mind mapping is a visual representation of the focus and structure of a task. The advantage of creating and developing a mind map is that it gives you a holistic view of the task and helps you identify relationships between ideas. </p>
+<p>There are three stages in the process. </p>
+
+
+    <p>Look at Stage 1 of the mind mapping process. Click on the buttons to explore the other stages</p>
+    <div class="box" style="background:#fff;padding:20px 10px">
+        <div style="text-align:center">
+            <button id="btn1" class="btn btn-default active" onclick="stage1()">Stage 1</button>
+            <button id="btn2" class="btn btn-default" onclick="stage2()">Stage 2</button>
+            <button id="btn3" class="btn btn-default" onclick="stage3()">Stage 3</button>
+        </div>
+        <h4 id="stageNum" style="text-align:left;margin:20px">Stage 1:The free-thinking (brainstorming) stage. At this stage, all ideas are relevant.</h4>
+        
+        <script type="text/javascript" charset="utf-8" src="../sites/default/files/interactive/landscapeDiagram/edge_includes/edge.6.0.0.min.js"></script>
+        <script>
+        jQuery('[data-toggle="popover"]').popover()
+        var comp;
+        jQuery(document).ready(function() {
+            AdobeEdge.loadComposition('../sites/default/files/interactive/compressed-brainstorm-mindmap/compressed-brainstorm-mindmap', 'EDGE-17240992', {
+                scaleToFit: "width"
+                ,
+                centerStage: "none"
+                ,
+                minW: "0"
+                ,
+                maxW: "undefined"
+                ,
+                width: "720px"
+                ,
+                height: "895px"
+                ,
+                bScaleToParent: true
+            }, {
+                "dom": {}
+            }, {
+                "dom": {}
+            });
+
+            AdobeEdge.bootstrapCallback(function(compId) {
+                comp = AdobeEdge.getComposition(compId).getStage();
+            })
+        })
+
+        function stage1() {
+            jQuery('.box .btn').removeClass('active')
+            jQuery('#btn1').addClass('active')
+            comp.stop(250);
+            jQuery("#stageNum").text("Stage 1:The free-thinking (brainstorming) stage. At this stage, all ideas are relevant.")
+        }
+
+        function stage2() {
+            jQuery('.box .btn').removeClass('active')
+            jQuery('#btn2').addClass('active')
+            comp.play(251)
+            jQuery("#stageNum").text("Stage 2: The identification stage (initial mind mapping). This stage is where you identify and clarify relationships between ideas and discard anything outside of your focus.")
+        }
+
+        function stage3() {
+            jQuery('.box .btn').removeClass('active')
+            jQuery('#btn3').addClass('active')
+            comp.play(3251)
+            jQuery("#stageNum").text("Stage 3: The grouping and organising stage (final mind mapping). In this part of the process, group your ideas into logical categories and, in doing so, build the structure of your assignment. This stage will also idenfify any gaps in your research.")
+        }
+        </script>
+        <div class="stagewrap">
+            <div id="Stage" class="EDGE-17240992"></div>
+        </div> 
+															
 	</div>
+</div>
+
 
 <!-- Iframe resizer --> 
 <script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 

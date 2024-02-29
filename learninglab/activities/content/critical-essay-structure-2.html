@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>Critical essay structure 2 | Learning Lab</title>
+  
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
+	
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12.css"); 
+</style> 
+<!-- end activities style chunk -->     
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLHPB23GYR');
+  </script>
+
+<!-- Microsoft Bing --> 
+<meta name="msvalidate.01" content="8E4954E1DFAB7E2F8A92DD0A0BD6ED09" />
+
+<!-- Microsoft Clarity --> 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bbzr2pniz1");
+</script>
+
+	<style type="text/css">
+    .stagewrap {
+        width: 690px;
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        margin-top: 2px
+    }
+
+    .pending, .pending p {
+        color: RGBA(59, 140, 218, 1.00) !important
+    }
+
+
+  .correct {
+      color: #134D13 !important;
+	  border: 1px solid #134D13 !important;
+	  background-color: #CCE7DF !important;
+  }
+
+.incorrect {
+      color: #D50000 !important;;
+      border: 1px solid #D50000 !important;
+      background-color: #FBE6E6 !important;
+  }
+
+  .legends {
+      width: 20%;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 3%
+  }
+
+  .legends .color1, .legends button {
+      text-align: center;
+      padding: 2px 5px;
+      width: 90%;
+      margin: 5px auto 10px auto;
+      border-radius: 5px
+  }
+
+  .paragraph {
+      width: 76%;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 25px;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .scrollBtn {
+      margin: auto;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+  }
+
+  .paragraph p {
+      position: relative;
+      clear: both;
+  }
+
+  .legends button, .paragraph span {
+      transition: all .3s
+  }
+
+  .btn:first-letter {
+      text-transform: capitalize;
+  }
+  </style>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
+	
+	<div id="main" class="clearfix">
+
+		<div class="panel-body">
+             <div class="paragraph">
+<p>
+    <span class="context">The social and political revolution that erupted in Paris and throughout France during 1968 was the tonal landscape in which the Atelier Populaire was born. It grew out of student-artists&rsquo; solidarity with workers and communicated a direct challenge to the repressive socio-political authoritarianism of the conservative De Gaulle government. The Atelier Populaire curated an unprecedented outpouring of political graphic art and graffiti (Kugelberg 2010) throughout May and June of 1968.</span>
+    <span class="what">During this period it used irony and dialectical imagery to transform the poster into a powerful object of revolutionary communication.</span>
+    <span class="argument">In doing so, the Atelier Populaire established precedents for contemporary political communication design.</span>
+</p>
+             </div>
+             <div class="legends" mode-id="0" style="vertical-align:top">
+<button class="btn btn-default" data-toggle="tooltip" id="context_btn" title="What is the work? Who made it? When was it made?">context</button>
+<button class="btn btn-default" data-toggle="tooltip" id="what_btn" title="What relevance does it have for us today?">
+    what will
+    <br/>
+
+    		be covered
+</button>
+<button class="btn btn-default" data-toggle="tooltip" id="argument_btn" title="Why was it important at the time?">
+    argument/
+    <br/>
+
+    		position
+</button>
+<button class="btn btn-default show-all" id="show_btn">Show all</button>
+             </div>
+         </div>
+		
+	</div>
+ <script>
+  (function($) {
+      $('[data-toggle="tooltip"]').tooltip()
+
+      var modes = [['context', 'what', 'argument'], ['topic', 'evidence', 'example', 'link', 'explain'], ['restate', 'sum', 'relate']]
+      var mode = '',
+          modeId = 0;
+      $(".legends button").click(function() {
+          var id = $(this).attr("id")
+          modeId = $(this).parent().attr("mode-id")
+          mode = id.slice(0, id.length - 4).toLowerCase();
+          console.log(modeId)
+          var color = "color" + (modes[modeId].indexOf(mode) + 1)
+          dehighlight()
+          highlight(mode, color)
+      })
+
+      $(".show-all").click(function() {
+          var $parent = $(this).parent()
+          var modeId = $parent.attr("mode-id")
+          $("[mode-id='" + modeId + "']").each(function() {
+              var $btn = $(this).find(".show-all")
+              if ($btn.text() == 'Show all') {
+ for (var i = 1; i < 8; i++) {
+     var color = "color" + i
+     highlight(modes[modeId][i - 1], color)
+ }
+ $btn.text('Hide all')
+              } else {
+ dehighlight()
+ $btn.text('Show all')
+              }
+
+          })
+
+      })
+
+      var highlight = function(mode, color) {
+          $("." + mode).addClass(color + "-h " + color)
+          $("[mode-id='" + modeId + "']").find("#" + mode + "_btn").addClass(color + "-h " + color + " " + color + "-b")
+      }
+
+      var dehighlight = function() {
+          $(".paragraph span, .legends button").removeClass(function() {
+              var classes = ''
+              for (var i = 1; i < 8; i++) {
+ classes += "color" + i + " color" + i + "-h " + 'color' + i + "-b "
+              }
+              return classes;
+          })
+      }
+
+  })(jQuery)
+  </script>
+  
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+</body>
+</html>

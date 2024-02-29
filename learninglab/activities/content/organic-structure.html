@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>Coherence: Organic structure | Learning Lab</title>
+  
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
+	
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12.css"); 
+</style> 
+<!-- end activities style chunk -->     
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLHPB23GYR');
+  </script>
+
+<!-- Microsoft Bing --> 
+<meta name="msvalidate.01" content="8E4954E1DFAB7E2F8A92DD0A0BD6ED09" />
+
+<!-- Microsoft Clarity --> 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bbzr2pniz1");
+</script>
+	
+<style type="text/css">
+  #overall .stagewrap {
+      width: 690px;
+      max-width: 100%;
+      position: relative;
+      overflow: hidden;
+      margin-top: 2px;
+      letter-spacing: 0 !important;
+  }
+
+  #overall .pending, .pending p {
+      color: RGBA(59, 140, 218, 1.00) !important
+  }
+ .correct {
+     color: #134D13 !important;
+     border: 1px solid #134D13 !important;
+     background-color: #CCE7DF !important;
+ }
+
+ .incorrect {
+     color: #D50000 !important;
+     border: 1px solid #D50000 !important;
+     background-color: #FBE6E6 !important;
+ }
+
+
+ .legends {
+     width: 20%;
+     display: inline-block;
+     vertical-align: top;
+     margin-left: 3%
+ }
+
+ .legends .color1, .legends button {
+     text-align: center;
+     padding: 2px 5px;
+     width: 90%;
+     margin: 5px auto 10px auto;
+     border-radius: 5px
+ }
+
+ .paragraph {
+     width: 76%;
+     display: inline-block;
+     vertical-align: top;
+     line-height: 25px;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .scrollBtn {
+     margin: auto;
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+ }
+
+ .paragraph p {
+     position: relative;
+     clear: both;
+ }
+
+ .legends button, .paragraph span {
+     transition: all .3s
+ }
+
+ .btn:first-letter {
+     text-transform: capitalize;
+ }
+
+ .col-xs-12 {
+     width: 100%;
+ }
+
+ .col-xs-11 {
+     width: 91.66666667%;
+ }
+
+ .col-xs-10 {
+     width: 83.33333333%;
+ }
+
+ .col-xs-9 {
+     width: 75%;
+ }
+
+ .col-xs-8 {
+     width: 66.66666667%;
+ }
+
+ .col-xs-7 {
+     width: 58.33333333%;
+ }
+
+ .col-xs-6 {
+     width: 50%;
+ }
+
+ .col-xs-5 {
+     width: 41.66666667%;
+ }
+
+ .col-xs-4 {
+     width: 33.33333333%;
+ }
+
+ .col-xs-3 {
+     width: 25%;
+ }
+
+ .col-xs-2 {
+     width: 16.66666667%;
+ }
+
+ .col-xs-1 {
+     width: 8.33333333%;
+ }
+  </style>
+  <style type="text/css">
+  .buttons.affix {
+      z-index: 99;
+      top: 20px
+  }
+
+  #organic .stagewrap #stage_24_diagram {
+      line-height: 16px !important;
+      color: inherit !important;
+      letter-spacing: 0 !important
+  }
+
+  #organic .stagewrap #stage_24_para p {
+      line-height: 24px !important;
+      color: inherit !important;
+      letter-spacing: 0 !important
+  }
+  </style>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
+	
+	<div id="main" class="clearfix">
+
+             <p>Click on the &lsquo;next&rsquo; button to explore the structure.</p>
+             <div class="buttons" style="text-align:right">
+                 <button class="btn btn-default" disabled="disabled" id="vc_back" onclick="vc_back()">back</button>
+                 <button class="btn btn-default" id="vc_next" onclick="vc_next()">next</button>
+                 <button class="btn btn-default" id="showClear" onclick="showOrClear()" style="width:80px">show all</button>
+             </div>
+             <!--<script type="text/javascript" charset="utf-8" src="./comdesigncoherence/edge_includes/edge.6.0.0.min.js"></script>-->
+             <script type="text/javascript" charset="utf-8" src="../sites/default/files/interactive/landscapeDiagram/edge_includes/edge.6.0.0.min.js"></script>
+             <script>
+             //        var curPos=0; AdobeEdge.loadComposition('./comdesigncoherence/coherence', 'EDGE-14705592', {
+             var curPos = 0;
+             AdobeEdge.loadComposition('../sites/default/files/interactive/comdesigncoherence/coherence', 'EDGE-14705592', {
+                 scaleToFit: "width",
+                 centerStage: "none",
+                 minW: "0",
+                 maxW: "undefined",
+                 width: "760px",
+                 height: "1485px",
+                 bScaleToParent: true
+             }, {
+                 "dom": {}
+             }, {
+                 "dom": {}
+             });
+             AdobeEdge.loadComposition('../sites/default/files/interactive/comdesigncoherence/organic_structure', 'EDGE-84602856', {
+                 //        AdobeEdge.loadComposition('./comdesigncoherence/organic_structure', 'EDGE-84602856', {
+                 scaleToFit: "width",
+                 centerStage: "none",
+                 minW: "0px",
+                 maxW: "undefined",
+                 width: "720px",
+                 height: "737px",
+                 bScaleToParent: true
+             }, {
+                 "dom": {}
+             }, {
+                 "dom": {}
+             });
+
+             var wrapperCurrentPage = "PAGE_A";
+             var comps = {};
+             var comp1 = null,
+                 comp2 = null;
+             AdobeEdge.bootstrapCallback(function(compId) {
+                 comps[compId] = AdobeEdge.getComposition(compId);
+
+                 AdobeEdge.Symbol.bindTimelineAction(compId, "stage", "Default Timeline", "stop", function() {
+
+
+                     if (compId == "EDGE-14705592") {
+                         //                    console.log(pos)
+                         comp1 = comps[compId].getStage()
+                         var pos = comp1.getPosition()
+                         if (pos < 500) {
+                             jQuery('#overall #vc_back').prop('disabled', true)
+                         } else if (pos >= 500 && pos <= 2000) {
+                             jQuery('#overall #vc_back').prop('disabled', false)
+                             jQuery('#overall #vc_next').prop('disabled', false)
+                         } else {
+                             jQuery('#overall #vc_next').prop('disabled', true)
+                         }
+                     } else {
+                         comp2 = comps[compId].getStage()
+                         var pos = comp2.getPosition()
+                         if (pos < 500) {
+                             jQuery('#organic #vc_back').prop('disabled', true)
+                         } else if (pos >= 500 && pos <= 2001) {
+                             jQuery('#organic #vc_back').prop('disabled', false)
+                             jQuery('#organic #vc_next').prop('disabled', false)
+                             jQuery('#organic #showClear').prop('disabled', false)
+                         } else {
+                             jQuery('#organic #vc_next').prop('disabled', true)
+                             jQuery('#organic #showClear').prop('disabled', true)
+                         }
+                     }
+
+                     var clip1 = jQuery(".EDGE-14705592")
+                     var clip2 = jQuery(".EDGE-84602856")
+                     clip1.css("transform", 'scale(0.9)').parent().height(clip1.height()).parent().height(clip1.height())
+                     clip2.css("transform", 'scale(1)').parent().height(clip2.height()).parent().height(clip2.height())
+
+                 });
+
+
+                 jQuery('#overall #vc_back').click(function() {
+                     curPos--;
+                     comp1.playReverse();
+                 })
+                 jQuery('#overall #vc_next').click(function() {
+                     curPos++;
+                     comp1.play();
+                 })
+             });
+
+             function vc_back() {
+                 comp2.playReverse();
+             }
+             function vc_next() {
+                 comp2.play();
+                 jQuery('#organic #vc_back').prop('disabled', false);
+             }
+             function showOrClear() {
+                 var $this = jQuery('#organic #showClear')
+                 if ($this.text() == 'show all') {
+                     comp2.stop(2250);
+                     $this.text("reset");
+                     jQuery('#organic #vc_back').prop('disabled', true)
+                     jQuery('#organic #vc_next').prop('disabled', true)
+                 } else {
+                     comp2.stop(0);
+                     $this.text("show all");
+                     jQuery('#organic #vc_back').prop('disabled', true)
+                     jQuery('#organic #vc_next').prop('disabled', false)
+                     jQuery('#organic #showClear').prop('disabled', false)
+                 }
+             }
+
+             //jQuery("#custom-tabs-0 a").click(function(){
+             //     console.log('tab clicked')
+             //     jQuery(".buttons").each(function(){
+             //     	$this = jQuery(this)
+             //         var left = $this.parent().width()-$this.children().width()
+             //         console.log($this.parent().width(),$this.children().width())
+             //         $this.css("left",left)
+             //     })
+             // })
+
+             jQuery('.buttons').each(function() {
+                 $this = jQuery(this)//            var left = $this.parent().width()-$this.children().width()-10
+                 //            console.log($this.parent().width(),$this.children().width())
+                 //            $this.css("left",left)
+                 //            jQuery( window ).resize(function() {
+                 //                left = $this.parent().width()-$this.children().width()-10
+                 //                $this.css("left",left)
+                 //            });
+
+                 $this.affix({
+                     offset: {
+                         top: function() {
+                             return ( this.top = $this.offset().top)
+                         }
+                     }
+                 })
+             })
+             </script>
+             <div class="stagewrap" style="margin-top:30px">
+                 <div class="EDGE-84602856">&nbsp;</div>
+             </div>
+         </div>
+		
+	<script type="text/javascript" src="../sites/default/files/enhanced/jquery.sticky.js"></script>
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+</body>
+</html>

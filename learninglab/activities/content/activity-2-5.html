@@ -45,8 +45,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Converting activity 2 | Learning Lab</title>
   
-
   <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
@@ -57,23 +57,6 @@
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
-<script type="text/javascript" src="../sites/all/modules/jquery_update/js/jquery_update%EF%B9%96v=0.0.1.js"></script>
-<script type="text/javascript" src="../sites/all/libraries/colorbox/jquery.colorbox-min.js"></script>
-<script type="text/javascript" src="../sites/all/modules/colorbox/js/colorbox.js"></script>
-<script type="text/javascript" src="../sites/all/modules/colorbox/styles/default/colorbox_style.js"></script>
-<script type="text/javascript" src="../sites/all/modules/colorbox/js/colorbox_load.js"></script>
-<script type="text/javascript" src="../sites/all/modules/LearningLabNodeTypes/js/js.cookie-2.1.1.min.js"></script>
-<script type="text/javascript" src="../sites/all/modules/bs_shortcodes/includes/js/bootstrap-shortcodes-tooltip.js"></script>
-<script type="text/javascript" src="../sites/all/modules/bs_shortcodes/includes/js/bootstrap-shortcodes-popover.js"></script>
-<script type="text/javascript" src="../sites/all/modules/LearningLabNodeTypes/js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../sites/all/modules/colorbox_node/colorbox_node.js"></script>
-<script type="text/javascript" src="../sites/all/modules/LearningLabNodeTypes/js/lab_helper.js"></script>
-<script type="text/javascript" src="../sites/all/themes/ll/js/global.js"></script>
-<script type="text/javascript" src="../sites/all/themes/ll/js/bookboxmenus.js"></script>
-<script type="text/javascript" src="../sites/all/themes/ll/js/mobile.js"></script>
-<script type="text/javascript" src="../sites/all/themes/ll/js/new_window.js"></script>
-
 
   <script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
 
@@ -87,7 +70,7 @@
   @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
   @import url("../sites/default/files/css_injector/css_injector_12.css"); 
 </style> 
-<!-- end activities style chunk -->     
+<!-- end activities style chunk -->      
 
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
  <script>
@@ -110,7 +93,7 @@
 </script>
 
 </head>
-<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-1091 node-type-enhanced-page book-child lower-level" >
+<body>
 
 
 <div id="page" class="page">
@@ -169,6 +152,14 @@
             <div id="container" style="position:relative;width:550px;text-align:center">
                <svg id="artboard" style="width:100%;height:400px"> <desc>Created with Snap</desc><defs></defs><!--?xml version="1.0" encoding="utf-8"?-->
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+				   <script>
+                    jQuery(document).ready(function(){
+                        var s = Snap("#artboard");
+                        Snap.load("../sites/default/files/activity5b_base.svg", function (f) {
+                            s.append(f);
+                        })
+                    })
+                </script>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
 <path fill="#F7E6C6" stroke="#303030" stroke-width="5" stroke-linejoin="round" stroke-miterlimit="10" d="M1015.9,60H869.1h-35.2
 	c-3.4,0-5.5,2.2-5.5,4.8v48.1c0,2.4-2.4,4.8-5,4.8h-35.2h-35.2c-0.5,0-0.2,0-0.7,0c-3.1,0-5.3,2.2-5.3,4.8V173
@@ -228,14 +219,7 @@
 </g>
 </svg>
 </svg>
-                <script>
-                    jQuery(document).ready(function(){
-                        var s = Snap("#artboard");
-                        Snap.load("../sites/default/files/activity5b_base.svg", function (f) {
-                            s.append(f);
-                        })
-                    })
-                </script>
+                
 
                 <div class="droppable" id="kg" style="top:5%; right:20.5%"></div>
                 <div class="droppable" id="" style="top:11%; right:28.5%"></div>
@@ -259,7 +243,7 @@
                 Clear
             </button>
         </div>
-        <script>
+           <script>
             var selected="";
 
             jQuery(".draggable").draggable({
@@ -293,9 +277,8 @@
                         correctCount++
                         console.log(correctCount)
                         if(correctCount>=3){
-                            console.log("yeah")
+                            console.log("All answers")
                             jQuery(".tick").show("slow")
-                            jQuery("#show_btn").hide();
                         }
                     }
                 }
@@ -311,6 +294,7 @@
 
             //show answers
             function showAnswer() {
+
                 //reset to original position
                 jQuery(".draggable").each(function(i){
                     jQuery(this).animate({top: 0, left:0},0);
@@ -329,7 +313,6 @@
                     jQuery(this).animate({top: jQuery(droppableId).position().top - jQuery(this).position().top, left:(jQuery(droppableId).position().left- jQuery(this).position().left)},500);
                     console.log(jQuery(this).position().left)
                 })
-
             }
 
             //clear answers
@@ -338,9 +321,8 @@
                 jQuery("#check_btn").prop("disabled",false);
                 jQuery("#clear_btn").prop("disabled",false);
 
-                
-                jQuery(".tick").hide("slow")
                 console.log("clear answer");
+                //                location.reload(true);
                 jQuery(".draggable").each(function(i){
                     jQuery(this).animate({top: 0, left:0},500);
                     console.log(jQuery(this).position().top)

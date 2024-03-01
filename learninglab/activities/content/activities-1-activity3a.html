@@ -55,9 +55,10 @@
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
 
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<!-- keep this style chunk so that activities work - 05/02/2024 -->
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" />
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
 <style type="text/css" media="all"> 
   @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
   @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
@@ -84,7 +85,222 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "bbzr2pniz1");
 </script>
+ <style type="text/css">
+     /* Quiz */
+     #quiz-container button, #clear-answers-container button {
+         outline: none !important;
+     }
 
+     .question-container {
+         margin-bottom: 25px;
+     }
+
+     .question-container p {
+         font-weight: bold;
+     }
+
+     .result {
+         display: inline-block;
+     }
+
+     .feedback {
+         display: none;
+         margin-top: 15px;
+         width: 700px;
+     }
+
+     h4.question-title {
+         font-size: 1.5rem;
+     }
+
+     hr.lrg-space {
+         margin-top: 20px;
+         margin-bottom: 20px;
+     }/* DIEP */
+     .diep-container {
+         min-height: 450px;
+     }
+
+     .correct-answer {
+         display: none;
+     }
+
+     .diep-well-done {
+         display: none;
+         font-weight: bold;
+     }/* Highlight other words */
+     #component-identifier-container button {
+         outline: none;
+     }
+
+     #show-clear-button-container {
+         display: block;
+         float: left;
+     }
+
+     #show-clear-button-container button {
+         margin: 15px 5px 0 0;
+         float: left;
+     }
+
+     #previous-next-button-container button {
+         float: right;
+         margin: 15px 5px 0 0;
+         width: 100px;
+     }
+
+     .option:hover {
+         color: var(--blue);
+         background-color: var(--blue-light);
+         cursor: pointer;
+     }
+
+     hr {
+         margin-top: 30px;
+     }/* Flash */
+     .red-flash {
+         animation: incorrect 0.5s forwards linear normal;
+     }
+
+     .green-flash-blue {
+         animation: blue-correct 0.5s forwards linear normal;
+     }
+
+     .green-flash-purple {
+         animation: purple-correct 0.5s forwards linear normal;
+     }
+
+     .green-flash-orange {
+         animation: orange-correct 0.5s forwards linear normal;
+     }
+
+     @keyframes incorrect {
+         0% {
+             color: #FBE6E6;
+             background: #D50000;
+             opacity: 1;
+         }
+
+         50% {
+             color: #FBE6E6;
+             background: #D50000;
+             opacity: 1;
+         }
+
+         100% {
+             color: #000;
+             background: #FFF;
+             opacity: 1;
+         }
+     }
+
+     @keyframes blue-correct {
+         0% {
+             color: #FFF;
+             background: #134D13;
+             opacity: 1;
+         }
+
+         50% {
+             color: #FFF;
+             background: #134D13;
+             opacity: 1;
+         }
+
+         100% {
+             color: #104880;
+             background: #DDF5FD;
+             opacity: 1;
+         }
+     }
+
+     @keyframes purple-correct {
+         0% {
+             color: #FFF;
+             background: #134D13;
+             opacity: 1;
+         }
+
+         50% {
+             color: #FFF;
+             background: #134D13;
+             opacity: 1;
+         }
+
+         100% {
+             color: #591E77;
+             background: #DFDBFE;
+             opacity: 1;
+         }
+     }
+
+     @keyframes orange-correct {
+         0% {
+             color: #FFF;
+             background: #134D13;
+             opacity: 1;
+         }
+
+         50% {
+             color: #FFF;
+             background: #134D13;
+             opacity: 1;
+         }
+
+         100% {
+             color: #F66000;
+             background: #FFF3DE;
+             opacity: 1;
+         }
+     }
+
+     .part-description {
+         font-weight: bold;
+     }/* Completion */
+     .bubble-well-done-1, .bubble-well-done-2, .bubble-well-done-3 {
+         font-size: 14px;
+         font-weight: bold;
+         margin-left: 40px;
+         margin-top: 30px;
+     }
+
+     .help-bubble-1, .help-bubble-2, .help-bubble-3 {
+         display: table;
+         float: right;
+         width: 180px;
+         height: 105px;
+         min-height: 105px;
+         margin-left: 20px;
+         font-size: 12px;
+         background-color: #EEE;
+         padding: 10px;
+         border-radius: 5px;
+     }
+
+     .help-bubble-2, .help-bubble-3 {
+         margin-top: 40px;
+     }
+
+     .help-bubble-1 p, .help-bubble-2 p, .help-bubble-3 p {
+         margin-bottom: 0px;
+     }
+
+     .help-bubble-1:before, .help-bubble-2:before, .help-bubble-3:before {
+         content: "";
+         position: absolute;
+         top: 40px;
+         left: -30px;
+         z-index: 1;
+         border: solid 15px transparent;
+         border-right-color: #EEE;
+     }
+
+     @media (max-width: 939px) {
+         .help-bubble-1, .help-bubble-2, .help-bubble-3 {
+             margin-left: 475px;
+         }
+     }
+     </style>
 </head>
 <body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-1191 node-type-book book-child lower-level" >
 
@@ -120,197 +336,7 @@
   	<div class="content">
   	  <div class="field field-name-body field-type-text-with-summary field-label-hidden">
     <div class="field-items">
-          <div class="field-item clearfix even" property="content:encoded"><style type="text/css">/* Quiz */
-#quiz-container button, #clear-answers-container button {
-    outline: none !important;
-}
-
-.question-container {
-    margin-bottom: 25px;
-}
-
-.question-container p {
-    font-weight: bold;
-}
-
-.result {
-    display: inline-block;
-}
-
-.feedback {
-    display: none;
-    margin-top: 15px;
-    width: 700px;
-}
-
-h4.question-title {
-	font-size: 1.5rem;
-}
-
-hr.lrg-space {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-/* DIEP */
-.diep-container {
-    min-height: 450px;
-}
-
-.correct-answer {
-    display: none;
-}
-
-.diep-well-done {
-	display: none;
-	font-weight: bold;
-}
-
-/* Highlight other words */
-#component-identifier-container button {
-    outline: none;
-}
-
-#show-clear-button-container {
-    display: block;
-    float: left;
-}
-
-#show-clear-button-container button {
-    margin: 15px 5px 0 0;    
-    float: left;
-}
-
-#previous-next-button-container button {
-    float: right;
-    margin: 15px 5px 0 0;    
-    width: 100px;
-}
-
-.option:hover {
-    color: var(--blue);
-    background-color: var(--blue-light);
-    cursor: pointer;
-}
-
-hr {
-    margin-top: 30px;
-}
-
-/* Flash */
-.red-flash {
-    animation: incorrect 0.5s forwards linear normal;
-}
-
-.green-flash-blue {
-    animation: blue-correct 0.5s forwards linear normal;    
-}
-
-.green-flash-purple {
-    animation: purple-correct 0.5s forwards linear normal;    
-}
-
-.green-flash-orange {
-    animation: orange-correct 0.5s forwards linear normal;    
-}
-
-@keyframes incorrect {
-    0% {
-        color: #FBE6E6;
-        background: #D50000;
-        opacity: 1;
-    }
-    50% {
-        color: #FBE6E6;
-        background: #D50000;
-        opacity: 1;
-    }
-    100% {
-        color: #000;
-        background: #FFF;
-        opacity: 1;
-    }
-}
-
-@keyframes blue-correct {
-    0% {
-        color: #FFF;
-        background: #134D13;
-        opacity: 1;
-    }
-    50% {
-        color: #FFF;
-        background: #134D13;
-        opacity: 1;
-    }
-    100% {
-        color: #104880;
-        background: #DDF5FD;
-        opacity: 1;
-    }
-}
-
-@keyframes purple-correct {
-    0% {
-        color: #FFF;
-        background: #134D13;
-        opacity: 1;
-    }
-    50% {
-        color: #FFF;
-        background: #134D13;
-        opacity: 1;
-    }
-    100% {
-        color: #591E77;
-        background: #DFDBFE;
-        opacity: 1;
-    }
-}
-
-@keyframes orange-correct {
-    0% {
-        color: #FFF;
-        background: #134D13;
-        opacity: 1;
-    }
-    50% {
-        color: #FFF;
-        background: #134D13;
-        opacity: 1;
-    }
-    100% {
-        color: #F66000;
-        background: #FFF3DE;
-        opacity: 1;
-    }
-}
-
-
-.part-description {
-	font-weight: bold;
-}
-
-/* Completion */
-.bubble-well-done-1,
-.bubble-well-done-2,
-.bubble-well-done-3 {
-	font-size: 14px;
-	font-weight: bold;
-	margin-left: 40px;
-	margin-top: 30px;
-}
-
-.help-bubble-1,
-.help-bubble-2,
-.help-bubble-3 {
-	float: right;
-    width: 180px;
-    margin-left: 40px;
-    background-color: #EEE;
-    padding: 10px;
-}
-			  </style>
+          <div class="field-item clearfix even" property="content:encoded">
 
 		<!-- Part A -->
 		<div id="custom-tab-0-Activity-3a" title="Activity 3(a)" class="tab-pane">

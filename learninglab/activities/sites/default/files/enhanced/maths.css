@@ -92,11 +92,12 @@ label:focus, label:hover {
 .sidenote, .marginnote { 
     float: right;
     clear: right;
-    margin-right: -60%;
     width: 50%;
     font-size: 0.9em;
     margin-bottom: 1em;
     margin-top: 0;
+    margin-left: 40px;
+    margin-right: -40px;
 }
 
 .sidenote-number {
@@ -120,6 +121,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
         clear: both;
         display: block;
         margin-right: 0;
+        margin-left: 0;
         width: 95%;
     }
 

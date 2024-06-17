@@ -16,7 +16,7 @@
 <link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-  <title> | Learning Lab</title>
+  <title>Body of an essay | Learning Lab</title>
   
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
 <script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
@@ -43,7 +43,29 @@
 </style> 
 <!-- end activities style chunk -->   
 	
-	
+<style type="text/css">
+		.legends{
+       width:20%;display:inline-block;vertical-align:top;margin-left: 3%
+    }
+    .legends div, .legends button{
+        text-align: center;
+        padding: 2px 5px;
+        width:90%;
+        margin:5px auto 10px auto;
+        border-radius: 5px
+    }
+    .paragraph{
+        width:76%;display:inline-block;vertical-align:top;line-height:25px
+    }
+    .activity{
+        background-image: url("../sites/default/files/activity-image.png");
+        background-repeat: no-repeat;
+        height: 40px;
+        padding: 8px 50px;
+    }
+
+    #activity button,#activity span {transition: all .3s}
+  </style>
 
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
  <script>
@@ -70,13 +92,80 @@
 	
 	<div id="main" class="clearfix">
 
-		<!-- content here -->
+		<p>Select the buttons to explore the TEEL structure within the paragraph. Notice how references have been used throughout the paragraph to support the claims.</p>
+	<p class="paragraph"><span class="topic">One factor that impacts positively on team effectiveness is the notion of team cohesiveness.</span> <span class="explain">Team cohesiveness is the key to enabling a diverse group of individuals to work towards common goals.</span> <span class="evidence">Mathieu et al. (2014) note that the right mix of people sets the stage for a team to be effective, resulting in improved performance quality and innovation.</span> <span class="example">BJB Minerals&rsquo; project teams were established on an opt-in basis based on the idealistic model, where members were encouraged by the clear goals and knowledge of the skill sets needed (Berlin et al. 2012). The project assigned to the team was also well resourced, with clear timelines and an end date (BJB Minerals 2014). </span> <span class="link">This idealistic team model validated the diverse skills that individuals brought to the team, celebrating both personal satisfaction as well as the team&rsquo;s project achievements. </span></p>
+	<div class="legends" style="vertical-align:top"><button class="btn btn-default" id="topic_btn">Topic</button><button class="btn btn-default" id="explain_btn">Explain</button><button class="btn btn-default" id="evidence_btn">Evidence</button><button class="btn btn-default" id="example_btn">Example</button><button class="btn btn-default" id="link_btn">Link</button><button class="btn btn-default" id="show_btn">Show all</button></div>
+</div>
 		
-	</div>
+
 
 <!-- Iframe resizer --> 
 <script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
 <!-- end Iframe resizer --> 
+
+		<script>
+    (function($){
+        $('[data-toggle="tooltip"]').tooltip()
+
+        var modes = ['topic','evidence','example','link','explain']    
+        var mode = ''
+        $(".legends button").click(function(){
+            var id = $(this).attr("id")
+            mode = id.slice(0,id.length-4).toLowerCase();
+            var color= "color"+(modes.indexOf(mode)+1)
+            dehighlight()
+            highlight(mode,color)
+        })
+
+         $("#show_btn").click(function(){
+            if($(this).text()=='Show all'){
+                for(var i=1;i<8;i++){
+                    var color = "color"+i
+                    highlight(modes[i-1],color)
+                }
+                $(this).text('Hide all')
+            }else{
+                dehighlight()
+                $(this).text('Show all')
+            }
+
+        })
+
+        var highlight = function(mode,color){
+            $("."+mode).addClass(color+"-h "+color)
+            $("#"+mode+"_btn").addClass(color+"-h "+color+" "+color+"-b")
+        }
+
+        var dehighlight = function(){
+            $("#activity span, #activity button").removeClass(function(){
+                var classes =''
+                for(var i=1;i<8;i++){
+                    classes+="color"+i+" color"+i+"-h "+'color'+i+"-b "
+                }
+                return classes;
+            })
+        }
+
+        // var targetHeight = 300
+        // $(".paragraph").height(targetHeight+60)
+        // $(".scrollBtn").click(function (){
+        //     var $parent = $(this).parents(".paragraph")
+        //     //            console.log($parent)
+        //     if($parent.find("#para1").position().top<-200){
+        //         $parent.find("p").animate({"top":0});
+        //         $parent.find("#up").hide()
+        //         $parent.find("#down").show()
+        //     }else{
+        //         $parent.find("p").animate({"top":-targetHeight+40});
+        //         $parent.find("#up").show()
+        //         $parent.find("#down").hide()
+        //     }
+
+        // })
+    })(jQuery)
+</script>	
+	
+	
 </body>
 </html>

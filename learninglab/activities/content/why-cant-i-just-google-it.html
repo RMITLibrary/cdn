@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>Why can't I just Google it? | Learning Lab</title>
+  
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
+	
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12.css"); 
+</style> 
+<!-- end activities style chunk -->   
+	
+	<style type="text/css">
+           .btn {
+               margin-right: 5px;
+           }
+
+           .answer {
+               border-radius: 3px;
+               padding: 4px;
+               cursor: move;
+               text-align: center;
+               font-size: 9pt;
+               margin: 3px;
+               display: inline-block;
+               width: 270px;
+               z-index: 2;
+           }
+
+           .droppable {
+               vertical-align: middle;
+               text-align: center;
+               line-height: 15px;
+           }
+
+           .draggable {
+               min-width: 50px;
+               list-style: none;
+           }
+
+           .box {
+               background-color: rgba(255, 249, 239, 0.4);
+               display: block;
+               padding: 5px 10px;
+               border-radius: 10px;
+               border: #999 dashed thin;
+               position: relative;
+               height: inherit;
+               width: inherit;
+               text-align: left;
+           }
+
+           .correct, .fa-check {
+               color: var(--green-med) !important;
+           }
+
+           .correct {
+               border: 1px solid var(--green-med) !important
+           }
+
+           .correct, .correct input {
+               background-color: var(--green-light) !important;
+           }
+
+           .incorrect, .fa-times {
+               color: var(--red-med) !important;
+           }
+
+           .incorrect {
+               border: 1px solid var(--red-med) !important
+           }
+
+           .incorrect, .incorrect input {
+               background-color: var(--red-light) !important;
+           }
+
+           .placeholder-title {
+               font-family: "Museo300", Arial, Helvetica, sans-serif;
+               text-align: center;
+               top: 10px;
+               font-size: 18px;
+               z-index: 1;
+           }
+
+           .advantage-container, .disadvantage-container {
+               display: inline-block;
+               width: 300px;
+               height: 300px;
+               margin: 10px 0;
+           }
+
+           .disadvantage-container {
+               float: right;
+           }
+
+           div#feedback {
+               margin-top: 15px;
+               padding: 20px;
+               display: none;
+               background: var(--grey-superlight);
+               border: 1px solid var(--grey-light);
+               border-radius: 4px;
+           }
+
+           div#feedback h3 {
+               font-family: "Museo", Arial, Helvetica, sans-serif;
+               font-size: 16px;
+               margin-bottom: 5px;
+           }
+           </style>
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLHPB23GYR');
+  </script>
+
+<!-- Microsoft Bing --> 
+<meta name="msvalidate.01" content="8E4954E1DFAB7E2F8A92DD0A0BD6ED09" />
+
+<!-- Microsoft Clarity --> 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bbzr2pniz1");
+</script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
+	
+	<div id="main" class="clearfix">
+
+		<div class="activity-container">
+                   <p>Drag the statements into their correct category. Incorrect answers will snap back to their original position.
+                   </p>
+                   <div id="activity1a" style="max-width:700px">
+                       <!-- Droppable -->
+                       <div id="paragraph" style="margin-bottom: 20px; width:100%">
+                           <!-- Advantages -->
+                           <div class="advantage-container">
+                               <div class="placeholder-title">Advantages</div>
+                               <div class="droppable box font-large" id="advantages">&nbsp;</div>
+                           </div>
+                           <!-- Disadvantages -->
+                           <div class="disadvantage-container">
+                               <div class="placeholder-title">Disadvantages</div>
+                               <div class="droppable box font-large" id="disadvantages">&nbsp;</div>
+                           </div>
+                       </div>
+                       <!-- Buttons -->
+                       <div style="width: 100%; padding: 10px 0 15px 0;">
+                           <button class="btn btn-default" id="show_btn" onclick="showAnswer()">Show answers</button>
+                           <button class="btn btn-default" id="clear_btn" onclick="clearAnswer()">Clear</button>
+                       </div>
+                       <!-- Options -->
+                       <div id="options" style="width:100%;">
+                           <ul style="width:100%;padding:0">
+                               <li class="answer draggable-d color5 color5-h color5-b" id="disadv1">Not all information is credible on the internet - anyone can publish anything.</li>
+                               <li class="answer draggable-a color5 color5-h color5-b" id="adv1">
+                                   Finding information is quick and easy.
+                                   <br/>
+
+                                   						&nbsp;
+                               </li>
+                               <li class="answer draggable-a color5 color5-h color5-b" id="adv2">Easy access to non-text sources such as measurement data, images and video.</li>
+                               <li class="answer draggable-d color5 color5-h color5-b" id="disadv2">It may be difficult to know if the information is out-of-date or biased.</li>
+                               <li class="answer draggable-d color5 color5-h color5-b" id="disadv3">Because there is often so much information, it can be hard to identify the most relevant sources.</li>
+                               <li class="answer draggable-d color5 color5-h color5-b" id="disadv4">Google only searches the public web. Over 90% of information is found in the deep web.</li>
+                               <li class="answer draggable-a color5 color5-h color5-b" id="adv3">Information can be updated almost immediately.</li>
+                           </ul>
+                       </div>
+                       <!-- Feedback -->
+                       <div id="feedback">
+                           <p>Well done!</p>
+
+                           				<p>Google does have its advantages, but remember to be mindful of its limitations for your research.</p>
+                       </div>
+                   </div>
+                       </div>
+		
+	</div>
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	 <script>
+           jQuery('#feedback').hide();
+
+           const advantages = [
+           'Finding information is quick and easy.',
+           'Easy access to non-text sources such as measurement data, images and video.',
+           'Information can be updated almost immediately.',
+           ];
+
+           let disadvantages = [
+           'Not all information is credible on the internet - anyone can publish anything.',
+           'It may be difficult to know if the information is out-of-date or biased.',
+           'Because there is often so much information, it can be hard to identify the most relevant sources.',
+           'Google only searches the public web. Over 90% of information is found in the deep web.',
+           ];
+
+           // Check if all answers are selected
+           function checkAllCorrect() {
+               if (jQuery('#options ul').children().length === 0) {
+                   console.log("Length: " + jQuery('#options ul').children().length);
+                   jQuery('#feedback').slideDown();
+               }
+           }
+
+           // Initialise draggable blocks
+           jQuery('#activity1a .draggable-a').draggable({
+               scroll: false,
+               revert: function(droppableContainer) {
+                   return ( !droppableContainer)
+               }
+           });
+
+           jQuery('#activity1a .draggable-d').draggable({
+               scroll: false,
+               revert: function(droppableContainer) {
+                   return ( !droppableContainer)
+               }
+           });
+
+           // Initialise advantage droppable area
+           jQuery('#activity1a #advantages').droppable({
+               accept: '.draggable-a',
+               activeClass: '',
+               hoverClass: '',
+               drop: function(event, ui) {
+                   $item = ui.draggable.removeAttr('style')// Add logic to snap back
+                   dropBlock($item, jQuery('#advantages'))
+               }
+           });
+
+           // Initialise disadvantage droppable area
+           jQuery('#activity1a #disadvantages').droppable({
+               accept: '.draggable-d',
+               activeClass: '',
+               hoverClass: '',
+               drop: function(event, ui) {
+                   $item = ui.draggable.removeAttr('style')
+                   dropBlock($item, jQuery('#disadvantages'));
+               }
+           });
+
+           // Drop a block
+           let dropBlock = function($item, $box) {
+               let $list = jQuery('ul', $box).length ? jQuery('ul', $box) : jQuery('<ul style="padding:0;margin:0"/>').appendTo($box);
+               if ($item)
+                   $item.fadeOut(function() {
+                       $item.appendTo($list).fadeIn();
+                       checkAllCorrect();
+                   });
+           }
+           // Show answers
+           function showAnswer() {
+               jQuery('#activity1a #show_btn').prop('disabled', true);
+               jQuery('#activity1a #check_btn').prop('disabled', true);
+               jQuery('#activity1a #clear_btn').prop('disabled', false);
+               jQuery('#activity1a .draggable-a').each(function() {
+                   jQuery(this).removeClass('correct incorrect', 250);
+                   if (advantages.indexOf(jQuery(this).text().trim()) != -1) {
+                       jQuery(this).fadeOut('slow', function() {
+                           jQuery('#advantages').append(jQuery(this));
+                           jQuery(this).show('slow');
+                       })
+                   } else {
+                       jQuery(this).fadeOut('slow', function() {
+                           jQuery('#disadvantages').append(jQuery(this));
+                           jQuery(this).show('slow');
+                       });
+                   }
+               });
+               jQuery('#activity1a .draggable-d').each(function() {
+                   jQuery(this).removeClass('correct incorrect', 250);
+                   if (advantages.indexOf(jQuery(this).text().trim()) != -1) {
+                       jQuery(this).fadeOut('slow', function() {
+                           jQuery('#advantages').append(jQuery(this));
+                           jQuery(this).show('slow');
+                       })
+                   } else {
+                       jQuery(this).fadeOut('slow', function() {
+                           jQuery('#disadvantages').append(jQuery(this));
+                           jQuery(this).show('slow');
+                       });
+                   }
+               });
+           }
+
+           // Clear answers
+           function clearAnswer() {
+               jQuery('#feedback').slideUp();
+               jQuery('#activity1a #show_btn').prop('disabled', false);
+               jQuery('#activity1a #check_btn').prop('disabled', false);
+               jQuery('#activity1a #clear_btn').prop('disabled', false);
+               correctCount = 0;
+               jQuery('#activity1a .droppable .draggable-a').each(function() {
+                   jQuery(this).removeClass('correct incorrect', 250)
+                   .removeAttr('style').css('position', 'relative')
+                   .fadeOut(function() {
+                       jQuery(this).appendTo('#options ul')
+                       .show(function() {
+                           jQuery(this).removeClass('incorrect', 250);
+                       });
+                   });
+               });
+               jQuery('#activity1a .droppable .draggable-d').each(function() {
+                   jQuery(this).removeClass('correct incorrect', 250)
+                   .removeAttr('style').css('position', 'relative')
+                   .fadeOut(function() {
+                       jQuery(this).appendTo('#options ul')
+                       .show(function() {
+                           jQuery(this).removeClass('incorrect', 250);
+                       });
+                   });
+               });
+           }
+           </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+</body>
+</html>

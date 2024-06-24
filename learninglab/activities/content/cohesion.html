@@ -187,89 +187,89 @@
 	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	
 	 <script>
-                                                                    (function($) {
-                                                                        var selected = "";
+                    (function($) {
+                        var selected = "";
 
-                                                                        $(".draggable").draggable({
-                                                                            scroll: false,
-                                                                            revert: function(droppableContainer) {
-                                                                                if ($(droppableContainer).attr('id') == $(this).attr("answer")) {
-                                                                                    return false
-                                                                                }
-                                                                                else {
-                                                                                    return true
-                                                                                }
-                                                                            },
-                                                                            drag: function() {
-                                                                                selected = $(this).attr("answer")
-                                                                            },
-                                                                            //                stop: function() {
-                                                                            //                    
-                                                                            //                },
-                                                                            snap: ".droppable",
-                                                                            snapMode: "inner"
-                                                                        });
+                        $(".draggable").draggable({
+                            scroll: false,
+                            revert: function(droppableContainer) {
+                                if ($(droppableContainer).attr('id') == $(this).attr("answer")) {
+                                    return false
+                                }
+                                else {
+                                    return true
+                                }
+                            },
+                            drag: function() {
+                                selected = $(this).attr("answer")
+                            },
+                            //                stop: function() {
+                            //                    
+                            //                },
+                            snap: ".droppable",
+                            snapMode: "inner"
+                        });
 
-                                                                        var correctCount = 0//initialise droppables
-                                                                        $(".droppable").droppable({
-                                                                            accept: ".draggable",
-                                                                            activeClass: "",
-                                                                            hoverClass: "",
-                                                                            drop: function(event, ui) {
-                                                                                if ($(this).attr('id') == selected) {
-                                                                                    correctCount++
-                                                                                    console.log(correctCount)
-                                                                                    if (correctCount >= $(".draggable").length) {
-                                                                                        console.log("yeah")
-                                                                                        $(".answer").addClass('color2 color2-h')
-                                                                                    }
+                        var correctCount = 0//initialise droppables
+                        $(".droppable").droppable({
+                            accept: ".draggable",
+                            activeClass: "",
+                            hoverClass: "",
+                            drop: function(event, ui) {
+                                if ($(this).attr('id') == selected) {
+                                    correctCount++
+                                    console.log(correctCount)
+                                    if (correctCount >= $(".draggable").length) {
+                                        console.log("yeah")
+                                        $(".answer").addClass('color2 color2-h')
+                                    }
 
-                                                                                }
-                                                                            }
-                                                                        });
+                                }
+                            }
+                        });
 
-                                                                        //show answers
-                                                                        $("#show_btn").click(function() {
-                                                                            //reset to original position
-                                                                            $(".draggable").each(function(i) {
-                                                                                $(this).animate({
-                                                                                    top: 0,
-                                                                                    left: 0
-                                                                                }, 0).css("margin", 0);
-                                                                                console.log($(this).position().top)
-                                                                            })
+                        //show answers
+                        $("#show_btn").click(function() {
+                            //reset to original position
+                            $(".draggable").each(function(i) {
+                                $(this).animate({
+                                    top: 0,
+                                    left: 0
+                                }, 0).css("margin", 0);
+                                console.log($(this).position().top)
+                            })
 
-                                                                            $("#clear_btn").prop("disabled", false);
-                                                                            $("#show_btn").prop("disabled", true);
-                                                                            $(".draggable").each(function() {
-                                                                                droppableId = "#" + $(this).attr("answer");
-                                                                                console.log("droppableId: " + droppableId)
-                                                                                console.log($(droppableId).position().top)
-                                                                                console.log($(droppableId).position().top - $(this).position().top)
-                                                                                $(this).animate({
-                                                                                    top: $(droppableId).position().top - $(this).position().top,
-                                                                                    left: ($(droppableId).position().left - $(this).position().left)
-                                                                                }, 500);
-                                                                                console.log($(this).position().left)
-                                                                            })
+                            $("#clear_btn").prop("disabled", false);
+                            $("#show_btn").prop("disabled", true);
+                            $(".draggable").each(function() {
+                                droppableId = "#" + $(this).attr("answer");
+                                console.log("droppableId: " + droppableId)
+                                console.log($(droppableId).position().top)
+                                console.log($(droppableId).position().top - $(this).position().top)
+                                $(this).animate({
+                                    top: $(droppableId).position().top - $(this).position().top,
+                                    left: ($(droppableId).position().left - $(this).position().left)
+                                }, 500);
+                                console.log($(this).position().left)
+                            })
 
-                                                                        })
-                                                                        //clear answers
-                                                                        $("#clear_btn").click(function() {
-                                                                            $("#show_btn").prop("disabled", false);
-                                                                            console.log("clear answer");
-                                                                            $(".draggable").each(function(i) {
-                                                                                $(this).animate({
-                                                                                    top: 0,
-                                                                                    left: 0
-                                                                                }, 500).css("margin", '.5%');
-                                                                                console.log($(this).position().top)
-                                                                            })
-                                                                            correctCount = 0;
-                                                                        })
+                        })
+                        //clear answers
+                        $("#clear_btn").click(function() {
+                            $("#show_btn").prop("disabled", false);
+                            console.log("clear answer");
+                            $(".draggable").each(function(i) {
+                                $(this).animate({
+                                    top: 0,
+                                    left: 0
+                                }, 500).css("margin", '.5%');
+                                console.log($(this).position().top)
+                            })
+                            correctCount = 0;
+                        })
 
 
-                                                                    })(jQuery)
-                                                                    </script>
+                    })(jQuery)
+                    </script>
 </body>
 </html>

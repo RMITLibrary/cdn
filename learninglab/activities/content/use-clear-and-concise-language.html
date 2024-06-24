@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>Use clear and concise language | Learning Lab</title>
+  
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
+	
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12.css"); 
+</style> 
+<!-- end activities style chunk -->   
+	
+	
+    <style>
+    .droppable {
+        border-radius: 5px;
+        padding: 1px 0;
+        margin: 0;
+        background-color: #f2f2f2;
+        vertical-align: middle;
+        width: 90px;
+        height: 27px;
+        display: inline-block;
+        border: 1px solid #ededed;
+    }
+
+    .answer {
+        display: inline-block;
+        border-radius: 5px;
+        background-color: #DFDBFE;
+        line-height: 27px;
+        height: 27px;
+        min-width: 90px;
+        color: #591E77;
+        cursor: pointer;
+        white-space: nowrap;
+        text-align: center;
+        float: left;
+        margin: .5%;
+        transition: background .5s;
+    }
+
+    .answered {
+        border-radius: 5px;
+        background-color: #9dd8f2;
+        min-width: 90px;
+        height: 27px;
+        color: white;
+        display: inline-block;
+        border: 0px solid;
+        text-align: center;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+
+    .box-title {
+        border-radius: 5px 5px 0 0;
+        padding: 5px 10px;
+    }
+
+    .box {
+        margin: 0 0 10px 0;
+        min-height: 40px;
+        padding: 10px;
+        border-radius: 0 0 5px 5px;
+    }
+    </style>
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLHPB23GYR');
+  </script>
+
+<!-- Microsoft Bing --> 
+<meta name="msvalidate.01" content="8E4954E1DFAB7E2F8A92DD0A0BD6ED09" />
+
+<!-- Microsoft Clarity --> 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bbzr2pniz1");
+</script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
+	
+	<div id="main" class="clearfix">
+
+		<div class="activity-container">
+            <p>Replace these ‘wordy’ phrases with a more concise alternative. Drag the concise words to their original correct places. Only correct answers will be accepted.</p>
+
+            <div id="paragraph">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>
+                            1. At this point in time = 
+                            <span class="droppable" id="now"></span>
+                        </p>
+                        <p>
+                            2. Due to the fact that = 
+                            <span class="droppable" id="because"></span>
+                        </p>
+                        <p>
+                            3. As a matter of fact = 
+                            <span class="droppable" id="in_fact"></span>
+                        </p>
+                        <p>
+                            4. At all times = 
+                            <span class="droppable" id="always"></span>
+                        </p>
+                        <p>
+                            5. At the present time = 
+                            <span class="droppable" id="currently"></span>
+                        </p>
+                        <p>
+                            6. By means of = 
+                            <span class="droppable" id="by"></span>
+                        </p>
+                        <p>
+                            7. For the purpose of = 
+                            <span class="droppable" id="for"></span>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>
+                            8. In spite of the fact that = 
+                            <span class="droppable" id="although"></span>
+                        </p>
+                        <p>
+                            9. In the event that = 
+                            <span class="droppable" id="if"></span>
+                        </p>
+                        <p>
+                            10. In the final analysis = 
+                            <span class="droppable" id="finally"></span>
+                        </p>
+                        <p>
+                            11. A sufficient number = 
+                            <span class="droppable" id="enough"></span>
+                        </p>
+                        <p>
+                            12. Have the ability to = 
+                            <span class="droppable" id="able_to"></span>
+                        </p>
+                        <p>
+                            13. Until such time as = 
+                            <span class="droppable" id="until"></span>
+                        </p>
+                        <p>
+                            14. In the nature of = 
+                            <span class="droppable" id="like"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="panel" style="min-height:100px">
+
+                        <div id="draggable2" class="answer draggable" answer="because">because</div>
+                        <div id="draggable3" class="answer draggable" answer="in_fact">in fact</div>
+                        <div id="draggable10" class="answer draggable" answer="finally">finally</div>
+                        <div id="draggable11" class="answer draggable" answer="enough">enough</div>
+                        <div id="draggable7" class="answer draggable" answer="for">for</div>
+                        <div id="draggable1" class="answer draggable" answer="now">now</div>
+                        <div id="draggable8" class="answer draggable" answer="although">although</div>
+                        <div id="draggable9" class="answer draggable" answer="if">if</div>
+                        <div id="draggable12" class="answer draggable" answer="able_to">able to</div>
+                        <div id="draggable4" class="answer draggable" answer="always">always</div>
+                        <div id="draggable5" class="answer draggable" answer="currently">currently</div>
+                        <div id="draggable6" class="answer draggable" answer="by">by</div>
+                        <div id="draggable13" class="answer draggable" answer="until">until</div>
+                        <div id="draggable14" class="answer draggable" answer="like">like</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:10px">
+                    <button id="show_btn" class="btn btn-default">
+                                        Show Answers
+                                    </button>
+                    <button id="clear_btn" class="btn btn-default">
+                                        Clear
+                                    </button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>	
+	 <script>
+    (function($) {
+        var selected = "";
+
+        $(".draggable").draggable({
+            scroll: false,
+            revert: function(droppableContainer) {
+                if ($(droppableContainer).attr('id') == $(this).attr("answer")) {
+                    return false
+                }
+                else {
+                    return true
+                }
+            },
+            drag: function() {
+                selected = $(this).attr("answer")
+            },
+            //                stop: function() {
+            //                    
+            //                },
+            snap: ".droppable",
+            snapMode: "inner"
+        });
+
+        // var correctCount=0
+        //initialise droppables
+        $(".droppable").droppable({
+            accept: ".draggable",
+            activeClass: "",
+            hoverClass: "",
+            drop: function(event, ui) {
+                if ($(this).attr('id') == selected) {
+                    $(this).addClass('dropped')
+                    console.log($(".dropped").length)
+                    if ($(".dropped").length >= $(".draggable").length) {
+                        console.log("yeah")
+                        $(".answer").addClass('color2 color2-h')
+                    }
+                }
+            }
+        });
+
+        //show answers
+        $("#show_btn").click(function() {
+            //reset to original position
+            $(".draggable").each(function(i) {
+                $(this).animate({
+                    top: 0,
+                    left: 0
+                }, 0).css("margin", 0);
+                console.log($(this).offset().top)
+            })
+
+            $("#clear_btn").prop("disabled", false);
+            $("#show_btn").prop("disabled", true);
+            $(".draggable").each(function() {
+                droppableId = "#" + $(this).attr("answer");
+                console.log("droppableId: " + droppableId)
+                console.log($(droppableId).offset().top)
+                console.log($(droppableId).offset().top - $(this).offset().top)
+                $(this).animate({
+                    top: $(droppableId).offset().top - $(this).offset().top,
+                    left: ($(droppableId).offset().left - $(this).offset().left)
+                }, 500);
+                console.log($(this).offset().left)
+            })
+
+        })
+        //clear answers
+        $("#clear_btn").click(function() {
+            $("#show_btn").prop("disabled", false);
+            console.log("clear answer");
+            $(".draggable").each(function(i) {
+                $(this).animate({
+                    top: 0,
+                    left: 0
+                }, 500).css("margin", '.5%');
+                console.log($(this).offset().top)
+            })
+            $(".answer").removeClass('color2 color2-h')
+        })
+
+
+    })(jQuery)
+    </script>
+
+</body>
+</html>

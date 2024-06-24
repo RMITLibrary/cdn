@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>What is scholarly information? | Learning Lab</title>
+  
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
+	
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12.css"); 
+</style> 
+<!-- end activities style chunk -->   
+	
+	<style type="text/css">
+                                                                    .scenario-heading {
+  font-weight: bold;
+  font-family: "Museo", "Cambria", "Times New Roman", Times, serif;
+  color: #d30900;
+                                                                    }
+
+                                                                    .scenario-text {
+  font-family: "Museo", "Cambria", "Times New Roman", Times, serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+                                                                    }
+
+                                                                    .scenario-form {
+  margin-left: 25px;
+                                                                    }
+
+                                                                    .scenario-form input[type=radio] {
+  margin: 0 5px 0 -20px;
+                                                                    }
+
+                                                                    .information-source-activity ul {
+  padding: 0;
+                                                                    }
+
+                                                                    .information-source-activity li {
+  list-style: none;
+  margin: 15px 0;
+                                                                    }
+
+                                                                    .correct {
+  background-color: #CCE7DF;
+  border-radius: 4px;
+                                                                    }
+
+                                                                    .incorrect {
+  background-color: #FBE6E6;
+  border-radius: 4px;
+                                                                    }
+
+                                                                    .highlight {
+  background-color: #FFFADA;
+  border-radius: 4px;
+                                                                    }
+
+                                                                    .feedback {
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  margin-top: 3px;
+  padding: 4px 8px;
+  background: #FAFAFA;
+                                                                    }
+
+                                                                    .green-border {
+  border-bottom: 3px solid #5CB85C;
+  border-radius: 3px;
+                                                                    }
+
+                                                                    .red-border {
+  border-bottom: 3px solid #D9534F;
+  border-radius: 3px;
+                                                                    }
+
+                                                                    .red {
+  color: red;
+                                                                    }
+
+                                                                    .list-style-alpha ol li {
+  list-style-type: lower-alpha !important;
+                                                                    }
+                                                                    </style>
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLHPB23GYR');
+  </script>
+
+<!-- Microsoft Bing --> 
+<meta name="msvalidate.01" content="8E4954E1DFAB7E2F8A92DD0A0BD6ED09" />
+
+<!-- Microsoft Clarity --> 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bbzr2pniz1");
+</script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
+	
+	<div id="main" class="clearfix">
+
+		<div class="activity-container information-source-activity">
+              <p>Identify the best information source in the scenarios below. Select the 'Check answers' button when you are finished.
+              </p>
+              <br>
+              <!-- Scenario 1 -->
+              <p>
+                  <span class="introductory-paragraph">Scenario 1</span>
+                  <br>
+                   You are studying for a small business qualification. Your task is to choose a small business idea and to identify and
+                        analyse potential competitors. Choose the most appropriate information source from the list.
+                      
+              </p>
+              <form class="scenario-form">
+                  <ul>
+                      <li>
+                          <input type="radio" name="scenario1" class="answer">
+                           The website of an existing business that could be a potential competitor.
+                                    
+                          <span class="icon"></span>
+
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               Well done. This is the best option. Websites are useful sources for this research task because
+                                          they often contain details about potential competitors including price, product range, target market and annual
+                                          reports.
+                                        
+                          </div>
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario1">
+                           Advertisement in trade magazine for similar business.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               Although an advertisement can help identify competitors, you cannot analyse them. A competitor's
+                                          website is a better option because it often contains details about price, product range, target market and annual
+                                          reports to assist in analysis.
+                                        
+                          </div>
+
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario1">
+                           Bureau of Statistics report that cites the number of new small businesses that commenced in the previous financial
+                                    year.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               The Bureau of Statistics is a reputable source of information but, in this case, the information
+                                          is not specific or relevant to the research topic.
+                                        
+                          </div>
+
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario1">
+                           An article in a popular magazine about how someone else started up their own small business.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               Articles in popular magazines can be appropriate sources of information. This particular article
+                                          is too general and may provide useful background but will not assist in identifying and analysing competitors.
+                                        
+                          </div>
+
+                      </li>
+                  </ul>
+              </form>
+              <hr>
+
+              <!-- Scenario 2 -->
+              <p>
+                  <span class="introductory-paragraph">Scenario 2</span>
+                  <br>
+                   You are researching emerging architectural trends in apartment living in capital cities worldwide. Choose the most appropriate
+                        information source from the list.
+                      
+              </p>
+              <form class="scenario-form">
+                  <ul>
+                      <li>
+                          <input type="radio" name="scenario2">
+                           Plans of current apartment developments being undertaken in your city.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               Although plans of current local developments could be useful, the topic's focus is worldwide
+                                          so it would need to be supplemented by examples in other cities. Plans of current developments may also not be
+                                          indicative of emerging trends.
+                                        
+                          </div>
+
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario2">
+                           International trade show for the building construction sector – keynote address, "Life in 2030."
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               This source relates to future trends. The topic is focussed on emerging trends. Otherwise, this
+                                          may have been an appropriate resource.
+                                        
+                          </div>
+
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario2">
+                           Photographs of apartment complexes captured during a field trip around your city.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               Although photographs of current local developments could be useful, the topic's focus is worldwide
+                                          so it would need to be supplemented by examples in other cities. Photographs of current developments may also not
+                                          be indicative of emerging trends.
+                                        
+                          </div>
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario2" class="answer">
+                           Online magazine article, "What does going green really mean? Global impacts of sustainability on residential design."
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               Correct! This is the best option because it best suits the criteria of the research topic.
+                                        
+                          </div>
+                      </li>
+                  </ul>
+              </form>
+              <div class="feedback hidden" style="display: none;">
+                  <strong>Feedback</strong>
+                  <br>
+              </div>
+              <hr>
+
+              <!-- Scenario 3 -->
+              <p>
+                  <span class="introductory-paragraph">Scenario 3</span>
+                  <br>
+                   You are researching the evolution of special effects in the film industry. Choose the most appropriate information source
+                        from the list.
+                      
+              </p>
+              <form class="scenario-form">
+                  <ul>
+                      <li>
+                          <input type="radio" name="scenario3">
+                           Movie review from a well-respected film critic.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               A movie review is subjective and not relevant to this topic.
+                                        
+                          </div>
+
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario3" class="answer">
+                           Transcript of a radio interview with Richard Rickitt, author of Special Effects, and Tyruben Ellingson, who worked
+                                    on Avatar, who discuss the evolution of special effects in films.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               Well done! This is the best option. The sources used for the radio interview appear to be qualified
+                                          and the assignment topic is directly addressed.
+                                        
+                          </div>
+
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario3">
+                           A blog where contributors talk about their favourite special effects movies of all time.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               Blogs can be acceptable sources of information but are only appropriate when the contributors
+                                          are qualified. In this case the entries are subjective and irrelevant.
+                                        
+                          </div>
+
+                      </li>
+                      <li>
+                          <input type="radio" name="scenario3">
+                           A report published in a trade magazine, Beyond 3D – the future of special effects in the film industry, completed
+                                    by a team from a respected university.
+                                    
+                          <span class="icon"></span>
+                          <div class="feedback" style="display: none;">
+                              <strong>Feedback:</strong>
+                               This report, although published by a reputable source, refers to the future of special effects,
+                                          not the evolution.
+                                        
+                          </div>
+
+                      </li>
+                  </ul>
+              </form>
+              <br>
+              <!-- Buttons -->
+              <div class="button-container">
+                  <button id="check-answers-btn" class="btn btn-default">Check answers</button>
+                  <button id="show-answers-btn" class="btn btn-default">Show answers</button>
+                  <button id="clear-btn" class="btn btn-default">Clear</button>
+              </div>
+
+          </div>
+		
+	</div>
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+	 <script>
+                                                                    jQuery(document).ready(function() {
+
+  jQuery('.feedback').each(function() {
+      jQuery(this).hide();
+  });
+
+  // Check answers
+  jQuery('#check-answers-btn').on('click', function() {
+
+      const tick = '<i class="fa fa-check" aria-hidden="true" style="color:#5CB85C"></i>';
+      const cross = '<i class="fa fa-times" aria-hidden="true" style="color:#D9534F"></i>';
+
+      jQuery('.scenario-form input:checked').each(function() {
+          // Colourise the list item dependent on its correctness
+          // Append a tick or cross
+          if (jQuery(this).hasClass('answer')) {
+              jQuery(this).parent().find('.icon').empty();
+              jQuery(this).parent().find('.icon').append(tick);
+              jQuery(this).parent().find('.feedback').addClass('green-border');
+          } else {
+              jQuery(this).parent().find('.icon').empty();
+              jQuery(this).parent().find('.icon').append(cross);
+              jQuery(this).parent().find('.feedback').addClass('red-border');
+          }
+          // Display feedback
+          jQuery(this).parent().find('.feedback').slideDown();
+      });
+  });
+
+  // Show answers
+  jQuery('#show-answers-btn').on('click', function() {
+      jQuery('.scenario-form input').each(function() {
+          if (jQuery(this).hasClass('answer')) {
+              jQuery(this).parent().addClass('highlight');
+          }
+      })
+  })
+  // Clear answers
+  jQuery('#clear-btn').on('click', function() {
+      jQuery('.scenario-form input').each(function() {
+          jQuery(this).parent().removeClass('correct incorrect highlight');
+          jQuery(this).prop('checked', false);
+      });
+      // Hide feedback and remove styles
+      jQuery('.feedback').removeClass('green-border red-border').slideUp();
+      // Clear ticks and crosses
+      jQuery('.icon').each(function() {
+          jQuery(this).children().remove();
+      });
+  });
+
+  // Remove highlight if user selects another answer
+  jQuery('.scenario-form').on('click', function() {
+      jQuery(this).find('.feedback').slideUp();
+      jQuery('li').each(function() {
+          jQuery(this).removeClass('correct incorrect highlight');
+      });
+      jQuery(this).find('.icon').children().remove();
+  });
+                                                                    });
+                                                                    </script>
+</body>
+</html>

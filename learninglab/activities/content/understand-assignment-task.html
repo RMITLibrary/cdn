@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>Understand the assignment task | Learning Lab</title>
+  
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
+	
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12.css"); 
+</style> 
+<!-- end activities style chunk -->   
+	
+<style type="text/css">
+         .legend {
+             padding: 5px 10px;
+             margin: 10px 5px 10px 0;
+             border-radius: 3px;
+         }
+
+         .activity-container button, .activity-container span {
+             transition: all .3s;
+         }/* Activity styles */
+
+         #statement-02, #statement-03 {
+             display: none;
+         }
+
+         .topic-sentence-container {
+             margin: 5px 0;
+             font-size: 18px;
+             line-height: 26px;
+         }
+
+         #highlighter-container-01, #highlighter-container-02, #highlighter-container-03 {
+             padding: 5px;
+             min-height: 140px;
+         }
+
+         #highlighter-container-01 div, #highlighter-container-02 div, #highlighter-container-03 div {
+             float: left;
+             width: 30px;
+             height: 30px;
+             margin: 5px 0;
+             padding: 3px 6px;
+             border-radius: 5px;
+             border: 2px solid #FFFFFF;
+             cursor: pointer;
+         }
+
+         #feedback-01, #feedback-02, #feedback-03 {
+             display: none;
+         }
+
+         #feedback-01 h3, #feedback-02 h3, #feedback-03 h3 {
+             font-family: 'Museo', Arial, Helvetica, sans-serif;
+             font-size: 16px;
+             color: var(--red);
+         }
+
+         span.word-container {
+             background: #EEEEEE;
+             padding: 0 5px;
+             border-radius: 3px;
+             cursor: pointer;
+         }
+
+         span.highlighter-name {
+             display: block;
+             float: left;
+             margin: 9px 0 0 9px;
+             height: 30px;
+         }
+
+         .selected-colour {
+             border: 2px solid var(--red) !important;
+             border-radius: 3px;
+         }
+
+         #button-container {
+             display: block;
+             margin-top: 10px;
+         }
+
+         .green {
+             color: var(--green-med);
+         }
+
+         .red-flash {
+             animation: incorrect 0.5s forwards linear normal;
+         }
+
+         @keyframes incorrect {
+             0% {
+                 color: #FBE6E6;
+                 background: #D50000;
+                 opacity: 1;
+             }
+
+             50% {
+                 color: #FBE6E6;
+                 background: #D50000;
+                 opacity: 1;
+             }
+
+             100% {
+                 color: #000000;
+                 background: #EEEEEE;
+                 opacity: 1;
+             }
+         }
+
+         .essay-topic-blockquote {
+             font-size: 16px;
+             line-height: 20px;
+         }
+         </style>
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLHPB23GYR');
+  </script>
+
+<!-- Microsoft Bing --> 
+<meta name="msvalidate.01" content="8E4954E1DFAB7E2F8A92DD0A0BD6ED09" />
+
+<!-- Microsoft Clarity --> 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bbzr2pniz1");
+</script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
+	
+	<div id="main" class="clearfix">
+
+		<div class="activity-container">
+        
+                             <p>Select the yellow pen and highlight the content words, use the blue pen for instructional words, and use the green pen for limiting words. Incorrect labelling of words will flash red.
+                             </p>
+                             <br/>
+                             <!-- Statement 1 -->
+                             <div class="active" id="statement-01">
+                                 <div class="topic-sentence-container">
+                                     <span class="word-container" id="colour2">Develop</span>
+                                     <span class="word-container" id="colour0">a marketing plan</span>
+                                      focused on 
+                                     <span class="word-container" id="colour1">one business unit of a selected company</span>
+                                     .
+                                 </div>
+                                 <div id="highlighter-container-01">
+                                     <div class="highlighter" id="colour0" style="background-color:var(--yellow-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Content words</span>
+                                     <br/>
+                                     <br/>
+                                     <div class="highlighter" id="colour2" style="background-color:var(--blue-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Instructional words</span>
+                                     <br/>
+                                     <br/>
+                                     <div class="highlighter" id="colour1" style="background-color:var(--green-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Limiting words</span>
+                                 </div>
+                             </div>
+                             <!-- Statement 2 -->
+                             <div id="statement-02">
+                                 <div class="topic-sentence-container">
+                                     <span class="word-container" id="colour2">Discuss</span>
+                                      the implications of 
+                                     <span class="word-container" id="colour0">family members being present during emergency interventions</span>
+                                     <span class="word-container" id="colour1">involving children</span>
+                                     .
+                                 </div>
+                                 <div id="highlighter-container-02">
+                                     <div class="highlighter" id="colour0" style="background-color:var(--yellow-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Content words</span>
+                                     <br/>
+                                     <br/>
+                                     <div class="highlighter" id="colour2" style="background-color:var(--blue-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Instructional words</span>
+                                     <br/>
+                                     <br/>
+                                     <div class="highlighter" id="colour1" style="background-color:var(--green-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Limiting words</span>
+                                 </div>
+                             </div>
+                             <!-- Statement 3 -->
+                             <div id="statement-03">
+                                 <div class="topic-sentence-container">
+                                     <span class="word-container" id="colour2">Outline</span>
+                                      the key 
+                                     <span class="word-container" id="colour0">factors affecting the provision of aged care services</span>
+                                      in 
+                                     <span class="word-container" id="colour1">rural Australia</span>
+                                     .
+                                 </div>
+                                 <div id="highlighter-container-03">
+                                     <div class="highlighter" id="colour0" style="background-color:var(--yellow-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Content words</span>
+                                     <br/>
+                                     <br/>
+                                     <div class="highlighter" id="colour2" style="background-color:var(--blue-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Instructional words</span>
+                                     <br/>
+                                     <br/>
+                                     <div class="highlighter" id="colour1" style="background-color:var(--green-med);">&nbsp;</div>
+                                     <span class="highlighter-name">Limiting words</span>
+                                 </div>
+                             </div>
+                             <!-- Buttons -->
+                             <div id="button-container">
+                                 <button class="btn btn-default" id="clear-answers" type="button">Clear answers</button>
+                                 <button class="btn btn-default" id="show-answers" type="button">Show answers</button>
+                                 <button class="btn btn-default" id="navigate-previous" type="button">Previous</button>
+                                 <button class="btn btn-default" id="navigate-next" type="button">Next</button>
+                             </div>
+                         </div>
+		
+	</div>
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+	<script>
+                 jQuery(document).ready(function() {
+                     const colours = ['#var(--yellow-med)', 'var(--green-med)', 'var(--blue-med)'];
+                     let scores = [0, 0, 0];
+                     let currSection = 'first';
+                     updateButtons();
+
+                     // Add border around selected highlighter
+                     jQuery('#highlighter-container-01').on('click', 'div', function(event) {
+                         jQuery('.selected-colour').removeClass('selected-colour');
+                         jQuery(this).addClass('selected-colour');
+                     });
+                     jQuery('#highlighter-container-02').on('click', 'div', function(event) {
+                         jQuery('.selected-colour').removeClass('selected-colour');
+                         jQuery(this).addClass('selected-colour');
+                     });
+                     jQuery('#highlighter-container-03').on('click', 'div', function(event) {
+                         jQuery('.selected-colour').removeClass('selected-colour');
+                         jQuery(this).addClass('selected-colour');
+                     });
+
+                     // Highlight the topic sentence with the selected highlighter
+                     jQuery('.topic-sentence-container').on('click', 'span', function(event) {
+
+                         let highlighter = jQuery('.selected-colour');
+                         let colour = jQuery('.selected-colour').css('background-color');
+                         let phrase = jQuery(this);
+                         let id = phrase.attr('id');
+                         let parentId = jQuery(this).parent().parent().attr('id');
+                         let questionNumber = parentId.substr(parentId.length - 1);
+
+                         // If correct, remain highlighted, else flash red
+                         if (highlighter.attr('id') == id) {
+                             if (!phrase.hasClass('selected')) {
+                                 highlighter.next('.highlighter-name').append(' <i class="fas fa-check green"></i>');
+                                 phrase.css({
+                                     'background-color': colour
+                                 });
+                                 phrase.addClass('selected');
+                                 scores[questionNumber - 1]++;
+                             }
+                         } else {
+                             if (!phrase.hasClass('selected')) {
+                                 phrase.addClass('red-flash');
+                                 setTimeout(function() {
+                                     phrase.removeClass('red-flash');
+                                 }, 500);
+                             }
+                         }
+
+                         // If all answers are correct, show feedback
+                         if (scores[questionNumber - 1] == 3) {
+                             jQuery('#feedback-0' + questionNumber).slideDown('slow');
+                         }
+                     });
+
+                     // Clear answers
+                     jQuery('#clear-answers').on('click', function() {
+                         jQuery('.selected-colour').removeClass('selected-colour');
+                         jQuery('.word-container').each(function() {
+                             jQuery(this).css({
+                                 'background-color': ''
+                             });
+                             jQuery(this).removeClass('selected');
+                         });
+                         jQuery('.fa-check').each(function() {
+                             jQuery(this).remove();
+                         });
+                     });
+
+                     // Show answers
+                     jQuery('#show-answers').on('click', function() {
+                         jQuery('span#colour0').css({
+                             'background-color': colours[0]
+                         });
+                         jQuery('span#colour1').css({
+                             'background-color': colours[1]
+                         });
+                         jQuery('span#colour2').css({
+                             'background-color': colours[2]
+                         });
+                     });
+
+                     /* Click on next */
+                     jQuery('button#navigate-next').click(function() {
+                         if (currSection == 'first') {
+                             jQuery('#statement-01').hide();
+                             jQuery('#statement-01').removeClass('active');
+                             jQuery('#statement-02').show();
+                             jQuery('#statement-02').addClass('active');
+                             currSection = 'second';
+                         } else if (currSection == 'second') {
+                             jQuery('#statement-02').hide();
+                             jQuery('#statement-02').removeClass('active');
+                             jQuery('#statement-03').show();
+                             jQuery('#statement-01').addClass('active');
+                             currSection = 'third';
+                         }
+                         updateButtons();
+                     });
+
+                     /* Click on previous */
+                     jQuery('button#navigate-previous').click(function() {
+                         if (currSection === 'second') {
+                             jQuery('#statement-02').hide();
+                             jQuery('#statement-02').removeClass('active');
+                             jQuery('#statement-01').show();
+                             jQuery('#statement-01').addClass('active');
+                             currSection = 'first';
+                         }
+                         if (currSection === 'third') {
+                             jQuery('#statement-03').hide();
+                             jQuery('#statement-03').removeClass('active');
+                             jQuery('#statement-02').show();
+                             jQuery('#statement-02').addClass('active');
+                             currSection = 'second';
+                         }
+                         updateButtons();
+                     });
+
+                     /* Update disable state of next/previous buttons */
+                     function updateButtons() {
+                         if (currSection == 'first') {
+                             jQuery('button#navigate-previous').prop('disabled', true);
+                         } else {
+                             jQuery('button#navigate-previous').prop('disabled', false);
+                         }
+                         if (currSection == 'third') {
+                             jQuery('button#navigate-next').prop('disabled', true);
+                         } else {
+                             jQuery('button#navigate-next').prop('disabled', false);
+                         }
+                     }
+
+                 });
+                 </script>
+
+
+         <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+</body>
+</html>

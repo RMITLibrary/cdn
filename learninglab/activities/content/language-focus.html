@@ -105,7 +105,7 @@
                   <select class="options"></select>
               </span>
                be successful 
-              <span class="1">
+              <span class="0">
                   <select class="options"></select>
               </span>
                he sued Groovy Clothing Store for negligence. However, 
@@ -129,7 +129,7 @@
   </div>
 
 </div>
-                                                                    
+   
 	
 
 <!-- Iframe resizer --> 
@@ -138,38 +138,38 @@
 <!-- end Iframe resizer --> 
 	
    <script>
-                                                                    jQuery(document).ready(function() {
+   jQuery(document).ready(function() {
 
-                                                                        var i = 0;
-                                                                        var answers = [
-                                                                        "if", "would", "would be", "would not have", "might be able"
-                                                                        ];
+       var i = 0;
+       var answers = [
+       "if", "would", "would be", "would not have", "might be able"
+       ];
 
-                                                                        jQuery(".options").append(new Option("-- Select --"));
+       jQuery(".options").append(new Option("-- Select --"));
 
-                                                                        /* Add options to select dropdown */
-                                                                        for (i = 0; i < answers.length; i++) {
+       /* Add options to select dropdown */
+       for (i = 0; i < answers.length; i++) {
   jQuery(".options").append(new Option(answers[i], answers[i]));
-                                                                        }
-                                                                        ;
+       }
+       ;
 
-                                                                        /* Capitalisation */
-                                                                        jQuery("#first option").each(function() {
+       /* Capitalisation */
+       jQuery("#first option").each(function() {
   jQuery(this).text(jQuery(this).text().charAt(0).toUpperCase() + jQuery(this).text().slice(1));
-                                                                        });
+       });
 
-                                                                        /* If there's an icon already */
-                                                                        jQuery("select").on("change", function() {
+       /* If there's an icon already */
+       jQuery("select").on("change", function() {
   jQuery("select").each(function() {
       if (jQuery(this).parent().find(".fa-times")) {
           jQuery(this).parent().find(".fa-times").remove();
           jQuery("#check-answers").prop("disabled", false);
       }
   });
-                                                                        });
+       });
 
-                                                                        /* Check answers */
-                                                                        jQuery("#check-answers").click(function() {
+       /* Check answers */
+       jQuery("#check-answers").click(function() {
   jQuery("select").each(function() {
       jQuery(this).parent().find(".fa").remove();
       var answer_num = jQuery(this).parent().attr("class");
@@ -184,20 +184,20 @@
 
   });
   jQuery("#check-answers").prop("disabled", true);
-                                                                        });
+       });
 
-                                                                        /* Show answers */
-                                                                        jQuery("#show-answers").click(function() {
+       /* Show answers */
+       jQuery("#show-answers").click(function() {
   jQuery("select").each(function() {
       var answer_num = jQuery(this).parent().attr("class");
       jQuery(this).val(answers[answer_num]);
       jQuery(this).parent().find(".fa").remove();
   });
   jQuery("#check-answers").prop("disabled", true);
-                                                                        });
+       });
 
-                                                                        /* Clear answers */
-                                                                        jQuery("#clear").click(function() {
+       /* Clear answers */
+       jQuery("#clear").click(function() {
   jQuery("select").each(function() {
       jQuery(this).find(".fa").remove();
       jQuery(this).val(jQuery("select option:first").val());
@@ -205,10 +205,10 @@
       jQuery("#show-answers").prop("disabled", false);
       jQuery(this).parent().find(".fa").remove();
   });
-                                                                        });
+       });
 
-                                                                    });
-                                                                    </script>
+   });
+   </script>
 	
 </body>
 </html>

@@ -79,58 +79,57 @@
 	
 	<div id="main" class="clearfix">
 
-		 <div class="activity-container" style="line-height:40px">
 
-                    <p>Complete the text by choosing the correct linking words from the drop down menu.</p>
+                    <p>Complete the text by choosing the correct linking words from the drop down menus.</p>
+ <div class="activity-container">
 
-                    		Australia&rsquo;s legal system is called the common law system. This is 
-                    <select class="btn btn-default" key="because">
-                        <option value="-"></option>
-                    </select>
-                     it was brought to us by the British. 
-                    <select class="btn btn-default first-cap" key="Moreover">
-                        <option value="-"></option>
-                    </select>
-                    , it is based on the idea of applying common legal principles to similar cases. Criminal law involves the regulation of behaviour, which is considered to harm 
-                    <select class="btn btn-default" key="not only">
-                        <option value="-"></option>
-                    </select>
-                     an individual victim 
-                    <select class="btn btn-default" key="but also">
-                        <option value="-"></option>
-                    </select>
-                     has the potential to harm the whole of society. A person who commits the harm is known as the accused or defendant. 
-                    <select class="btn btn-default first-cap" key="For example">
-                        <option value="-"></option>
-                    </select>
-                    , 
-                    <select class="btn btn-default" key="if">
-                        <option value="-"></option>
-                    </select>
-                     you kill another human being without reason you 
-                    <select class="btn btn-default" key="clearly">
-                        <option value="-"></option>
-                    </select>
-                     hurt the victim and 
-                    <select class="btn btn-default" key="also">
-                        <option value="-"></option>
-                    </select>
-                     the social fabric of society. Action is taken against you (the defendant) by the police and the courts on behalf of the rest of the community. Civil law involves private individuals 
-                    <select class="btn btn-default" key="who">
-                        <option value="-"></option>
-                    </select>
-                     believe their personal rights have been wronged. The person who has been wronged (plaintiff) 
-                    <select class="btn btn-default" key="may">
-                        <option value="-"></option>
-                    </select>
-                     sue (claim compensation/remedy) from the person who harmed them (defendant).
-            </div>
-            <div style="text-align:right">
-                <button class="btn btn-default" id="checkAnswer" onclick="checkAnswer()">Check Answers</button>
-                <button class="btn btn-default" id="showAnswer" onclick="showAnswer()">Show Answers</button>
-                <button class="btn btn-default" id="clear" onclick="clearAnswer()">Clear</button>
-            </div>
-	</div>
+      <div class="select-activity">
+          <p>
+              <span class="0">
+                  <select class="options" id="first"></select>
+              </span>
+               Groovy Clothing Store failed to prove that it was partly Bert&rsquo;s negligence that caused himself such injuries, it 
+              <span class="1">
+                  <select class="options"></select>
+              </span>
+               then be completely liable to Bert for any foreseeable loss or damage (Wagon Mound Cases) which he suffered as a result of the breach. But for the breach, Bert 
+              <span class="3">
+                  <select class="options"></select>
+              </span>
+               suffered extensive injuries and be hospitalised for six months. (Cork v Kirby McLean; Chapel v Hart). Hence, the medical expenses for Bert&rsquo;s hospitalisation and any foreseeable and reasonable physical or other economic damages (e.g. loss of earning capacity) though not mentioned in the case, 
+              <span class="2">
+                  <select class="options"></select>
+              </span>
+               recoverable by Groovy Clothing Store. It appears that Bert 
+              <span class="1">
+                  <select class="options"></select>
+              </span>
+               be successful 
+              <span class="1">
+                  <select class="options"></select>
+              </span>
+               he sued Groovy Clothing Store for negligence. However, 
+              <span class="0">
+                  <select class="options"></select>
+              </span>
+               Bert was held partly liable for his injury due to contributory negligence, he 
+              <span class="4">
+                  <select class="options"></select>
+              </span>
+               to recover only part of these damages.
+          </p>
+          <br/>
+          <br/>
+          <div class="buttons">
+              <button class="btn btn-default" id="check-answers" type="button">Check Answers</button>
+              <button class="btn btn-default" id="show-answers" type="button">Show Answers</button>
+              <button class="btn btn-default" id="clear" type="button">Clear</button>
+          </div>
+      </div>
+  </div>
+
+</div>
+                                                                    
 	
 
 <!-- Iframe resizer --> 
@@ -138,84 +137,78 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
 <!-- end Iframe resizer --> 
 	
-    <script>
+   <script>
+                                                                    jQuery(document).ready(function() {
 
-    String.prototype.firstCap = function() {
-        return this.charAt(0).toUpperCase() + this.slice(1);
-    }
-    var options = ["also", "not only", "because", "for example", "who", "may", "moreover", "if", "clearly", "but also"]
+                                                                        var i = 0;
+                                                                        var answers = [
+                                                                        "if", "would", "would be", "would not have", "might be able"
+                                                                        ];
 
-    var updateOptions = function() {
+                                                                        jQuery(".options").append(new Option("-- Select --"));
 
-        jQuery('.activity-container select').each(function() {
-            var selected = jQuery(this).val()
-            var html = "<option value='-'>-</option>"
-            if (selected != '-')
-                html += "<option value='" + selected + "' selected>" + selected + "</option>";
-            for (var i = 0; i < options.length; i++) {
-                if (jQuery(this).hasClass('first-cap')) {
-                    html += "<option value='" + options[i].firstCap() + "'>" + options[i].firstCap() + "</option>"
-                } else {
-                    html += "<option value='" + options[i] + "'>" + options[i] + "</option>"
-                }
-            }
-            jQuery(this).html(html)
-        })
-    }
-    updateOptions()
+                                                                        /* Add options to select dropdown */
+                                                                        for (i = 0; i < answers.length; i++) {
+  jQuery(".options").append(new Option(answers[i], answers[i]));
+                                                                        }
+                                                                        ;
 
-    var oldVal,
-        newVal = ''
-    jQuery('.activity-container select').click(function() {
-        oldVal = jQuery(this).val().toLowerCase()
-        console.log("old: " + oldVal)
-    }).change(function() {
-        newVal = jQuery(this).val().toLowerCase()
-        console.log("new: " + newVal)
+                                                                        /* Capitalisation */
+                                                                        jQuery("#first option").each(function() {
+  jQuery(this).text(jQuery(this).text().charAt(0).toUpperCase() + jQuery(this).text().slice(1));
+                                                                        });
 
-        if (newVal != oldVal) {
-            if (options.indexOf(newVal) != -1)
-                options.splice(options.indexOf(newVal), 1);
+                                                                        /* If there's an icon already */
+                                                                        jQuery("select").on("change", function() {
+  jQuery("select").each(function() {
+      if (jQuery(this).parent().find(".fa-times")) {
+          jQuery(this).parent().find(".fa-times").remove();
+          jQuery("#check-answers").prop("disabled", false);
+      }
+  });
+                                                                        });
 
-            if (oldVal != '-')
-                options.push(oldVal);
-        }
+                                                                        /* Check answers */
+                                                                        jQuery("#check-answers").click(function() {
+  jQuery("select").each(function() {
+      jQuery(this).parent().find(".fa").remove();
+      var answer_num = jQuery(this).parent().attr("class");
+      var answer_text = answers[answer_num];
+      var correct = "<span class=\"color2\"><i class=\"fa fa-check\" aria-hidden=\"true\"></i></span>";
+      var incorrect = "<span class=\"color4\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span>";
+      if (jQuery(this).val() == answer_text) {
+          jQuery(this).parent().append(correct);
+      } else {
+          jQuery(this).parent().append(incorrect);
+      }
 
-        updateOptions()
-    })
+  });
+  jQuery("#check-answers").prop("disabled", true);
+                                                                        });
 
-    var checkAnswer = function() {
-        jQuery('select').each(function() {
-            var key = jQuery(this).attr('key')
-            var selected = jQuery(this).val()
-            if (key == selected) {
-                jQuery(this).addClass('color2 color2-h color2-b')
-            } else {
-                jQuery(this).addClass('color4 color4-h color4-b')
+                                                                        /* Show answers */
+                                                                        jQuery("#show-answers").click(function() {
+  jQuery("select").each(function() {
+      var answer_num = jQuery(this).parent().attr("class");
+      jQuery(this).val(answers[answer_num]);
+      jQuery(this).parent().find(".fa").remove();
+  });
+  jQuery("#check-answers").prop("disabled", true);
+                                                                        });
 
-            }
-        })
-    }
+                                                                        /* Clear answers */
+                                                                        jQuery("#clear").click(function() {
+  jQuery("select").each(function() {
+      jQuery(this).find(".fa").remove();
+      jQuery(this).val(jQuery("select option:first").val());
+      jQuery("#check-answers").prop("disabled", false);
+      jQuery("#show-answers").prop("disabled", false);
+      jQuery(this).parent().find(".fa").remove();
+  });
+                                                                        });
 
-    var showAnswer = function() {
-        clearAnswer()
-        jQuery('select').each(function() {
-            var key = jQuery(this).attr('key')
-            jQuery(this).val(key)
-        })
-    }
-
-    var clearAnswer = function() {
-        console.log('clear')
-        options = ["also", "not only", "because", "for example", "who", "may", "moreover", "if", "clearly", "but also"]
-        updateOptions()
-        jQuery('.color2').removeClass('color2 color2-h color2-b')
-        jQuery('.color4').removeClass('color4 color4-h color4-b')
-        jQuery('select').each(function() {
-            jQuery(this).val('-')
-        })
-    }
-    </script>
+                                                                    });
+                                                                    </script>
 	
 </body>
 </html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/rmit_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>Contextualising example 3 | Learning Lab</title>
+  
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.droppable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.sortable.min%EF%B9%96v=1.10.2.js"></script>
+<script type="text/javascript" src="../sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.selectable.min%EF%B9%96v=1.10.2.js"></script>
+	
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>var w=Math.max(document.documentElement.clientWidth, window.innerWidth||0);if(w<480){document.head.querySelector('meta[name="viewport"]').content="width=480"};</script>
+
+	<!-- keep this style chunk so that activities work - 05/02/2024 -->  
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" /> 
+<style type="text/css" media="all"> 
+  @import url("../sites/all/modules/colorbox/styles/default/colorbox_style.css"); 
+  @import url("../sites/all/libraries/fontawesome/css/font-awesome.css"); 
+  @import url("../sites/default/files/css_injector/css_injector_12.css"); 
+</style> 
+<!-- end activities style chunk -->   
+	
+	 <style>
+.icon-grid {
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.icon-grid p {
+    text-align: center !important;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.legends {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 230px;
+    float: left;
+    margin-right: 10px
+}
+
+.legends button, .legends .question {
+    vertical-align: top;
+    line-height: 25px;
+}
+
+.legends button {
+    text-align: center;
+    padding: 2px 5px;
+    margin: 5px auto 10px auto;
+    border-radius: 5px
+}
+
+.paragraph {
+    vertical-align: top;
+    line-height: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollBtn {
+    margin: auto;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.paragraph p {
+    position: relative;
+    clear: both;
+}
+
+.legends button, .paragraph span, .question span {
+    transition: all .3s
+}
+
+.btn:first-letter {
+    text-transform: capitalize;
+}
+
+.tab-btn {
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin: 10px 6px;
+    display: inline-block;
+    transition: all .1s;
+    cursor: pointer;
+    color: #333;
+    background: transparent;
+}
+
+.tab-btn:hover {
+    border: 1px solid #ccc;
+    color: #333;
+    text-decoration: none;
+}
+
+.tab-btn.active, .tab-btn:active {
+    border: 1px solid #eee;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.language {
+    display: none
+}
+
+.tab-content h4 {
+    margin: 10px auto !important;
+}
+</style>
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHPB23GYR"></script> 
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLHPB23GYR');
+  </script>
+
+<!-- Microsoft Bing --> 
+<meta name="msvalidate.01" content="8E4954E1DFAB7E2F8A92DD0A0BD6ED09" />
+
+<!-- Microsoft Clarity --> 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bbzr2pniz1");
+</script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-873 node-type-enhanced-page book-child lower-level" >
+	
+	<div id="main" class="clearfix">
+
+		<div style="text-align:center;margin-bottom:15px">
+            <button tab="structure" class="tab-btn active">Structure</button>
+            <button tab="language" class="tab-btn">Language features</button>
+        </div>
+        <div class="structure tab-content">
+            <div class="legends" style="vertical-align:top" mode-id="0">
+                <div class="row">
+                    <h4 class="col-xs-8 pull-right">Questions</h4>
+                </div>
+                <div class="row">
+                    <button id="con_btn" class="btn btn-default col-xs-4" data-toggle="tooltip" title="Describes context of the studio in a specific design field">context</button>
+                    <div class="question col-xs-8">
+                        What 
+                        <span class="con con-b con-h">field of practice</span>
+                         does the studio investigate?
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="aim_btn" class="btn btn-default col-xs-4" data-toggle="tooltip" title="Identifies the aim/focus of the field of practice">aim/intent</button>
+                    <div class="question col-xs-8">
+                        What is the 
+                        <span class="aim-b aim aim-h">intent</span>
+                         of this field of practice?
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="app_btn" class="btn btn-default col-xs-4" data-toggle="tooltip" title="Refers to methods/ approaches and theories /thinkers/practitioners">
+                        approaches 
+                        <br>
+                        /thinkers
+                    </button>
+                    <div class="question col-xs-8">
+                        What are the key 
+                        <span class="app-b app app-h">approaches/methods</span>
+                         and who are the 
+                        <span class="app-b app-h app">key thinkers</span>
+                         in this field of practice?
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="imp_btn" class="btn btn-default col-xs-4" data-toggle="tooltip" title="Indicates meaning and value for your future practice">implications</button>
+                    <div class="question col-xs-8">
+                        What are the 
+                        <span class="imp-b imp imp-h">implications</span>
+                         of these for design practice (yours/others)?
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="show_btn" class="btn btn-default show-all col-xs-4">Show all</button>
+                </div>
+            </div>
+            <div class="paragraph">
+                <h4>Example paragraph structure</h4>
+                <p>
+                    <span class="con con-h">
+                        The Design for Social Change studio is to design for 
+                        <span class="con-b">social innovation</span>
+                        , reframing complex problems into practical outcomes that can be integrated into people's lives Working with Oxfam we have had the opportunity to explore complex systemic issues of climate change and food security through design and research
+                    </span>
+                    . 
+                    <span class="aim aim-h">
+                        The field of practice explores 
+                        <span class="aim-b">how design can help make people understand how big problems are relevant to their daily lives</span>
+                    </span>
+                    . 
+                    <span class="app app-h">
+                         Approaches and methods used in this emerging field demonstrate ways to promote and support human-centred research and design using 
+                        <span class="app-b">ethnography-research skills, and holistic and systems thinking</span>
+                        . The studio includes 
+                        <span class="app-b">case studies</span>
+                         and 
+                        <span class="app-b">presentations of social-oriented programs</span>
+                        , businesses and NGOs. An 
+                        <span class="app-b">'impact design agency' like Studio Thick</span>
+                         works with companies such as Telstra and the Commonwealth Bank that require sustainability and service design to meet their social and community responsibilities
+                    </span>
+                    . 
+                    <span class="imp imp-h">
+                        This field of practice is a way to 
+                        <span class="imp-b">spread information, ideas and messages to contribute to shaping mentalities</span>
+                         and 
+                        <span class="imp-b">making the world a better place to live</span>
+                        . I hope the field continues to develop and become recognised as an actual pathway for designers in the future
+                    </span>
+                    .
+                </p>
+            </div>
+        </div>
+        <div class="language tab-content">
+            <div class="legends" style="vertical-align:top">
+                <h4>Features</h4>
+                <p class="question">
+                    <span class="color1 color1-h">Generally context paragraphs describe the field of practice in the present</span>
+                </p>
+                <!--            <p class="question"><span class="color2 color2-h">Context paragraphs may also describe the future use of your learning from this field of practice.</span></p>-->
+                <p class="question">
+                    Use 
+                    <span class="color3-h color3-b color3">'I'</span>
+                    , 
+                    <span class="color3-h color3-b color3">'me'</span>
+                     or 
+                    <span class="color3-h color3-b color3">'my'</span>
+                     to demonstrate your personal and subjective response
+                </p>
+            </div>
+            <div class="paragraph">
+                <h4>Example paragraph</h4>
+                <p class="lang-para">
+                    <span class="color1 color1-h">The Design for Social Change studio is to design for social innovation</span>
+                    , reframing complex problems into practical outcomes that can be integrated into people's lives Working with Oxfam we have had the opportunity to explore complex systemic issues of climate change and food security through design and research. 
+                    <span class="color1 color1-h">The field of practice explores how design can help make people understand how big problems are relevant to their daily lives</span>
+                    . Approaches and methods used in this emerging field 
+                    <span class="color1 color1-h">demonstrate ways to promote and support human-centred research and design using ethnography-research skills, and holistic and systems thinking. The studio includes case studies</span>
+                     and presentations of social-oriented programs, businesses and NGOs. An 'impact design agency' like Studio Thick works with companies such as Telstra and the Commonwealth Bank that require sustainability and service design to meet their social and community responsibilities. 
+                    <span class="color1 color1-h">This field of practice is a way to spread information, ideas and messages</span>
+                     to contribute to shaping mentalities and making the world a better place to live.
+                    <span class="color1 color1-h"> I hope the field continues to develop</span>
+                     and become recognised as an actual pathway for designers in the future.
+                </p>
+            </div>
+        </div>
+		
+	</div>
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+	
+	<script>
+(function($) {
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'hover'
+    })
+
+    var modes = [['con', 'aim', 'app', 'imp'], []]
+    var mode = '',
+        modeId = 0;
+    $(".legends button").not('.show-all').click(function() {
+        var id = $(this).attr("id")
+        modeId = $(this).parents('.legends').attr("mode-id")
+        mode = id.slice(0, id.length - 4).toLowerCase().trim();
+        console.log(mode, modes[modeId].indexOf(mode) + 1, modes)
+        var color = "color" + (modes[modeId].indexOf(mode) + 1)
+        dehighlight()
+        highlight(mode, color)
+    })
+
+    $(".show-all").click(function() {
+        var $parent = $(this).parents('.legends')
+        var modeId = $parent.attr("mode-id")
+        console.log(modeId)
+        $("[mode-id='" + modeId + "']").each(function() {
+            var $btn = $(this).find(".show-all")
+            if ($btn.text() == 'Show all') {
+                for (var i = 1; i < 8; i++) {
+                    var color = "color" + i
+                    highlight(modes[modeId][i - 1], color)
+                }
+                $btn.text('Hide all')
+            } else {
+                dehighlight()
+                $btn.text('Show all')
+            }
+
+        })
+
+    })
+
+    var highlight = function(mode, color) {
+        console.log("." + mode, color)
+        $("." + mode).addClass(color)
+        $("." + mode + "-b").addClass(color + "-b")
+        $("." + mode + "-h").addClass(color + "-h")
+        $("[mode-id='" + modeId + "']").find("#" + mode + "_btn").addClass(color + "-h " + color + " " + color + "-b")
+    }
+
+    var dehighlight = function() {
+
+        $('.structure').find(".paragraph span, .legends button, .question span").removeClass(function() {
+            var classes = ''
+            for (var i = 1; i < 8; i++) {
+                classes += "color" + i + " color" + i + "-h " + 'color' + i + "-b "
+            }
+            return classes;
+        })
+    }
+
+    $(".lang-para").html(function() {
+        return $(this).html().replace(/ I /g, "<span class='color3-h color3-b color3'> I </span>").replace(/ me /g, " <span class='color3-h color3-b color3'>me</span> ").replace(/ my /g, " <span class='color3-h color3-b color3'>my</span> ").replace(/My /g, "<span class='color3-h color3-b color3'>My</span> ")
+    })
+
+    $(".tab-btn").click(function() {
+        var tab = $(this).attr('tab')
+        var $parent = $(this).parent().parent()
+        $parent.find('.tab-btn').removeClass('active')
+        $(this).addClass('active')
+        $parent.find('.tab-content').hide()
+        $parent.find('.' + tab).show()
+    })
+
+})(jQuery)
+</script>
+
+                                                                   
+</body>
+</html>

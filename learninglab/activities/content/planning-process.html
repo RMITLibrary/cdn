@@ -45,15 +45,15 @@
 	
 	<style>
                                                                             #diagram span {
-                                                                                width: 12%;
-                                                                                height: 80px;
-                                                                                background: rgba(3, 4, 5, 0);
-                                                                                position: absolute;
-                                                                                margin: 6.5% 0
+                           width: 12%;
+                           height: 80px;
+                           background: rgba(3, 4, 5, 0);
+                           position: absolute;
+                           margin: 6.5% 0
                                                                             }
 
                                                                             .popover.top {
-                                                                                margin-top: 0px
+                           margin-top: 0px
                                                                             }
                                                                             </style>
 
@@ -83,19 +83,19 @@
 	<div id="main" class="clearfix">
 
 		 <p>Roll over each process square in the diagram to reveal more detail.</p>
-                                                                                <div id="diagram" style="position:relative;width:100%;height:200px; margin-top: 80px; margin-bottom: 20px;">
-                                                                                    <img src="../sites/default/files/mcommdes_writing_process_diagram.png" style="position:absolute;left:0;top:0;width:100%">
-                                                                                    <span style="left:2%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Analyse</strong> your topic <ul><li>look at assignment brief instructions for focus</li><li>research directions and structure</li></ul>"></span>
-                                                                                    <span style="left:16%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Brainstorm</strong> the topic
-                                                                                            <ul><li>bring all ideas together </li><li>start with what you already know
-                                                                                            </li></ul>"></span>
-                                                                                    <span style="left:30%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Research</strong> the gaps<ul><li>general reading</li><li>note-taking</li><li>develop information</li></ul>"></span>
-                                                                                    <span style="left:44%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Plan</strong> a coherent <strong>structure</strong><ul><li><strong>brainstorm</strong> ideas. What do you already know? </li><li><strong>select</strong> and <strong>evaluate evidence</strong> from reading</li><li>create a <strong>mindmap</strong></li><li>organise your <strong>research</strong> and ideas</li></ul>"></span>
-                                                                                    <span style="left:58%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Write and rewrite</strong>
-                                                                                            <ul><li>draft</li><li>review the topic</li></ul>"></span>
-                                                                                    <span style="left:72%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Edit</strong>
-                                                                                            <ul><li>redraft</li><li>proofread</li></ul>"></span>
-                                                                                </div>
+                           <div id="diagram" style="position:relative; width:100%; height:320px; margin-top: 100px;">
+                               <img src="../sites/default/files/mcommdes_writing_process_diagram.png" style="position:absolute;left:0;top:0;width:100%">
+                               <span style="left:2%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Analyse</strong> your topic <ul><li>look at assignment brief instructions for focus</li><li>research directions and structure</li></ul>"></span>
+                               <span style="left:16%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Brainstorm</strong> the topic
+                                       <ul><li>bring all ideas together </li><li>start with what you already know
+                                       </li></ul>"></span>
+                               <span style="left:30%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Research</strong> the gaps<ul><li>general reading</li><li>note-taking</li><li>develop information</li></ul>"></span>
+                               <span style="left:44%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Plan</strong> a coherent <strong>structure</strong><ul><li><strong>brainstorm</strong> ideas. What do you already know? </li><li><strong>select</strong> and <strong>evaluate evidence</strong> from reading</li><li>create a <strong>mindmap</strong></li><li>organise your <strong>research</strong> and ideas</li></ul>"></span>
+                               <span style="left:58%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Write and rewrite</strong>
+                                       <ul><li>draft</li><li>review the topic</li></ul>"></span>
+                               <span style="left:72%" data-html="true" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="<strong>Edit</strong>
+                                       <ul><li>redraft</li><li>proofread</li></ul>"></span>
+                           </div>
 		
 	</div>
 
@@ -105,31 +105,31 @@
 <!-- end Iframe resizer --> 
 	
 	<script type="text/javascript" charset="utf-8" src="../sites/default/files/interactive/landscapeDiagram/edge_includes/edge.6.0.0.min.js"></script>
-                                                                                    <script>
-                                                                                    jQuery('[data-toggle="popover"]').popover()
-                                                                                    var comp;
-                                                                                    
+                               <script>
+                               jQuery('[data-toggle="popover"]').popover()
+                               var comp;
+                               
 
-                                                                                    function stage1() {
-                                                                                        jQuery('.box .btn').removeClass('active')
-                                                                                        jQuery('#btn1').addClass('active')
-                                                                                        comp.stop(250);
-                                                                                        jQuery("#stageNum").text("Stage 1:The free-thinking (brainstorming) stage. At this stage, all ideas are relevant.")
-                                                                                    }
+                               function stage1() {
+                                   jQuery('.box .btn').removeClass('active')
+                                   jQuery('#btn1').addClass('active')
+                                   comp.stop(250);
+                                   jQuery("#stageNum").text("Stage 1:The free-thinking (brainstorming) stage. At this stage, all ideas are relevant.")
+                               }
 
-                                                                                    function stage2() {
-                                                                                        jQuery('.box .btn').removeClass('active')
-                                                                                        jQuery('#btn2').addClass('active')
-                                                                                        comp.play(251)
-                                                                                        jQuery("#stageNum").text("Stage 2: The identification stage (initial mind mapping). This stage is where you identify and clarify relationships between ideas and discard anything outside of your focus.")
-                                                                                    }
+                               function stage2() {
+                                   jQuery('.box .btn').removeClass('active')
+                                   jQuery('#btn2').addClass('active')
+                                   comp.play(251)
+                                   jQuery("#stageNum").text("Stage 2: The identification stage (initial mind mapping). This stage is where you identify and clarify relationships between ideas and discard anything outside of your focus.")
+                               }
 
-                                                                                    function stage3() {
-                                                                                        jQuery('.box .btn').removeClass('active')
-                                                                                        jQuery('#btn3').addClass('active')
-                                                                                        comp.play(3251)
-                                                                                        jQuery("#stageNum").text("Stage 3: The grouping and organising stage (final mind mapping). In this part of the process, group your ideas into logical categories and, in doing so, build the structure of your assignment. This stage will also idenfify any gaps in your research.")
-                                                                                    }
-                                                                                    </script>
+                               function stage3() {
+                                   jQuery('.box .btn').removeClass('active')
+                                   jQuery('#btn3').addClass('active')
+                                   comp.play(3251)
+                                   jQuery("#stageNum").text("Stage 3: The grouping and organising stage (final mind mapping). In this part of the process, group your ideas into logical categories and, in doing so, build the structure of your assignment. This stage will also idenfify any gaps in your research.")
+                               }
+                               </script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<!-- DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>3D model</title>
+	<meta charset="utf-8">
+	<!-- Viewport Meta Tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style> 
+        body {
+            margin: 0px;
+        }
+        
+        
+        .model-wrapper {
+            width: 100vw;     
+            height: 100%;
+        }
+
+        model-viewer {
+            position:absolute;
+            width: 100vw;
+            height: 100%;
+        }
+	</style>
+</head>
+<body> 
+
+<div class="model-wrapper">
+    <model-viewer id="viewer" src="test.glb" alt="A 3D model of a person"  camera-orbit="43deg 88deg 0" max-field-of-view="90deg" min-field-of-view="10deg" camera-controls="" interaction-prompt="none" data-js-focus-visible="" exposure="1" background-color="transparent" shadow-intensity="0.8" shadow-softness="0.4" disable-pan poster="assets/images/circle-loader 2.svg" >
+	<!-- add in auto-rotate rotation-per-second="27deg" for spin video -->
+    </model-viewer>
+</div>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script src="scripts/scripts.js"></script>
+
+</body>
+</html>

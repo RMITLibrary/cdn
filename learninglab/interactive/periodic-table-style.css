@@ -415,7 +415,7 @@ li#Key {
   /* Merge with above when :focus-within is supported */
 }
 
-@media all and (min-width: 60em) {
+@media all and (min-width: 40em) {
   #Elements ol {
     font-size: .67vw;
     display: -ms-grid;

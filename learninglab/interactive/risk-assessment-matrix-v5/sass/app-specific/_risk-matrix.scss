@@ -1,0 +1,96 @@
+
+.risk-table {
+  margin: 0;
+  max-width: 57rem; /* 912px */
+  
+	td, th {
+		width: 16.66%; /* 100% divided by 6 columns */
+		height: 4rem;
+		vertical-align: middle;
+		padding: 0.75rem;
+		border: 2px solid $white;
+
+		a:hover {
+			opacity: 0.8; /* Sets the opacity to 90% */
+		}
+
+		@include media-breakpoint-up(md) {
+			font-size: 17px;
+		}
+	}
+
+	td.extreme, td.high, td.low {
+		background-color: $rmit-red;
+		a { color: $white; }
+	}
+
+	td.medium {
+		background-color: #fac800;
+		a { color: #000000; }
+	}
+
+	td.extreme {
+		background-color: #991622;	
+	}
+
+	td.low {
+		background-color: $correct-green;
+	}
+}
+
+.risk-modal {
+	h3 { margin: 0; }
+	figcaption {
+		border-top: 1px solid $interface-grey;
+		padding-top: 0.25rem;
+		margin-top: 1.5rem;
+	}
+}
+
+.risk-two-col {
+	.risk-explain {
+		font-size: 15px;
+	}
+
+	.risk-eq {
+		margin-top: 1.5rem;
+	}
+
+	figure {
+		margin: 0;
+		max-width: 6rem;
+
+		float: right;
+	}
+}
+
+@include media-breakpoint-up(md) {
+
+	.modal-dialog {
+		max-width: 44rem;
+	}
+
+	.risk-two-col {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+
+		.risk-explain {
+			font-size: 18px;
+			margin: 0;
+			order: 1;
+		}
+	
+		figure {
+			max-width: 13rem;
+			float:none;
+			order: 2;
+		}
+	}
+
+	.risk-modal {
+		figcaption {
+			margin-top: 2rem;
+		}
+	}
+}

@@ -2,7 +2,7 @@
 .risk-table {
   margin: 0;
   max-width: 57rem; /* 912px */
-  
+
 	td, th {
 		width: 16.66%; /* 100% divided by 6 columns */
 		height: 4rem;
@@ -38,6 +38,11 @@
 	}
 }
 
+.modal-dialog {
+	margin-top: 1.5rem;
+}
+
+
 .risk-modal {
 	h3 { margin: 0; }
 	figcaption {
@@ -54,13 +59,27 @@
 
 	.risk-eq {
 		margin-top: 1.5rem;
+		margin-bottom: 0;
 	}
 
 	figure {
-		margin: 0;
+		margin: 0 0 0.5rem 2rem;
 		max-width: 6rem;
 
 		float: right;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	//Extra margin on mobile to keep equation on one line
+	.risk-two-col {
+		.risk-eq-margin-large{
+			margin-top: 3rem;
+		}
+
+		.risk-eq-margin-xlarge {
+			margin-top: 5rem;
+		}
 	}
 }
 
@@ -68,6 +87,7 @@
 
 	.modal-dialog {
 		max-width: 44rem;
+		margin-bottom: 0;
 	}
 
 	.risk-two-col {
@@ -84,6 +104,7 @@
 		figure {
 			max-width: 13rem;
 			float:none;
+			margin: 0;
 			order: 2;
 		}
 	}

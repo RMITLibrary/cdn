@@ -14738,6 +14738,14 @@ $img-width-sm: 18.5rem;     //296px*/
   float: right;
 }
 
+@media (max-width: 767.98px) {
+  .risk-two-col .risk-eq-margin-large {
+    margin-top: 3rem;
+  }
+  .risk-two-col .risk-eq-margin-xlarge {
+    margin-top: 5rem;
+  }
+}
 @media (min-width: 768px) {
   .modal-dialog {
     max-width: 44rem;

@@ -14712,6 +14712,10 @@ $img-width-sm: 18.5rem;     //296px*/
   background-color: #008057;
 }
 
+.modal-dialog {
+  margin-top: 1.5rem;
+}
+
 .risk-modal h3, .risk-modal .h3 {
   margin: 0;
 }
@@ -14726,9 +14730,10 @@ $img-width-sm: 18.5rem;     //296px*/
 }
 .risk-two-col .risk-eq {
   margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 .risk-two-col figure {
-  margin: 0;
+  margin: 0 0 0.5rem 2rem;
   max-width: 6rem;
   float: right;
 }
@@ -14736,6 +14741,7 @@ $img-width-sm: 18.5rem;     //296px*/
 @media (min-width: 768px) {
   .modal-dialog {
     max-width: 44rem;
+    margin-bottom: 0;
   }
   .risk-two-col {
     display: flex;
@@ -14750,6 +14756,7 @@ $img-width-sm: 18.5rem;     //296px*/
   .risk-two-col figure {
     max-width: 13rem;
     float: none;
+    margin: 0;
     order: 2;
   }
   .risk-modal figcaption {

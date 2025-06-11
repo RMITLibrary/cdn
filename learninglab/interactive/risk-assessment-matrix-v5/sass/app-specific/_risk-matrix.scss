@@ -115,3 +115,15 @@
 		}
 	}
 }
+
+
+@include color-mode(dark) {
+	
+.risk-table {
+
+	  td, th {
+		  border: 2px solid $body-bg-dark;
+	  }
+  }
+
+}

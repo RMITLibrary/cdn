@@ -14771,3 +14771,6 @@ $img-width-sm: 18.5rem;     //296px*/
     margin-top: 2rem;
   }
 }
+[data-bs-theme=dark] .risk-table td, [data-bs-theme=dark] .risk-table th {
+  border: 2px solid #222529;
+}

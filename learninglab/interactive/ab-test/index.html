@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Basic Meta Tags -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>AB Test Test</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="RMIT University" />
+	<meta name="robots" content="index, follow" />
+	<meta name="color-scheme" content="light dark" />
+	<link rel="canonical" href="" />
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/main.css" />
+
+	<!-- Microsoft Clarity --> 
+	<script type="text/javascript">
+		(function(c,l,a,r,i,t,y){
+			c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+			t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+			y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+		})(window, document, "clarity", "script", "ry4mqwwooy");
+	</script>
+	<style>
+		#contentA, #contentB {
+			max-width: 800px;
+		}
+
+		#contentB {
+			display: none;
+		}
+
+	</style>
+
+</head>
+<body>
+    <div id="contentA">
+		<h2>Simple content</h2>
+		<figure><img src="https://static.wikia.nocookie.net/spongebob/images/f/f3/Momageddon_149.png" alt="" /></figure>
+	</div>
+	<div id="contentB">
+		<h2>Interactive content</h2>
+		<figure><img src="https://pbs.twimg.com/media/GGVqT9RWoAA6cFE?format=jpg" alt="" /></figure>
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam ac lorem nec sollicitudin. Duis eget lacinia quam, in pretium velit. Phasellus elementum dolor eget metus posuere luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a efficitur dui, ut bibendum nunc. Aliquam ac magna vel mauris commodo rutrum. Praesent aliquet vel orci at ultricies. Duis fringilla arcu sit amet odio rhoncus, a placerat sem volutpat. Cras pharetra mi ac nibh cursus, vel varius orci aliquet. Nullam vestibulum felis in sagittis iaculis. Praesent ut tincidunt risus. Pellentesque at lacus imperdiet, venenatis erat a, tristique urna. Sed in magna sit amet neque suscipit mattis. Proin vulputate vehicula est eget molestie. Nullam maximus felis sit amet pharetra hendrerit.
+</p><p>
+Morbi finibus leo eu sapien dignissim dictum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed purus odio, rutrum ut dolor id, aliquam laoreet magna. Maecenas tristique vestibulum risus vestibulum consectetur. Nam lorem ipsum, dictum eget sem id, maximus accumsan nisl. Proin eleifend quis eros vel euismod. Phasellus eleifend ipsum sit amet justo efficitur, id ullamcorper justo congue. Curabitur eget facilisis lectus. Etiam in lacinia massa. Sus</p><p>
+Nunc in dignissim mi. Sed lorem sem, commodo quis varius sed, euismod id eros. Praesent diam ex, ultrices vel tempor tempor, porta sit amet sem. Donec ut velit vel diam aliquet consectetur. Aenean ultricies augue id risus mollis, eget ultrices libero luctus. Phasellus non pulvinar augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam, massa non lacinia interdum, libero risus pulvinar justo, nec fringilla nibh ex vel sapien. Suspendisse non est nibh. Cras ut augue at dolor maximus efficitur. Cras consectetur sem at mauris consectetur ultricies. Suspendisse sollicitudin in erat sed dapibus. Proin eleifend semper nisi, ut vulputate orci molestie non. Suspendisse cursus fermentum imperdiet. Morbi quis risus lacinia, venenatis sapien quis, elementum elit. Integer blandit pellentesque leo, in consequat turpis fermentum in.
+	</p>
+	<script>
+        // Coin flip function
+        function displayContent() {
+            const isHeads = Math.random() < 0.5;
+            
+            if (isHeads) {
+                document.getElementById('contentA').style.display = 'block';
+                document.getElementById('contentB').style.display = 'none';
+                clarity('set', 'contentDisplayed', 'Content A');
+            } else {
+                document.getElementById('contentA').style.display = 'none';
+                document.getElementById('contentB').style.display = 'block';
+                clarity('set', 'contentDisplayed', 'Content B');
+            }
+        }
+
+        // Ensure the DOM is fully loaded before running the script
+        document.addEventListener('DOMContentLoaded', (event) => {
+            displayContent();
+        });
+    </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+	<!-- Code to handle this page being resized by other wordpress pages, e.g. embed mode described in main-body.js -->
+	<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script>
+</body>
+</html>

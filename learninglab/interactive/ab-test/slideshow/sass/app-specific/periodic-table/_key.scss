@@ -1,0 +1,107 @@
+#Elements li#Key button {
+  position: relative;
+  border-radius: 0;
+  border: none;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: transparent;
+  background-position: 100% 100%;
+}
+
+#Elements li#Key button:focus, #Elements li#Key button:hover {
+  background-color: #000;
+}
+
+
+
+#Key h2 {
+  margin: 0 0 1em 0;
+  font-size: 1.1em;
+}
+
+#Key dl {
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+#Key dt,
+#Key dd {
+  margin: 0;
+  padding: 0;
+  margin-top: .5em;
+  float: left;
+}
+
+#Key dt {
+  width: 1.5em;
+  height: 1.5em;
+  outline: .1em solid #000;
+  clear: left;
+  margin-right: 1em;
+}
+
+#Key dt[class*=unknown] {
+  display: none;
+}
+
+#Key dt[class*=unknown] + dd {
+  display: none;
+}
+
+
+@media all and (min-width: 40em) {
+    // Merge with above when :focus-within is supported
+  li#Key {
+    font-size: 150%;
+    grid-column-start: 1;
+    -ms-grid-column-span: 3;
+    grid-row-start: 8;
+    -ms-grid-row-span: 5;
+    grid-column: 1 / 4;
+    grid-row: 8 / 13;
+  }
+
+  li#Key {
+    grid-row-start: 1;
+    -ms-grid-row-span: 3;
+    grid-column-start: 5;
+    -ms-grid-column-span: 6;
+    grid-row: 1 / 4;
+    grid-column: 4 / 11;
+  }
+  #Key dl {
+    display: -ms-grid;
+    grid-template-columns: 2em 12em;
+    -ms-grid-rows: 2em;
+    grid-template-columns: repeat(2, 1em 12em);
+  }
+  #Key dt:nth-of-type(2n-1) {
+    grid-column-start: 1;
+  }
+  #Key dt:nth-of-type(2n) {
+    grid-column-start: 3;
+  }
+  #Key dd:nth-of-type(2n-1) {
+    grid-column-start: 2;
+  }
+  #Key dd:nth-of-type(2n) {
+    grid-column-start: 4;
+  }
+  #Key dl *:nth-child(n+5) {
+    grid-row-start: 2;
+  }
+  #Key dl *:nth-child(n+9) {
+    grid-row-start: 3;
+  }
+  #Key dl *:nth-child(n+13) {
+    grid-row-start: 4;
+  }
+  #Key dl *:nth-child(n+17) {
+    grid-row-start: 5;
+  }
+ 
+  // Merge with above when :focus-within is supported
+}

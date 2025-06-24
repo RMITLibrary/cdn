@@ -1,0 +1,48 @@
+/* Colors */
+.cat-diatomic_nonmetal {
+  background-color: rgba(122, 225, 170, 0.8);
+}
+
+.cat-noble_gas {
+  background-color: rgba(250, 200, 0, 0.8);
+}
+
+.cat-alkali_metal {
+  background-color: rgba(252, 145, 71, 0.8);
+}
+
+.cat-alkaline_earth_metal {
+  background-color: rgba(238, 220, 0, 0.8);
+}
+
+.cat-metalloid {
+  background-color: rgba(170, 215, 95, 0.8);
+}
+
+.cat-polyatomic_nonmetal {
+  background-color: rgba(0, 220, 180, 0.8);
+}
+
+.cat-post-transition_metal {
+  background-color: rgba(0, 116, 231, 0.8);
+}
+
+.cat-transition_metal {
+  background-color: rgba(0, 170, 255, 0.8);
+}
+
+.cat-lanthanide {
+  background-color: rgba(170, 0, 130, 0.8);
+}
+
+.cat-actinide {
+  background-color: rgba(200, 100, 200, 0.8);
+}
+
+.cat-unknown_probably_transition_metal,
+.cat-unknown_probably_post-transition_metal,
+.cat-unknown_probably_metalloid,
+.cat-unknown_predicted_to_be_noble_gas,
+.cat-unknown_but_predicted_to_be_an_alkali_metal {
+  background-color: rgba(255, 129, 153, 0.8);
+}

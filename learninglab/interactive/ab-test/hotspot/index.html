@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hotspot cover</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Google Tag Manager -->
+    <!--<script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K6GPW9XR');
+    </script>-->
+    <!-- End Google Tag Manager -->
+
+	<!-- Microsoft Clarity --> 
+	<script type="text/javascript">
+		(function(c,l,a,r,i,t,y){
+			c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+			t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+			y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+		})(window, document, "clarity", "script", "ry4mqwwooy");
+	</script>
+
+	<!-- Dark Mode Script -->
+    <script>
+		(function () {
+		  'use strict';
+  
+		  const getStoredTheme = () => localStorage.getItem('theme');
+  
+		  const getPreferredTheme = () => {
+			const storedTheme = getStoredTheme();
+			return storedTheme ? storedTheme : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		  };
+  
+		  const setTheme = (theme) => {
+			const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+			document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		  };
+  
+		  setTheme(getPreferredTheme());
+		})();
+	  </script>
+
+</head>
+<body>
+<!-- START slideshow -->
+<!--
+// 3 modes:
+// class="slideshow" 						- normal slideshow
+// class="slideshow hotspot-text-below"		- hotspot with text below
+// class="slideshow hotspot-text-cover"		- hotspot text covers image on large screens
+-->
+<div id="test-hotspot1" class="slideshow hotspot-text-cover">
+    <p class="visually-hidden">Screen reader users: The following content contains an image with clickable hot spots. You can skip the hot spots and use the navigation at the bottom to sequentially move through the content.</p>
+    <button id="skip-content" onclick="focusContent()" class="visually-hidden">Skip past hotspots to content</button>
+    <div class="hotspot-container hotspot-dark">
+        <img src="https://rmitlibrary.github.io/cdn/learninglab/interactive/ab-test/hotspot/images/literature-reviews-hot-spot.png" tabindex="-1" alt="Blergh" />
+        <button id="dot1" class="dot" onclick="currentSlide(1)" aria-label="1. Find relevant and current information" style="top: 11.7817%; left: 17.8538%;">1</button>
+        <button id="dot2" class="dot" onclick="currentSlide(2)" aria-label="2. Filter out less relevant information" style="top: 10.2484%; left: 41.472%;">2</button>
+        <button id="dot3" class="dot" onclick="currentSlide(3)" aria-label="3. Logical organisational structure" style="top: 11.86%; left: 73.715%;">3</button>
+        <button id="dot4" class="dot" onclick="currentSlide(4)" aria-label="4. Linking of ideas and theories" style="top: 25.2896%; left: 27.8037%;">4</button>
+        <button id="dot5" class="dot" onclick="currentSlide(5)" aria-label="5. Critical analysis of the literature" style="top: 39.6145%; left: 10.0467%;">5</button>
+        <button id="dot6" class="dot" onclick="currentSlide(6)" aria-label="6. Identification of gaps in knowledge or unresolved problems" style="top: 71.1292%; left: 8.29439%;">6</button>
+        <button id="dot7" class="dot" onclick="currentSlide(7)" aria-label="7. An understanding of the key concepts" style="top: 82.5891%; left: 84.5794%;">7</button>         
+    </div>
+
+    <!-- START slides-->
+    <div class="my-slide">
+        <div class="slide-content">
+        <!-- START content-->
+            <h3 id="top-slide1" tabindex="-1">Your ability to find the most relevant and current information:</h3>
+            <p>Demonstrate your research skills by sourcing up-to-date and important literature. This shows that you have a grasp of the topic and are aware of developments and discussions in your field.</p>
+        <!-- END content-->
+        </div>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+    
+    <div class="my-slide">
+        <div class="slide-content">
+          <!-- START content-->
+              <h3 id="top-slide2" tabindex="-1">Filtering out less relevant/current information:</h3>
+              <p>Distinguish between what is important and what is not. Your ability to search through large amounts of literature and select the most significant works shows your understanding of the subject.</p>
+          <!-- END content-->
+          </div>  
+          <button type="button" class="btn-close" aria-label="Close"></button>  	
+    </div>
+    
+    <div class="my-slide">
+        <div class="slide-content">
+        <!-- START content-->
+            <h3 id="top-slide3" tabindex="-1">Logical organisational structure:</h3>
+            <p>Present your review in a clear and coherent manner. A well-structured literature review helps readers follow your reasoning and understand how the literature connects to your research question.</p>
+        <!-- END content-->
+        </div>   
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+
+    <div class="my-slide">
+        <div class="slide-content">
+        <!-- START content-->
+            <h3 id="top-slide4" tabindex="-1">Linking of ideas and theories. Comparing and contrasting:</h3>
+            <p>Show how different studies relate to each other. Compare and contrast theories and findings to highlight similarities, differences, and trends in the literature.</p>
+        <!-- END content-->
+        </div>  
+        <button type="button" class="btn-close" aria-label="Close"></button> 
+    </div>
+
+    <div class="my-slide">
+        <div class="slide-content">
+        <!-- START content-->
+            <h3 id="top-slide5" tabindex="-1">Critical analysis of the literature:</h3>
+            <p>Go beyond summarising the literature by critically analysing the strengths and weaknesses of your sources. Discuss the methodologies, findings, and implications to demonstrate your analytical skills.</p>
+        <!-- END content-->
+        </div>   
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+
+    <div class="my-slide">
+        <div class="slide-content">
+        <!-- START content-->
+            <h3 id="top-slide6" tabindex="-1">Identification of gaps in knowledge or unresolved problems:</h3>
+            <p>Identify areas where further research is needed. Highlighting these gaps indicates that you have a deep understanding of the topic.</p>
+        <!-- END content-->
+        </div>   
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+
+    <div class="my-slide">
+        <div class="slide-content">
+        <!-- START content-->
+            <h3 id="top-slide7" tabindex="-1">An understanding of the key concepts:</h3>
+            <p>Show that you have an understanding of the main concepts and theories relevant to your topic. This knowledge is crucial for a meaningful analysis and discussion of the literature.</p>
+        <!-- END content-->
+        </div>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+    <!-- END slides -->
+
+	
+	<nav class="slide-nav" aria-label="Progress nav">
+		<div id="progress-numbers" class="progress-numbers"></div>
+		<button class="prev" onclick="plusSlides(-1)"><div class="visually-hidden">Previous slide</div></button>
+		<button class="next" onclick="plusSlides(1)"></button><div class="visually-hidden">Next slide</div></button>
+  </nav>
+
+        
+</div>
+<!-- END slideshow -->    
+<script src="slideshow.js"></script>
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+
+<script>
+
+
+	/*
+		THEME SWITCHER
+		This script handles the theme switching functionality for the website. It retrieves the user's  preferred theme from local storage or system settings and applies it to the document. It also provides the ability to switch themes through a theme switcher UI component, updates the UI to reflect the active theme, and listens for changes to the system's dark mode preference.
+	
+		Note: There is a companion script in the <head> section that sets the initial theme as early as possible to reduce the flash of unstyled content (FOUC). It determines the user's preferred theme (either from local storage or system settings) and applies it immediately.
+	*/
+	(function() {
+		'use strict';
+	
+		const getStoredTheme = () => localStorage.getItem('theme');
+	
+		const setStoredTheme = theme => localStorage.setItem('theme', theme);
+	
+		const getPreferredTheme = () => {
+		  const storedTheme = getStoredTheme();
+		  return storedTheme ? storedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		};
+	
+		const setTheme = theme => {
+		  const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+		  document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		};
+	
+		const showActiveTheme = theme => {
+		  document.querySelectorAll('.theme-switch').forEach(themeSwitcher => {
+			themeSwitcher.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+			  element.checked = (element.getAttribute('data-bs-theme-value') === theme);
+			});
+		  });
+		};
+	
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+		  const storedTheme = getStoredTheme();
+		  if (storedTheme !== 'light' && storedTheme !== 'dark') {
+			setTheme(getPreferredTheme());
+		  }
+		});
+	
+		window.addEventListener('DOMContentLoaded', () => {
+		  showActiveTheme(getPreferredTheme());
+		  document.querySelectorAll('.theme-switch [data-bs-theme-value]').forEach(toggle => {
+			toggle.addEventListener('change', () => {
+			  const theme = toggle.getAttribute('data-bs-theme-value');
+			  setStoredTheme(theme);
+			  setTheme(theme);
+			  showActiveTheme(theme);
+			});
+		  });
+		});
+	  })();
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Annotated bibliography checklist</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Google Tag Manager -->
+    <!--<script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K6GPW9XR');
+    </script>-->
+    <!-- End Google Tag Manager -->
+
+	<!-- Dark Mode Script -->
+    <script>
+		(function () {
+		  'use strict';
+  
+		  const getStoredTheme = () => localStorage.getItem('theme');
+  
+		  const getPreferredTheme = () => {
+			const storedTheme = getStoredTheme();
+			return storedTheme ? storedTheme : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		  };
+  
+		  const setTheme = (theme) => {
+			const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+			document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		  };
+  
+		  setTheme(getPreferredTheme());
+		})();
+	  </script>
+
+</head>
+<body>
+<!-- START checklist -->
+<div class="checklist-container">
+	<h3>Annotated bibliography checklist</h3>
+
+	<div class="highlight-text ">
+		<div class="content">
+
+			<p><span class="reference"><strong>Johnson, L. M., & Carver, N. (2021). Virtual collaboration: Exploring effectiveness and productivity. <em>Journal of Digital Work Studies</em>, <em>15</em>(3), 45-60.</strong> <a href="https://doi.org/10.1080/jdws.2021.5678">https://doi.org/10.1080/jdws.2021.5678</a></span>
+			</p>
+
+			<h4>Summary</h4>
+			<p>The article investigates how virtual collaboration tools impact team productivity and effectiveness. <span class="aim">The main aim</span> is to understand the role of digital platforms in enhancing remote team communication and efficiency. <span class="supporting">Supporting arguments</span> include technology proficiency and team dynamics as key factors for effective collaboration. Methods include surveys and interviews with remote workers across various industries, <span class="supporting">revealing that well-integrated digital tools significantly enhance team performance.</span></p>
+
+			<h4>Critical Analysis</h4>
+			<p>The article provides <span class="strength">a thorough analysis of strengths</span> explained using robust data collection methods and comprehensive statistical interpretations. The inclusion of a large, diverse participant pool <span class="strength">strengthens</span> the findings' generalisability. <span class="weakness">However, the study's limitation lies in its focus on technology-intensive industries, which may skew results. Additionally, potential bias is introduced through self-reported data weaknesses.</span></p>
+
+			<h4>Reflection</h4>
+			<p><span class="usefulness">Johnson and Carver's work is crucial</span> for understanding the nuances of virtual collaboration, offering insights applicable to my research on remote team management. <span class="notuseful">However, the industry-specific focus requires consideration</span> of its applicability to other fields, which might limit its usefulness.
+			</p>
+		</div>
+
+		<div class="my-checklist">
+			<form>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="check1" data-target="reference">
+					<label for="check1" class="errgh">
+						Reference
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="check2" data-target="aim">
+					<label for="check2" class="errgh">
+						Identify article’s main aim/argument
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="check3" data-target="supporting">
+					<label for="check3">
+						Identify several supporting arguments
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="check4" data-target="strength">
+					<label for="check4">
+						Analyse text/article’s strengths
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="check5" data-target="weakness">
+					<label for="check5">
+						Analyse article’s weaknesses/limitations
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="check6" data-target="usefulness">
+					<label for="check6">
+						How/why the article will be useful for your research
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="check7" data-target="notuseful">
+					<label for="check7">
+						How/why the article will not be useful for your research
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- END sample -->
+</div>
+<!-- END checklist -->
+
+
+<script src="checklist.js"></script>
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+
+<script>
+
+
+	/*
+		THEME SWITCHER
+		This script handles the theme switching functionality for the website. It retrieves the user's  preferred theme from local storage or system settings and applies it to the document. It also provides the ability to switch themes through a theme switcher UI component, updates the UI to reflect the active theme, and listens for changes to the system's dark mode preference.
+	
+		Note: There is a companion script in the <head> section that sets the initial theme as early as possible to reduce the flash of unstyled content (FOUC). It determines the user's preferred theme (either from local storage or system settings) and applies it immediately.
+	*/
+	(function() {
+		'use strict';
+	
+		const getStoredTheme = () => localStorage.getItem('theme');
+	
+		const setStoredTheme = theme => localStorage.setItem('theme', theme);
+	
+		const getPreferredTheme = () => {
+		  const storedTheme = getStoredTheme();
+		  return storedTheme ? storedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		};
+	
+		const setTheme = theme => {
+		  const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+		  document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		};
+	
+		const showActiveTheme = theme => {
+		  document.querySelectorAll('.theme-switch').forEach(themeSwitcher => {
+			themeSwitcher.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+			  element.checked = (element.getAttribute('data-bs-theme-value') === theme);
+			});
+		  });
+		};
+	
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+		  const storedTheme = getStoredTheme();
+		  if (storedTheme !== 'light' && storedTheme !== 'dark') {
+			setTheme(getPreferredTheme());
+		  }
+		});
+	
+		window.addEventListener('DOMContentLoaded', () => {
+		  showActiveTheme(getPreferredTheme());
+		  document.querySelectorAll('.theme-switch [data-bs-theme-value]').forEach(toggle => {
+			toggle.addEventListener('change', () => {
+			  const theme = toggle.getAttribute('data-bs-theme-value');
+			  setStoredTheme(theme);
+			  setTheme(theme);
+			  showActiveTheme(theme);
+			});
+		  });
+		});
+	  })();
+	
+</script>
+</body>
+</html>

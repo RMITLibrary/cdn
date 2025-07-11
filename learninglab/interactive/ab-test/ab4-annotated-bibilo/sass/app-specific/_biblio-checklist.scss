@@ -1,0 +1,42 @@
+.checklist-container {
+	max-width: 58.5rem;
+	position: relative;
+	margin: auto;
+
+	border-radius: 0.25rem;
+	border: 1px solid $interface-grey;
+
+	padding: 1rem 0.75rem 0.75rem 0.75rem;
+
+	@include media-breakpoint-up(md) {
+		padding: 1.5rem;
+	}
+
+    .highlight-text {
+        //display: block;
+        grid-template-columns: auto;
+
+        .content {
+            order: 1;
+        }
+
+        .my-checklist {
+            columns: 2;
+
+            .form-check {
+                display: flex;
+                margin-bottom: 0.5rem;
+            }
+
+            .form-check-input {
+                float: none;
+            }
+
+            label {
+                display: block;
+                padding: 4px;
+                span { }
+            }
+        }
+    }
+}

@@ -8,8 +8,9 @@ let dots = document.getElementsByClassName("dot");
 // Store the image element for later use
 var imageElement = document.querySelector('.hotspot-container img'); 
 
-//determine mode of hotspot/slideshow
+let clicked = false;
 
+//determine mode of hotspot/slideshow
 
 // Determine the mode of the slideshow based on its classes
 // class="slideshow" 						- normal slideshow
@@ -74,11 +75,16 @@ displayNumbers();
 
 // Controls for navigating slides, called when prev/next is clicked
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+	//set clicked to true
+	clicked = true;
+	showSlides(slideIndex += n);
 }
 
 // Hotspot controls, called when a hot spot (dot) is clicked
 function currentSlide(n) {
+	//set clicked to true
+	clicked = true;
+
 	//Check if screen is mobile sized
 	var isMobile = isWindowLessThan768();
 
@@ -199,22 +205,24 @@ function positionHotspotSlide(n) {
 
 //Called when a slide is displayed
 function setFocus() {
-	
-	if(slideshowMode == 'regular') {
-		//focus to the content
-		focusContent();
-	}
-	else {
-		var isMobile = isWindowLessThan768();
-		if(slideshowMode == 'textCover' && !isMobile) {
-			//If we are in textCover mode and not in mobile
+	//prevent focus from occuring without user clicking something
+	if(clicked) {
+		if(slideshowMode == 'regular') {
+			//focus to the content
 			focusContent();
 		}
 		else {
-			//focus to hidden button just above the image
-			var skipContent = document.getElementById('skip-content');
-			skipContent.focus();
-		}	
+			var isMobile = isWindowLessThan768();
+			if(slideshowMode == 'textCover' && !isMobile) {
+				//If we are in textCover mode and not in mobile
+				focusContent();
+			}
+			else {
+				//focus to hidden button just above the image
+				var skipContent = document.getElementById('skip-content');
+				skipContent.focus();
+			}	
+		}
 	}
 }
 

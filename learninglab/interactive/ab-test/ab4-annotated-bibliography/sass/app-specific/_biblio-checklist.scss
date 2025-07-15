@@ -1,3 +1,12 @@
+.intro-container {
+	max-width: 58.5rem;
+	position: relative;
+	margin: auto;
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+}
 .checklist-container {
 	max-width: 58.5rem;
 	position: relative;
@@ -6,10 +15,10 @@
 	border-radius: 0.25rem;
 	border: 1px solid $interface-grey;
 
-	padding: 1rem 0.75rem 0.75rem 0.75rem;
+	padding: 0rem 0.75rem 0.75rem 0.75rem;
 
 	@include media-breakpoint-up(md) {
-		padding: 1.5rem;
+		padding: 0 1.5rem 1.5rem 1.5rem;
 	}
 
     .highlight-text {

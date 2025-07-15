@@ -15175,17 +15175,26 @@ $img-width-sm: 18.5rem;     //296px*/
   top: 90%;
 }
 
+.intro-container {
+  max-width: 58.5rem;
+  position: relative;
+  margin: auto;
+}
+.intro-container p {
+  margin-bottom: 1.5rem;
+}
+
 .checklist-container {
   max-width: 58.5rem;
   position: relative;
   margin: auto;
   border-radius: 0.25rem;
   border: 1px solid #BFBFBF;
-  padding: 1rem 0.75rem 0.75rem 0.75rem;
+  padding: 0rem 0.75rem 0.75rem 0.75rem;
 }
 @media (min-width: 768px) {
   .checklist-container {
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
 }
 .checklist-container .highlight-text {

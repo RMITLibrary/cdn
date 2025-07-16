@@ -7,7 +7,26 @@ const feedbackArray = [
 ];
 
 function checkSpecificAnswers() {
-	let answersArray = [1, 1, 1, 1, 1]; 
+	let answersArray = [
+        {	answer: 1,
+            feedback:'This is the more concise option.',
+            feedbackIncorrect: 'These words could be replaced with one word to make the sentence more concise.'	},
+		{	answer: 2,
+            feedback:'This is the more concise option.',
+            feedbackIncorrect: 'These words could be replaced with one word to make the sentence more concise.'	},
+		{	answer: 1,
+            feedback:'This is the more concise option.',
+			feedbackIncorrect: 'These words could be replaced with one word to make the sentence more concise.' 	},
+		{	answer: 2,
+            feedback:'This is the more concise option.',
+            feedbackIncorrect: 'These words could be replaced with one word to make the sentence more concise.'	},
+		{	answer: 2,
+            feedback:'This is the more concise option.',
+            feedbackIncorrect: 'These words could be replaced with one word to make the sentence more concise.'	}
+	];
+
+	// [1, 2, 1, 2, 2], 
+
     let score = 0;
 
     let selects = document.getElementsByClassName("inline-select");
@@ -17,19 +36,19 @@ function checkSpecificAnswers() {
 		let myFeedback = createHiddenFeedback(selects[i], i);
 
 		//still have to add 
-        if (selects[i].selectedIndex === answersArray[i]) {
+        if (selects[i].selectedIndex === answersArray[i].answer) {
             selects[i].classList.remove("is-invalid");
 			selects[i].classList.add("is-valid");
 			score++;
 
-			fillHiddenFeedback(myFeedback, "Correct answer");
+			fillHiddenFeedback(myFeedback, "Correct", answersArray[i]);
 			
         } else {
 			selects[i].classList.remove("is-valid");
             selects[i].classList.add("is-invalid");
             allCorrect = false;
 
-			fillHiddenFeedback(myFeedback, "Incorrect answer");
+			fillHiddenFeedback(myFeedback, "Incorrect", answersArray[i]);
         }
     }
 
@@ -37,7 +56,19 @@ function checkSpecificAnswers() {
 }
 
 function checkTentativeAnswers() {
-    let answersArray = ['0', '1', '1', '0', '0']; 
+    let answersArray = [
+        {	answer: '0',
+            feedback: "'There is a possibility' and 'may' are examples of tentative language."	},
+		{	answer: '1',
+            feedback:'This sentence does not use tentative language to soften its meaning.'	},
+		{	answer: '1',
+            feedback:'The language in this sentence is very certain and not tentative at all.' 	},
+		{	answer: '0',
+            feedback:"The words 'suggests' and 'could' are examples of tentative language."	},
+		{	answer: '0',
+            feedback:"The words 'indicate' and 'possible' are examples of tentative language."	}
+	];
+    
     let score = 0;
 
     // Get all fieldsets which contain the radio groups
@@ -52,21 +83,21 @@ function checkTentativeAnswers() {
 	
 		if (selectedInput) {
 			let value = selectedInput.value;
-			if (value === answersArray[i]) {
+			if (value === answersArray[i].answer) {
 				for (let j = 0; j < radios.length; j++) {
 					radios[j].classList.remove("is-invalid");
 					radios[j].classList.add("is-valid");
 				}
 				score++;
 
-				fillHiddenFeedback(myFeedback, "Correct answer");
+				fillHiddenFeedback(myFeedback, "Correct", answersArray[i]);
 			} else {
 				for (let j = 0; j < radios.length; j++) {
 					radios[j].classList.remove("is-valid");
 					radios[j].classList.add("is-invalid");
 				}
 
-				fillHiddenFeedback(myFeedback, "Incorrect answer");
+				fillHiddenFeedback(myFeedback, "Incorrect", answersArray[i]);
 			}
 		} else {
 			for (let j = 0; j < radios.length; j++) {
@@ -74,7 +105,7 @@ function checkTentativeAnswers() {
 				radios[j].classList.add("is-invalid");
 			}
 
-			fillHiddenFeedback(myFeedback, "Incorrect answer");
+			fillHiddenFeedback(myFeedback, "Incorrect", answersArray[i]);
 		}
 	}
 
@@ -88,8 +119,16 @@ function createHiddenFeedback(myElement, n) {
     if (!feedback) {
         feedback = document.createElement("div");
         feedback.id = `q-feedback${n+1}`;
-        feedback.className = "visually-hidden";
+        feedback.className = "question-feedback";
         feedback.setAttribute("role", "alert");
+
+		const spanResult = document.createElement("span");
+		spanResult.className = "q-feedback-result";
+		feedback.appendChild(spanResult);
+
+		const spanFeedback = document.createElement("span");
+		spanFeedback.className = "q-feedback-inner";
+		feedback.appendChild(spanFeedback);
 
 		myElement.setAttribute("aria-describedby", feedback.id);
         myElement.parentNode.appendChild(feedback);
@@ -98,8 +137,27 @@ function createHiddenFeedback(myElement, n) {
 	return feedback;
 }
 
-function fillHiddenFeedback(myFeedback, text) {
-	myFeedback.innerHTML = text;
+function fillHiddenFeedback(myFeedback, text, obj) {
+
+	let feedbackStr = obj.feedback;
+
+	let spanResult = myFeedback.getElementsByClassName("q-feedback-result");
+	let spanFeedback = myFeedback.getElementsByClassName("q-feedback-inner");
+
+	if(text === "Incorrect") {
+
+		if(obj.feedbackIncorrect) {
+			feedbackStr = obj.feedbackIncorrect;
+		}
+
+		spanResult[0].classList.add("error");
+	}
+	else {
+		spanResult[0].classList.remove("error");
+	}
+
+	spanResult[0].textContent = text +". ";
+	spanFeedback[0].textContent = feedbackStr; 
 }
 
 function showQuizScore(score, total) {
@@ -112,7 +170,7 @@ function showQuizScore(score, total) {
     let quizFeedback = document.getElementsByClassName("quiz-feedback-verbose");
     let extraFeedback = document.getElementsByClassName("extra-feedback");
 
-    if (quizFeedback) {
+    if (quizFeedback.length > 0) {
         let feedbackIndex;
         scoreDisplay.classList.remove('gold', 'silver', 'bronze'); // Remove existing classes
 

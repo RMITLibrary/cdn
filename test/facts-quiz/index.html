@@ -30,6 +30,28 @@
 			y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 		})(window, document, "clarity", "script", "ry4mqwwooy");
 	</script> -->
+
+	<!-- Dark Mode Script -->
+    <script>
+		(function () {
+		  'use strict';
+  
+		  const getStoredTheme = () => localStorage.getItem('theme');
+  
+		  const getPreferredTheme = () => {
+			const storedTheme = getStoredTheme();
+			return storedTheme ? storedTheme : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		  };
+  
+		  const setTheme = (theme) => {
+			const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+			document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		  };
+  
+		  setTheme(getPreferredTheme());
+		})();
+	  </script>
+
 </head>
 <body>
 	<div class="quiz-container">
@@ -182,12 +204,92 @@
 				<button id="restart-quiz" class="btn btn-default">Restart Quiz</button>
 			</section>
 		</main>
+		<div class="fish-container">
+			<div id="fish3" class="fish"></div>
+			<div id="fish1" class="fish"></div>
+			<div id="fish5" class="fish"></div>
+			<div id="fish2" class="fish"></div>
+			<div id="fish4" class="fish"></div>
+		</div>
 	</div>
-<script src="quiz.js?ver=1.1"></script>
+<script src="quiz.js"></script>
+
+<!-- Well done! You’ve caught a lot of fish today!
+
+Oh dear!Not many bites today.
+
+Persevere and try again!
+
+In summary, to stay alert to bias, consider the following questions when assessing any piece of information:
+Are the purported facts reliable?
+Are there multiple sources quoted?
+Do the sources quoted offer differing points of view?
+Has a counter argument or opposing view been presented?
+Is the information presented with colourful or exaggerated language?
+After reading an article, read the headline again. Does it fairly represent the content of the article?
+Check yourself: are you expressing bias by agreeing with content simply because it reflects your own world view? -->
 
 <!-- Iframe resizer --> 
 <script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
 <!-- end Iframe resizer --> 
+
+<script>
+
+
+
+
+	/*
+		THEME SWITCHER
+		This script handles the theme switching functionality for the website. It retrieves the user's  preferred theme from local storage or system settings and applies it to the document. It also provides the ability to switch themes through a theme switcher UI component, updates the UI to reflect the active theme, and listens for changes to the system's dark mode preference.
+	
+		Note: There is a companion script in the <head> section that sets the initial theme as early as possible to reduce the flash of unstyled content (FOUC). It determines the user's preferred theme (either from local storage or system settings) and applies it immediately.
+	*/
+	(function() {
+		'use strict';
+	
+		const getStoredTheme = () => localStorage.getItem('theme');
+	
+		const setStoredTheme = theme => localStorage.setItem('theme', theme);
+	
+		const getPreferredTheme = () => {
+		  const storedTheme = getStoredTheme();
+		  return storedTheme ? storedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		};
+	
+		const setTheme = theme => {
+		  const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+		  document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		};
+	
+		const showActiveTheme = theme => {
+		  document.querySelectorAll('.theme-switch').forEach(themeSwitcher => {
+			themeSwitcher.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+			  element.checked = (element.getAttribute('data-bs-theme-value') === theme);
+			});
+		  });
+		};
+	
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+		  const storedTheme = getStoredTheme();
+		  if (storedTheme !== 'light' && storedTheme !== 'dark') {
+			setTheme(getPreferredTheme());
+		  }
+		});
+	
+		window.addEventListener('DOMContentLoaded', () => {
+		  showActiveTheme(getPreferredTheme());
+		  document.querySelectorAll('.theme-switch [data-bs-theme-value]').forEach(toggle => {
+			toggle.addEventListener('change', () => {
+			  const theme = toggle.getAttribute('data-bs-theme-value');
+			  setStoredTheme(theme);
+			  setTheme(theme);
+			  showActiveTheme(theme);
+			});
+		  });
+		});
+	  })();
+	
+</script>
 </body>
 </html>

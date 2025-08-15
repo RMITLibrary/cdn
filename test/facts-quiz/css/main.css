@@ -14678,6 +14678,8 @@ $img-width-sm: 18.5rem;     //296px*/
   text-align: center;
   max-width: 608px;
   margin: 0px auto;
+  z-index: 101;
+  position: relative;
 }
 #intro-header h1, #intro-header .h1 {
   margin-top: 0;
@@ -14694,6 +14696,7 @@ $img-width-sm: 18.5rem;     //296px*/
 }
 
 .quiz-container {
+  position: relative;
   margin: 0px auto;
   padding: 16px;
   padding-top: 64px;
@@ -14744,6 +14747,11 @@ $img-width-sm: 18.5rem;     //296px*/
 .quiz-container button:focus-visible {
   color: #000054;
   box-shadow: 0 0 0 0.25rem rgba(255, 149, 0, 0.64);
+}
+
+main {
+  position: relative;
+  z-index: 100;
 }
 
 #quiz {
@@ -14898,6 +14906,9 @@ $img-width-sm: 18.5rem;     //296px*/
   }
 }
 
+#results {
+  z-index: 100;
+}
 #results .quiz-score {
   font-size: 1.125rem;
   font-weight: 500;
@@ -14933,4 +14944,67 @@ $img-width-sm: 18.5rem;     //296px*/
     margin: 0 auto;
     margin-bottom: 48px;
   }
+}
+
+/* Fish */
+.fish-container {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  opacity: 0.7;
+  width: calc(100% - 32px);
+  height: 100px;
+}
+@media (min-width: 768px) {
+  .fish-container {
+    width: 672px;
+    height: 150px;
+    opacity: 0.5;
+  }
+}
+
+.fish {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#fish3 {
+  left: 9.78%; /* (66 / 672) * 100 */
+  top: 20%; /* (30 / 150) * 100 */
+  width: 13.78%; /* (93 / 672) * 100 */
+  height: 31.33%; /* (47 / 150) * 100 */
+  background-image: url("../images/fish3a.png");
+}
+
+#fish1 {
+  left: 29.46%; /* (198 / 672) * 100 */
+  top: 28%; /* (42 / 150) * 100 */
+  width: 15.27%; /* (103 / 672) * 100 */
+  height: 31.33%; /* (47 / 150) * 100 */
+  background-image: url("../images/fish1a.png");
+}
+
+#fish5 {
+  left: 47.17%; /* (317 / 672) * 100 */
+  top: 62.67%; /* (94 / 150) * 100 */
+  width: 14.73%; /* (99 / 672) * 100 */
+  height: 20.07%; /* (30 / 150) * 100 */
+  background-image: url("../images/fish5a.png");
+}
+
+#fish2 {
+  left: 68.95%; /* (463 / 672) * 100 */
+  top: 13.8%; /* (21 / 150) * 100 */
+  width: 14.58%; /* (98 / 672) * 100 */
+  height: 49.33%; /* (74 / 150) * 100 */
+  background-image: url("../images/fish2a.png");
+}
+
+#fish4 {
+  left: 85.23%; /* (572 / 672) * 100 */
+  top: 65.33%; /* (98 / 150) * 100 */
+  width: 7.47%; /* (50 / 672) * 100 */
+  height: 18.78%; /* (28 / 150) * 100 */
+  background-image: url("../images/fish4a.png");
 }

@@ -3,7 +3,7 @@ const answersArray = [
     { answer: '0', feedback: 'Original source. This data is collected first-hand by the researcher.' },
     { answer: '1', feedback: '“Abortion law opens flood gates to murdering babies”. The words "flood gates" and "murdering" are emotive and provocative.' },
     { answer: '1', feedback: 'Checking just one characteristic of a source does not make it reliable. There are many aspects that you should check.' },
-    { answer: '1', feedback: 'No. Not necessarily. The reliability of a study can be compromised if it is funded by an organisation that has a financial interest, for example. So, you also need to consider whether the study was peer reviewed.' }
+    { answer: '1', feedback: 'While a sound methodology for s study is important, it is not the only signal of reliability. A study can be compromised if it is funded by an organisation that has a financial interest, for example. So, you also need to check whether the study was peer reviewed.' }
 ];
 
 var score;
@@ -66,6 +66,7 @@ function checkAnswer(selectedButton) {
         selectedButton.classList.add("is-valid");
         score++;
         injectFeedback(feedback, "Correct");
+        hideFish();
         console.log(`Correct! Question ${currentQuestionIndex + 1} answered with value: ${value}`);
     } else {
         selectedButton.classList.add("is-invalid");
@@ -92,6 +93,11 @@ function injectFeedback(feedback, resultText) {
         specificFeedback.textContent = obj.feedbackIncorrect;
     }
     feedback.appendChild(specificFeedback);
+}
+
+function hideFish() {
+    var fish = document.getElementById("fish" + (currentQuestionIndex+1));
+    fish.style.display = "none";
 }
 
 function nextQuestion() {
@@ -138,6 +144,11 @@ function restartQuiz() {
     document.querySelectorAll('.feedback, .next-question, .final-feedback').forEach(function(element) {
         element.hidden = true;
     });
+
+    document.querySelectorAll('.fish').forEach(function(element) {
+        element.style.display = "block";
+    });
+
     document.getElementById('quiz').hidden = true;
     document.getElementById('results').hidden = true;
     document.getElementById('intro-header').hidden = false;

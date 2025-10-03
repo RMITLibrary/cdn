@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <meta name="description" content="Understanding and applying the hierarchy of controls for workplace safety - RMIT Work Safe learning resource." />
+
+    <!-- PWA and Mobile Support -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#e60028" />
+    <!-- RMIT red -->
+
+    <!-- Security -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="noindex,follow" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Work safe- Applying the hierarchy of controls" />
+    <meta property="og:description" content="Understanding and applying the hierarchy of controls for workplace safety - RMIT Work Safe learning resource." />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicons -->
+    <link href="https://www.rmit.edu.au/etc.clientlibs/rmit/clientlibs/clientlib-site/resources/favicon.png" rel="icon" type="image/x-icon" />
+    <link href="https://www.rmit.edu.au/etc.clientlibs/rmit/clientlibs/clientlib-site/resources/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://www.rmit.edu.au/etc.clientlibs/rmit/clientlibs/clientlib-site/resources/favicon.png" />
+
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+    <!-- ensure iframe links are opened in a new tab in the parent unless this is a scorm page builder -->
+    <!--<base target="_blank">-->
+    <script src="wp-content/themes/233/js/jquery.min.js"></script>
+    <title>Work safe- Applying the hierarchy of controls</title>
+
+    <link rel="stylesheet" id="understrap-styles-css" href="wp-content/themes/233/css/theme.min%EF%B9%96ver=2.3.3.css" type="text/css" media="" />
+    <script type="text/javascript" src="wp-content/themes/233/js/popper.min%EF%B9%96ver=1.js"></script>
+
+    <!--
+
+    ██████╗ ██╗   ████████╗
+    ██╔══██╗██║   ╚══██╔══╝
+    ██║  ██║██║      ██║
+    ██║  ██║██║      ██║
+    ██████╔╝███████╗ ██║
+    ╚═════╝ ╚══════╝ ╚═╝
+
+    This project was originally developed as a learning resource by the VE Design Team (https://emedia.rmit.edu.au/ptsws/). This static version has been uplifted and is now managed by the Digital Learning Team (DLT), Library. For any queries, contact digital.learning.library@rmit.edu.au.
+
+    -->
+
+    <style>
+      #nav-tab .tab-content {
+        border: none;
+      }
+
+      /* Improved carousel styling for mobile */
+      @media (max-width: 7678px) {
+        .carousel-item p {
+          margin-right: 50px; /* Ensure text doesn't get too close to the button */
+        }
+
+        .nxt-btn {
+          position: absolute;
+          float: right;
+          bottom: 10px; /* Move up slightly from the bottom */
+          right: 15px; /* Add some right padding */
+          color: #d3261d;
+          cursor: pointer;
+          z-index: 10; /* Ensure it's above other content */
+          background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+          border-radius: 50%;
+          padding: 5px;
+        }
+      }
+
+      /* Carousel navigation buttons */
+      .scrollers {
+        display: none; /* Hide old navigation */
+      }
+
+      /* Style for bottom navigation buttons */
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        margin: 1rem 0;
+        width: 100%;
+      }
+
+      .btn-outline-primary {
+        flex: 1;
+        max-width: 200px;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        border: 2px solid #0056b3;
+        color: #0056b3;
+        background-color: transparent;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-weight: 500;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .btn-outline-primary:hover {
+        background-color: #0056b3;
+        color: white;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .btn-group {
+          padding: 0 1rem;
+          gap: 0.5rem;
+        }
+
+        .btn-outline-primary {
+          padding: 0.6rem 0.5rem;
+          font-size: 0.9rem;
+          max-width: none;
+        }
+      }
+
+      /* Carousel indicator styling */
+      .carousel-indicator button {
+        border: 2px solid transparent;
+        transition: border-color 0.2s ease;
+        padding: 2px;
+      }
+
+      /* Single consistent border styling for active indicators */
+      .carousel-indicator.active button img,
+      .carousel-indicator[aria-selected='true'] button img {
+        border: 3px solid #d3261d; /* RMIT red */
+        box-shadow: 0 0 5px rgba(211, 38, 29, 0.5);
+      }
+
+      /* Hide triangle indicators as they're replaced with border styling */
+      .triangle {
+        display: none !important;
+      }
+
+      /* Focus styles for better keyboard navigation */
+      .carousel-thumb-button:focus {
+        outline: none;
+      }
+
+      /* Focus styles for better keyboard navigation */
+      .carousel-thumb-button:focus-visible {
+        outline: 3px solid #007bff;
+        outline-offset: 2px;
+      }
+
+      .carousel-thumb-button {
+        background: none;
+        border: none;
+        padding: 0;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      /* Hide all triangles */
+      #carousel .indicators .col-auto .triangle {
+        display: none !important;
+      }
+
+      /* Active indicator styling for thumbnails - single consistent border */
+      #carousel .indicators .carousel-indicator.active img,
+      #carousel .indicators .carousel-indicator[aria-selected='true'] img {
+        border: 3px solid #d3261d; /* RMIT red */
+        box-shadow: 0 0 5px rgba(211, 38, 29, 0.5);
+      }
+    </style>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4GZH949');</script>
+<!-- End Google Tag Manager -->
+</head>
+  <body class="page-template-default page page-id-234">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4GZH949"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="wrapper" id="page-wrapper">
+      <div id="content" tabindex="-1">
+        <div class="pt-2 pb-2 content-area" id="primary">
+          <main class="site-main" id="main">
+            <article class="post-234 page type-page status-publish hentry" id="post-234">
+              <div class="entry-content">
+                <!-- acf.php -->
+                <div id="carousel" class="carousel mt-1" data-interval="false" role="region" aria-roledescription="carousel" aria-label="Hierarchy of controls carousel">
+                  <div class="container-fluid navs mb-2">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row justify-content-center indicators" role="tablist" aria-label="Carousel navigation">
+
+                          <div class="col-1 col-auto carousel-indicator active" data-target="#carousel" data-slide-to="0" role="tab" aria-selected="true" aria-label="Hazard controls table">
+                            <button type="button" class="carousel-thumb-button" tabindex="0" aria-label="Go to slide 1 - Hazard controls table">
+                              <img width="150" height="150" src="wp-content/uploads/2018/12/UHC_table_01-1-150x150.png" class="attachment-thumbnail size-thumbnail" alt="Hazard controls table thumbnail" />
+                              <div class="triangle">
+                                <div class="empty"></div>
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="col-1 col-auto carousel-indicator" data-target="#carousel" data-slide-to="1" role="tab" aria-selected="false" aria-label="Elimination controls">
+                            <button type="button" class="carousel-thumb-button" tabindex="0" aria-label="Go to slide 2 - Elimination controls">
+                              <img width="150" height="150" src="wp-content/uploads/2018/12/hierarchy-of-control_01-150x150.gif" class="attachment-thumbnail size-thumbnail" alt="Hierarchy of control - elimination thumbnail" />
+                              <div class="triangle">
+                                <div class="empty"></div>
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="col-1 col-auto carousel-indicator" data-target="#carousel" data-slide-to="2" role="tab" aria-selected="false" aria-label="Substitution controls">
+                            <button type="button" class="carousel-thumb-button" tabindex="0" aria-label="Go to slide 3 - Substitution controls">
+                              <img width="150" height="150" src="wp-content/uploads/2018/12/hierarchy-of-control_02-150x150.gif" class="attachment-thumbnail size-thumbnail" alt="Hierarchy of control - substitution thumbnail" />
+                              <div class="triangle">
+                                <div class="empty"></div>
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="col-1 col-auto carousel-indicator" data-target="#carousel" data-slide-to="3" role="tab" aria-selected="false" aria-label="Engineering controls">
+                            <button type="button" class="carousel-thumb-button" tabindex="0" aria-label="Go to slide 4 - Engineering controls">
+                              <img width="150" height="150" src="wp-content/uploads/2018/12/hierarchy-of-control_03-150x150.gif" class="attachment-thumbnail size-thumbnail" alt="Hierarchy of control - engineering thumbnail" />
+                              <div class="triangle">
+                                <div class="empty"></div>
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="col-1 col-auto carousel-indicator" data-target="#carousel" data-slide-to="4" role="tab" aria-selected="false" aria-label="Administrative controls">
+                            <button type="button" class="carousel-thumb-button" tabindex="0" aria-label="Go to slide 5 - Administrative controls">
+                              <img width="150" height="150" src="wp-content/uploads/2018/12/hierarchy-of-control_04-150x150.gif" class="attachment-thumbnail size-thumbnail" alt="Hierarchy of control - administrative thumbnail" />
+                              <div class="triangle">
+                                <div class="empty"></div>
+                              </div>
+                            </button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel container-fluid">
+                    <div class="carousel row">
+                      <div class="col-1 hidden-md-down"></div>
+                      <div class="carousel-inner bordered col-12 col-md-12" role="presentation">
+                        <div class="carousel-item active" role="tabpanel" aria-label="Hierarchy of controls overview" tabindex="0">
+                          <div class="row carousel-min-height">
+                            <div class="col-12 col-sm-6 mb-3 mb-sm-0">
+                              <img width="640" height="297" src="wp-content/uploads/2018/12/UHC_table_01-1.png" class="attachment-large size-large" alt="Hazard controls reference table" srcset="wp-content/uploads/2018/12/UHC_table_01-1.png 714w, wp-content/uploads/2018/12/UHC_table_01-1-300x139.png 300w" sizes="(max-width: 640px) 100vw, 640px" />
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <h3 class="h3">Hierarchy of controls</h3>
+                              <p>To select the best method of controlling a hazard, use the hierarchy of controls. This is a sequence of options that offer you a number of ways to approach the hazard control process.</p>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="carousel-item" role="tabpanel" aria-label="Elimination controls" aria-hidden="true" tabindex="-1">
+                          <div class="row carousel-min-height">
+                            <div class="col-12 col-sm-6 mb-3 mb-sm-0">
+                              <img width="640" height="295" src="wp-content/uploads/2018/12/hierarchy-of-control_01.gif" class="attachment-large size-large" alt="Hierarchy of control - elimination level" />
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <h3 class="h3">1: Elimination</h3>
+                              <p>In order to use the chart for hazard control, you must start at control measure 1: Elimination. This involves eliminating the hazard at the source.</p>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="carousel-item" role="tabpanel" aria-label="Substitution controls" aria-hidden="true" tabindex="-1">
+                          <div class="row carousel-min-height">
+                            <div class="col-12 col-sm-6 mb-3 mb-sm-0">
+                              <img width="640" height="295" src="wp-content/uploads/2018/12/hierarchy-of-control_02.gif" class="attachment-large size-large" alt="Hierarchy of control - substitution level" />
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <h3 class="h3">2: Substitution</h3>
+                              <p>If this is not possible or practical, you would then move down the list to control measure 2: Substitution. This involves substituting the process or product for one that does not produce hazards.</p>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="carousel-item" role="tabpanel" aria-label="Engineering controls" aria-hidden="true" tabindex="-1">
+                          <div class="row carousel-min-height">
+                            <div class="col-12 col-sm-6 mb-3 mb-sm-0">
+                              <img width="640" height="295" src="wp-content/uploads/2018/12/hierarchy-of-control_03.gif" class="attachment-large size-large" alt="Hierarchy of control - engineering/isolation level" />
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <h3 class="h3">3: Isolate</h3>
+                              <p>
+                                If this is not possible or practical, move to control measure 3.<br />
+                                The process follows down the list in sequence until a suitable method of hazard control is achieved.
+                              </p>
+                              <p>&nbsp;</p>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="carousel-item" role="tabpanel" aria-label="Administrative controls" aria-hidden="true" tabindex="-1">
+                          <div class="row carousel-min-height">
+                            <div class="col-12 col-sm-6 mb-3 mb-sm-0">
+                              <img width="640" height="295" src="wp-content/uploads/2018/12/hierarchy-of-control_04.gif" class="attachment-large size-large" alt="Hierarchy of control - administrative and PPE levels" />
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <h3 class="h3"></h3>
+                              <p>Complete elimination of the hazard is the safest and best method of control and is the preferred method in any case. Personal Protective Equipment (PPE) should only be a very short-term solution.</p>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-1 hidden-lg-down"></div>
+                    </div>
+                  </div>
+
+                  <!-- Moved navigation buttons to bottom -->
+                  <div class="container-fluid mt-3">
+                    <div class="row justify-content-center">
+                      <div class="col-12 text-center">
+                        <div class="btn-group" role="group" aria-label="Carousel navigation">
+                          <a href="#carousel" class="btn btn-outline-primary mx-2" role="button" data-slide="prev" aria-label="Previous slide">
+                            <i class="fa fa-chevron-left"></i> Previous
+                          </a>
+                          <a href="#carousel" class="btn btn-outline-primary mx-2" role="button" data-slide="next" aria-label="Next slide">
+                            Next <i class="fa fa-chevron-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end acf.php -->
+              </div>
+              <!-- .entry-content -->
+            </article>
+            <!-- #post-## -->
+          </main>
+          <!-- #main -->
+        </div>
+        <!-- #primary -->
+      </div>
+      <!-- Container end -->
+    </div>
+    <!-- Wrapper end -->
+
+    <script>
+      // Initialize carousel and make first slide active
+      $(document).ready(function () {
+        // Set up keyboard navigation for carousel indicators
+        $('.carousel-thumb-button').on('keydown', function (e) {
+          // Handle enter or space to activate slide
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            $(this).closest('.carousel-indicator').trigger('click');
+          }
+
+          // Handle left/right arrows for navigation between indicators
+          if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            var indicators = $('.carousel-indicator');
+            var currentIndex = indicators.index($(this).closest('.carousel-indicator'));
+            var newIndex = e.key === 'ArrowLeft' ? Math.max(0, currentIndex - 1) : Math.min(indicators.length - 1, currentIndex + 1);
+
+            indicators.eq(newIndex).find('.carousel-thumb-button').focus();
+          }
+        });
+
+        // Update ARIA states when slides change
+        $('#carousel').on('slide.bs.carousel', function (e) {
+          var index = $(e.relatedTarget).index();
+          // Update ARIA attributes and classes
+          $('.carousel-indicator').removeClass('active').attr('aria-selected', 'false');
+          $('.carousel-indicator').eq(index).addClass('active').attr('aria-selected', 'true');
+
+          // Update tab index and hidden state for slides
+          $('.carousel-item').attr('aria-hidden', 'true').attr('tabindex', '-1');
+          $(e.relatedTarget).attr('aria-hidden', 'false').attr('tabindex', '0');
+        });
+
+        // Initialize active states on load
+        $(function () {
+          // Force active class to match the active slide
+          var activeIndex = $('.carousel-item.active').index();
+          $('.carousel-indicator').removeClass('active').attr('aria-selected', 'false');
+          $('.carousel-indicator').eq(activeIndex).addClass('active').attr('aria-selected', 'true');
+        });
+
+        // Add keyboard navigation for carousel slides
+        $('.carousel-item').on('keydown', function (e) {
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            $('#carousel').carousel('prev');
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            $('#carousel').carousel('next');
+          }
+        });
+      });
+    </script>
+
+    <script type="text/javascript" src="wp-content/themes/233/js/theme.min%EF%B9%96ver=2.3.3.js" defer></script>
+    <script src="ltiTriggerResize.js"></script>
+  </body>
+</html>

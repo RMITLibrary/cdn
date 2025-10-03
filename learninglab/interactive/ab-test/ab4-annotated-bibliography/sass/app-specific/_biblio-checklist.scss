@@ -22,16 +22,17 @@
 	}
 
     .highlight-text {
-        //display: block;
-        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
         margin-bottom: 0;
 
         .content {
-            order: 1;
+            order: 2;
         }
 
         .my-checklist {
-            columns: 2;
+           
+            order: 1;
 
             .form-check {
                 display: flex;
@@ -46,6 +47,10 @@
                 display: block;
                 padding: 4px;
                 span { }
+            }
+
+            @include media-breakpoint-up(md) {
+                 columns: 2;
             }
         }
     }

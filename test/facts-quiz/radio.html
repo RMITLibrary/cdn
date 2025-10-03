@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tentative langauge quiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Google Tag Manager -->
+    <!--<script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K6GPW9XR');
+    </script>-->
+    <!-- End Google Tag Manager -->
+
+	<!-- Microsoft Clarity --> 
+	<!-- <script type="text/javascript">
+		(function(c,l,a,r,i,t,y){
+			c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+			t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+			y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+		})(window, document, "clarity", "script", "ry4mqwwooy");
+	</script> -->
+
+	<!-- Dark Mode Script -->
+    <script>
+		(function () {
+		  'use strict';
+  
+		  const getStoredTheme = () => localStorage.getItem('theme');
+  
+		  const getPreferredTheme = () => {
+			const storedTheme = getStoredTheme();
+			return storedTheme ? storedTheme : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		  };
+  
+		  const setTheme = (theme) => {
+			const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+			document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		  };
+  
+		  setTheme(getPreferredTheme());
+		})();
+	  </script>
+
+</head>
+<body>
+
+	<header id="intro-header">
+        <h1>Quiz Title</h1>
+        <h2>Introduction</h2>
+        <p>Fact-checking, like fishing, requires patience and persistence.</p>
+        <p>Answer the following questions regarding fact-checking to see how many fish you can catch.</p>
+        <button id="start-quiz" class="btn btn-primary">Start Quiz</button>
+    </header>
+
+    <main>
+        <section id="quiz" hidden>
+            <div id="question-counter">Question 1 of 5</div> <!-- Question counter -->
+            <ul id="quiz-questions">
+                <li hidden>
+                    <fieldset class="form-group" role="radiogroup">
+                        <div role="legend">Is the following a fact, opinion or a combination?<br />
+                        "In Parliament yesterday, the Prime Minister stated that he thought most celebrants did not believe in the sanctity of marriage."</div>
+                        <div class="radio-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group1" id="radio1a" value="0">
+                                <label class="form-check-label" for="radio1a">Fact</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group1" id="radio1b" value="1">
+                                <label class="form-check-label" for="radio1b">Opinion</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group1" id="radio1c" value="2">
+                                <label class="form-check-label" for="radio1c">Combination</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="feedback" role="alert" hidden>Feedback goes here.</div>
+                    <button class="next-question" hidden>Next question</button> <!-- Hidden initially -->
+                </li>
+                <li hidden>
+                    <fieldset class="form-group" role="radiogroup">
+                        <div role="legend">Is data from a study conducted by a PhD student from RMIT university an original or a secondary source?</div>
+                        <div class="radio-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group2" id="radio2a" value="0">
+                                <label class="form-check-label" for="radio2a">Original</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group2" id="radio2b" value="1">
+                                <label class="form-check-label" for="radio2b">Secondary</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="feedback" role="alert" hidden>Feedback goes here.</div>
+                    <button class="next-question" hidden>Next question</button>
+                </li>
+                <li hidden>
+                    <fieldset class="form-group" role="radiogroup">
+                        <div role="legend">Which headline is biased?</div>
+                        <div class="radio-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group3" id="radio3a" value="0">
+                                <label class="form-check-label" for="radio3a">Law proposed to decriminalise abortion</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group3" id="radio3b" value="1">
+                                <label class="form-check-label" for="radio3b">Abortion law opens flood gates to murdering babies</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="feedback" role="alert" hidden>Feedback goes here.</div>
+                    <button class="next-question" hidden>Next question</button>
+                </li>
+                <li hidden>
+                    <fieldset class="form-group" role="radiogroup">
+                        <div role="legend">You encounter a website with an "About us" page that provides a neutral description. Is this enough to demonstrate that the contents of the site are reliable?</div>
+                        <div class="radio-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group4" id="radio4a" value="0">
+                                <label class="form-check-label" for="radio4a">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group4" id="radio4b" value="1">
+                                <label class="form-check-label" for="radio4b">No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="feedback" role="alert" hidden>Feedback goes here.</div>
+                    <button class="next-question" hidden>Next question</button>
+                </li>
+
+                <li hidden>
+                    <fieldset class="form-group" role="radiogroup">
+                        <div role="legend">You come across a study with a large sample size and sound methodology. Does this make the study reliable?</div>
+                        <div class="radio-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group5" id="radio5a" value="0">
+                                <label class="form-check-label" for="radio5a">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group5" id="radio5b" value="1">
+                                <label class="form-check-label" for="radio5b">No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="feedback" role="alert" hidden>Feedback goes here.</div>
+                    <button class="next-question" hidden>Show results</button>
+                </li>
+            </ul>
+        </section>
+
+        <section id="results" hidden>
+            <h2>Results</h2>
+            <p class="quiz-score"></p>
+            <div class="final-feedback" id="gold-feedback" hidden>Excellent work! You've mastered the material.</div>
+			<div class="final-feedback" id="silver-feedback" hidden>Great job! You have a strong understanding.</div>
+			<div class="final-feedback" id="bronze-feedback" hidden>Good effort! There's room for improvement.</div>
+			<div class="final-feedback" id="other-feedback" hidden>Keep trying! Review the material and try again.</div>
+			<button id="restart-quiz" class="btn btn-primary">Restart Quiz</button>
+        </section>
+    </main>
+
+    <script src="quiz-radio.js"></script> <!-- Link to your JavaScript file -->
+
+<!-- Well done! You’ve caught a lot of fish today!
+
+In summary, to stay alert to bias, consider the following questions when assessing any piece of information:
+Are the purported facts reliable?
+Are there multiple sources quoted?
+Do the sources quoted offer differing points of view?
+Has a counter argument or opposing view been presented?
+Is the information presented with colourful or exaggerated language?
+After reading an article, read the headline again. Does it fairly represent the content of the article?
+Check yourself: are you expressing bias by agreeing with content simply because it reflects your own world view? -->
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+
+<script>
+
+
+	/*
+		THEME SWITCHER
+		This script handles the theme switching functionality for the website. It retrieves the user's  preferred theme from local storage or system settings and applies it to the document. It also provides the ability to switch themes through a theme switcher UI component, updates the UI to reflect the active theme, and listens for changes to the system's dark mode preference.
+	
+		Note: There is a companion script in the <head> section that sets the initial theme as early as possible to reduce the flash of unstyled content (FOUC). It determines the user's preferred theme (either from local storage or system settings) and applies it immediately.
+	*/
+	(function() {
+		'use strict';
+	
+		const getStoredTheme = () => localStorage.getItem('theme');
+	
+		const setStoredTheme = theme => localStorage.setItem('theme', theme);
+	
+		const getPreferredTheme = () => {
+		  const storedTheme = getStoredTheme();
+		  return storedTheme ? storedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		};
+	
+		const setTheme = theme => {
+		  const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+		  document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		};
+	
+		const showActiveTheme = theme => {
+		  document.querySelectorAll('.theme-switch').forEach(themeSwitcher => {
+			themeSwitcher.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+			  element.checked = (element.getAttribute('data-bs-theme-value') === theme);
+			});
+		  });
+		};
+	
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+		  const storedTheme = getStoredTheme();
+		  if (storedTheme !== 'light' && storedTheme !== 'dark') {
+			setTheme(getPreferredTheme());
+		  }
+		});
+	
+		window.addEventListener('DOMContentLoaded', () => {
+		  showActiveTheme(getPreferredTheme());
+		  document.querySelectorAll('.theme-switch [data-bs-theme-value]').forEach(toggle => {
+			toggle.addEventListener('change', () => {
+			  const theme = toggle.getAttribute('data-bs-theme-value');
+			  setStoredTheme(theme);
+			  setTheme(theme);
+			  showActiveTheme(theme);
+			});
+		  });
+		});
+	  })();
+	
+</script>
+</body>
+</html>

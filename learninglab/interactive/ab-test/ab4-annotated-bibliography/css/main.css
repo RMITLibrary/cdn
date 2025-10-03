@@ -15198,14 +15198,15 @@ $img-width-sm: 18.5rem;     //296px*/
   }
 }
 .checklist-container .highlight-text {
-  grid-template-columns: auto;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 0;
 }
 .checklist-container .highlight-text .content {
-  order: 1;
+  order: 2;
 }
 .checklist-container .highlight-text .my-checklist {
-  columns: 2;
+  order: 1;
 }
 .checklist-container .highlight-text .my-checklist .form-check {
   display: flex;
@@ -15217,4 +15218,9 @@ $img-width-sm: 18.5rem;     //296px*/
 .checklist-container .highlight-text .my-checklist label {
   display: block;
   padding: 4px;
+}
+@media (min-width: 768px) {
+  .checklist-container .highlight-text .my-checklist {
+    columns: 2;
+  }
 }

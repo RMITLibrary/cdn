@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fact checking quiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Google Tag Manager -->
+    <!--<script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K6GPW9XR');
+    </script>-->
+    <!-- End Google Tag Manager -->
+
+	<!-- Microsoft Clarity --> 
+	<!-- <script type="text/javascript">
+		(function(c,l,a,r,i,t,y){
+			c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+			t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+			y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+		})(window, document, "clarity", "script", "ry4mqwwooy");
+	</script> -->
+
+	<!-- Dark Mode Script -->
+    <script>
+		(function () {
+		  'use strict';
+  
+		  const getStoredTheme = () => localStorage.getItem('theme');
+  
+		  const getPreferredTheme = () => {
+			const storedTheme = getStoredTheme();
+			return storedTheme ? storedTheme : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		  };
+  
+		  const setTheme = (theme) => {
+			const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+			document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		  };
+  
+		  setTheme(getPreferredTheme());
+		})();
+	  </script>
+
+</head>
+<body>
+	<div class="quiz-container">
+		<header id="intro-header">
+			<h1>Casting the line</h1>
+			<p class="lead">Fact-checking, like fishing, requires patience and persistence.</p>
+			<p class="second-para">Answer the following questions regarding fact-checking to see how many fish you can catch.</p>
+			<button id="start-quiz" class="btn btn-default">Start Quiz</button>
+		</header>
+		<main>
+			<section id="quiz" hidden>
+				<ul id="quiz-questions">
+					<li hidden>
+						<h2><span class="visually-hidden">Question&nbsp;</span>1 of 5</h2>
+						<div>
+							<fieldset class="form-group">
+								<div class="jerky" role="legend" id="question1-desc"><p class="lead">Is the following a fact, opinion or a combination?</p>
+								<p>"In Parliament yesterday, the Prime Minister stated that he thought most celebrants did not believe in the sanctity of marriage."</p></div>
+								<p id="button-desc-1" class="visually-hidden">There are 3 choices available: Fact, Opinion, Combination</p>
+								<div class="button-group button-group3" role="group" aria-labelledby="question1-desc" aria-describedby="button-desc-1">
+									<button class="btn btn-default answer-button" data-value="0" aria-describedby="button-desc-1">Fact</button>
+									<button class="btn btn-default answer-button" data-value="1" aria-describedby="button-desc-1">Opinion</button>
+									<button class="btn btn-default answer-button" data-value="2">Combination</button>
+								</div>
+							</fieldset>
+							<p class="feedback always-left" role="alert" hidden>Feedback goes here.</p>
+							<button class="btn btn-default next-question" hidden>Next <span class="visually-hidden">question</span></button>
+						</div>	
+					</li>
+					<li hidden>
+						<h2><span class="visually-hidden">Question&nbsp;</span>2 of 5</h2>
+						<div>
+							<fieldset class="form-group">
+								<div class="jerky" role="legend" id="question2-desc"><p class="lead">Is data from a study conducted by a PhD student from RMIT university an original or a secondary source?</p></div>
+								<p id="button-desc-2" class="visually-hidden">There are 2 choices available: Original, Secondary</p>
+								<div class="button-group button-group2" aria-labelledby="question2-desc">
+									<button class="btn btn-default answer-button" data-value="0" aria-describedby="button-desc-2">Original</button>
+									<button class="btn btn-default answer-button" data-value="1" aria-describedby="button-desc-2">Secondary</button>
+								</div>
+							</fieldset>
+							<p class="feedback" role="alert" hidden>Feedback goes here.</p>
+							<button class="btn btn-default next-question" hidden>Next <span class="visually-hidden">question</span></button>
+						</div>
+					</li>
+					<li hidden>
+						<h2><span class="visually-hidden">Question&nbsp;</span>3 of 5</h2>
+						<div>
+							<fieldset class="form-group">
+								<div class="jerky" role="legend" id="question3-desc"><p class="lead">Which headline is biased?</p></div>
+								<p id="button-desc-3" class="visually-hidden">There are 2 choices available: Law proposed to decriminalise abortion, Abortion law opens flood gates to murdering babies</p>
+								<div class="button-group button-group-large" aria-labelledby="question3-desc">
+									<button class="btn btn-default answer-button" data-value="0" aria-describedby="button-desc-3">Law proposed to decriminalise abortion</button>
+									<button class="btn btn-default answer-button" data-value="1" aria-describedby="button-desc-3">Abortion law opens flood gates to murdering babies</button>
+								</div>
+							</fieldset>
+							<p class="feedback" role="alert" hidden>Feedback goes here.</p>
+							<button class="btn btn-default next-question" hidden>Next <span class="visually-hidden">question</span></button>
+						</div>
+					</li>
+					<li hidden>
+						<h2><span class="visually-hidden">Question&nbsp;</span>4 of 5</h2>
+						<div>
+							<fieldset class="form-group">
+								<div class="jerky" role="legend" id="question4-desc"><p class="lead">You encounter a website with an "About us" page that provides a neutral description. Is this enough to demonstrate that the contents of the site are reliable?</p></div>
+								<p id="button-desc-4" class="visually-hidden">There are 2 choices available: Yes, No</p>
+								<div class="button-group button-group2" aria-labelledby="question4-desc">
+									<button class="btn btn-default answer-button" data-value="0" aria-describedby="button-desc-4">Yes</button>
+									<button class="btn btn-default answer-button" data-value="1" aria-describedby="button-desc-4">No</button>
+								</div>
+							</fieldset>
+							<p class="feedback" role="alert" hidden>Feedback goes here.</p>
+							<button class="btn btn-default next-question" hidden>Next <span class="visually-hidden">question</span></button>
+						</div>
+					</li>
+					<li hidden>
+						<h2><span class="visually-hidden">Question&nbsp;</span>5 of 5</h2>
+						<div>
+							<fieldset class="form-group">
+								<div class="jerky" role="legend" id="question5-desc"><p class="lead">You come across a study with a large sample size and sound methodology. Does this make the study reliable?</p></div>
+								<p id="button-desc-5" class="visually-hidden">There are 2 choices available: Yes, No</p>
+								<div class="button-group button-group2" aria-labelledby="question5-desc">
+									<button class="btn btn-default answer-button" data-value="0" aria-describedby="button-desc-5">Yes</button>
+									<button class="btn btn-default answer-button" data-value="1" aria-describedby="button-desc-5">No</button>
+								</div>
+							</fieldset>
+							<p class="feedback" role="alert" hidden>Feedback goes here.</p>
+							<button class="btn btn-default next-question" hidden>Show results</button>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section id="results" hidden>
+				<div class="final-feedback" id="gold-feedback" hidden>
+					<h2>Well done! You’ve caught a lot of fish today!</h2>
+					<p class="quiz-score"></p>
+					<p>In summary, to stay alert to bias, consider the following questions when assessing any piece of information:</p>
+					<ul>
+						<li>Are the purported facts reliable?</li>
+						<li>Are there multiple sources quoted?</li>
+						<li>Do the sources quoted offer differing points of view?</li>
+						<li>Has a counter argument or opposing view been presented?</li>
+						<li>Is the information presented with colourful or exaggerated language?</li>
+						<li>After reading an article, read the headline again. Does it fairly represent the content of the article?</li>
+						<li>Check yourself: are you expressing bias by agreeing with content simply because it reflects your own world view?</li>
+					</ul>
+				</div>
+				<div class="final-feedback" id="silver-feedback" hidden>
+					<h2>Well done! You’ve caught a lot of fish today!</h2>
+					<p class="quiz-score"></p>
+					<p>In summary, to stay alert to bias, consider the following questions when assessing any piece of information:</p>
+					<ul>
+						<li>Are the purported facts reliable?</li>
+						<li>Are there multiple sources quoted?</li>
+						<li>Do the sources quoted offer differing points of view?</li>
+						<li>Has a counter argument or opposing view been presented?</li>
+						<li>Is the information presented with colourful or exaggerated language?</li>
+						<li>After reading an article, read the headline again. Does it fairly represent the content of the article?</li>
+						<li>Check yourself: are you expressing bias by agreeing with content simply because it reflects your own world view?</li>
+					</ul>
+				</div>
+				<div class="final-feedback" id="bronze-feedback" hidden>
+					<h2>Well done! You’ve caught a lot of fish today!</h2>
+					<p class="quiz-score"></p>
+					<p>In summary, to stay alert to bias, consider the following questions when assessing any piece of information:</p>
+					<ul>
+						<li>Are the purported facts reliable?</li>
+						<li>Are there multiple sources quoted?</li>
+						<li>Do the sources quoted offer differing points of view?</li>
+						<li>Has a counter argument or opposing view been presented?</li>
+						<li>Is the information presented with colourful or exaggerated language?</li>
+						<li>After reading an article, read the headline again. Does it fairly represent the content of the article?</li>
+						<li>Check yourself: are you expressing bias by agreeing with content simply because it reflects your own world view?</li>
+					</ul>
+				</div>
+				
+				<div class="final-feedback" id="other-feedback" hidden>
+					<h2>Oh dear! Not many bites today</h2>
+					<p class="quiz-score"></p>
+					<p>In summary, to stay alert to bias, consider the following questions when assessing any piece of information:</p>
+					<ul>
+						<li>Are the purported facts reliable?</li>
+						<li>Are there multiple sources quoted?</li>
+						<li>Do the sources quoted offer differing points of view?</li>
+						<li>Has a counter argument or opposing view been presented?</li>
+						<li>Is the information presented with colourful or exaggerated language?</li>
+						<li>After reading an article, read the headline again. Does it fairly represent the content of the article?</li>
+						<li>Check yourself: are you expressing bias by agreeing with content simply because it reflects your own world view?</li>
+					</ul>
+				</div>
+				<button id="restart-quiz" class="btn btn-default">Restart Quiz</button>
+			</section>
+		</main>
+		<div class="fish-container">
+			<div id="fish3" class="fish"></div>
+			<div id="fish1" class="fish"></div>
+			<div id="fish5" class="fish"></div>
+			<div id="fish2" class="fish"></div>
+			<div id="fish4" class="fish"></div>
+		</div>
+	</div>
+<script src="quiz.js"></script>
+
+<!-- Well done! You’ve caught a lot of fish today!
+
+Oh dear!Not many bites today.
+
+Persevere and try again!
+
+In summary, to stay alert to bias, consider the following questions when assessing any piece of information:
+Are the purported facts reliable?
+Are there multiple sources quoted?
+Do the sources quoted offer differing points of view?
+Has a counter argument or opposing view been presented?
+Is the information presented with colourful or exaggerated language?
+After reading an article, read the headline again. Does it fairly represent the content of the article?
+Check yourself: are you expressing bias by agreeing with content simply because it reflects your own world view? -->
+
+<!-- Iframe resizer --> 
+<script src="https://rmitlibrary.github.io/cdn/libraries/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script> 
+<!-- end Iframe resizer --> 
+
+<script>
+
+
+
+
+	/*
+		THEME SWITCHER
+		This script handles the theme switching functionality for the website. It retrieves the user's  preferred theme from local storage or system settings and applies it to the document. It also provides the ability to switch themes through a theme switcher UI component, updates the UI to reflect the active theme, and listens for changes to the system's dark mode preference.
+	
+		Note: There is a companion script in the <head> section that sets the initial theme as early as possible to reduce the flash of unstyled content (FOUC). It determines the user's preferred theme (either from local storage or system settings) and applies it immediately.
+	*/
+	(function() {
+		'use strict';
+	
+		const getStoredTheme = () => localStorage.getItem('theme');
+	
+		const setStoredTheme = theme => localStorage.setItem('theme', theme);
+	
+		const getPreferredTheme = () => {
+		  const storedTheme = getStoredTheme();
+		  return storedTheme ? storedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		};
+	
+		const setTheme = theme => {
+		  const themeToSet = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+		  document.documentElement.setAttribute('data-bs-theme', themeToSet);
+		};
+	
+		const showActiveTheme = theme => {
+		  document.querySelectorAll('.theme-switch').forEach(themeSwitcher => {
+			themeSwitcher.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+			  element.checked = (element.getAttribute('data-bs-theme-value') === theme);
+			});
+		  });
+		};
+	
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+		  const storedTheme = getStoredTheme();
+		  if (storedTheme !== 'light' && storedTheme !== 'dark') {
+			setTheme(getPreferredTheme());
+		  }
+		});
+	
+		window.addEventListener('DOMContentLoaded', () => {
+		  showActiveTheme(getPreferredTheme());
+		  document.querySelectorAll('.theme-switch [data-bs-theme-value]').forEach(toggle => {
+			toggle.addEventListener('change', () => {
+			  const theme = toggle.getAttribute('data-bs-theme-value');
+			  setStoredTheme(theme);
+			  setTheme(theme);
+			  showActiveTheme(theme);
+			});
+		  });
+		});
+	  })();
+	
+</script>
+</body>
+</html>

@@ -52,10 +52,8 @@
   // --- Resize Logic ---
 
   function postResize(height) {
-    window.parent.postMessage(
-      { subject: "lti.frameResize", height },
-      CONFIG.targetOrigin
-    );
+    window.parent.postMessage({ subject: "lti.frameResize", height }, CONFIG.targetOrigin);
+    window.parent.postMessage({ subject: "rmit.iframeResize", height }, CONFIG.targetOrigin);
   }
 
   function setLock() {

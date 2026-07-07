@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 558 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-383,0)">
+        <g id="electricity_parallel-circuit" transform="matrix(1.520436,0,0,1.006231,393.643052,13.080997)">
+            <rect x="-7" y="-13" width="367" height="321" style="fill:white;"/>
+            <g>
+                <g transform="matrix(0.657706,0,0,0.993808,-96.448029,-80.578947)">
+                    <rect x="234" y="96" width="214" height="266" style="fill:none;stroke:black;stroke-width:1px;"/>
+                </g>
+                <g transform="matrix(0.608532,0,0,0.993808,55.807859,-80.578947)">
+                    <rect x="234" y="96" width="214" height="266" style="fill:none;stroke:black;stroke-width:1.04px;"/>
+                </g>
+                <g id="Battery" transform="matrix(0.657706,0,0,0.993808,-96.448029,-78.591331)">
+                    <g transform="matrix(1,0,0,1.444444,-1,-97.888889)">
+                        <rect x="232" y="218" width="6" height="9" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(1.058824,0,0,1.058824,-11.647059,-19.117647)">
+                        <path d="M215,223L249,223" style="fill:none;stroke:black;stroke-width:0.94px;stroke-linecap:butt;"/>
+                    </g>
+                    <g transform="matrix(0.676471,0,0,0.676471,77.058824,79.147059)">
+                        <path d="M215,223L249,223" style="fill:none;stroke:black;stroke-width:4.93px;stroke-linecap:butt;"/>
+                    </g>
+                </g>
+                <g transform="matrix(0.657706,0,0,0.993808,-62.247312,-80.578947)">
+                    <g transform="matrix(20.833333,0,0,20.833333,153.916667,231.4375)">
+                    </g>
+                    <text x="111.083px" y="231.438px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:20.833px;">EMF</text>
+                </g>
+                <g transform="matrix(0.657706,0,0,0.993808,-49.09319,-152.133127)">
+                    <g transform="matrix(20.833333,0,0,20.833333,135.197917,231.4375)">
+                    </g>
+                    <text x="129.802px" y="231.438px" style="font-family:'HelveticaNeue-Italic', 'Helvetica Neue';font-style:italic;font-size:20.833px;">I</text>
+                </g>
+                <g transform="matrix(0.657706,0,0,0.993808,87.44566,-152.552303)">
+                    <text x="126.426px" y="231.438px" style="font-family:'HelveticaNeue-Italic', 'Helvetica Neue';font-style:italic;font-size:20.833px;">I</text>
+                    <g transform="matrix(12.145833,0,0,12.145833,138.574458,238.375)">
+                    </g>
+                    <text x="131.821px" y="238.375px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:12.146px;">1</text>
+                </g>
+                <g transform="matrix(0.657706,0,0,0.993808,88.367384,-76.603715)">
+                    <text x="121.988px" y="231.438px" style="font-family:'HelveticaNeue-Italic', 'Helvetica Neue';font-style:italic;font-size:20.833px;">R</text>
+                    <g transform="matrix(12.145833,0,0,12.145833,143.011958,238.375)">
+                    </g>
+                    <text x="136.259px" y="238.375px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:12.146px;">1</text>
+                </g>
+                <g transform="matrix(0.657706,0,0,0.993808,218.59319,-75.609907)">
+                    <text x="121.988px" y="231.438px" style="font-family:'HelveticaNeue-Italic', 'Helvetica Neue';font-style:italic;font-size:20.833px;">R</text>
+                    <g transform="matrix(12.145833,0,0,12.145833,143.011958,238.375)">
+                    </g>
+                    <text x="136.259px" y="238.375px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:12.146px;">2</text>
+                </g>
+                <g id="Resistor" transform="matrix(0.657706,0,0,0.993808,-96.448029,-25.919505)">
+                    <g transform="matrix(1,0,0,1.022727,0,-4.5)">
+                        <rect x="442" y="154" width="11" height="44" style="fill:white;"/>
+                    </g>
+                    <g id="Resistor1" serif:id="Resistor">
+                        <g transform="matrix(0.331541,0,0,0.200617,298.969534,122.305556)">
+                            <path d="M449,153L479,170L417,207L449.676,227.769" style="fill:none;stroke:black;stroke-width:3.65px;stroke-linecap:butt;"/>
+                        </g>
+                        <g transform="matrix(0.331541,0,0,0.200617,298.969534,137.305556)">
+                            <path d="M449,153L479,170L417,207L449.676,227.769" style="fill:none;stroke:black;stroke-width:3.65px;stroke-linecap:butt;"/>
+                        </g>
+                        <g transform="matrix(0.331541,0,0,0.200617,298.969534,152.305556)">
+                            <path d="M449,153L479,170L417,207L449.676,227.769" style="fill:none;stroke:black;stroke-width:3.65px;stroke-linecap:butt;"/>
+                        </g>
+                    </g>
+                </g>
+                <g id="Resistor2" serif:id="Resistor" transform="matrix(0.657706,0,0,0.993808,33.777778,-24.925697)">
+                    <g transform="matrix(1,0,0,1.022727,0,-4.5)">
+                        <rect x="442" y="154" width="11" height="44" style="fill:white;"/>
+                    </g>
+                    <g id="Resistor3" serif:id="Resistor">
+                        <g transform="matrix(0.331541,0,0,0.200617,298.969534,122.305556)">
+                            <path d="M449,153L479,170L417,207L449.676,227.769" style="fill:none;stroke:black;stroke-width:3.65px;stroke-linecap:butt;"/>
+                        </g>
+                        <g transform="matrix(0.331541,0,0,0.200617,298.969534,137.305556)">
+                            <path d="M449,153L479,170L417,207L449.676,227.769" style="fill:none;stroke:black;stroke-width:3.65px;stroke-linecap:butt;"/>
+                        </g>
+                        <g transform="matrix(0.331541,0,0,0.200617,298.969534,152.305556)">
+                            <path d="M449,153L479,170L417,207L449.676,227.769" style="fill:none;stroke:black;stroke-width:3.65px;stroke-linecap:butt;"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="matrix(0.657706,0,0,0.993808,-96.448029,-80.578947)">
+                    <g transform="matrix(1,-0,-0,1,136,68)">
+                        <path d="M80.875,55.375L84,46L87.125,55.375L80.875,55.375Z"/>
+                        <path d="M84,121L84,53.5" style="fill:none;stroke:black;stroke-width:2.08px;stroke-linecap:butt;"/>
+                    </g>
+                </g>
+                <g transform="matrix(-0.60509,0,0,-0.914303,320.143011,204.524706)">
+                    <g transform="matrix(-1.086957,-0,-0,-1.086957,540.652174,237.913043)">
+                        <path d="M298.125,104.625L295,114L291.875,104.625L298.125,104.625Z"/>
+                        <path d="M295,45L295,106.5" style="fill:none;stroke:black;stroke-width:2.08px;stroke-linecap:butt;"/>
+                    </g>
+                </g>
+                <g transform="matrix(0.657706,0,0,0.993808,217.013761,-152.552303)">
+                    <text x="126.426px" y="231.438px" style="font-family:'HelveticaNeue-Italic', 'Helvetica Neue';font-style:italic;font-size:20.833px;">I</text>
+                    <g transform="matrix(12.145833,0,0,12.145833,138.574458,238.375)">
+                    </g>
+                    <text x="131.821px" y="238.375px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:12.146px;">2</text>
+                </g>
+                <g transform="matrix(-0.60509,0,0,-0.914303,449.711111,204.524706)">
+                    <g transform="matrix(-1.086957,-0,-0,-1.086957,754.782609,237.913043)">
+                        <path d="M495.125,104.625L492,114L488.875,104.625L495.125,104.625Z"/>
+                        <path d="M492,45L492,106.5" style="fill:none;stroke:black;stroke-width:2.08px;stroke-linecap:butt;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
